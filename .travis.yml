@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '4.2'
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 sudo: false
 addons:
   apt:
@@ -23,4 +23,6 @@ script:
 - grunt
 - test -z "$(git status -s)"
 notifications:
-  secure: Bo/bgmtFVGj6I2XnkvERfGnoM+t73WQSsP5eMlGM0jhUSKPqIc7Hf2zjYil3amMY3awFnoA6prILcMBzyUURj3jc5VRsWBCf6aQZ3bM+xzAcuTMcoiAKS7Ru1HQj1WY8G7VycDWuNeF8dCT0kt2QhcSneAUQ0qqyclWjcOK22kw=
+  slack:
+    rooms:
+      secure: sMRckpSJ6AhIYp3qa2gJz16hLKwSNDINfOE5PkuR+O335+TQoGBQsHnjduYTZEZo2niD3iFJjXp4G7rzLEhw++RAzsBt4kK0+3MlSVhhdPX3YqNpJfAf107y3UL+wV7/prvxFDw8wnmLFEU/jp8XbU4jjgmGFXNP33hWVfrX31ZsxFkTnLcU336CUIh29agYPc9kQDb6uLcJaZvvREksuMmMxp3FHiDcIvBD2Mk9+TNMrifXREW5NLvEVt/Ee4jD70N4inDRb0pEq+DZnE/1G5JcSpCSAkobMGAkVf9j1sYmt9+5hhQQITunI0E0rDoPfLx3/EChea7LEvWIrUcMSV2N6C0wosXd1mBFwzH1AXrcTQ04/s1FuncdOgYeboEygY5VSPYbFkrPkzs4J1uIo86sA2y/1kPTVIVIG1axVouv3kdsT9jy0wSOcFHQ8hccRiSm7eBQrLMUE7AQrq1JgLfh19PA5pkgPjYsmMLWb+MANVytoGkv/tvYYqSUEOLM4Vvv14rVAcOx3dwyAQUsDQMGoqqsirqCVUYbzeUaPK0hJRT7q6nRztMAPezdECbjypmTMn4v5AcgmFw7OOPiCrnmsIbI1u+Abbldj2J54Vnetakn8JH34iEteg0GAZa+5Gnb/preTaFC1iIsf5cILGt50mItUjYHVSugT7Ov9eY=
