@@ -1,0 +1,60 @@
+{
+  "name": "coach",
+  "version": "0.1.0",
+  "description": "The coach gives you advice on building a better web page",
+  "keywords": [
+    "performance",
+    "web",
+    "advice",
+    "webperf",
+    "perfmatters"
+  ],
+  "main": "index.js",
+  "bin": "./bin/index.js",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sitespeedio/coach.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sitespeedio/coach/issues"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "fulltest": "grunt",
+    "lint": "node_modules/eslint/bin/eslint.js ."
+  },
+  "devDependencies": {
+    "bluebird": "3.0.6",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "eslint": "^1.7.3",
+    "eslint-plugin-require-jsdoc": "^1.0.4",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-eslint": "^17.3.1",
+    "grunt-http-server": "1.13.0",
+    "grunt-jsdoc": "1.1.0",
+    "grunt-mocha-cli": "2.0.0",
+    "longjohn": "0.2.11",
+    "mocha": "^2.3.3",
+    "uglify-js": "2.6.1"
+  },
+  "homepage": "https://www.sitespeed.io/coach",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Peter Hedenskog",
+    "url": "https://www.peterhedenskog.com"
+  },
+  "contributors": {
+    "name": "Tobias Lidskog"
+  },
+  "dependencies": {
+    "browsertime": "git+https://github.com/tobli/browsertime.git#1.0",
+    "filter-files": "^0.4.0",
+    "json-stable-stringify": "^1.0.0",
+    "snufkin": "0.2.4"
+  }
+}

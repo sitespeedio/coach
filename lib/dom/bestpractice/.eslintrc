@@ -1,0 +1,6 @@
+env:
+    browser: true
+globals:
+    util: true
+extends:
+    "eslint:recommended"

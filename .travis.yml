@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '4.2'
+env:
+  - CXX=g++-4.8
+sudo: false
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - google-chrome
+    packages:
+    - g++-4.8
+    - google-chrome-stable
+  firefox: latest
+before_install:
+- npm install grunt-cli -g
+- firefox --version 2>/dev/null
+- google-chrome --product-version
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+script:
+- grunt
+- test -z "$(git status -s)"
+notifications:
+  slack:
+    secure: Bo/bgmtFVGj6I2XnkvERfGnoM+t73WQSsP5eMlGM0jhUSKPqIc7Hf2zjYil3amMY3awFnoA6prILcMBzyUURj3jc5VRsWBCf6aQZ3bM+xzAcuTMcoiAKS7Ru1HQj1WY8G7VycDWuNeF8dCT0kt2QhcSneAUQ0qqyclWjcOK22kw=
