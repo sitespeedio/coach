@@ -25,7 +25,7 @@ module.exports = {
     } else {
         script = script.replace('(function(util) {', 'return (function(util) {');
     }
-    return runner.loadAndWait(url)
+    return runner.loadAndWait(url, 'return window.performance.timing.loadEventEnd>0')
       .then(() => runner.runScript(util + script));
   }
 };

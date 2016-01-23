@@ -19,7 +19,7 @@ module.exports = {
   },
   run: function(url, scriptPath) {
     let script = fs.readFileSync(path.resolve(scriptPath), 'utf8');
-    return runner.loadAndWait(url)
+    return runner.loadAndWait(url,'return window.performance.timing.loadEventEnd>0')
       .then(() => runner.runScript('return ' + script));
   }
 };
