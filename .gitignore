@@ -3,3 +3,6 @@ node_modules
 *.iml
 *.log
 dist/coach.js
+dist/doc/
+dist/bookmarklet.js
+dist/coach.bookmarklet.min.js
