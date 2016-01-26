@@ -55,6 +55,6 @@
     "browsertime": "git+https://github.com/tobli/browsertime.git#1.0",
     "filter-files": "^0.4.0",
     "json-stable-stringify": "^1.0.0",
-    "snufkin": "0.2.4"
+    "snufkin": "0.2.5"
   }
 }
