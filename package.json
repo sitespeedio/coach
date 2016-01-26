@@ -1,5 +1,5 @@
 {
-  "name": "coach",
+  "name": "webcoach",
   "version": "0.1.0",
   "description": "The coach gives you advice on building a better web page",
   "keywords": [
@@ -7,7 +7,8 @@
     "web",
     "advice",
     "webperf",
-    "perfmatters"
+    "perfmatters",
+    "coach"
   ],
   "main": "index.js",
   "bin": "./bin/index.js",
