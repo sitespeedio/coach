@@ -12,8 +12,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['dist/<%= pkg.name %>.js'],
-          'dist/<%= pkg.name %>.bookmarklet.min.js': ['dist/bookmarklet.js']
+          'dist/coach.min.js': ['dist/coach.js'],
+          'dist/coach.bookmarklet.min.js': ['dist/bookmarklet.js']
         }
       }
     },
