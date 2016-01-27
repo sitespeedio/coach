@@ -53,6 +53,13 @@ describe('Timings:', function() {
           });
       });
 
+      it('We should get a fully loaded timing', function() {
+        return bt.run(path + 'index.html', 'lib/dom/timings/fullyLoaded.js')
+          .then((result) => {
+            assert.strictEqual(result > 0, true);
+          });
+      });
+
     });
   });
 
