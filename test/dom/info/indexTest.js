@@ -30,7 +30,7 @@ describe('Info', function() {
       it('We should be able to identify a AMP page', function() {
         return bt.run(path + 'amp.html', 'lib/dom/info/amp.js')
           .then((result) => {
-            assert.strictEqual(result.amp, true);
+            assert.strictEqual(result, '1450396666888');
           });
       });
 
@@ -38,7 +38,7 @@ describe('Info', function() {
         return bt.run(path + 'connectionType.html', 'lib/dom/info/connectionType.js')
           .then((result) => {
             if (browser === 'chrome') {
-              assert.strictEqual(result.connectionType !== 'unknown', true);
+              assert.strictEqual(result !== 'unknown', true);
             }
           });
       });
@@ -46,64 +46,64 @@ describe('Info', function() {
       it('We should be able to find iframes', function() {
         return bt.run(path + 'iframes.html', 'lib/dom/info/iframes.js')
           .then((result) => {
-            assert.strictEqual(result.iframes, 2);
+            assert.strictEqual(result, 2);
           });
       });
 
       it('We should be able to get the title', function() {
         return bt.run(path + 'documentTitle.html', 'lib/dom/info/documentTitle.js')
           .then((result) => {
-            assert.strictEqual(result.title, 'Document title');
+            assert.strictEqual(result, 'Document title');
           });
       });
 
       it('We should be able to get the document height', function() {
         return bt.run(path + 'documentHeight.html', 'lib/dom/info/documentHeight.js')
           .then((result) => {
-            assert.strictEqual(result.documentHeight > 0, true);
+            assert.strictEqual(result > 0, true);
           });
       });
 
       it('We should be able to get the document width', function() {
         return bt.run(path + 'documentWidth.html', 'lib/dom/info/documentWidth.js')
           .then((result) => {
-            assert.strictEqual(result.documentWidth > 0, true);
+            assert.strictEqual(result> 0, true);
           });
       });
 
       it('We should be able to count the DOM depth', function() {
         return bt.run(path + 'domDepth.html', 'lib/dom/info/domDepth.js')
           .then((result) => {
-            assert.strictEqual(result.avgDomDepth, 3);
-            assert.strictEqual(result.maxDomDepth, 4);
+            assert.strictEqual(result.avg, 3);
+            assert.strictEqual(result.max, 4);
           });
       });
 
       it('We should be able to get the DOM elements', function() {
         return bt.run(path + 'domElements.html', 'lib/dom/info/domElements.js')
           .then((result) => {
-            assert.strictEqual(result.elements, 26);
+            assert.strictEqual(result, 26);
           });
       });
 
       it('We should be able to get the local storage size', function() {
         return bt.run(path + 'localStorageSize.html', 'lib/dom/info/localStorageSize.js')
           .then((result) => {
-            assert.strictEqual(result.localStorageSize > 0, true);
+            assert.strictEqual(result > 0, true);
           });
       });
 
       it('We should be able to get the session storage size', function() {
         return bt.run(path + 'sessionStorageSize.html', 'lib/dom/info/sessionStorageSize.js')
           .then((result) => {
-            assert.strictEqual(result.sessionStorageSize > 0, true);
+            assert.strictEqual(result > 0, true);
           });
       });
 
       it('We should be able to get the window size', function() {
         return bt.run(path + 'windowSize.html', 'lib/dom/info/windowSize.js')
           .then((result) => {
-            assert.strictEqual(result.windowSize != undefined, true);
+            assert.strictEqual(result != undefined, true);
           });
       });
 
