@@ -11,7 +11,7 @@
     "coach"
   ],
   "main": "index.js",
-  "bin": "./bin/index.js",
+  "bin": "./bin/coach-dom.js",
   "engines": {
     "node": ">=4.2.0"
   },
