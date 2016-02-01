@@ -7,14 +7,20 @@ let fs = require('fs'),
   Promise = require('bluebird'),
   path = require('path'),
   stringify = require('json-stable-stringify'),
-  harApi = require('../').har;
+  harApi = require('../').har,
+  packageInfo = require('../package');
 
 Promise.promisifyAll(fs);
 
 let options = yargs
   .usage('$0 [options] <har file>')
   .require(1, 'har-file')
+  .version(() => `${packageInfo.name} ${packageInfo.version}`)
+  .alias('V', 'version')
+  .help('h')
+  .alias('h', 'help')
   .wrap(yargs.terminalWidth())
+  .strict()
   .argv;
 
 fs.readFileAsync(path.resolve(process.cwd(), options._[0]))
