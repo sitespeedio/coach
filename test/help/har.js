@@ -14,7 +14,7 @@ module.exports = {
     return fs.readFileAsync(path.resolve(harFile))
       .then(JSON.parse)
       .then(harApi.getPagesFromHar)
-      .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}))
+      .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice()))
       .then((results) => {
         return results;
       });
