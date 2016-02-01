@@ -25,7 +25,8 @@
   "scripts": {
     "test": "grunt test",
     "fulltest": "grunt",
-    "lint": "node_modules/eslint/bin/eslint.js ."
+    "lint": "node_modules/eslint/bin/eslint.js .",
+    "prepublish": "grunt combine bookmarklet uglify jsdoc"
   },
   "devDependencies": {
     "chai": "^3.5.0",
