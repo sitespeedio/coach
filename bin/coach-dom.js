@@ -3,20 +3,26 @@
 'use strict';
 
 let fs = require('fs'),
+  yargs = require('yargs'),
   Promise = require('bluebird'),
   stringify = require('json-stable-stringify'),
   domApi = require('../').dom;
 
 Promise.promisifyAll(fs);
 
-const argc = process.argv.length;
-if (!(argc === 3 || argc === 4)) {
-  console.error('Must pass url as argument');
-  process.exit(1);
-}
+let options = yargs
+  .usage('$0 [options] <url>')
+  .require(1, 'url')
+  .option('browser', {
+    describe: 'Browser to run.',
+    default: 'firefox',
+    alias: 'b'
+  })
+  .wrap(yargs.terminalWidth())
+  .argv;
 
-let url = process.argv[2];
-let browser = process.argv[3] || 'firefox';
+let url = options._[0];
+let browser = options.browser;
 
 domApi.runAdvice(url, domApi.getAdviceScript(), {browser})
   .then((result) => {

@@ -3,6 +3,7 @@
 'use strict';
 
 let fs = require('fs'),
+  yargs = require('yargs'),
   Promise = require('bluebird'),
   path = require('path'),
   stringify = require('json-stable-stringify'),
@@ -10,17 +11,18 @@ let fs = require('fs'),
 
 Promise.promisifyAll(fs);
 
-if (process.argv.length !== 3) {
-  console.error('Must pass har file as argument');
-  process.exit(1);
-}
+let options = yargs
+  .usage('$0 [options] <har file>')
+  .require(1, 'har-file')
+  .wrap(yargs.terminalWidth())
+  .argv;
 
-fs.readFileAsync(path.resolve(process.cwd(), process.argv[2]))
+fs.readFileAsync(path.resolve(process.cwd(), options._[0]))
   .then(JSON.parse)
   .then(harApi.getPagesFromHar)
   .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}))
   .then((results) => {
-    console.log(stringify(results, {space: 3}));
+    console.log(stringify(results, {space: 2}));
     process.exit(0);
   })
   .catch((e) => {
