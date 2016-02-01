@@ -17,9 +17,6 @@ module.exports = {
       .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}))
       .then((results) => {
         return results;
-      }).
-      catch((e) => {
-        console.error('Error running advice for har', e);
-      })
+      });
   }
 };
