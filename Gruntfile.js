@@ -38,6 +38,7 @@ module.exports = function(grunt) {
       api: ["test/api/*Tests.js"],
       combined: ["test/dom/combinedTest.js"],
       advice: ["test/dom/adviceTest.js"],
+      dom: ["test/dom/**/*Test.js"],
       har: ["test/har/performance/*Test.js"],
       all: ["test/dom/adviceTest.js", "test/dom/*/*Test.js", "test/api/*/*Tests.js", "test/har/performance/*Test.js", "test/dom/combinedTest.js"]
     },

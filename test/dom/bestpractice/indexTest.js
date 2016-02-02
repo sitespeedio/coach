@@ -25,10 +25,17 @@ describe('Best practice:', function() {
           });
       });
 
+      it('We should be able to check if the page is missing a description meta tag', function() {
+        return bt.run(path + 'missingMetaDescription.html', 'lib/dom/bestpractice/metaDescription.js')
+          .then((result) => {
+            assert.strictEqual(result.score, 0);
+          });
+      });
+
       it('We should be able to check if the page has a description meta tag', function() {
         return bt.run(path + 'metaDescription.html', 'lib/dom/bestpractice/metaDescription.js')
           .then((result) => {
-            assert.strictEqual(result.score, 0);
+            assert.strictEqual(result.score, 100);
           });
       });
 
