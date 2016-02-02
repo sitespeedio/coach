@@ -2,7 +2,4 @@ node_modules
 .DS_Store
 *.iml
 *.log
-dist/coach.js
-dist/doc/
-dist/bookmarklet.js
-dist/coach.bookmarklet.min.js
+dist
