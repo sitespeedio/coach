@@ -15,6 +15,11 @@
   "engines": {
     "node": ">=4.2.0"
   },
+  "files": [
+    "bin",
+    "lib",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/sitespeedio/coach.git"
