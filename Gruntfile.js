@@ -4,6 +4,13 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    bookmarklet_wrapper: {
+      default_options: {
+        files: {
+          'dist/coach.bookmarklet.js': ['dist/bookmarklet.js']
+        }
+      }
+    },
     uglify: {
       options: {
         // banner: '/*! Sitespeed.io <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
@@ -12,8 +19,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/coach.min.js': ['dist/coach.js'],
-          'dist/coach.bookmarklet.min.js': ['dist/bookmarklet.js']
+          'dist/coach.min.js': ['dist/coach.js']
         }
       }
     },
@@ -57,19 +63,22 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks("grunt-mocha-cli");
   grunt.loadNpmTasks('grunt-jsdoc');
+  grunt.loadNpmTasks('grunt-bookmarklet-wrapper');
 
-  grunt.registerTask('default', ['eslint', 'combine', 'bookmarklet', 'uglify','http-server','mochacli','jsdoc']);
+  grunt.registerTask('default', ['eslint', 'combine', 'uglify', 'bookmarklet','http-server','mochacli','jsdoc']);
 
   grunt.registerTask('test', ['http-server','mochacli']);
 
   grunt.registerTask('combine', 'Combine all the javascripts', function() {
     grunt.file.mkdir('dist');
-    combine('dist/coach.js')
+    combine('dist/coach.js');
   });
 
-  grunt.registerTask('bookmarklet', 'Create the bookmarklet', function() {
+  grunt.registerTask('create-bookmarklet', 'Create the bookmarklet', function() {
     grunt.file.mkdir('dist');
-    bookmarklet('dist/bookmarklet.js')
+    bookmarklet('dist/bookmarklet.js');
   });
+
+  grunt.registerTask('bookmarklet', ['create-bookmarklet', 'bookmarklet_wrapper']);
 
 };
