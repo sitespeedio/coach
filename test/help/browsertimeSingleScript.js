@@ -10,7 +10,10 @@ module.exports = {
   start: function(browser) {
     bt.logging.configure({});
     runner = new bt.SeleniumRunner({
-      browser: browser
+      browser: browser,
+      'timeouts': {
+        'browserStart': 20000
+      }
     });
     return runner.start();
   },
