@@ -25,7 +25,7 @@ script:
 - grunt
 deploy:
   provider: releases
-  api_key: 'GH_OAUTH'
+  api_key: $GH_OAUTH
   file: 'dist/coach.bookmarklet.js'
   skip_cleanup: true
   on:
