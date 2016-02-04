@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - '4.2'
-- 'latest'
 env:
 - CXX=g++-4.8
 sudo: false
