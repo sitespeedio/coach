@@ -4,4 +4,111 @@
 
 The coach helps you find problems on your web page.
 
-Coming sooooon!
+## Work in progress!
+We know you want the coach to help you but right now YOU need to help the coach! The project is not ready for release yet and you can help us: Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback.
+
+## Why does my page need coaching?
+
+It's hard to get everything right, building a web page and following best practice. A coach can help you! The coach helps you make sure your page is accessible, follows web best practice and is as fast as it can be.
+
+When using http2 some previous best practices are no longer valid, or even downright bad for performance. The coach will detect (in supported browsers) that the page is accessed using http2, and adjust its' advice accordingly.
+
+One of the coach main goal is to NEVER give you wrong advice. If the coach tells you that something is wrong you should fix that!
+
+## Run in the browser
+We will soon publish a bookmarklet. You can test it out by first build by running <code>grunt</code> and then take the content of the file <code>dist/coach.bookmarklet.min.js</code> and paste it in your console of the site you want to test.
+
+## Run using CLI
+Currently there are separate scripts for analyze the DOM in a browser, and analyzing HAR files. Both have their advantages, merging the two are in the works.
+
+When running from a local checkout of the code, first run npm install to install dependencies and generate a concatenated and minified advice script.
+
+```bash
+npm install
+```
+
+For analyzing a url in a browser, run:
+
+```bash
+bin/index.js http://www.sitespeed.io
+```
+
+For analyzing a har file, run:
+
+```bash
+bin/har.js test/har/files/www.nytimes.com.har
+```
+
+## The coach gives you advice
+
+### Accessibility
+Make sure your site is accessible and useable for every one. You can read more about making the web accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
+
+### Best practice
+You want your page to follow best practice right? Making sure your page is setup for search engines, have good URL structure and so on.
+
+### Performance
+The coach gives you performance advice that will make your page faster.
+
+## The coach gives you extra info
+
+### General information
+The world is complex, somethings are great to know but hard for the coach to give advice about. The coach then just tell you have the page is built and you can yourself draw your own conclusions if something should be changed.
+
+### Timings
+The coach got a clock and know how to use it! You will get timing metrics and know if you are doing better or worse than the last run.
+
+## How does it all work?
+
+The coach test your site in two steps:
+ * Executes Javascript in your browser and check for performance, accessibility, best practice and collect general info about your page.
+ * Analyze the [HAR file](http://www.softwareishard.com/blog/har-12-spec/) for your page together with relevant info from the DOM process [COMING SOON]
+
+You can run the different steps standalone but for the best result run them together.
+
+The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io) but you can use it your own application or as a standalone tool. We will release a standalone bookmarklet soon.
+
+# Browser support
+The coach is automatically tested in Chrome and Firefox. To get best results you need Chrome or Firefox Nightly (with Resource Timing v2 support) to be able to know if the server is using HTTP/2.
+
+We hope that the coach work in other browsers but we cannot guarantee it right now.
+
+# Add a new advice
+The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge! When you add a new advice you test it in your browser and create a test case in the project. Then send a PR.
+
+## The structure of an advice
+
+Each advice needs to an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and return an object with the following structure:
+
+```javascript
+return {
+  id: 'uniqueid', // a uniqie id
+  title: 'The title of the advice',
+  description: 'More information of the advice',
+  advice: 'Information of what the user should do to fix the problem',
+  score:  100, // a number between 0-100, 100 means the page don't need any advice
+  weight: 5, // a number between 0-10, how important is this advice in this category? 10 means super important
+  offending: [], // an array of assets that made the score less than perfect
+  tags: ['accessibility','html']
+};
+```
+
+
+## Test in your browser
+You can and should test your advice in your browser. It's easy. Just copy paste the Javascript code and run it in the console of your browser. If you make rules and want to use our [utility methods](blob/master/lib/dom/util.js) (that contains some help methods), just copy/paste the util object to your browser and then run your rule.
+
+## Add a test case
+Each test case runs against a specific HTML page located in [test/http-server](test/http-server)  Create a suitable HTML page with the structure you want to test. Create the test case in  [test/dom](test/dom) or [test/har](test/har) and run it with <code>grunt test</code>
+
+NOTE: You need to have both Chrome and Firefox installed locally to run the tests.
+
+## Test your changes against a web page
+The coach uses Browsertime as runner for browsers. When you done a change, make sure to build a new version of the combined Javascript and then test agains a url.
+
+```bash
+grunt
+bin/index.js https://www.sitespeed.io firefox
+```
+
+# Add a new category
+We have accessibility best practice, performance, and info today. Do the coach need to know something else? Let us know and we can create that category (it's as easy as create a new folder) and we can start add new advice there.
