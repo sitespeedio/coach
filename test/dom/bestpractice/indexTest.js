@@ -39,6 +39,13 @@ describe('Best practice:', function() {
           });
       });
 
+      it('We should find meta description meta tag in upper case', function() {
+        return bt.run(path + 'upperCaseMetaDescription.html', 'lib/dom/bestpractice/metaDescription.js')
+          .then((result) => {
+            assert.strictEqual(result.score, 100);
+          });
+      });
+
       it('We should be able to know if a page is missing the doctype', function() {
         return bt.run(path + 'doctype.html', 'lib/dom/bestpractice/doctype.js')
           .then((result) => {
