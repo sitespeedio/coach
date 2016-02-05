@@ -1,17 +1,17 @@
-# The coach
+# The webcoach
 
 ![The coach](img/coach.png)
 
 The coach helps you find problems on your web page.
 
 ## Work in progress!
-We know you want the coach to help you but right now YOU need to help the coach! The project is not ready for release yet and you can help us: Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback.
+We know you want the coach to help you but right now YOU need to help the coach! The project is not ready for release yet and you can help us: Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback!
 
-## Why does my page need coaching?
+## Do my page need coaching?
 
-It's hard to get everything right, building a web page and following best practice. A coach can help you! The coach helps you make sure your page is accessible, follows web best practice and is as fast as it can be.
+It's hard to get everything right. Creating a web page and following best practice rules. The coach can help you! The coach helps you make sure your page is accessible, follows web best practice and is as fast as it can be.
 
-When using http2 some previous best practices are no longer valid, or even downright bad for performance. The coach will detect (in supported browsers) that the page is accessed using http2, and adjust its' advice accordingly.
+Using HTTP/2 some of the previous performance best practices are now worst practices. The coach will detect (in supported browsers) that the page is accessed using HTTP/2, and adjust its' advice accordingly.
 
 One of the coach main goal is to NEVER give you wrong advice. If the coach tells you that something is wrong you should fix that!
 
@@ -33,7 +33,7 @@ For analyzing a url in a browser, run:
 bin/index.js http://www.sitespeed.io
 ```
 
-For analyzing a har file, run:
+For analyzing a HAR file, run:
 
 ```bash
 bin/har.js test/har/files/www.nytimes.com.har
@@ -73,6 +73,19 @@ The coach is automatically tested in Chrome and Firefox. To get best results you
 
 We hope that the coach work in other browsers but we cannot guarantee it right now.
 
+# Develop
+To help develop the coach you need to install grunt-cli:
+
+```
+  npm install -g grunt-cli
+```
+
+And have both Chrome and Firefox installed locally so you can run the test by:
+```
+  grunt test
+```
+
+
 # Add a new advice
 The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge! When you add a new advice you test it in your browser and create a test case in the project. Then send a PR.
 
@@ -99,8 +112,6 @@ You can and should test your advice in your browser. It's easy. Just copy paste 
 
 ## Add a test case
 Each test case runs against a specific HTML page located in [test/http-server](test/http-server)  Create a suitable HTML page with the structure you want to test. Create the test case in  [test/dom](test/dom) or [test/har](test/har) and run it with <code>grunt test</code>
-
-NOTE: You need to have both Chrome and Firefox installed locally to run the tests.
 
 ## Test your changes against a web page
 The coach uses Browsertime as runner for browsers. When you done a change, make sure to build a new version of the combined Javascript and then test agains a url.
