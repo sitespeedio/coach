@@ -46,7 +46,7 @@ module.exports = function(grunt) {
       advice: ["test/dom/adviceTest.js"],
       dom: ["test/dom/**/*Test.js"],
       har: ["test/har/performance/*Test.js"],
-      all: ["test/dom/adviceTest.js", "test/dom/*/*Test.js", "test/api/*/*Tests.js", "test/har/performance/*Test.js", "test/dom/combinedTest.js"]
+      all: ["test/dom/adviceTest.js", "test/dom/*/*Test.js", "test/api/*/*Tests.js", "test/har/performance/*Test.js","test/merge/*Test.js", "test/dom/combinedTest.js"]
     },
    jsdoc : {
         dist : {
