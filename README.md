@@ -69,7 +69,7 @@ You can run the different steps standalone but for the best result run them toge
 The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io) but you can use it your own application or as a standalone tool. We will release a standalone bookmarklet soon.
 
 # Browser support
-The coach is automatically tested in Chrome and Firefox. To get best results you need Chrome or Firefox Nightly (with Resource Timing v2 support) to be able to know if the server is using HTTP/2.
+The coach is automatically tested in Chrome and Firefox. To get best results you need Chrome or Firefox 45 (in beta with Resource Timing v2 support) to be able to know if the server is using HTTP/2.
 
 We hope that the coach work in other browsers but we cannot guarantee it right now.
 
