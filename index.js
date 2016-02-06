@@ -11,20 +11,17 @@ Promise.promisifyAll(fs);
 
 module.exports = {
   dom: {
-    getAdviceScript() {
-      return fs.readFileAsync(path.resolve(__dirname, 'dist', 'coach.min.js'), 'utf8');
-    },
-    runAdvice(url, script, options) {
+
+    runAdvice(url, options) {
       browsertime.logging.configure(options);
 
-      let runner = new browsertime.SeleniumRunner(options);
+      options.scripts = browsertime.browserScripts.parseBrowserScripts('dist/coach.js', false);
 
-      return Promise.resolve(script)
-        .then((script) =>
-          runner.start()
-            .then(() => runner.loadAndWait(url))
-            .then(() => runner.runScript('return ' + script))
-            .finally(() => runner.stop()));
+      let runner = new browsertime.Engine(options);
+
+      return runner.start()
+        .then(() => runner.run(url))
+        .finally(() => runner.stop());
     }
   },
   har: {

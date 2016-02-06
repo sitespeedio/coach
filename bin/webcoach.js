@@ -9,20 +9,34 @@ let fs = require('fs'),
   stringify = require('json-stable-stringify'),
   domApi = require('../').dom,
   harApi = require('../').har,
+  merge = require('../lib/merge').merge,
   packageInfo = require('../package');
 
 Promise.promisifyAll(fs);
 
-function runDOM(options) {
-  domApi.runAdvice(options.url, domApi.getAdviceScript(), {browser: options.browser})
-    .then((result) => {
-      console.log(stringify(result, {space: 2}));
-      process.exit(0);
-    })
-    .catch((e) => {
-      console.error('Error running advice: ', e);
-      process.exit(1);
-    });
+function runDOMAndHar(options) {
+
+  var browsertime = domApi.runAdvice(options.url, {
+    browser: options.browser,
+    experimental: {
+      nativeHar: true
+    },
+    iterations: 1
+  });
+
+  var har = browsertime.then((result) => harApi.getPagesFromHar(result.har))
+    .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}));
+
+  Promise.join(browsertime, har, function(browsertimeResult, harResult) {
+    let total = merge(browsertimeResult.browsertimeData[0].coach, harResult);
+    console.log(stringify(total, {
+      space: 2
+    }));
+    process.exit(0);
+  }).catch((e) => {
+    console.error('Error running advice: ', e);
+    process.exit(1);
+  });
 }
 
 function runHAR(options) {
@@ -70,7 +84,7 @@ let options = yargs
   .argv;
 
 if (options.url) {
-  runDOM(options);
+  runDOMAndHar(options);
 } else if (options.file) {
   runHAR(options);
 }
