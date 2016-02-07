@@ -12,9 +12,11 @@ Promise.promisifyAll(fs);
 
 module.exports = {
   dom: {
+    getAdviceScript() {
+      return fs.readFileAsync(path.resolve(__dirname, 'dist', 'coach.min.js'), 'utf8');
+    },
     runAdvice(url, options) {
       browsertime.logging.configure(options);
-
       options.scripts = browsertime.browserScripts.parseBrowserScripts('dist/coach.js', false);
 
       let runner = new browsertime.Engine(options);
