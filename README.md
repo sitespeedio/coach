@@ -27,10 +27,10 @@ When running from a local checkout of the code, first run npm install to install
 npm install
 ```
 
-For analyzing a url in a browser, run:
+For analyzing a url in a browser (analyzing both in the DOM and the HAR file):
 
 ```bash
-bin/index.js http://www.sitespeed.io
+bin/webcoach.js -u https://run.sitespeed.io -b chrome
 ```
 
 For analyzing a HAR file, run:
@@ -62,7 +62,7 @@ The coach got a clock and know how to use it! You will get timing metrics and kn
 
 The coach test your site in two steps:
  * Executes Javascript in your browser and check for performance, accessibility, best practice and collect general info about your page.
- * Analyze the [HAR file](http://www.softwareishard.com/blog/har-12-spec/) for your page together with relevant info from the DOM process [COMING SOON]
+ * Analyze the [HAR file](http://www.softwareishard.com/blog/har-12-spec/) for your page together with relevant info from the DOM process.
 
 You can run the different steps standalone but for the best result run them together.
 
