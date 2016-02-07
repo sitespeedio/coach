@@ -26,7 +26,11 @@ describe('DOM apis:', function() {
       this.timeout(15000);
 
       it('should run simple script', function() {
-        return api.dom.runAdvice(LOCAL_SERVER, {browser, iterations: 1}).should.eventually.have.property("browsertimeData");
+        return api.dom.runAdvice(LOCAL_SERVER, {
+          browser,
+          iterations: 1,
+          pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'
+        }).should.eventually.have.property("browsertimeData");
       });
     });
   });
