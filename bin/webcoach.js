@@ -9,7 +9,7 @@ let fs = require('fs'),
   stringify = require('json-stable-stringify'),
   domApi = require('../').dom,
   harApi = require('../').har,
-  merge = require('../lib/merge').merge,
+  api = require('../'),
   packageInfo = require('../package');
 
 Promise.promisifyAll(fs);
@@ -28,7 +28,7 @@ function runDOMAndHar(options) {
     .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}));
 
   Promise.join(browsertime, har, function(browsertimeResult, harResult) {
-    let total = merge(browsertimeResult.browsertimeData[0].coach, harResult);
+    let total = api.merge(browsertimeResult.browsertimeData[0].coach, harResult);
     console.log(stringify(total, {
       space: 2
     }));

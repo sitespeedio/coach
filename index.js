@@ -5,13 +5,13 @@ const fs = require('fs'),
   browsertime = require('browsertime'),
   path = require('path'),
   Promise = require('bluebird'),
+  merger = require('./lib/merge').merge,
   harRunner = require('./lib/har');
 
 Promise.promisifyAll(fs);
 
 module.exports = {
   dom: {
-
     runAdvice(url, options) {
       browsertime.logging.configure(options);
 
@@ -43,5 +43,8 @@ module.exports = {
         .spread((pages, adviceList) =>
           harRunner.runAdvice(pages, adviceList, options));
     }
+  },
+  merge(domAdvice, harAdvice) {
+    return merger(domAdvice, harAdvice);
   }
 };
