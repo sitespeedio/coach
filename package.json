@@ -50,7 +50,7 @@
     "uglify-js": "2.6.1"
   },
   "homepage": "https://www.sitespeed.io/coach",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "author": {
     "name": "Peter Hedenskog",
     "url": "https://www.peterhedenskog.com"
