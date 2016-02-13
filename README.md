@@ -21,7 +21,10 @@ One of the coach main goal is to NEVER give you wrong advice. If the coach tells
 npm install webcoach -g
 webcoach -u http://www.sitespeed.io --browser chrome
 ```
-If you want to use Firefox, change browser parameter.
+If you want to use Firefox:
+```bash
+webcoach -u http://www.sitespeed.io --browser firefox
+```
 
 ## The coach gives you advice
 The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
