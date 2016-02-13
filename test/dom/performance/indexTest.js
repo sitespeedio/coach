@@ -12,7 +12,7 @@ describe('Performance advice:', function() {
 
     describe('browser:' + browser, function() {
 
-      this.timeout(15000);
+      this.timeout(30000);
 
       before(() => bt.start(browser));
 
