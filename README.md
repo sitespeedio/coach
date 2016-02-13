@@ -1,4 +1,4 @@
-# The webcoach
+# The coach
 
 ![The coach](img/coach.png)
 
@@ -15,31 +15,16 @@ Using HTTP/2 some of the previous performance best practices are now worst pract
 
 One of the coach main goal is to NEVER give you wrong advice. If the coach tells you that something is wrong you should fix that!
 
-## Run in the browser
-We will soon publish a bookmarklet. You can test it out by first build by running <code>grunt</code> and then take the content of the file <code>dist/coach.bookmarklet.min.js</code> and paste it in your console of the site you want to test.
-
-## Run using CLI
-Currently there are separate scripts for analyze the DOM in a browser, and analyzing HAR files. Both have their advantages, merging the two are in the works.
-
-When running from a local checkout of the code, first run npm install to install dependencies and generate a concatenated and minified advice script.
+## How to run
 
 ```bash
-npm install
+npm install webcoach -g
+webcoach -u http://www.sitespeed.io --browser chrome
 ```
-
-For analyzing a url in a browser (analyzing both in the DOM and the HAR file):
-
-```bash
-bin/webcoach.js -u https://run.sitespeed.io -b chrome
-```
-
-For analyzing a HAR file, run:
-
-```bash
-bin/har.js test/har/files/www.nytimes.com.har
-```
+If you want to use Firefox, change browser parameter.
 
 ## The coach gives you advice
+The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
 
 ### Accessibility
 Make sure your site is accessible and useable for every one. You can read more about making the web accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
@@ -51,9 +36,10 @@ You want your page to follow best practice right? Making sure your page is setup
 The coach gives you performance advice that will make your page faster.
 
 ## The coach gives you extra info
+The world is complex, somethings are great to know but hard for the coach to give advice about.
 
 ### General information
-The world is complex, somethings are great to know but hard for the coach to give advice about. The coach then just tell you have the page is built and you can yourself draw your own conclusions if something should be changed.
+The coach then just tell you have the page is built and you can yourself draw your own conclusions if something should be changed.
 
 ### Timings
 The coach got a clock and know how to use it! You will get timing metrics and know if you are doing better or worse than the last run.
@@ -69,7 +55,7 @@ You can run the different steps standalone but for the best result run them toge
 The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io) but you can use it your own application or as a standalone tool. We will release a standalone bookmarklet soon.
 
 # Browser support
-The coach is automatically tested in Chrome and Firefox. To get best results you need Chrome or Firefox 45 (in beta with Resource Timing v2 support) to be able to know if the server is using HTTP/2.
+The coach is automatically tested in Chrome and Firefox. To get best results you need Chrome or Firefox 45 (in beta with Resource Timing v2 support, release the 8 of March) to be able to know if the server is using HTTP/2.
 
 We hope that the coach work in other browsers but we cannot guarantee it right now.
 
