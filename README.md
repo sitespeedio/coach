@@ -17,6 +17,8 @@ One of the coach main goal is to NEVER give you wrong advice. If the coach tells
 
 ## How to run
 
+You need Node.js 4.2.0 or later to run.
+
 ```bash
 npm install webcoach -g
 webcoach -u http://www.sitespeed.io --browser chrome
