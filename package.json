@@ -13,7 +13,7 @@
   "main": "index.js",
   "bin": "./bin/webcoach.js",
   "engines": {
-    "node": ">=4.2.0"
+    "node": ">=4.3.0"
   },
   "files": [
     "bin",
