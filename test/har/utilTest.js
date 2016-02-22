@@ -27,4 +27,12 @@ describe('Test HAR util functions', function() {
 
   });
 
+  it('Format bytes for readability', function() {
+    let bytes = 1200000;
+    assert.strictEqual(util.formatBytes(bytes), '1.2 MB');
+
+    bytes = 120000;
+    assert.strictEqual(util.formatBytes(bytes), '120 kB');
+    });
+
 });
