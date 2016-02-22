@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <title>Local storage size</title>
   <script>
-    var dummy = {
-      'dummy': 'yep this is some dummy data'
-    };
-    window.localStorage.setItem('dummy', JSON.stringify(dummy));
+    if (window.localStorage) {
+      window.localStorage.setItem('dummy', 'hepp');
+    }
   </script>
 </head>
 
