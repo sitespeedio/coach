@@ -60,7 +60,8 @@
   },
   "dependencies": {
     "bluebird": "3.3.1",
-    "browsertime": "tobli/browsertime.git#db25c0465ed89cedc3707acbe941721bc8b395d9",
+    "browsertime":
+    "tobli/browsertime.git#d43d95f76008f9f64b351a51193facefe4576342",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.merge": "4.3.0",
