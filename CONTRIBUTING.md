@@ -2,9 +2,11 @@
 The coach will continue to evolve thanks to people who contributes, so please help us make it better!
 
 ## Submitting pull requests
-If you want help out, that's great! Before taking the time to code something, feel free to open an issue first proposing your idea to other contributors, that way you can get feedback on the idea before taking time to write precious code.
+If you want help out, that's great! Before taking the time to code something big, feel free to open an issue first proposing your idea to other contributors, that way you can get feedback on the idea before taking time to write precious code.
 
 For any new functionality we like to see unit tests added as well so that we can catch regressions in the future in case something else breaks your fix.
+
+If you fix a bug, start by creating a test that fails and then fix the bug and send the PR with the fix and the test. 
 
 ## Add a defect
 Please make sure you use the [latest version](https://www.npmjs.com/package/webcoach) of the coach. Then check the [defect/bug list](https://github.com/sitespeedio/coach/issues?labels=bug&page=1&state=open) to make sure that it hasn't been filed yet.
