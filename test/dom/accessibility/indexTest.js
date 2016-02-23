@@ -60,7 +60,7 @@ describe('Accessibility:', function() {
           });
       });
 
-      it('We should be able to know if a page section structure contain a header', function() {
+      it('We should be able to know if a page section structure is missing a header', function() {
         return bt.run(path + 'sections.html', 'lib/dom/accessibility/sections.js')
           .then((result) => {
             assert.strictEqual(result.score, 90);
