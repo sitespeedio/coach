@@ -42,12 +42,12 @@
     "grunt-bookmarklet-wrapper": "^1.0.0",
     "grunt-contrib-uglify": "^0.11.0",
     "grunt-eslint": "^18.0.0",
-    "grunt-http-server": "1.13.0",
+    "grunt-http-server": "1.14.0",
     "grunt-jsdoc": "1.1.0",
     "grunt-mocha-cli": "2.0.0",
     "longjohn": "0.2.11",
     "mocha": "^2.4.5",
-    "uglify-js": "2.6.1"
+    "uglify-js": "2.6.2"
   },
   "homepage": "https://www.sitespeed.io/coach",
   "license": "MIT",
@@ -60,12 +60,11 @@
   },
   "dependencies": {
     "bluebird": "3.3.1",
-    "browsertime":
-    "tobli/browsertime.git#d43d95f76008f9f64b351a51193facefe4576342",
+    "browsertime": "tobli/browsertime.git#d43d95f76008f9f64b351a51193facefe4576342",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.merge": "4.3.0",
-    "snufkin": "0.3.4",
+    "snufkin": "0.3.6",
     "yargs": "4.1.0"
   }
 }
