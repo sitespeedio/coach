@@ -65,6 +65,6 @@
     "json-stable-stringify": "1.0.1",
     "lodash.merge": "4.3.1",
     "snufkin": "0.3.6",
-    "yargs": "4.1.0"
+    "yargs": "4.2.0"
   }
 }
