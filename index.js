@@ -17,7 +17,7 @@ module.exports = {
     },
     runAdvice(url, options) {
       browsertime.logging.configure(options);
-      options.scripts = browsertime.browserScripts.parseBrowserScripts('dist/coach.js', false);
+      options.scripts = browsertime.browserScripts.parseBrowserScripts(path.resolve(__dirname, 'dist', 'coach.min.js'), false);
 
       let runner = new browsertime.Engine(options);
 
