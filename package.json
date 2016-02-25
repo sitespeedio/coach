@@ -59,7 +59,7 @@
     "name": "Tobias Lidskog"
   },
   "dependencies": {
-    "bluebird": "3.3.2",
+    "bluebird": "3.3.3",
     "browsertime": "tobli/browsertime.git#d43d95f76008f9f64b351a51193facefe4576342",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
