@@ -7,7 +7,7 @@ const api = require('../../'),
 chai.use(chaiAsPromised);
 chai.should();
 
-const LOCAL_SERVER = 'http://0.0.0.0:8282/info/';
+const LOCAL_SERVER = 'http://0.0.0.0:8282/info/head.html';
 
 const BROWSERS = ['chrome', 'firefox'];
 
