@@ -30,7 +30,7 @@
   "scripts": {
     "test": "grunt test",
     "fulltest": "grunt",
-    "lint": "node_modules/eslint/bin/eslint.js .",
+    "lint": "eslint .",
     "prepublish": "grunt combine bookmarklet uglify jsdoc"
   },
   "devDependencies": {
