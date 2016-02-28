@@ -1,3 +1,5 @@
 # CHANGELOG - webcoach
 
-When we do the first public release we will make use if this, yes I promise!
+## [Unreleased]
+### Added
+- Include coach version in the ouput JSON
