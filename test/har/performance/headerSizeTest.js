@@ -6,14 +6,14 @@ let har = require('../../help/har');
 describe('Don\'t sen too much data in the headers', function() {
   it('We should be able to know if there are too large headers', function() {
     return har.getHARresult('test/har/files/headerSize.har').then((result) => {
-      assert.strictEqual(result[0].performance.adviceList.headerSize.score, 100);
+      assert.strictEqual(result[0].results.performance.adviceList.headerSize.score, 100);
     });
   });
 
   it('We should be able to know if there are too large headers', function() {
     return har.getHARresult('test/har/files/headerSize2.har').then((result) => {
-      assert.strictEqual(result[0].performance.adviceList.headerSize.score, 90);
-        assert.strictEqual(result[0].performance.adviceList.headerSize.offending.length ,1);
+      assert.strictEqual(result[0].results.performance.adviceList.headerSize.score, 90);
+        assert.strictEqual(result[0].results.performance.adviceList.headerSize.offending.length ,1);
     });
   });
 

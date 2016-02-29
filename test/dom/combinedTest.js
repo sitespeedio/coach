@@ -1,14 +1,17 @@
 'use strict';
-let bt = require('../help/browsertime');
-let assert = require('assert');
+let bt = require('../help/browsertime'),
+  assert = require('assert'),
+  path = require('path');
 
-let path = 'http://0.0.0.0:8282/combined/';
+let url = 'http://0.0.0.0:8282/combined/';
 
 let BROWSERS = ['chrome', 'firefox'];
 
-let SCRIPT_NAME = 'dist/coach.min.js';
+let SCRIPT_NAME = 'coach.min.js';
 
 describe('Combined minified script [' + SCRIPT_NAME + ']', function() {
+
+  const scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
 
   BROWSERS.forEach(function(browser) {
 
@@ -21,23 +24,23 @@ describe('Combined minified script [' + SCRIPT_NAME + ']', function() {
       after(() => bt.stop());
 
       it('We should have a combined score for all categories', function() {
-        return bt.run(path + 'index.html', SCRIPT_NAME)
+        return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.score > 0, true);
+              assert.strictEqual(result.results.score > 0, true);
           });
       });
 
       it('We should have a average score for performance', function() {
-        return bt.run(path + 'index.html', SCRIPT_NAME)
+        return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.performance.score > 0, true);
+              assert.strictEqual(result.results.performance.score > 0, true);
           });
       });
 
       it('We should have a average score for accessibility', function() {
-        return bt.run(path + 'index.html', SCRIPT_NAME)
+        return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.accessibility.score > 0, true);
+              assert.strictEqual(result.results.accessibility.score > 0, true);
           });
       });
 
