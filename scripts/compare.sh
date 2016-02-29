@@ -1,4 +1,5 @@
 #! /bin/bash
+export LANG=C.UTF-8
 
 if [ $# -ne 1 ]; then
     echo $0: usage: compare urls.txt
@@ -13,12 +14,12 @@ URLS=()
 while read txt ; do
    URLS[${#URLS[@]}]=$txt
 done < $input
-echo 'URL, Coach, GPSI, YSlow' > result.txt
+echo 'URL, Coach, GPSI Desktop, YSlow' > result.txt
 
 for url in "${URLS[@]}"; do
 echo "$url"
 gpsi="$(gpagespeed "$url" --key $GPSI_KEY | jq .ruleGroups.SPEED.score)"
-coach="$(webcoach -u "$url" | jq .performance.score)"
+coach="$(webcoach -u "$url" > apa.txt && cat apa.txt | jq .performance.score)"
 yslow="$(phantomjs yslow.js "$url" | jq .o )"
 echo "$url, $coach, $gpsi, $yslow" >> result.txt
 done
