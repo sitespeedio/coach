@@ -10,19 +10,40 @@ const fs = require('fs'),
 
 Promise.promisifyAll(fs);
 
+function getAdviceScript() {
+  return fs.readFileAsync(path.resolve(__dirname, 'dist', 'coach.min.js'), 'utf8');
+}
+
+function getCoachScripts() {
+  return Promise.resolve(getAdviceScript())
+    .then((script) => {
+      return {
+        coachAdvice: script
+      };
+    })
+    .then((scriptObject) => {
+      return {
+        "coach": scriptObject
+      }
+    })
+}
+
+
 module.exports = {
   dom: {
     getAdviceScript() {
-      return fs.readFileAsync(path.resolve(__dirname, 'dist', 'coach.min.js'), 'utf8');
+      return getAdviceScript();
     },
     runAdvice(url, options) {
+
+      let coachScripts = getCoachScripts();
+
       browsertime.logging.configure(options);
-      options.scripts = browsertime.browserScripts.parseBrowserScripts(path.resolve(__dirname, 'dist', 'coach.js'), false);
 
       let runner = new browsertime.Engine(options);
 
       return runner.start()
-        .then(() => runner.run(url))
+        .then(() => runner.run(url, coachScripts))
         .finally(() => runner.stop());
     }
   },
