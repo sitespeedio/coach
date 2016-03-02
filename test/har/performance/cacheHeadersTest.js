@@ -8,7 +8,7 @@ describe('Use cache headers', function() {
     return har.getHARresult('test/har/files/cacheHeaders.har').then((result) => {
       assert.strictEqual(result[0].results.performance.adviceList.cacheHeaders.score, 0);
       // massive
-      assert.strictEqual(result[0].results.performance.adviceList.cacheHeaders.offending.length, 81);
+      assert.strictEqual(result[0].results.performance.adviceList.cacheHeaders.offending.length, 49);
     });
   });
 

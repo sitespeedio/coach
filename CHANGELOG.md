@@ -5,4 +5,5 @@
 - Include coach version in the ouput JSON
 
 ### Changed
-- Updated to latest relesed Browsertime
+- Updated to latest relesed Browsertime 1.0.0.alpha.1
+- Latest version of Snufkin 0.3.8

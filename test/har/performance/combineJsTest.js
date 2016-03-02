@@ -7,7 +7,7 @@ describe('Avoid multiple Javascript request on a page', function() {
 
   it('We should be able to find multiple Javascript requests on a page', function() {
     return har.getHARresult('test/har/files/combineJs.har').then((result) => {
-      assert.strictEqual(result[0].results.performance.adviceList.combineJs.offending.length, 66);
+      assert.strictEqual(result[0].results.performance.adviceList.combineJs.offending.length, 53);
       assert.strictEqual(result[0].results.performance.adviceList.combineJs.score < 100, true);
     });
   });
