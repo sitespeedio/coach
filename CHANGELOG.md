@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## [unreleased]
+
+
 ## 0.2.0 - 2016-03-04
 ### Added
 - Include coach version in the ouput JSON
