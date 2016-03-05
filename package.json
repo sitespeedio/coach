@@ -55,9 +55,9 @@
     "name": "Peter Hedenskog",
     "url": "https://www.peterhedenskog.com"
   },
-  "contributors": {
+  "contributors": [{
     "name": "Tobias Lidskog"
-  },
+  }],
   "dependencies": {
     "bluebird": "3.3.3",
     "browsertime": "v1.0.0-alpha.3",
