@@ -11,7 +11,7 @@ You know, it's hard to get everything right! The world is complex: HTTP/1 vs HTT
 One of the coach main goal is to NEVER give you wrong advice. If the coach tells you that something is wrong you should fix that!
 
 ## Work in progress!
-We know you want the coach to help you but right now YOU need to help the coach! The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge! Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback! In a couple of months we will release 1.0.
+We know you want the coach to help you but right now YOU need to help the coach! The coach is new and need more advice. Send a [PR](#develop) with a new advice, so the coach gets more knowledge! Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback! In a couple of months we will release 1.0.
 
 ## How to use the coach
 
@@ -74,7 +74,7 @@ To help develop the coach you need to install grunt-cli:
   npm install -g grunt-cli
 ```
 
-And have both Chrome and Firefox installed locally so you can run the test by:
+And have both Chrome and Firefox installed locally so you can run the tests:
 ```
   grunt test
 ```
@@ -85,7 +85,7 @@ The coach is new and need more advice. Send a PR with a new advice, so the coach
 
 ## The structure of an advice
 
-Each advice needs to an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and return an object with the following structure:
+Each DOM advice needs to an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and return an object with the following structure:
 
 ```javascript
 return {
@@ -100,6 +100,7 @@ return {
 };
 ```
 
+Advice based on a HAR follows the same structure. The result from the DOM and the HAR is merged.
 
 ## Test in your browser
 You can and should test your advice in your browser. It's easy. Just copy paste the Javascript code and run it in the console of your browser. If you make rules and want to use our [utility methods](blob/master/lib/dom/util.js) (that contains some help methods), just copy/paste the util object to your browser and then run your rule.
