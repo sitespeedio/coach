@@ -8,11 +8,11 @@ describe('Test HAR util functions', function() {
   it('Categorize connection types H2 as HTTP/2 and nothing else', function() {
     let page = {};
     page.connectionType = 'h2';
-    assert.strictEqual(util.isHttp2(page), true);
+    assert.strictEqual(util.isHTTP2(page), true);
     page.connectionType = 'spdy';
-    assert.strictEqual(util.isHttp2(page), false);
+    assert.strictEqual(util.isHTTP2(page), false);
     page.connectionType = 'h1';
-    assert.strictEqual(util.isHttp2(page), false);
+    assert.strictEqual(util.isHTTP2(page), false);
   });
 
   it('Get the right hostname', function() {

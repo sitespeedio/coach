@@ -2,6 +2,9 @@
 
 ## [unreleased]
 
+### Changed
+- Unified naming of util methods to check if HTTP/2 is used.
+- Updated to latest relesed Browsertime 1.0.0.alpha.4
 
 ## 0.2.0 - 2016-03-04
 ### Added
