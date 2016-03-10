@@ -12,7 +12,7 @@ module.exports = {
     runner = new bt.SeleniumRunner({
       browser: browser,
       'timeouts': {
-        'browserStart': 20000
+        'browserStart': 30000
       }
     });
     return runner.start();
