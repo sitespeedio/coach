@@ -1,13 +1,14 @@
-# Make the coach 
+# Developer
 
-Lets make the co
+We all want the coach to be better, faster & smarter. Here's what you need to know to help her.
 
 # Table of Content
 
-- [What do I need](#what-do-i-need)
-- [DOM vs HAR advice](#DOM-vs-HAR-advice)
-	- [DOM advice](#DOM-advice)
-	- [HAR advice](#har-advice)
+- [Prerequisites](#prerequisites)
+- [Advice](#advice)
+	- [DOM vs HAR advice](#DOM-vs-HAR-advice)
+		- [DOM advice](#DOM-advice)
+		- [HAR advice](#har-advice)
 - [Testing HTTP/2 vs HTTP/1](#Testing HTTP/2 vs HTTP/1)
 - [Create a new advice]()
 - [Test]()
@@ -15,10 +16,10 @@ Lets make the co
   - [Add a test case]()
 
 
-## What do I need
-You need to have [Firefox](https://www.mozilla.org/en-US/firefox/new/) & [Chrome](https://www.google.com/chrome/browser/desktop/) installed to be able to run all the tests locally.
+## Prerequisites
+You need [Firefox](https://www.mozilla.org/en-US/firefox/new/) & [Chrome](https://www.google.com/chrome/browser/desktop/) installed to be able to run all the tests locally.
 
-Then you need [Node.js](https://nodejs.org/en/],  [npm](https://nodejs.org/en/) and [grunt-cli](http://gruntjs.com/using-the-cli). When you got everything you can clone the project (or rather first fork it and clone your fork).
+And [Node.js](https://nodejs.org/en/],  [npm](https://nodejs.org/en/) and [grunt-cli](http://gruntjs.com/using-the-cli). When you got everything you can clone the project (or rather first fork it and clone your fork).
 
 ```
 $ git clone git@github.com:sitespeedio/coach.git
@@ -31,17 +32,23 @@ $ grunt test
 ```
 If it works, then you are ready to get started creating new advice for the coach!
 
-## DOM vs HAR advice
+## Advice 
+The coach helps you with web performance and gives you advice about things you can do better
+
+### DOM vs HAR advice
 The coach analyze a page in two steps: First it executes Javascript in the browser to do the checks that are a perfect fit for Javascript: examine the rendering path, check if images are scaled in the browser etc.
 
 Then the coach take the HAR file from the page and analyze that too. The HAR is good if you want the number of responses, size and cache headers.
 
 Whats missing right now (but we [intend to implement](https://github.com/sitespeedio/coach/issues/13)) is the combination of the two: A HAR advice that takes input from a DOM. This is cool because the the HAR advice can now which requests are done inside if head and render blocking.
 
+Both HAR & DOM n
 
-### DOM advice
+#### DOM advice
 
-Each DOM advice needs to be a [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and return an object that holds the data.
+Each DOM advice needs to be a [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and return an object that holds the data. 
+
+A simple 
 
 ```javascript
 (function(util) {
@@ -90,7 +97,7 @@ it('We should find out if we load an print CSS', function() {
 
 Right now all these tests run in https://github.com/sitespeedio/coach/blob/master/test/dom/performance/indexTest.js
 
-### HAR advice
+#### HAR advice
 We use snufkin (https://github.com/sitespeedio/snufkin) that takes a HAR file and converts it to easier to use format. If something is missing from the Page object get from snufkin, send a PR and we will add it.
 
 Each advice will be called with the processPage function.
