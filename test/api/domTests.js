@@ -23,7 +23,7 @@ describe('DOM apis:', function() {
   BROWSERS.forEach(function(browser) {
 
     describe('runAdvice: ' + browser, function() {
-      this.timeout(30000);
+      this.timeout(60000);
 
       it('should run simple script', function() {
         return api.dom.runAdvice(LOCAL_SERVER, {

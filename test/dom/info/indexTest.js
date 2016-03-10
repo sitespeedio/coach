@@ -12,7 +12,7 @@ describe('Info', function() {
 
     describe('browser:' + browser, function() {
 
-      this.timeout(30000);
+      this.timeout(60000);
 
       before(() => bt.start(browser));
 
