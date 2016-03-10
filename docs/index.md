@@ -1,8 +1,8 @@
-# Developer
+# Develop
 
 The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge!
 
-# Table of Content
+# Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Advice](#advice)
