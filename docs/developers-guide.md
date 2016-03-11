@@ -1,9 +1,5 @@
 # Developers guide
 
-The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge!
-
-# Table of Contents
-
 - [Prerequisites](#prerequisites)
 - [Advice](#advice)
 	- [DOM vs HAR advice](#dom-vs-har-advice)

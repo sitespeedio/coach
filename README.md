@@ -1,10 +1,8 @@
-# The coach
-
 ![The coach](img/coach.png)
 
 The coach helps you find performance problems on your web page. Think of the coach as a modern version of [YSlow](http://yslow.org/). The coach will give advice of how your page can be faster.
 
-# TOC
+# The coach
  - [Do my page need coaching?](#do-my-page-need-coaching)
  - [Why we love the coach](#why-we-love-the-coach)
  - [Work in progress](#work-in-progress)
