@@ -10,20 +10,19 @@ The coach is new and need more advice. Send a PR with a new advice, so the coach
 		- [DOM advice](#dom-advice)
 		- [HAR advice](#har-advice)
 - [Testing HTTP/2 vs HTTP/1](#testing-http2-vs-http1)
-- [Create a new advice]()
-- [Test]()
-  - [In the browser]()
-  - [Add a test case]()
-
+- [Test in your browser](#test-in-your-browser)
+- [Add a test case](#add-a-test-case)
+- [Test your changes against a web page](#test-your-changes-against-a-web-page)
+- [Add a new category](#add-a-new-category)
 
 ## Prerequisites
 
 You need:
 - [Node.js](https://nodejs.org/en/)  
-- [npm](https://nodejs.org/en/) 
-- [grunt-cli](http://gruntjs.com/using-the-cli) 
+- [npm](https://nodejs.org/en/)
+- [grunt-cli](http://gruntjs.com/using-the-cli)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- [Chrome](https://www.google.com/chrome/browser/desktop/) 
+- [Chrome](https://www.google.com/chrome/browser/desktop/)
 
 When you got them installed you can clone the project (or rather first fork it and clone your fork).
 

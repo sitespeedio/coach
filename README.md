@@ -10,7 +10,7 @@ The coach helps you find performance problems on your web page. Think of the coa
  - [Work in progress](#work-in-progress)
  - [How to use the coach](#how-to-use-the-coach)
     - [Standalone](#standalone)
-    - [sitespeed.io 4.0](#sitespeed.io-4.0)
+    - [sitespeed.io 4.0](#sitespeedio-40)
     - [Bookmarklet](#bookmarklet)
     - [Include in your own tool](#include-in-your-own-tool)
  - [What do the coach do?](#what-do-the-coach-do)  
@@ -103,7 +103,7 @@ The coach then just tell you have the page is built and you can yourself draw yo
 The coach got a clock and know how to use it! You will get timing metrics and know if you are doing better or worse than the last run.
 
 # Developers guide
-Checkout the [developers guide](docs/develop.MD) to get a better feeling how the coach works.
+Checkout the [developers guide](docs/developers-guide.md) to get a better feeling how the coach works.
 
 # Browser support
 The coach is automatically tested in latest Chrome and Firefox. To get best results you need Chrome or Firefox 45 (or later) to be able to know if the server is using HTTP/2.
