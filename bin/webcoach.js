@@ -7,8 +7,6 @@ let fs = require('fs'),
   yargs = require('yargs'),
   Promise = require('bluebird'),
   stringify = require('json-stable-stringify'),
-  domApi = require('../').dom,
-  harApi = require('../').har,
   api = require('../'),
   packageInfo = require('../package');
 
@@ -16,7 +14,7 @@ Promise.promisifyAll(fs);
 
 function runDOMAndHar(options) {
 
-  var browsertime = domApi.runAdvice(options.url, {
+  var browsertime = api.runDomAdvice(options.url, api.getDomAdvice(), {
     browser: options.browser,
     experimental: {
       nativeHar: true
@@ -24,8 +22,7 @@ function runDOMAndHar(options) {
     iterations: 1
   });
 
-  var har = browsertime.then((result) => harApi.getPagesFromHar(result.har))
-    .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}));
+  var har = browsertime.then((result) => api.runHarAdvice(result.har, api.getHarAdvice()));
 
   Promise.join(browsertime, har, function(browsertimeResult, harResult) {
     let total = api.merge(browsertimeResult.browsertimeData[0].coach, harResult);
@@ -42,8 +39,7 @@ function runDOMAndHar(options) {
 function runHAR(options) {
   fs.readFileAsync(path.resolve(process.cwd(), options.file))
     .then(JSON.parse)
-    .then(harApi.getPagesFromHar)
-    .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice(), {}))
+    .then((har) => api.runHarAdvice(har, api.getHarAdvice()))
     .then((results) => {
       console.log(stringify(results, {space: 2}));
       process.exit(0);

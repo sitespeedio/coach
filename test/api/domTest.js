@@ -1,6 +1,6 @@
 'use strict';
 
-const api = require('../../'),
+const api = require('../../lib/'),
   chai = require("chai"),
   chaiAsPromised = require("chai-as-promised");
 
@@ -13,20 +13,20 @@ const BROWSERS = ['chrome', 'firefox'];
 
 describe('DOM apis:', function() {
 
-  describe('getAdviceScript', function() {
+  describe('getDomAdvice', function() {
     it('should return a script', function() {
-      return api.dom.getAdviceScript().should.eventually.not.be.empty;
+      return api.getDomAdvice().should.eventually.not.be.empty;
     });
 
   });
 
   BROWSERS.forEach(function(browser) {
 
-    describe('runAdvice: ' + browser, function() {
+    describe('runDomAdvice: ' + browser, function() {
       this.timeout(60000);
 
       it('should run simple script', function() {
-        return api.dom.runAdvice(LOCAL_SERVER, {
+        return api.runDomAdvice(LOCAL_SERVER, api.getDomAdvice(), {
           browser,
           iterations: 1,
           pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'

@@ -10,7 +10,7 @@
     "perfmatters",
     "coach"
   ],
-  "main": "index.js",
+  "main":"./lib/index.js",
   "bin": "./bin/webcoach.js",
   "engines": {
     "node": ">=4.3.0"

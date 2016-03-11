@@ -1,6 +1,6 @@
 'use strict';
 
-const api = require('../../'),
+const api = require('../../lib/'),
   fs = require('fs'),
   path = require('path'),
   Promise = require('bluebird'),
@@ -14,13 +14,13 @@ Promise.promisifyAll(fs);
 
 describe('HAR apis:', function() {
 
-  describe('getAllAdvice', function() {
+  describe('getHarAdvice', function() {
     it('should return at least one advice', function() {
-      return api.har.getAllAdvice().should.eventually.not.be.empty;
+      return api.getHarAdvice().should.eventually.not.be.empty;
     });
 
     it('should only return valid advice', function() {
-      return api.har.getAllAdvice()
+      return api.getHarAdvice()
         .then((adviceList) => {
           return Promise.each(adviceList, (advice) => {
             return ['id', 'title', 'description','weight', 'tags'].forEach((property) =>
@@ -31,43 +31,22 @@ describe('HAR apis:', function() {
     });
   });
 
-  describe('getPagesFromHar', function() {
+  describe('runHarAdvice', function() {
     let har;
 
     before(() => {
       const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har');
       return fs.readFileAsync(harPath, 'utf8')
         .then(JSON.parse)
-        .then((json) => {
-          har = json;
-        });
-    });
-
-    it('should parse valid har', () => {
-      const pagesFromHar = api.har.getPagesFromHar(har);
-      pagesFromHar.should.have.length(2);
-      pagesFromHar.forEach((page) => {
-        page.should.have.ownProperty('assets');
-      });
-    })
-  });
-
-  describe('runAdvice', function() {
-    let pages;
-
-    before(() => {
-      const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har');
-      return fs.readFileAsync(harPath, 'utf8')
-        .then(JSON.parse)
-        .then((har) => {
-          pages = api.har.getPagesFromHar(har);
+        .then((harFromFile) => {
+          har = harFromFile;
         });
     });
 
     it('should work', () => {
-      return api.har.getAllAdvice()
+      return api.getHarAdvice()
         .then((adviceList) => {
-          return api.har.runAdvice(pages, adviceList, {}).should.not.be.empty;
+          return api.runHarAdvice(har, adviceList, {}).should.not.be.empty;
         });
     })
   });

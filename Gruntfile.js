@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         }
     },
     mochacli: {
-      api: ["test/api/*Tests.js"],
+      api: ["test/api/*Test.js"],
       combined: ["test/dom/combinedTest.js"],
       advice: ["test/dom/adviceTest.js"],
       dom: ["test/dom/**/*Test.js"],

@@ -5,7 +5,7 @@
 let fs = require('fs'),
   Promise = require('bluebird'),
   path = require('path'),
-  harApi = require('../..').har;
+  api = require('../../lib/');
 
 Promise.promisifyAll(fs);
 
@@ -13,8 +13,7 @@ module.exports = {
   getHARresult: function(harFile) {
     return fs.readFileAsync(path.resolve(harFile))
       .then(JSON.parse)
-      .then(harApi.getPagesFromHar)
-      .then((pages) => harApi.runAdvice(pages, harApi.getAllAdvice()))
+      .then((har) => api.runHarAdvice(har, api.getHarAdvice()))
       .then((results) => {
         return results;
       });

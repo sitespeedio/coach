@@ -78,36 +78,56 @@ grunt bookmarklet
 and then you will find it in the dist folder.
 
 ### Include in your own tool
+The coach uses Browsertime to start the browser, execute the Javascript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts.
+
+#### Use built in browser support
+TBA
+
+
+#### Use the scripts
+Say that your tool run on Windows, you start the browsers yourself and you generate your own HAR file. Create your own wrapper to get the coach to help you.
+
+First you need the Javascript advice, you can get the raw script either by generating it yourself or through the API.
+
 If you just need the Javascript to run in the browser, you can generate that by
 ```bash
 grunt combine
 ```
 and you will find it in the dist folder.
 
-The coach has an API so you can easily get hold of the Javascript that you want to run in your browser, analyze a HAR file and merge the result. That's perfect if you run Node.js.
-
-Here's an example of what you can do:
+Or you just get it from the API:
 
 ```javascript
 // get the API
 const api = require('webcoach');
+// get the DOM scripts, it's a promise
+const domScriptPromise = api.getDomAdvice();
+```
 
-// Convert your HAR file to snufkin pages
-const pageSummaries = api.har.getPagesFromHar(myHar);  
+Take the <em>domScript</em> and run it in your browser and take care of the result. You also want to test the HAR file:
 
-// get the DOM scripts
-const domScripts = api.dom.getAdviceScript();
+```javascript
+const api = require('webcoach');
 
-// get the HAR scripts
-const harScripts = api.har.getAllAdvice();
+// You read your HAR file from disk or however you get hold of it
+const harJson = //
+// the result is a promise
+const myHarAdviceResultPromise = api.runHarAdvice(harJson, api.getHarAdvice());
 
-// Analyze a HAR
-const harResult = api.har.runAdvice(pageSummaries , harScripts, {});
+```
 
-// merged result.
-const result = api.merge(domResult, harResult);
+When you got the result from both the DOM and the HAR you need to merge the result to get the full coach result:
 
-```  
+```javascript
+const api = require('webcoach');
+
+// Say that you got the result from the browser in domAdviceResult
+// and the HAR result in harAdviceResult
+const coachResult = api.merge(domAdviceResult, harAdviceResult);
+```
+
+Now you have the full result (as JSON) in coachResult.
+
 ## What do the coach do
 The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
 
