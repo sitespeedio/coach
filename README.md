@@ -67,11 +67,47 @@ The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io). 
 
 We also produce a bookmarklet. The bookmarklet only uses advice that you can run inside the browser (it doesn't have HAR file to analyze even though maybe possible in the future with the Resource Timing API).
 
-The bookmarklet is really rough right now and logs the info to the browser console. Help us make a cool frontend :)
+The bookmarklet is really rough right now and logs the info to the browser console. Help us make a cool front end :)
+
+You can generate the bookmarklet by running
+
+```bash
+grunt bookmarklet
+```
+
+and then you will find it in the dist folder.
 
 ### Include in your own tool
-The coach has an API so you can easily get hold of the Javascript that you want to run in your browser, analyze a HAR file and merge the result. We need to add more docs about but if you want to start now, checkout index.js.
+If you just need the Javascript to run in the browser, you can generate that by
+```bash
+grunt combine
+```
+and you will find it in the dist folder.
 
+The coach has an API so you can easily get hold of the Javascript that you want to run in your browser, analyze a HAR file and merge the result. That's perfect if you run Node.js.
+
+Here's an example of what you can do:
+
+```javascript
+// get the API
+const coachApi = require('webcoach');
+
+// Convert your HAR file to snufkin pages
+const pageSummaries = coachApi.har.getPagesFromHar(myHar);  
+
+// get the DOM scripts
+const domScripts = coachApi.dom.getAdviceScript();
+
+// get the HAR scripts
+const harScripts = coachApi.har.getAllAdvice();
+
+// Analyze a HAR
+const harResult = runAdvice(pageSummaries , harScripts, {});
+
+// merged result. 
+const result = api.merge(domResult, harResult);
+
+```  
 ## What do the coach do
 The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
 
