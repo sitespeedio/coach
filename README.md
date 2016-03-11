@@ -90,21 +90,21 @@ Here's an example of what you can do:
 
 ```javascript
 // get the API
-const coachApi = require('webcoach');
+const api = require('webcoach');
 
 // Convert your HAR file to snufkin pages
-const pageSummaries = coachApi.har.getPagesFromHar(myHar);  
+const pageSummaries = api.har.getPagesFromHar(myHar);  
 
 // get the DOM scripts
-const domScripts = coachApi.dom.getAdviceScript();
+const domScripts = api.dom.getAdviceScript();
 
 // get the HAR scripts
-const harScripts = coachApi.har.getAllAdvice();
+const harScripts = api.har.getAllAdvice();
 
 // Analyze a HAR
-const harResult = runAdvice(pageSummaries , harScripts, {});
+const harResult = api.har.runAdvice(pageSummaries , harScripts, {});
 
-// merged result. 
+// merged result.
 const result = api.merge(domResult, harResult);
 
 ```  
