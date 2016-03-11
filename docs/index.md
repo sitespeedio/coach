@@ -6,10 +6,10 @@ The coach is new and need more advice. Send a PR with a new advice, so the coach
 
 - [Prerequisites](#prerequisites)
 - [Advice](#advice)
-	- [DOM vs HAR advice](#DOM-vs-HAR-advice)
-		- [DOM advice](#DOM-advice)
+	- [DOM vs HAR advice](#dom-vs-har-advice)
+		- [DOM advice](#dom-advice)
 		- [HAR advice](#har-advice)
-- [Testing HTTP/2 vs HTTP/1](#Testing HTTP/2 vs HTTP/1)
+- [Testing HTTP/2 vs HTTP/1](#testing-http2-vs-http1)
 - [Create a new advice]()
 - [Test]()
   - [In the browser]()
@@ -18,11 +18,14 @@ The coach is new and need more advice. Send a PR with a new advice, so the coach
 
 ## Prerequisites
 
-You need [Node.js](https://nodejs.org/en/],  [npm](https://nodejs.org/en/) and [grunt-cli](http://gruntjs.com/using-the-cli) to run the coach.
+You need:
+- [Node.js](https://nodejs.org/en/)  
+- [npm](https://nodejs.org/en/) 
+- [grunt-cli](http://gruntjs.com/using-the-cli) 
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Chrome](https://www.google.com/chrome/browser/desktop/) 
 
-To test what you do, you need to have  [Firefox](https://www.mozilla.org/en-US/firefox/new/) & [Chrome](https://www.google.com/chrome/browser/desktop/) installed.
-
-When you git them installed you can clone the project (or rather first fork it and clone your fork).
+When you got them installed you can clone the project (or rather first fork it and clone your fork).
 
 ```
 $ git clone git@github.com:sitespeedio/coach.git
