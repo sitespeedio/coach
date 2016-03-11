@@ -67,6 +67,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['eslint', 'combine', 'uglify', 'bookmarklet','http-server','mochacli','jsdoc']);
 
+  grunt.registerTask('dom', ['combine', 'uglify']);
   grunt.registerTask('test', ['http-server','mochacli']);
 
   grunt.registerTask('combine', 'Combine all the javascripts', function() {
