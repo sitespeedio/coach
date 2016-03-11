@@ -1,4 +1,4 @@
-# Develop
+# Developers guide
 
 The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge!
 
