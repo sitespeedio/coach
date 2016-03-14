@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 'use strict';
 
 let fs = require('fs'),
@@ -13,9 +11,6 @@ module.exports = {
   getHARresult: function(harFile) {
     return fs.readFileAsync(path.resolve(harFile))
       .then(JSON.parse)
-      .then((har) => api.runHarAdvice(har, api.getHarAdvice()))
-      .then((results) => {
-        return results;
-      });
+      .then((har) => api.runHarAdvice(har, api.getHarAdvice()));
   }
 };
