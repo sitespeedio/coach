@@ -11,9 +11,6 @@ describe('Timings:', function() {
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
-
-      this.timeout(60000);
-
       before(() => bt.start(browser));
 
       after(() => bt.stop());

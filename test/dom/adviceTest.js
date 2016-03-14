@@ -23,8 +23,6 @@ describe('Verify advice structure ', function() {
 
           let files = fs.readdirSync('lib/dom/' + category + '/');
 
-          this.timeout(60000);
-
           before(() => bt.start(browser));
 
           after(() => bt.stop());
