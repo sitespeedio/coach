@@ -78,22 +78,36 @@ grunt bookmarklet
 and then you will find it in the dist folder.
 
 ### Include in your own tool
-The coach uses Browsertime to start the browser, execute the Javascript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts.
+The coach uses Browsertime to start the browser, execute the Javascript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts if you have your own browser implementation.
 
 #### Use built in browser support
-TBA
 
+In the simplest version you use the default configuration (default DOM and HAR advice and using Firefox):
+
+```javascript
+const api = require('webcoach');
+
+const result = api.run('https://www.sitespeed.io');
+```
+
+The full API method:
+
+```javascript
+// get the API
+const api = require('webcoach');
+const result = api.run(url, domScript, harScript, domOptions, harOptions);
+```
 
 #### Use the scripts
 Say that your tool run on Windows, you start the browsers yourself and you generate your own HAR file. Create your own wrapper to get the coach to help you.
 
 First you need the Javascript advice, you can get the raw script either by generating it yourself or through the API.
 
-If you just need the Javascript to run in the browser, you can generate that by
+Generate the script
 ```bash
 grunt combine
 ```
-and you will find it in the dist folder.
+and it will be in the dist folder.
 
 Or you just get it from the API:
 
@@ -104,7 +118,9 @@ const api = require('webcoach');
 const domScriptPromise = api.getDomAdvice();
 ```
 
-Take the <em>domScript</em> and run it in your browser and take care of the result. You also want to test the HAR file:
+Take the <em>domScript</em> and run it in your browser and take care of the result.
+
+To test the HAR you need to generate the HAR yourself and then run it against the advice.
 
 ```javascript
 const api = require('webcoach');
