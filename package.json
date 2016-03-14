@@ -62,7 +62,7 @@
   ],
   "dependencies": {
     "bluebird": "3.3.4",
-    "browsertime": "v1.0.0-alpha.4",
+    "browsertime": "1.0.0-alpha.4",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.merge": "4.3.2",
