@@ -15,15 +15,15 @@ Promise.promisifyAll(fs);
 describe('HAR apis:', function() {
 
   describe('getHarAdvice', function() {
-    it('should return at least one advice', function() {
-      return api.getHarAdvice().should.eventually.not.be.empty;
-    });
+    it('should return at least one advice', () =>
+      api.getHarAdvice().should.eventually.not.be.empty
+    );
 
     it('should only return valid advice', function() {
       return api.getHarAdvice()
         .then((adviceList) => {
           return Promise.each(adviceList, (advice) => {
-            return ['id', 'title', 'description','weight', 'tags'].forEach((property) =>
+            return ['id', 'title', 'description', 'weight', 'tags'].forEach((property) =>
               advice.should.have.ownProperty(property)
             );
           });
@@ -32,23 +32,12 @@ describe('HAR apis:', function() {
   });
 
   describe('runHarAdvice', function() {
-    let har;
+    const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har'),
+      har = fs.readFileAsync(harPath, 'utf8').then(JSON.parse);
 
-    before(() => {
-      const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har');
-      return fs.readFileAsync(harPath, 'utf8')
-        .then(JSON.parse)
-        .then((harFromFile) => {
-          har = harFromFile;
-        });
-    });
-
-    it('should work', () => {
-      return api.getHarAdvice()
-        .then((adviceList) => {
-          return api.runHarAdvice(har, adviceList, {}).should.not.be.empty;
-        });
-    })
+    it('should work', () =>
+      api.runHarAdvice(har).should.eventually.not.be.empty
+    );
   });
 
 });
