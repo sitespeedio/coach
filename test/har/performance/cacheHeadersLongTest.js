@@ -4,7 +4,7 @@ let har = require('../../help/har');
 
 
 describe('Use cache headers', function() {
-  it('We should be able to know if we have failing cache headers', function() {
+  it('We should be able to know if cache times are too short', function() {
     return har.getHARresult('test/har/files/cacheHeaders.har').then((result) => {
       assert.strictEqual(result[0].results.performance.adviceList.cacheHeadersLong.score, 19);
       // massive
@@ -13,7 +13,7 @@ describe('Use cache headers', function() {
   });
 
 
-  it('We should be able to know if we the cache headers are ok', function() {
+  it('We should be able to know if cache times are ok', function() {
     return har.getHARresult('test/har/files/cacheHeaders2.har').then((result) => {
       assert.strictEqual(result[0].results.performance.adviceList.cacheHeadersLong.score,100);
 
