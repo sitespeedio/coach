@@ -10,6 +10,10 @@
 - Unified naming in the API. This is a breaking change so if you are using the
   API you need to change the name accordingly. Checkout lib/index.js
 
+### Fixed
+- The merging of HAR & DOM result was broken. Now the HAR and the DOM result 
+follow the same structure starting with the key coachAdvice.
+
 ## 0.2.0 - 2016-03-04
 ### Added
 - Include coach version in the ouput JSON
