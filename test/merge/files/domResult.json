@@ -1,412 +1,382 @@
 {
-  "results": {
-    "accessibility": {
-      "adviceList": {
-        "altImages": {
-          "advice": "",
-          "description": "All img tags require an alt attribute. This goes without exception. Everything else is an error. If you have an img tag in your HTML without an alt attribute, add it now. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
-          "id": "altImages",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility",
-            "images"
-          ],
-          "title": "Always use alt attribute on image tags",
-          "weight": 5
+  "coachAdvice": {
+    "results": {
+      "accessibility": {
+        "adviceList": {
+          "altImages": {
+            "advice": "",
+            "description": "All img tags require an alt attribute. This goes without exception. Everything else is an error. If you have an img tag in your HTML without an alt attribute, add it now. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+            "id": "altImages",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility",
+              "images"
+            ],
+            "title": "Always use alt attribute on image tags",
+            "weight": 5
+          },
+          "headings": {
+            "advice": "The page is missing headings. Use them to get a better structure of your content.",
+            "description": "Headings gives your document a logical, easy to follow structure. Have you ever wondered how Wikipedia puts together its table of contents for each article? They use the logical heading structure for that, too!The h1 through h6 elements are unambiguous in telling screen readers, search engines and other technologies what the structure of your document is. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+            "id": "headings",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility",
+              "html"
+            ],
+            "title": "Use headings tags to structure your page",
+            "weight": 4
+          },
+          "labelOnInput": {
+            "advice": "",
+            "description": "Most input elements, as well as the select and textarea elements, need an associated label element that states the purpose. The one exception are those that produce a button, like the types of button, reset, and submit do. But every other, be it text, checkbox, password, radio (button), search etc. require a label element to be present. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+            "id": "labelOnInput",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility",
+              "form"
+            ],
+            "title": "Always set labels on input in forms",
+            "weight": 3
+          },
+          "landmarks": {
+            "advice": "",
+            "description": "Landmarks can be article, aside, footer, header, nav or main tag. Adding such landmarks appropriately can help further provide sense to your document and help users more easily navigate it. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+            "id": "landmarks",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility",
+              "html"
+            ],
+            "title": "Structure your content by using landmarks",
+            "weight": 5
+          },
+          "neverSuppressZoom": {
+            "advice": "",
+            "description": "A key feature of mobile browsing is being able to zoom in to read content and out to locate content within a page. http://www.iheni.com/mobile-accessibility-tip-dont-suppress-pinch-zoom/",
+            "id": "neverSuppressZoom",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility"
+            ],
+            "title": "Don't suppress pinch zoom",
+            "weight": 8
+          },
+          "table": {
+            "advice": "",
+            "description": "Add a caption element to give the table a proper heading or summary. Use th elements to denote column and row headings. Make use of their scope and other attributes to clearly associate what belongs to which. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+            "id": "table",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "accessibility",
+              "html"
+            ],
+            "title": "Use caption and th in tables",
+            "weight": 5
+          }
         },
-        "headings": {
-          "advice": "The page is missing headings. Use them to get a better structure of your content.",
-          "description": "Headings gives your document a logical, easy to follow structure. Have you ever wondered how Wikipedia puts together its table of contents for each article? They use the logical heading structure for that, too!The h1 through h6 elements are unambiguous in telling screen readers, search engines and other technologies what the structure of your document is. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
-          "id": "headings",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility",
-            "html"
-          ],
-          "title": "Use headings tags to structure your page",
-          "weight": 4
-        },
-        "labelOnInput": {
-          "advice": "",
-          "description": "Most input elements, as well as the select and textarea elements, need an associated label element that states the purpose. The one exception are those that produce a button, like the types of button, reset, and submit do. But every other, be it text, checkbox, password, radio (button), search etc. require a label element to be present. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
-          "id": "labelOnInput",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility",
-            "form"
-          ],
-          "title": "Always set labels on input in forms",
-          "weight": 3
-        },
-        "landmarks": {
-          "advice": "",
-          "description": "Landmarks can be article, aside, footer, header, nav or main tag. Adding such landmarks appropriately can help further provide sense to your document and help users more easily navigate it. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
-          "id": "landmarks",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility",
-            "html"
-          ],
-          "title": "Structure your content by using landmarks",
-          "weight": 5
-        },
-        "neverSuppressZoom": {
-          "advice": "",
-          "description": "A key feature of mobile browsing is being able to zoom in to read content and out to locate content within a page. http://www.iheni.com/mobile-accessibility-tip-dont-suppress-pinch-zoom/",
-          "id": "neverSuppressZoom",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility"
-          ],
-          "title": "Don't suppress pinch zoom",
-          "weight": 8
-        },
-        "table": {
-          "advice": "",
-          "description": "Add a caption element to give the table a proper heading or summary. Use th elements to denote column and row headings. Make use of their scope and other attributes to clearly associate what belongs to which. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
-          "id": "table",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "accessibility",
-            "html"
-          ],
-          "title": "Use caption and th in tables",
-          "weight": 5
-        }
+        "score": 100
       },
-      "score": 100
-    },
-    "bestpractice": {
-      "adviceList": {
-        "charset": {
-          "advice": "",
-          "description": "The Unicode Standard (UTF-8) covers (almost) all the characters, punctuations, and symbols in the world. Please use that.",
-          "id": "charset",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Use charset for your document",
-          "weight": 2
+      "bestpractice": {
+        "adviceList": {
+          "charset": {
+            "advice": "",
+            "description": "The Unicode Standard (UTF-8) covers (almost) all the characters, punctuations, and symbols in the world. Please use that.",
+            "id": "charset",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Use charset for your document",
+            "weight": 2
+          },
+          "doctype": {
+            "advice": "",
+            "description": "The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.",
+            "id": "doctype",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Use a doctype for your document",
+            "weight": 2
+          },
+          "https": {
+            "advice": "",
+            "description": "A page should always use HTTPS",
+            "id": "https",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Serve your content secure",
+            "weight": 10
+          },
+          "language": {
+            "advice": "",
+            "description": "According to the W3C recommendation you should declare the primary language for each Web page with the lang attribute inside the <html> tag.",
+            "id": "language",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Set the language code for your document.",
+            "weight": 3
+          },
+          "metaDescription": {
+            "advice": "",
+            "description": "Use a page description to make the page more relevant for a search engine",
+            "id": "metaDescription",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Meta description",
+            "weight": 5
+          },
+          "pageTitle": {
+            "advice": "The title is too long 79 recommended is 60",
+            "description": "Use a title to make the page more relevant for a search engine.",
+            "id": "pageTitle",
+            "offending": [],
+            "score": 50,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "Page title",
+            "weight": 5
+          },
+          "url": {
+            "advice": "",
+            "description": "Clean URL are good for the user and for SEO. Make the human readable, avoid too long URLs, spaces in the URL, too many request parameters and never ever have the session id in your URL.",
+            "id": "url",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "bestpractice"
+            ],
+            "title": "URL",
+            "weight": 2
+          }
         },
-        "doctype": {
-          "advice": "",
-          "description": "The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.",
-          "id": "doctype",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Use a doctype for your document",
-          "weight": 2
-        },
-        "https": {
-          "advice": "",
-          "description": "A page should always use HTTPS",
-          "id": "https",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Serve your content secure",
-          "weight": 10
-        },
-        "language": {
-          "advice": "",
-          "description": "According to the W3C recommendation you should declare the primary language for each Web page with the lang attribute inside the <html> tag.",
-          "id": "language",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Set the language code for your document.",
-          "weight": 3
-        },
-        "metaDescription": {
-          "advice": "",
-          "description": "Use a page description to make the page more relevant for a search engine",
-          "id": "metaDescription",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Meta description",
-          "weight": 5
-        },
-        "pageTitle": {
-          "advice": "The title is too long 79 recommended is 60",
-          "description": "Use a title to make the page more relevant for a search engine.",
-          "id": "pageTitle",
-          "offending": [
-          ],
-          "score": 50,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "Page title",
-          "weight": 5
-        },
-        "url": {
-          "advice": "",
-          "description": "Clean URL are good for the user and for SEO. Make the human readable, avoid too long URLs, spaces in the URL, too many request parameters and never ever have the session id in your URL.",
-          "id": "url",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "bestpractice"
-          ],
-          "title": "URL",
-          "weight": 2
-        }
+        "score": 91
       },
-      "score": 91
-    },
-    "info": {
-      "amp": false,
-      "connectionType": "unknown",
-      "documentHeight": 575,
-      "documentTitle": "Analyze your page against web performance best practice rules and using metrics",
-      "documentWidth": 1080,
-      "domDepth": {
-        "avg": 6,
-        "max": 9
+      "info": {
+        "amp": false,
+        "connectionType": "unknown",
+        "documentHeight": 575,
+        "documentTitle": "Analyze your page against web performance best practice rules and using metrics",
+        "documentWidth": 1080,
+        "domDepth": {
+          "avg": 6,
+          "max": 9
+        },
+        "domElements": 61,
+        "head": {
+          "css": [],
+          "jsasync": [],
+          "jssync": []
+        },
+        "iframes": 0,
+        "localStorageSize": 0,
+        "resourceHints": {
+          "dns-prefetch": [],
+          "preconnect": [],
+          "prefetch": [],
+          "prerender": []
+        },
+        "responsive": true,
+        "sessionStorageSize": 0,
+        "windowSize": "1080x575"
       },
-      "domElements": 61,
-      "head": {
-        "css": [
-        ],
-        "jsasync": [
-        ],
-        "jssync": [
-        ]
+      "performance": {
+        "adviceList": {
+          "avoidScalingImages": {
+            "advice": "",
+            "description": "Scaling images inside the browser takes extra CPU time and will hurt performance on mobile and will make you download extra kilobytes",
+            "id": "avoidScailingImages",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "image"
+            ],
+            "title": "Don't scale images in the browser",
+            "weight": 5
+          },
+          "cssInHead": {
+            "advice": "",
+            "description": "Keep CSS files inside of the head tag to make pages render faster",
+            "id": "cssInHead",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "css"
+            ],
+            "title": "Load CSS files inside the head tag",
+            "weight": 3
+          },
+          "cssInHeadDomain": {
+            "advice": "",
+            "description": "Make sure css in head is loaded from same domain as document, in order to have a better user experience and minimize DNS lookups.",
+            "id": "cssInHeadDomain",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "css"
+            ],
+            "title": "Load CSS in head from document domain",
+            "weight": 2
+          },
+          "cssPrint": {
+            "advice": "",
+            "description": "Loading a specific stylesheet for printing slows down the page, even though it is not used",
+            "id": "cssPrint",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "css"
+            ],
+            "title": "Do not load print stylesheets, use @media type print instead",
+            "weight": 1
+          },
+          "fastRender": {
+            "advice": "",
+            "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading Javascript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
+            "id": "fastRender",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance"
+            ],
+            "title": "Avoid slowing down the rendering critical path",
+            "weight": 10
+          },
+          "inlineCss": {
+            "advice": "",
+            "description": "Always inline the CSS when you use HTTP/1. Using HTTP/2 it is complicated. Do your users have a slow connection? Then its better to inline.",
+            "id": "inlineCss",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "css"
+            ],
+            "title": "Inline CSS for faster first render on HTTP/1",
+            "weight": 7
+          },
+          "jquery": {
+            "advice": "",
+            "description": "You may not think this is true but there are pages that uses more than one JQuery versions.",
+            "id": "jquery",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "JQuery",
+              "performance"
+            ],
+            "title": "Avoid use more than one JQuery version per page",
+            "weight": 4
+          },
+          "spof": {
+            "advice": "",
+            "description": "A page should not have a single point of failure a.k.a load content from a provider that can get the page to stop working.",
+            "id": "spof",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "css",
+              "js"
+            ],
+            "title": "Avoid Frontend single point of failure",
+            "weight": 7
+          },
+          "thirdPartyAsyncJs": {
+            "advice": "",
+            "description": "Use the JavaScript snippets that load the JS files asynchronously in order to speed up the user experience",
+            "id": "thirdPartyAsyncJs",
+            "offending": [],
+            "score": 100,
+            "tags": [
+              "performance",
+              "js"
+            ],
+            "title": "Always load third party Javascript asynchronously",
+            "weight": 5
+          },
+          "userTiming": {
+            "advice": "Start using the User Timing API to measure specifics metrics for your page.",
+            "description": "The User Timing API is perfect way to start measuring specific metrics for your site.",
+            "id": "userTiming",
+            "offending": [],
+            "score": 0,
+            "tags": [
+              "performance"
+            ],
+            "title": "Use the User Timing API to check your performance",
+            "weight": 1
+          }
+        },
+        "score": 98
       },
-      "iframes": 0,
-      "localStorageSize": 0,
-      "resourceHints": {
-        "dns-prefetch": [
-        ],
-        "preconnect": [
-        ],
-        "prefetch": [
-        ],
-        "prerender": [
-        ]
-      },
-      "responsive": true,
-      "sessionStorageSize": 0,
-      "windowSize": "1080x575"
-    },
-    "performance": {
-      "adviceList": {
-        "avoidScalingImages": {
-          "advice": "",
-          "description": "Scaling images inside the browser takes extra CPU time and will hurt performance on mobile and will make you download extra kilobytes",
-          "id": "avoidScailingImages",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "image"
-          ],
-          "title": "Don't scale images in the browser",
-          "weight": 5
-        },
-        "cssInHead": {
-          "advice": "",
-          "description": "Keep CSS files inside of the head tag to make pages render faster",
-          "id": "cssInHead",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "css"
-          ],
-          "title": "Load CSS files inside the head tag",
-          "weight": 3
-        },
-        "cssInHeadDomain": {
-          "advice": "",
-          "description": "Make sure css in head is loaded from same domain as document, in order to have a better user experience and minimize DNS lookups.",
-          "id": "cssInHeadDomain",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "css"
-          ],
-          "title": "Load CSS in head from document domain",
-          "weight": 2
-        },
-        "cssPrint": {
-          "advice": "",
-          "description": "Loading a specific stylesheet for printing slows down the page, even though it is not used",
-          "id": "cssPrint",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "css"
-          ],
-          "title": "Do not load print stylesheets, use @media type print instead",
-          "weight": 1
-        },
-        "fastRender": {
-          "advice": "",
-          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading Javascript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
-          "id": "fastRender",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance"
-          ],
-          "title": "Avoid slowing down the rendering critical path",
-          "weight": 10
-        },
-        "inlineCss": {
-          "advice": "",
-          "description": "Always inline the CSS when you use HTTP/1. Using HTTP/2 it is complicated. Do your users have a slow connection? Then its better to inline.",
-          "id": "inlineCss",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "css"
-          ],
-          "title": "Inline CSS for faster first render on HTTP/1",
-          "weight": 7
-        },
-        "jquery": {
-          "advice": "",
-          "description": "You may not think this is true but there are pages that uses more than one JQuery versions.",
-          "id": "jquery",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "JQuery",
-            "performance"
-          ],
-          "title": "Avoid use more than one JQuery version per page",
-          "weight": 4
-        },
-        "spof": {
-          "advice": "",
-          "description": "A page should not have a single point of failure a.k.a load content from a provider that can get the page to stop working.",
-          "id": "spof",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "css",
-            "js"
-          ],
-          "title": "Avoid Frontend single point of failure",
-          "weight": 7
-        },
-        "thirdPartyAsyncJs": {
-          "advice": "",
-          "description": "Use the JavaScript snippets that load the JS files asynchronously in order to speed up the user experience",
-          "id": "thirdPartyAsyncJs",
-          "offending": [
-          ],
-          "score": 100,
-          "tags": [
-            "performance",
-            "js"
-          ],
-          "title": "Always load third party Javascript asynchronously",
-          "weight": 5
-        },
-        "userTiming": {
-          "advice": "Start using the User Timing API to measure specifics metrics for your page.",
-          "description": "The User Timing API is perfect way to start measuring specific metrics for your site.",
-          "id": "userTiming",
-          "offending": [
-          ],
-          "score": 0,
-          "tags": [
-            "performance"
-          ],
-          "title": "Use the User Timing API to check your performance",
-          "weight": 1
-        }
-      },
-      "score": 98
-    },
-    "score": 97,
-    "timings": {
-      "firstPaint": -1,
-      "fullyLoaded": 870.201751,
-      "navigationTimings": {
-        "connectEnd": 1454668799974,
-        "connectStart": 1454668799974,
-        "domComplete": 1454668800791,
-        "domContentLoadedEventEnd": 1454668800432,
-        "domContentLoadedEventStart": 1454668800431,
-        "domInteractive": 1454668800418,
-        "domLoading": 1454668800383,
-        "domainLookupEnd": 1454668799974,
-        "domainLookupStart": 1454668799931,
-        "fetchStart": 1454668799931,
-        "loadEventEnd": 1454668800793,
-        "loadEventStart": 1454668800791,
-        "navigationStart": 1454668799928,
-        "redirectEnd": 0,
-        "redirectStart": 0,
-        "requestStart": 1454668800225,
-        "responseEnd": 1454668800382,
-        "responseStart": 1454668800382,
-        "secureConnectionStart": null,
-        "unloadEventEnd": 0,
-        "unloadEventStart": 0
-      },
-      "rumSpeedIndex": 454,
+      "score": 97,
       "timings": {
-        "backEndTime": 454,
-        "domContentLoadedTime": 503,
-        "domInteractiveTime": 490,
-        "domainLookupTime": 43,
-        "frontEndTime": 409,
-        "pageDownloadTime": 0,
-        "pageLoadTime": 863,
-        "redirectionTime": 3,
-        "serverConnectionTime": 0,
-        "serverResponseTime": 157
-      },
-      "userTimings": {
-        "marks": {
+        "firstPaint": -1,
+        "fullyLoaded": 870.201751,
+        "navigationTimings": {
+          "connectEnd": 1454668799974,
+          "connectStart": 1454668799974,
+          "domComplete": 1454668800791,
+          "domContentLoadedEventEnd": 1454668800432,
+          "domContentLoadedEventStart": 1454668800431,
+          "domInteractive": 1454668800418,
+          "domLoading": 1454668800383,
+          "domainLookupEnd": 1454668799974,
+          "domainLookupStart": 1454668799931,
+          "fetchStart": 1454668799931,
+          "loadEventEnd": 1454668800793,
+          "loadEventStart": 1454668800791,
+          "navigationStart": 1454668799928,
+          "redirectEnd": 0,
+          "redirectStart": 0,
+          "requestStart": 1454668800225,
+          "responseEnd": 1454668800382,
+          "responseStart": 1454668800382,
+          "secureConnectionStart": null,
+          "unloadEventEnd": 0,
+          "unloadEventStart": 0
         },
-        "measures": {
+        "rumSpeedIndex": 454,
+        "timings": {
+          "backEndTime": 454,
+          "domContentLoadedTime": 503,
+          "domInteractiveTime": 490,
+          "domainLookupTime": 43,
+          "frontEndTime": 409,
+          "pageDownloadTime": 0,
+          "pageLoadTime": 863,
+          "redirectionTime": 3,
+          "serverConnectionTime": 0,
+          "serverResponseTime": 157
+        },
+        "userTimings": {
+          "marks": {},
+          "measures": {}
         }
       }
     }

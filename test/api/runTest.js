@@ -9,7 +9,7 @@ describe('Run API:', function() {
   it('should work', () => {
     return api.run(LOCAL_SERVER)
       .then((result) => {
-        return result.should.have.ownProperty('results');
+        return result.should.have.ownProperty('coachAdvice');
       });
   })
 });
