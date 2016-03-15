@@ -1,6 +1,8 @@
 # CHANGELOG - webcoach
 
 ## [unreleased]
+### Added
+- Add brotli as one of content-encoding checks.
 
 ### Changed
 - Unified naming of util methods to check if HTTP/2 is used.
