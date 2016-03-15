@@ -11,44 +11,30 @@ let fs = require('fs'),
   packageInfo = require('../package');
 
 Promise.promisifyAll(fs);
-
-function runDOMAndHar(options) {
-
-  var browsertime = api.runDomAdvice(options.url, api.getDomAdvice(), {
-    browser: options.browser,
-    experimental: {
-      nativeHar: true
-    },
-    iterations: 1
-  });
-
-  var har = browsertime.then((result) => api.runHarAdvice(result.har, api.getHarAdvice()));
-
-  Promise.join(browsertime, har, function(browsertimeResult, harResult) {
-    let total = api.merge(browsertimeResult.browsertimeData[0].coach, harResult);
-    console.log(stringify(total, {
-      space: 2
-    }));
-    process.exit(0);
-  }).catch((e) => {
-    console.error('Error running advice: ', e);
-    process.exit(1);
-  });
-}
-
-function runHAR(options) {
-  fs.readFileAsync(path.resolve(process.cwd(), options.file))
-    .then(JSON.parse)
-    .then((har) => api.runHarAdvice(har, api.getHarAdvice()))
-    .then((results) => {
-      console.log(stringify(results, {space: 2}));
-      process.exit(0);
-    })
-    .catch((e) => {
-      console.error('Error running advice for har', e);
-      process.exit(1);
+var cli = {
+  runDOMAndHar: function(options) {
+    var browsertime = api.runDomAdvice(options.url, api.getDomAdvice(), {
+      browser: options.browser,
+      experimental: {
+        nativeHar: true
+      },
+      iterations: 1
     });
-}
+
+    var har = browsertime.then((result) => api.runHarAdvice(result.har, api.getHarAdvice()));
+
+    return Promise.join(browsertime, har, function(browsertimeResult, harResult) {
+      let total = api.merge(browsertimeResult.browsertimeData[0].coach, harResult);
+      return total;
+    });
+  },
+
+  runHAR: function(options) {
+    return fs.readFileAsync(path.resolve(process.cwd(), options.file))
+      .then(JSON.parse)
+      .then((har) => api.runHarAdvice(har, api.getHarAdvice()));
+  }
+};
 
 let options = yargs
   .usage('$0 [options]')
@@ -79,8 +65,27 @@ let options = yargs
   .strict()
   .argv;
 
+
 if (options.url) {
-  runDOMAndHar(options);
+  cli.runDOMAndHar(options).then((result) => {
+    console.log(stringify(result, {
+      space: 2
+    }));
+    process.exit(0);
+  }).catch((e) => {
+    console.error('Error running advice: ', e);
+    process.exit(1);
+  });
 } else if (options.file) {
-  runHAR(options);
+  cli.runHAR(options).then((results) => {
+    console.log(stringify(results, {
+      space: 2
+    }));
+    process.exit(0);
+  }).catch((e) => {
+    console.error('Error running advice for har', e);
+    process.exit(1);
+  });
 }
+
+module.exports = cli;
