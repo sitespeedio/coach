@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## [unreleased]
+## 0.3.0 2016-03-16
 ### Added
 - Add brotli as one of content-encoding checks.
 
