@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## [Unreleased]
+### Added
+- Include coach version in the HAR coach result. 
+
 ## 0.3.0 2016-03-16
 ### Added
 - Add brotli as one of content-encoding checks.
