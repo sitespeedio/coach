@@ -12,5 +12,8 @@ module.exports = {
     return fs.readFileAsync(path.resolve(harFile))
       .then(JSON.parse)
       .then((har) => api.runHarAdvice(har, api.getHarAdvice()));
-  }
+  },
+  getHAR: function(harFile) {
+    return fs.readFileAsync(path.resolve(harFile))
+      .then(JSON.parse)}
 };

@@ -65,6 +65,7 @@
     "browsertime": "1.0.0-alpha.4",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
+    "lodash.groupby": "4.2.0",
     "lodash.merge": "4.3.2",
     "snufkin": "0.3.8",
     "yargs": "4.3.1"
