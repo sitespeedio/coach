@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.3.2 2016-03-17
+### Fixed
+- The pickAPage changed the actual HAR, lets clone the object and return a new HAR.
+
 ## 0.3.1 2016-03-17
 ### Added
 - Include coach version in the HAR coach result. 
