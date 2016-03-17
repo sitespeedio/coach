@@ -41,13 +41,7 @@ module.exports = function(grunt) {
         }
     },
     mochacli: {
-      api: ["test/api/*Test.js"],
-      cli: ["test/cli/*Test.js"],
-      combined: ["test/dom/combinedTest.js"],
-      advice: ["test/dom/adviceTest.js"],
-      dom: ["test/dom/**/*Test.js"],
-      har: ["test/har/performance/*Test.js"],
-      all: ["test/dom/adviceTest.js", "test/dom/*/*Test.js", "test/api/*/*Tests.js", "test/har/performance/*Test.js","test/merge/*Test.js", "test/dom/combinedTest.js"]
+      all: ["test/dom/*/*Test.js", "test/har/**/*Test.js", "test/api/**/*Test.js", "test/cli/*Test.js","test/merge/*Test.js"]
     },
    jsdoc : {
         dist : {
