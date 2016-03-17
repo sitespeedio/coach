@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## [Unreleased]
+## 0.3.1 2016-03-17
 ### Added
 - Include coach version in the HAR coach result. 
 - API method pickAPage(har,pageIndex) to get specific 
