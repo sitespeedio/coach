@@ -127,22 +127,25 @@ const api = require('webcoach');
 
 // You read your HAR file from disk or however you get hold of it
 const harJson = //
+
+// if your har contains multiple pages (multiple runs etc) you can use the API
+// to get the page that you want
+const firstPageHar = api.pickAPage(harJson, 0);
+
 // the result is a promise
-const myHarAdviceResultPromise = api.runHarAdvice(harJson, api.getHarAdvice());
+const myHarAdviceResultPromise = api.runHarAdvice(firstPageHar, api.getHarAdvice());
 
 ```
 
 When you got the result from both the DOM and the HAR you need to merge the result to get the full coach result:
 
 ```javascript
-const api = require('webcoach');
-
 // Say that you got the result from the browser in domAdviceResult
 // and the HAR result in harAdviceResult
 const coachResult = api.merge(domAdviceResult, harAdviceResult);
 ```
 
-Now you have the full result (as JSON) in coachResult.
+Now you have the full result (as JSON) as coachResult.
 
 ## What do the coach do
 The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!

@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+
+### Added
+- Update docs to include the pickAPage API.
+
 ## 0.3.2 2016-03-17
 ### Fixed
 - The pickAPage changed the actual HAR, lets clone the object and return a new HAR.
