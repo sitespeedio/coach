@@ -8,12 +8,12 @@ const api = require('../../lib/'),
 
 Promise.promisifyAll(fs);
 
-describe('Split HAR api:', function() {
+describe('pickAPage HAR api:', function() {
     const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har');
 
     it('should work', function() {
       return fs.readFileAsync(harPath, 'utf8').then(JSON.parse).then((har) => {
-        assert.strictEqual(api.splitHar(har,0).log.pages.length, 1);
+        assert.strictEqual(api.pickAPage(har,0).log.pages.length, 1);
       });
     });
 

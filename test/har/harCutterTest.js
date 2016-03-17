@@ -1,6 +1,6 @@
 'use strict';
 let assert = require('assert');
-let harCutter = require('../../lib/har/harCutter').split;
+let harCutter = require('../../lib/har/harCutter').pickAPage;
 
 let helper = require('../help/har');
 
