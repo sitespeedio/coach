@@ -1,6 +1,9 @@
 # CHANGELOG - webcoach
 
 ## UNRELEASED
+### Fixed
+- combineCSS and combineJS advice should only advice to combine when the page has more that 1 
+  CSS/JS request.
 
 ### Added
 - Update docs to include the pickAPage API.
