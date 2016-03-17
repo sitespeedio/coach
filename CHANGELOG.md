@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Added
 - Include coach version in the HAR coach result. 
+- API method splitHar(har,pageIndex) to get specific 
+  HAR with the chosen page.
 
 ## 0.3.0 2016-03-16
 ### Added
