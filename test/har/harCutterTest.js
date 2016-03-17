@@ -12,6 +12,8 @@ describe('Test HAR cutter', function() {
       assert.strictEqual(har.log.pages.length, 2);
       let myHar = harCutter(har,0);
       assert.strictEqual(myHar.log.pages.length, 1);
+      // the old har should have the same amount of pages
+      assert.strictEqual(har.log.pages.length, 2);
     });
   });
 
