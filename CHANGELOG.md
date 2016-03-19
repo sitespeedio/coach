@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.4.0 2016-03-19
 ### Fixed
 - combineCSS and combineJS advice should only advice to combine when the page has more that 1
   CSS/JS request.
