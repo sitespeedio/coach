@@ -2,12 +2,13 @@
 
 ## UNRELEASED
 ### Fixed
-- combineCSS and combineJS advice should only advice to combine when the page has more that 1 
+- combineCSS and combineJS advice should only advice to combine when the page has more that 1
   CSS/JS request.
 - headings & sections advice gave wrong score if headings & sections where missing
 
 ### Added
 - Update docs to include the pickAPage API.
+- Output CLI data as a table (but you can still choose JSON).
 
 ## 0.3.2 2016-03-17
 ### Fixed
@@ -15,8 +16,8 @@
 
 ## 0.3.1 2016-03-17
 ### Added
-- Include coach version in the HAR coach result. 
-- API method pickAPage(har,pageIndex) to get specific 
+- Include coach version in the HAR coach result.
+- API method pickAPage(har,pageIndex) to get specific
   HAR with the chosen page.
 
 ## 0.3.0 2016-03-16
@@ -30,7 +31,7 @@
   API you need to change the name accordingly. Checkout lib/index.js
 
 ### Fixed
-- The merging of HAR & DOM result was broken. Now the HAR and the DOM result 
+- The merging of HAR & DOM result was broken. Now the HAR and the DOM result
 follow the same structure starting with the key coachAdvice.
 
 ## 0.2.0 - 2016-03-04
