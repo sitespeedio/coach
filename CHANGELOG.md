@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+- Show response codes in the responseOk advice. 
+
 ## 0.4.0 2016-03-19
 ### Fixed
 - combineCSS and combineJS advice should only advice to combine when the page has more that 1
