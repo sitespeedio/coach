@@ -8,6 +8,7 @@
 - If your assets misses a cache header, only give advide about it in cacheHeaders advice and 
   not in cacheHeadersLong
 - HAR advice didn't correct check HTTP version.
+- Better inlineCSS advice when you use HTTP/2
 
 ### Added
 - Update docs to include the pickAPage API.
