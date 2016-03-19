@@ -99,6 +99,13 @@ describe('Best practice:', function() {
           });
       });
 
+      it('We should not hurt pages served by HTTP', function() {
+        return bt.run(path + 'url.html', 'lib/dom/bestpractice/spdy.js')
+          .then((result) => {
+            assert.strictEqual(result.score, 100);
+          });
+      });
+
     });
   });
 

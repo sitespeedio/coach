@@ -11,6 +11,7 @@
 ### Added
 - Update docs to include the pickAPage API.
 - Output CLI data as a table (but you can still choose JSON).
+- Warn if a page is using SPDY, Chrome EOL coming soon.
 
 ## 0.3.2 2016-03-17
 ### Fixed
