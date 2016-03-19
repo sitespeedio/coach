@@ -5,13 +5,13 @@ let util = require('../../lib/har/util');
 
 describe('Test HAR util functions', function() {
 
-  it('Categorize connection types H2 as HTTP/2 and nothing else', function() {
+  it('Categorize connection types H2/SPDY as HTTP/2 and nothing else', function() {
     let page = {};
-    page.connectionType = 'h2';
+    page.httpType = 'h2';
     assert.strictEqual(util.isHTTP2(page), true);
-    page.connectionType = 'spdy';
-    assert.strictEqual(util.isHTTP2(page), false);
-    page.connectionType = 'h1';
+    page.httpType = 'spdy';
+    assert.strictEqual(util.isHTTP2(page), true);
+    page.httpType = 'h1';
     assert.strictEqual(util.isHTTP2(page), false);
   });
 
