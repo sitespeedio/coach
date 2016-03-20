@@ -2,14 +2,17 @@
 
 ## UNRELEASED
 ### Fixed
-- Show response codes in the responseOk advice. 
+- Show response codes in the responseOk advice.
+
+### Added
+- Use parameter --offending to show offending assets in table cli output.
 
 ## 0.4.0 2016-03-19
 ### Fixed
 - combineCSS and combineJS advice should only advice to combine when the page has more that 1
   CSS/JS request.
 - headings & sections advice gave wrong score if headings & sections where missing
-- If your assets misses a cache header, only give advide about it in cacheHeaders advice and 
+- If your assets misses a cache header, only give advice about it in cacheHeaders advice and
   not in cacheHeadersLong
 - HAR advice didn't correct check HTTP version.
 - Better inlineCSS advice when you use HTTP/2
