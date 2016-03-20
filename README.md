@@ -50,14 +50,25 @@ You need Node.js 4.3.0 or later to run.
 npm install webcoach -g
 webcoach -u http://www.sitespeed.io --browser chrome
 ```
-If you want to use Firefox:
+If you want to use Firefox (Firefox is default):
 ```bash
-webcoach -u http://www.sitespeed.io --browser firefox
+webcoach -u http://www.sitespeed.io
 ```
 
-> ... but hey, I only get a back some JSON?
+Do also want to show the offending assets (the list can be long):
+```bash
+webcoach -u http://www.sitespeed.io --offending
+```
 
-Yes you are right! There's no front end included in the standalone version. More about that later.
+
+> ... but hey, I want to see the full JSON?
+
+Yes you can do that!
+```bash
+webcoach -u http://www.sitespeed.io -o json
+```
+Will get you the full JSON, the same as if you integrate the coach into your tool.
+
 
 ### sitespeed.io 4.0
 
