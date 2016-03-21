@@ -1,11 +1,12 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.5.0 2016-03-21
 ### Fixed
 - Show response codes in the responseOk advice.
 
 ### Added
 - Use parameter --offending to show offending assets in table cli output.
+- Wrap the text in the output in the table cli so it looks good.
 
 ## 0.4.0 2016-03-19
 ### Fixed
