@@ -7,7 +7,7 @@ let path = 'http://0.0.0.0:8282/timings/';
 describe('Cli', function() {
    this.timeout(15000);
   it('The merged result should have the right structure from runDomAndHar ', function() {
-    const options = {url:path, browser: 'firefox'};
+    const options = {_:[path], browser: 'firefox'};
 
     return cli.runDOMAndHar(options).then((result) =>
     {
@@ -32,7 +32,7 @@ describe('Cli', function() {
   });
 
   it('The  result should have the right structure from runHAR ', function() {
-    const options = {file:'test/har/files/assetsRedirects.har' };
+    const options = {_:['test/har/files/assetsRedirects.har'] };
 
     return cli.runHAR(options).then((result) =>
     {
