@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## unreleased
+### Fixed
+- Fixed faulty user agent string for Firefox testing mobile.
+
 ## 0.8.0 2016-03-21
 ### Added
 - Show transfer vs uncompressed size for JS & CSS if we know it (works in Chrome).
