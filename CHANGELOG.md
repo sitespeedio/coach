@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## 0.6.2 2016-03-21
+### Fixed
+- Don't hurt document redirects if it happens from HTTP to HTTPS.
+- Updated to latest Browsertime, fixes transfer size problems for Chrome.
+
 ## 0.6.1 2016-03-21
 ### Fixed
 - assetRedirect advice stopped working with the last fix. Fixed now.
