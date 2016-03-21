@@ -9,6 +9,7 @@
 - Lets combine DOM and HAR advice for even smarter advice #13
 - Make sure options is passed to HAR advice so we can have different advice
   depending on device
+- pageSize now have different size limit for mobile and desktop  
 
 ## 0.8.0 2016-03-21
 ### Added
