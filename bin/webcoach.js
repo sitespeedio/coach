@@ -8,8 +8,7 @@ let stringify = require('json-stable-stringify'),
 
 
 let options = cli.getOptions();
-
-if (options.url) {
+if (options._[0].startsWith('http')) {
   cli.runDOMAndHar(options).then((result) => {
     if (options.output === 'json') {
       console.log(stringify(result, {
@@ -24,7 +23,7 @@ if (options.url) {
     console.error('Error running advice: ', e.stack);
     process.exit(1);
   });
-} else if (options.file) {
+} else {
   cli.runHAR(options).then((results) => {
     if (options.output === 'json') {
       console.log(stringify(results, {

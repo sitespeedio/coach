@@ -4,6 +4,9 @@
 ### Fixed
 - Fixed faulty user agent string for Firefox testing mobile.
 
+### Added
+- Skip -u/-f just pass an argument as in sitespeed.io 4.0
+
 ## 0.8.0 2016-03-21
 ### Added
 - Show transfer vs uncompressed size for JS & CSS if we know it (works in Chrome).
