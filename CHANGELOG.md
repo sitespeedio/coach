@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.6.3 2016-03-21
+### Fixed
+- Fix again for document redirects, old version wasn't working correctly.
+
 ## 0.6.2 2016-03-21
 ### Fixed
 - Don't hurt document redirects if it happens from HTTP to HTTPS.
