@@ -6,6 +6,9 @@
 
 ### Added
 - Skip -u/-f just pass an argument as in sitespeed.io 4.0
+- Lets combine DOM and HAR advice for even smarter advice #13
+- Make sure options is passed to HAR advice so we can have different advice
+  depending on device
 
 ## 0.8.0 2016-03-21
 ### Added
