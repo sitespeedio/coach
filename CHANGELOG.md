@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.8.0 2016-03-21
+### Added
+- Show transfer vs uncompressed size for JS & CSS if we know it (works in Chrome).
+
 ## 0.7.0 2016-03-21
 ### Added
 - Set device type using --device in the CLI. Choose between mobile or desktop.
