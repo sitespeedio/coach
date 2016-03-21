@@ -70,6 +70,13 @@ By default the coach only tells you about advice where you don't get the score 1
 webcoach -u http://www.sitespeed.io --limit 101
 ```
 
+If you want to test as a mobile device that's possible too by faking user agent.
+
+```bash
+webcoach -u http://www.sitespeed.io --device mobile -b chrome
+```
+
+
 > ... but hey, I want to see the full JSON?
 
 Yes you can do that!

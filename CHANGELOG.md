@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+- Set device type using --device in the CLI. Choose between mobile or desktop.
+
 ## 0.6.4 2016-03-21
 ### Fixed
 - Better naming of advice headings in cli table output.
