@@ -1,5 +1,7 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+
 ## 0.9.0 2016-03-22
 ### Fixed
 - Fixed faulty user agent string for Firefox testing mobile.

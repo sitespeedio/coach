@@ -27,7 +27,7 @@ You know, it's hard to get everything right! The world is complex: HTTP/1 vs HTT
 
 
 ## Why we love the coach
-Nine reasons why we love the coach:
+Ten reasons why we love the coach:
  - The coach gives you advice how to make your page faster. The coach aims to NEVER give you a false advice. Follow the advice and you will WIN!
  - HTTP/1 or HTTP/2? That's no problem, the coach adjust the advice accordingly.
  - The coach use real browsers to investigate your page exact as your users.
@@ -35,6 +35,7 @@ Nine reasons why we love the coach:
  - The coach knows other things than performance: Accessibility and web best practice are other things that the coach can help you with.
  - You can integrate the coach in your own web performance tool, it's easy: Your tool only need to be able to run Javascript in the browser and produce a HAR file. Or you can use the built in functionality of the coach to run the browser.
  - The coach is Open Source. The advice is public, you can check them and change them yourself. Help us make the coach even better!
+ - The coach can combine knowledge from the DOM with HAR to make super powerful advice.
  - The CLI output is pretty nice, you can configure how much you want to see. Use it as fast way to check the performance of your page.
  - The coach will be part of sitespeed.io 4.0 and it will be awesome!
 
@@ -122,7 +123,7 @@ The full API method:
 ```javascript
 // get the API
 const api = require('webcoach');
-const result = api.run(url, domScript, harScript, domOptions, harOptions);
+const result = api.run(url, domScript, harScript, options);
 ```
 
 #### Use the scripts
