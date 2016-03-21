@@ -27,14 +27,16 @@ You know, it's hard to get everything right! The world is complex: HTTP/1 vs HTT
 
 
 ## Why we love the coach
-Seven reasons why we love the coach:
+Nine reasons why we love the coach:
  - The coach gives you advice how to make your page faster. The coach aims to NEVER give you a false advice. Follow the advice and you will WIN!
  - HTTP/1 or HTTP/2? That's no problem, the coach adjust the advice accordingly.
  - The coach use real browsers to investigate your page exact as your users.
  - Every advice has one or more unit test to make sure it's easy to change advice in the future.
- - The coach knows other things than performance: Accessibility and web best practice are other things that the coach will help you with.
- - You can integrate the coach in your own web performance tool, it easy: Your tool need to be able to run Javascript in the browser and produce a HAR file.
- - The coach is Open Source. The advice is public, you can check them and change them yourself.
+ - The coach knows other things than performance: Accessibility and web best practice are other things that the coach can help you with.
+ - You can integrate the coach in your own web performance tool, it's easy: Your tool only need to be able to run Javascript in the browser and produce a HAR file. Or you can use the built in functionality of the coach to run the browser.
+ - The coach is Open Source. The advice is public, you can check them and change them yourself. Help us make the coach even better!
+ - The CLI output is pretty nice, you can configure how much you want to see. Use it as fast way to check the performance of your page.
+ - The coach will be part of sitespeed.io 4.0 and it will be awesome!
 
 ## Work in progress!
 We know you want the coach to help you but right now YOU need to help the coach! The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge! Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback! In a couple of months we will release 1.0.
@@ -44,8 +46,7 @@ You can use the coach in a couple of different ways.
 
 ### Standalone
 
-You need Node.js 4.3.0 or later to run.
-
+You need Node.js 4.3.0 or later to run. And you need Firefox and/or Chrome installed.
 
 If you want to use Firefox (Firefox is default):
 ```bash
@@ -80,7 +81,7 @@ Will get you the full JSON, the same as if you integrate the coach into your too
 
 ### sitespeed.io 4.0
 
-The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io). It will be realeased this summer, hallelujah!
+The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io). It will be released this summer, hallelujah!
 
 ### Bookmarklet
 
