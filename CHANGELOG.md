@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.6.1 2016-03-21
+### Fixed
+- assetRedirect advice stopped working with the last fix. Fixed now.
+
 ## 0.6.0 2016-03-21
 ### Fixed
 - assetRedirect advice shouldn't hurt the score if it's the main document, the
