@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## 0.6.4 2016-03-21
+### Fixed
+- Better naming of advice headings in cli table output.
+- Updated readme.
+
 ## 0.6.3 2016-03-21
 ### Fixed
 - Fix again for document redirects, old version wasn't working correctly.
