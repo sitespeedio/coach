@@ -1,5 +1,14 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+- assetRedirect advice shouldn't hurt the score if it's the main document, the
+  documentRedirect advice takes care of that.
+- Cleaup of advice messages.
+
+### Added
+- Make it possible to show the title and description of an advice in the CLI.
+
 ## 0.5.0 2016-03-21
 ### Fixed
 - Show response codes in the responseOk advice.
