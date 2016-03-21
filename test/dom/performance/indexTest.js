@@ -85,6 +85,13 @@ describe('Performance advice:', function() {
           });
       });
 
+      it('We should know if we shoudl combine CSS', function() {
+        return bt.run(path + 'combineCss.html', 'lib/dom/performance/combineCss.js')
+          .then((result) => {
+            assert.strictEqual(result.offending.length, 2);
+          });
+      });
+
     });
   });
 

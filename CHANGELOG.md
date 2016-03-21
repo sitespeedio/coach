@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## unreleased
+## 0.9.0 2016-03-22
 ### Fixed
 - Fixed faulty user agent string for Firefox testing mobile.
 
@@ -10,6 +10,8 @@
 - Make sure options is passed to HAR advice so we can have different advice
   depending on device
 - pageSize now have different size limit for mobile and desktop  
+- Changed combineCSS for only looking at CSS inside of HEAD for HTTP/1
+- Dropped combineJs. We can make this better now when we combine DOM & HAR
 
 ## 0.8.0 2016-03-21
 ### Added
