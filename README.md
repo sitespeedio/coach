@@ -46,20 +46,28 @@ You can use the coach in a couple of different ways.
 
 You need Node.js 4.3.0 or later to run.
 
-```bash
-npm install webcoach -g
-webcoach -u http://www.sitespeed.io --browser chrome
-```
+
 If you want to use Firefox (Firefox is default):
 ```bash
 webcoach -u http://www.sitespeed.io
 ```
 
-Do also want to show the offending assets (the list can be long):
+Try it with Chrome:
 ```bash
-webcoach -u http://www.sitespeed.io --offending
+npm install webcoach -g
+webcoach -u http://www.sitespeed.io --browser chrome
 ```
 
+Do also want to show the offending assets and the description of the advice:
+```bash
+webcoach -u http://www.sitespeed.io --offending --description
+```
+
+By default the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
+
+```bash
+webcoach -u http://www.sitespeed.io --limit 101
+```
 
 > ... but hey, I want to see the full JSON?
 
