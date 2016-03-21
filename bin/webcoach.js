@@ -11,17 +11,14 @@ let options = cli.getOptions();
 
 if (options.url) {
   cli.runDOMAndHar(options).then((result) => {
-
     if (options.output === 'json') {
       console.log(stringify(result, {
         space: 2
-    }));
-  } else {
-
-    let table = new ResultTable(result, options);
-    console.log(table.generate());
-  }
-
+      }));
+    } else {
+      let table = new ResultTable(result, options);
+      console.log(table.generate());
+    }
     process.exit(0);
   }).catch((e) => {
     console.error('Error running advice: ', e.stack);
@@ -29,12 +26,17 @@ if (options.url) {
   });
 } else if (options.file) {
   cli.runHAR(options).then((results) => {
-    console.log(stringify(results, {
-      space: 2
-    }));
+    if (options.output === 'json') {
+      console.log(stringify(results, {
+        space: 2
+      }));
+    } else {
+      let table = new ResultTable(results[0], options);
+      console.log(table.generate());
+    }
     process.exit(0);
   }).catch((e) => {
-    console.error('Error running advice for har', e);
+    console.error('Error running advice for HAR', e.stack);
     process.exit(1);
   });
 }

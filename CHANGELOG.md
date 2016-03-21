@@ -1,7 +1,9 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.7.0 2016-03-21
+### Added
 - Set device type using --device in the CLI. Choose between mobile or desktop.
+- Limited support (first HAR page) for outputting HAR as cli table.
 
 ## 0.6.4 2016-03-21
 ### Fixed
