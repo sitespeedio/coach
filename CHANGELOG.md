@@ -1,7 +1,10 @@
 # CHANGELOG - webcoach
 
-## Unreleased
-- Disable missing favicons check for Firefox because of #49
+## 0.10.0 2016-03-22
+### Added
+- Disable missing favicon check for Firefox because of #49
+- fastRender advice now check CSS response size in HTTP/2 to make sure it isn't larger than the magic number.
+- Sort advice alphabetically in table output
 
 ## 0.9.0 2016-03-22
 ### Fixed
