@@ -6,10 +6,18 @@ const LOCAL_SERVER = 'http://0.0.0.0:8282/info/head.html';
 
 describe('Run API:', function() {
 
-  it('should work', () => {
+  it('should output correct structure', () => {
     return api.run(LOCAL_SERVER)
       .then((result) => {
-        return result.should.have.ownProperty('coachAdvice');
+        const advice = result.coachAdvice;
+
+        ['results', 'errors', 'url', 'version'].forEach((property) =>
+          advice.should.have.ownProperty(property)
+        );
+
+        ['accessibility', 'bestpractice', 'info', 'performance', 'timings', 'score'].forEach((property) =>
+          advice.results.should.have.ownProperty(property)
+        );
       });
   })
 });
