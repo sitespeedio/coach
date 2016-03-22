@@ -1,6 +1,7 @@
 # CHANGELOG - webcoach
 
 ## Unreleased
+- Disable missing favicons check for Firefox because of #49
 
 ## 0.9.0 2016-03-22
 ### Fixed
