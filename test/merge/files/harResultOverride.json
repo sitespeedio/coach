@@ -1,0 +1,468 @@
+[
+  {
+    "coachAdvice": {
+      "results": {
+        "performance": {
+          "adviceList": {
+            "altImages": {
+              "advice": "",
+              "description": "Avoid doing redirects, it will kill your web page on mobile.",
+              "id": "assetsRedirects",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance"
+              ],
+              "title": "altImages from HAR",
+              "weight": 2
+            },
+            "cacheHeaders": {
+              "advice": "",
+              "description": "Cache responses longer than one 1 month is good.",
+              "id": "cacheHeaders",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Avoid extra requests by setting a cache headers",
+              "weight": 10
+            },
+            "combineCss": {
+              "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ...  ut be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+              "description": "The more number of CSS requests, the slower the page will be. Combine your css files into one. If you are using HTTP/1",
+              "id": "combineCss",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "css",
+                "HTTP/1"
+              ],
+              "title": "Combine CSS files if HTTP/1",
+              "weight": 5
+            },
+            "combineJs": {
+              "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many Javascript from the same domain ...  ut be careful! Many Javascript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+              "description": "The more number of Javascript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
+              "id": "combineJs",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "js",
+                "HTTP/1"
+              ],
+              "title": "Combine JS files if HTTP/1",
+              "weight": 5
+            },
+            "compressAssets": {
+              "advice": "",
+              "description": "Send content compressed over the wire to save bytes",
+              "id": "compressAssets",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Always compress text content",
+              "weight": 8
+            },
+            "connectionKeepAlive": {
+              "advice": "",
+              "description": "Use keep alive headers & don't close the connection when we have multiple requests to one and the same domain",
+              "id": "connectionKeepAlive",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Don't close a connection that is used multiple times",
+              "weight": 5
+            },
+            "cssSize": {
+              "advice": "",
+              "description": "",
+              "id": "cssSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "css"
+              ],
+              "title": "Total CSS size shouldn't be too big",
+              "weight": 5
+            },
+            "documentRedirect": {
+              "advice": "",
+              "description": "You should never ever redirect the main document.",
+              "id": "documentRedirect",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance"
+              ],
+              "title": "Avoid redirect the main document",
+              "weight": 9
+            },
+            "favicon": {
+              "advice": "",
+              "description": "",
+              "id": "favicon",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "favicon"
+              ],
+              "title": "The favicon should be small and cacheable",
+              "weight": 1
+            },
+            "fewFonts": {
+              "advice": "",
+              "description": "Fonts can slow down the rendering of content try to avoid too many of them",
+              "id": "fewFonts",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "font"
+              ],
+              "title": "Avoid too many fonts",
+              "weight": 2
+            },
+            "fewRequestsPerDomain": {
+              "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
+              "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+              "id": "fewRequestsPerDomain",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "HTTP/1"
+              ],
+              "title": "Avoid too many requests per domain",
+              "weight": 5
+            },
+            "headerSize": {
+              "advice": "",
+              "description": "",
+              "id": "headerSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "mobile"
+              ],
+              "title": "Response headers should't be too big",
+              "weight": 4
+            },
+            "imageSize": {
+              "advice": "",
+              "description": "",
+              "id": "imageSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "image"
+              ],
+              "title": "Total image size shouldn't be too big",
+              "weight": 5
+            },
+            "javascriptSize": {
+              "advice": "",
+              "description": "",
+              "id": "javascriptSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "javascript"
+              ],
+              "title": "Total Javascript size shouldn't be too big",
+              "weight": 5
+            },
+            "pageSize": {
+              "advice": "",
+              "description": "Avoid having pages that have transfer size over the wire more than 2mb because that is really big and will hurt performance. ",
+              "id": "pageSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server",
+                "mobile"
+              ],
+              "title": "Total page size shouldn't be too big",
+              "weight": 3
+            },
+            "privateAssets": {
+              "advice": "",
+              "description": "Static content should be able to be cached & used by everyone.",
+              "id": "privateAssets",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Don't use private headers on static content",
+              "weight": 5
+            },
+            "responseOk": {
+              "advice": "",
+              "description": "Check for 40X and 50X responses, and report them.",
+              "id": "responseOk",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Avoid missing and error requests",
+              "weight": 7
+            }
+          }
+        },
+        "url": "https://run.sitespeed.io/"
+      }
+    }
+  },
+  {
+    "coachAdvice": {
+      "results": {
+        "performance": {
+          "adviceList": {
+            "assetsRedirects": {
+              "advice": "",
+              "description": "Avoid doing redirects, it will kill your web page on mobile.",
+              "id": "assetsRedirects",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance"
+              ],
+              "title": "Avoid doing redirects",
+              "weight": 2
+            },
+            "cacheHeaders": {
+              "advice": "",
+              "description": "Cache responses longer than one 1 month is good.",
+              "id": "cacheHeaders",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Avoid extra requests by setting a cache headers",
+              "weight": 10
+            },
+            "combineCss": {
+              "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ...  ut be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+              "description": "The more number of CSS requests, the slower the page will be. Combine your css files into one. If you are using HTTP/1",
+              "id": "combineCss",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "css",
+                "HTTP/1"
+              ],
+              "title": "Combine CSS files if HTTP/1",
+              "weight": 5
+            },
+            "combineJs": {
+              "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many Javascript from the same domain ...  ut be careful! Many Javascript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+              "description": "The more number of Javascript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
+              "id": "combineJs",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "js",
+                "HTTP/1"
+              ],
+              "title": "Combine JS files if HTTP/1",
+              "weight": 5
+            },
+            "compressAssets": {
+              "advice": "",
+              "description": "Send content compressed over the wire to save bytes",
+              "id": "compressAssets",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Always compress text content",
+              "weight": 8
+            },
+            "connectionKeepAlive": {
+              "advice": "",
+              "description": "Use keep alive headers & don't close the connection when we have multiple requests to one and the same domain",
+              "id": "connectionKeepAlive",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Don't close a connection that is used multiple times",
+              "weight": 5
+            },
+            "cssSize": {
+              "advice": "",
+              "description": "",
+              "id": "cssSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "css"
+              ],
+              "title": "Total CSS size shouldn't be too big",
+              "weight": 5
+            },
+            "documentRedirect": {
+              "advice": "",
+              "description": "You should never ever redirect the main document.",
+              "id": "documentRedirect",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance"
+              ],
+              "title": "Avoid redirect the main document",
+              "weight": 9
+            },
+            "favicon": {
+              "advice": "",
+              "description": "",
+              "id": "favicon",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "favicon"
+              ],
+              "title": "The favicon should be small and cacheable",
+              "weight": 1
+            },
+            "fewFonts": {
+              "advice": "",
+              "description": "Fonts can slow down the rendering of content try to avoid too many of them",
+              "id": "fewFonts",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "font"
+              ],
+              "title": "Avoid too many fonts",
+              "weight": 2
+            },
+            "fewRequestsPerDomain": {
+              "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
+              "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+              "id": "fewRequestsPerDomain",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "HTTP/1"
+              ],
+              "title": "Avoid too many requests per domain",
+              "weight": 5
+            },
+            "headerSize": {
+              "advice": "",
+              "description": "",
+              "id": "headerSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "mobile"
+              ],
+              "title": "Response headers should't be too big",
+              "weight": 4
+            },
+            "imageSize": {
+              "advice": "",
+              "description": "",
+              "id": "imageSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "image"
+              ],
+              "title": "Total image size shouldn't be too big",
+              "weight": 5
+            },
+            "javascriptSize": {
+              "advice": "",
+              "description": "",
+              "id": "javascriptSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "javascript"
+              ],
+              "title": "Total Javascript size shouldn't be too big",
+              "weight": 5
+            },
+            "pageSize": {
+              "advice": "",
+              "description": "Avoid having pages that have transfer size over the wire more than 2mb because that is really big and will hurt performance. ",
+              "id": "pageSize",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server",
+                "mobile"
+              ],
+              "title": "Total page size shouldn't be too big",
+              "weight": 3
+            },
+            "privateAssets": {
+              "advice": "",
+              "description": "Static content should be able to be cached & used by everyone.",
+              "id": "privateAssets",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Don't use private headers on static content",
+              "weight": 5
+            },
+            "responseOk": {
+              "advice": "",
+              "description": "Check for 40X and 50X responses, and report them.",
+              "id": "responseOk",
+              "offending": [],
+              "score": 100,
+              "tags": [
+                "performance",
+                "server"
+              ],
+              "title": "Avoid missing and error requests",
+              "weight": 7
+            }
+          }
+        },
+        "url": "https://run.sitespeed.io/"
+      }
+    }
+  }
+]
