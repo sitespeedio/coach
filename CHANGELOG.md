@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## Unreleased
+### Fixed
+- combinedCss advice should alert if we have more than 1 CSS.
+- neverSupressZoom now reports the failing meta content
 
 ## 0.10.0 2016-03-22
 ### Added
