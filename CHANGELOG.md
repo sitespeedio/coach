@@ -1,8 +1,10 @@
 # CHANGELOG - webcoach
+
 ## Unreleased
 ### Fixed
 - combinedCss advice should alert if we have more than 1 CSS.
 - neverSupressZoom now reports the failing meta content
+- privateAssets now also check for private headers for HTML assets
 
 ## 0.10.0 2016-03-22
 ### Added
