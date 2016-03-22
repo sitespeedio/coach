@@ -4,6 +4,7 @@ let assert = require('assert');
 
 let domResult = require('./files/domResult.json');
 let harResult = require('./files/harResult.json');
+let harResultOverride = require('./files/harResultOverride.json');
 
 describe('Merging DOM and HAR results', function() {
   it('We should have the right amount of performance advice', function() {
@@ -23,5 +24,10 @@ describe('Merging DOM and HAR results', function() {
   it('The total score should be right ', function() {
     let result = merge(domResult, harResult);
     assert.strictEqual(result.coachAdvice.results.score, 98);
+  });
+
+  it('HAR result advice should override DOM advice ', function() {
+    let result = merge(domResult, harResultOverride);
+    assert.strictEqual(result.coachAdvice.results.performance.adviceList.altImages.title, 'altImages from HAR');
   });
 });
