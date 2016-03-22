@@ -111,17 +111,35 @@ let util = require('../util');
 module.exports = {
   id: 'pageSize',
   title: 'Total page size shouldn\'t be too big',
-  description: 'Avoid having pages that have transfer size over the wire of more than 2 MB because that is really big and will hurt performance. ',
+  description: 'Avoid having pages that have transfer size over the wire of more than 2 MB (desktop) and 1 MB (mobile) because that is really big and will hurt performance. ',
   weight: 3,
-  tags: ['performance','server','mobile'],
-  processPage: function(page) {
-    if (page.transferSize > 2000000) {
-      return {score: 0, offending: [], advice:'The page total transfer size is ' + util.formatBytes(page.transferSize) + ', which is more than the recommended 2 MB. That is really big and you should check what you can do to make it smaller'};
+  tags: ['performance', 'mobile'],
+  processPage: function(page, domAdvice, options) {
+		// in options we have the input parameters
+		// so we can do specific advice for devices like
+    let sizeLimit = options.device === 'desktop' ? 2000000 : 1000000;
+    if (page.transferSize > sizeLimit) {
+      return {
+        score: 0,
+        offending: [],
+        advice: 'The page total transfer size is ' + util.formatBytes(page.transferSize) + ', which is more than the coach limit of ' + util.formatBytes(sizeLimit) + '. That is really big and you should check what you can do to make it smaller.'
+      };
     }
-    return {score: 100, offending: [], advice:''};
+
+		// and the domAdvice is the data we got from running the DOM advice
+		// we can get things like what assets are loaded inside of HEAD
+		// knowing which Javascripts that are loaded synchronous
+		// if (domAdvice.coachAdvice.results.info.head.jssync.length > 0)
+
+    return {
+      score: 100,
+      offending: [],
+      advice: ''
+    };
   }
 };
 ```
+What's extra cool is that a HAR advice can both act on input (specific advice for device or browser) and on the result from the DOM advice running in the browser (=you can let the HAR advice know which assets are loaded inside of head etc).
 
 ## Testing HTTP/2 vs HTTP/1
 Both DOM and HAR advice have help methods that makes it easy to give different advice depending on the protocol.
