@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         }
     },
     mochacli: {
-      all: ["test/dom/*/*Test.js", "test/har/**/*Test.js", "test/api/**/*Test.js", "test/cli/*Test.js","test/merge/*Test.js"]
+      all: ["test/dom/*/*Test.js", "test/har/**/*Test.js", "test/api/**/*Test.js","test/merge/*Test.js"]
     },
    jsdoc : {
         dist : {
