@@ -5,6 +5,7 @@
 	- [DOM vs HAR advice](#dom-vs-har-advice)
 		- [DOM advice](#dom-advice)
 		- [HAR advice](#har-advice)
+		- [The best of two worlds](#the-best-of-two-worlds)
 - [Testing HTTP/2 vs HTTP/1](#testing-http2-vs-http1)
 - [Test in your browser](#test-in-your-browser)
 - [Add a test case](#add-a-test-case)
@@ -140,6 +141,13 @@ module.exports = {
 };
 ```
 What's extra cool is that a HAR advice can both act on input (specific advice for device or browser) and on the result from the DOM advice running in the browser (=you can let the HAR advice know which assets are loaded inside of head etc).
+
+#### The best of two worlds
+As an extra feature, the HAR advice override the DOM advice if the advice has the same id. This means you can easily combine data from the two and still output one advice.
+
+There's no advice that use that functionality today but be sure it will soon be.
+
+It also means we can use information from the resource timing API v2 (where we can get response size) making the DOM advice even more powerful, but when you combine the HAR & DOM advice we can get all the values from the HAR (or some if we want that).
 
 ## Testing HTTP/2 vs HTTP/1
 Both DOM and HAR advice have help methods that makes it easy to give different advice depending on the protocol.
