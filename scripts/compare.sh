@@ -19,7 +19,7 @@ echo 'URL, Coach, GPSI Desktop, YSlow' > result.txt
 for url in "${URLS[@]}"; do
 echo "$url"
 gpsi="$(gpagespeed "$url" --key $GPSI_KEY | jq .ruleGroups.SPEED.score)"
-coach="$(webcoach -u "$url" > apa.txt && cat apa.txt | jq .performance.score)"
+coach="$(webcoach -u "$url" -o json > apa.txt && cat apa.txt | jq .coachAdvice.results.performance.score)"
 yslow="$(phantomjs yslow.js "$url" | jq .o )"
 echo "$url, $coach, $gpsi, $yslow" >> result.txt
 done
