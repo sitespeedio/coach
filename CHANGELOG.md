@@ -1,10 +1,17 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.11.0 2016-03-23
+### Added
+- Lets include page size and size/request per content type #19
+- Let us know how many of the assets redirects happens on the main domain
+
 ### Fixed
 - combinedCss advice should alert if we have more than 1 CSS.
 - neverSupressZoom now reports the failing meta content
 - privateAssets now also check for private headers for HTML assets
+- faviconAdvice should tell us the real problem with the favicon
+- section advice should tell us how often we have a missing heading
+
 
 ## 0.10.0 2016-03-22
 ### Added
