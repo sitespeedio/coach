@@ -26,7 +26,7 @@ script:
 - grunt
 - node ./bin/webcoach.js -b chrome https://www.sitespeed.io > output.json
 - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
-- node ./bin/webcoach.js -b chrome -d mobile https://www.sitespeed.io > output.json
+- node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json
 notifications:
   slack:
     secure: Bo/bgmtFVGj6I2XnkvERfGnoM+t73WQSsP5eMlGM0jhUSKPqIc7Hf2zjYil3amMY3awFnoA6prILcMBzyUURj3jc5VRsWBCf6aQZ3bM+xzAcuTMcoiAKS7Ru1HQj1WY8G7VycDWuNeF8dCT0kt2QhcSneAUQ0qqyclWjcOK22kw=

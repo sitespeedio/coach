@@ -20,7 +20,7 @@ function run(options) {
 
     options.iterations = 1;
 
-    if (options.device === 'mobile') {
+    if (options.mobile) {
       options.viewPort = '360x640';
       if (options.browser === 'chrome') {
         options.chrome = {

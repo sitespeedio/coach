@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## Unreleased
+### Changed
+- Lets make it easier to choose mobile, just add --mobile
 
 ## 0.11.0 2016-03-23
 ### Added

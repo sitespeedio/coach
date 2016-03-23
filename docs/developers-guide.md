@@ -118,7 +118,7 @@ module.exports = {
   processPage: function(page, domAdvice, options) {
 		// in options we have the input parameters
 		// so we can do specific advice for devices like
-    let sizeLimit = options.device === 'desktop' ? 2000000 : 1000000;
+    let sizeLimit = options.mobile ? 1000000 : 2000000;
     if (page.transferSize > sizeLimit) {
       return {
         score: 0,

@@ -74,7 +74,7 @@ webcoach -u http://www.sitespeed.io --limit 101
 If you want to test as a mobile device that's possible too by faking user agent.
 
 ```bash
-webcoach -u http://www.sitespeed.io --device mobile -b chrome
+webcoach -u http://www.sitespeed.io --mobile -b chrome
 ```
 
 
