@@ -114,7 +114,6 @@ In the simplest version you use the default configuration (default DOM and HAR a
 
 ```javascript
 const api = require('webcoach');
-
 const result = api.run('https://www.sitespeed.io');
 ```
 
@@ -152,14 +151,11 @@ To test the HAR you need to generate the HAR yourself and then run it against th
 
 ```javascript
 const api = require('webcoach');
-
 // You read your HAR file from disk or however you get hold of it
 const harJson = //
-
 // if your har contains multiple pages (multiple runs etc) you can use the API
 // to get the page that you want
 const firstPageHar = api.pickAPage(harJson, 0);
-
 // the result is a promise
 const myHarAdviceResultPromise = api.runHarAdvice(firstPageHar, api.getHarAdvice());
 
@@ -185,6 +181,8 @@ The coach test your site in two steps:
  * Analyze the [HAR file](http://www.softwareishard.com/blog/har-12-spec/) for your page together with relevant info from the DOM process.
 
 You can run the different steps standalone but for the best result run them together.
+
+![What the coach do](img/coach-explained.png)
 
 ## Bonus
 The coach doesn't only knows about performance. She also knows about accessibility and web best practice.
