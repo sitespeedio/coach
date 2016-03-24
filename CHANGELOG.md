@@ -1,7 +1,8 @@
 # CHANGELOG - webcoach
 
 ## Unreleased
-- 
+### Added
+- Optimizely advice to turn it off when you are not using it.
 
 ## 0.13.0 2016-03-24
 ### Fixed
