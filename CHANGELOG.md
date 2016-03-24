@@ -1,4 +1,10 @@
 # CHANGELOG - webcoach
+
+## 0.13.0 2016-03-24
+### Fixed
+- Output the size you would save if you set correct cache headers of assets with no cache time
+- Better more precise advice for avoidScalingImages, labelOnInput and https.
+
 ## 0.12.0 2016-03-23
 ### Changed
 - Lets make it easier to choose mobile, just add --mobile
