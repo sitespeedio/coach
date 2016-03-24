@@ -1,8 +1,11 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.14.0 2016-03-24
 ### Added
 - Optimizely advice to turn it off when you are not using it.
+
+### Fixed
+- We missed getting relative CSS when we checked for CSS loaded inside of head.
 
 ## 0.13.0 2016-03-24
 ### Fixed
