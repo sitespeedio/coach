@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+### Added
+- Show number of occurrences when a response isn't a 200 response in responseOk advice.
+- Rewrite fastRender advice and made it include cssInHeadDomain (removed) to make it easier to rewrite the advice later and act on both what's in the DOM and the HTML. We need to add more tests before this can be released.
+
 ## 0.14.0 2016-03-24
 ### Added
 - Optimizely advice to turn it off when you are not using it.

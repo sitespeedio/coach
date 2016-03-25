@@ -36,13 +36,6 @@ describe('Performance advice:', function() {
           });
       });
 
-      it('We should find out if we load the CSS inside of head with same domain', function() {
-        return bt.run(path + 'cssInHeadDomain.html', 'lib/dom/performance/cssInHeadDomain.js')
-          .then((result) => {
-            assert.strictEqual(result.offending.length, 0);
-          });
-      });
-
       it('We should find out if we load an print CSS', function() {
         return bt.run(path + 'cssPrint.html', 'lib/dom/performance/cssPrint.js')
           .then((result) => {
