@@ -35,6 +35,13 @@ module.exports = function(grunt) {
           port: 8282,
           base: 'test/http-server'
         }
+      },
+      serverh2: {
+        options: {
+          port: 8383,
+          protocol: 'http2',
+          base: 'test/http-server'
+        }
       }
     },
 
