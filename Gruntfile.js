@@ -1,5 +1,5 @@
-var combine = require('./lib/dom/combine');
-var bookmarklet = require('./lib/dom/bookmarklet');
+var combine = require('./lib/dom/combine'),
+  bookmarklet = require('./lib/dom/bookmarklet');
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -15,7 +15,9 @@ module.exports = function(grunt) {
       options: {
         // banner: '/*! Sitespeed.io <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
         mangle: true,
-        compress: {negate_iife:false}
+        compress: {
+          negate_iife: false
+        }
       },
       dist: {
         files: {
@@ -26,44 +28,40 @@ module.exports = function(grunt) {
     eslint: {
       target: ['lib/dom/*/**.js']
     },
-    'http-server': {
-        dev: {
-            root: "test/http-server",
-            port: 8282,
-            host: "0.0.0.0",
-            cache: 10, // seconds
-            showDir : false,
-            // server default file extension
-            ext: "html",
-            runInBackground: true,
-            logFn: function() { },
-            openBrowser : false
+
+    connect: {
+      server: {
+        options: {
+          port: 8282,
+          base: 'test/http-server'
         }
+      }
     },
+
     mochacli: {
-      all: ["test/dom/*/*Test.js", "test/har/**/*Test.js", "test/api/**/*Test.js","test/merge/*Test.js"]
+      all: ["test/dom/*/*Test.js", "test/har/**/*Test.js", "test/api/**/*Test.js", "test/merge/*Test.js"]
     },
-   jsdoc : {
-        dist : {
-            src: ['README.md','lib/dom/**/*.js'],
-            options: {
-                destination: 'dist/doc'
-            }
+    jsdoc: {
+      dist: {
+        src: ['README.md', 'lib/dom/**/*.js'],
+        options: {
+          destination: 'dist/doc'
         }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-eslint');
-  grunt.loadNpmTasks('grunt-http-server');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks("grunt-mocha-cli");
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-bookmarklet-wrapper');
 
-  grunt.registerTask('default', ['eslint', 'combine', 'uglify', 'bookmarklet','http-server','mochacli','jsdoc']);
+  grunt.registerTask('default', ['eslint', 'combine', 'uglify', 'bookmarklet', 'connect', 'mochacli', 'jsdoc']);
 
   grunt.registerTask('dom', ['combine', 'uglify']);
-  grunt.registerTask('test', ['http-server','mochacli']);
+  grunt.registerTask('test', ['connect', 'mochacli']);
 
   grunt.registerTask('combine', 'Combine all the javascripts', function() {
     grunt.file.mkdir('dist');
