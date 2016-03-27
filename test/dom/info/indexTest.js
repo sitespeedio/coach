@@ -34,9 +34,7 @@ describe('Info', function() {
       it('We should be able to identify the connection type', function() {
         return bt.run(path + 'connectionType.html', 'lib/dom/info/connectionType.js')
           .then((result) => {
-            if (browser === 'chrome') {
               assert.strictEqual(result !== 'unknown', true);
-            }
           });
       });
 
