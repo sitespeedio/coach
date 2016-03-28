@@ -6,7 +6,7 @@ let path = 'http://0.0.0.0:8282/performance/';
 
 let BROWSERS = ['chrome', 'firefox'];
 
-describe('Performance advice:', function() {
+describe('Performance advice HTTP/1:', function() {
 
   BROWSERS.forEach(function(browser) {
 
@@ -29,7 +29,7 @@ describe('Performance advice:', function() {
           });
       });
 
-      it('We should find out the critical rendering path', function() {
+      it('We should know that synchronously Javscript makes the page render slower', function() {
         return bt.run(path + 'fastRender.html', 'lib/dom/performance/fastRender.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 2);
