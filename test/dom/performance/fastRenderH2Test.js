@@ -29,19 +29,6 @@ describe('Fast render advice HTTP/2:', function() {
             assert.strictEqual(result.offending.length, 1);
           });
       });
-
-      if (browser === 'firefox') {
-      it('We should know that a CSS file is too large', function() {
-        return bt.run(path + 'fastrender/tooLargeCSS.html', 'lib/dom/performance/fastRender.js')
-          .then((result) => {
-            assert.strictEqual(result.offending.length, 1);
-          });
-      });
-    } else {
-      it('We should know that a CSS file is too large in Chrome when it supports resource timing V2');
-    }
-
-
     });
   });
 
