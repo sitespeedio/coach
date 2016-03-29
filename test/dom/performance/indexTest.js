@@ -56,13 +56,6 @@ describe('Performance advice HTTP/1:', function() {
             assert.strictEqual(result.score, 100);
           });
       });
-
-      it('We should be able to know if we inline CSS and request CSS files', function() {
-        return bt.run(path + 'inlineCss.html', 'lib/dom/performance/inlineCss.js')
-          .then((result) => {
-            assert.strictEqual(result.score, 90);
-          });
-      });
     });
   });
 
