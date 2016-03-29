@@ -29,6 +29,18 @@ describe('Fast render advice HTTP/2:', function() {
             assert.strictEqual(result.offending.length, 0);
           });
       });
+
+      if (browser === 'firefox') {
+      it('We should know that loading too large CSS files is not ok', function() {
+        return bt.run(path + 'tooLargeCSS.html', 'lib/dom/performance/fastRender.js')
+          .then((result) => {
+            assert.strictEqual(result.offending.length, 1);
+          });
+      });
+    }
+    else {
+        it('We should know that loading too large CSS files is not ok');
+    }
     });
   });
 
