@@ -29,13 +29,6 @@ describe('Performance advice HTTP/1:', function() {
           });
       });
 
-      it('We should know that synchronously Javscript makes the page render slower', function() {
-        return bt.run(path + 'fastRender.html', 'lib/dom/performance/fastRender.js')
-          .then((result) => {
-            assert.strictEqual(result.offending.length, 2);
-          });
-      });
-
       it('We should find out if we load an print CSS', function() {
         return bt.run(path + 'cssPrint.html', 'lib/dom/performance/cssPrint.js')
           .then((result) => {
