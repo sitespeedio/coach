@@ -15,13 +15,6 @@ describe('Performance advice HTTP/1:', function() {
 
       after(() => bt.stop());
 
-      it('We should find out CSS files not in head', function() {
-        return bt.run(path + 'cssInHead.html', 'lib/dom/performance/cssInHead.js')
-          .then((result) => {
-            assert.strictEqual(result.offending.length, 1);
-          });
-      });
-
       it('We should find out if an image is scaled', function() {
         return bt.run(path + 'avoidScalingImages.html', 'lib/dom/performance/avoidScalingImages.js')
           .then((result) => {
