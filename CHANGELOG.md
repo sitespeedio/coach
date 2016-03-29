@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## 0.15.1 2016-03-30
+### Fixed
+- optimalCssSize advice showed the wrong limit of a CSS files
+- fastRender missed the number of CSS/JS requests for HTTP/1 
+
 ## 0.15.0 2016-03-30
 ### Added
 - Show number of occurrences when a response isn't a 200 response in responseOk advice.
