@@ -21,6 +21,13 @@ describe('Inline CSS advice HTTP/2:', function() {
             assert.strictEqual(result.score, 95);
           });
       });
+
+      it('We should be able to know if we request CSS file(s)', function() {
+        return bt.run(path + 'noInlineAndRequestCss.html', 'lib/dom/performance/inlineCss.js')
+          .then((result) => {
+            assert.strictEqual(result.score, 100);
+          });
+      });
     });
   });
 
