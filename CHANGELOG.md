@@ -7,6 +7,7 @@
 - Test our test cases against a H2 server (that was easy).
 - Drop the cssInHead advice, it is now a anti pattern. https://jakearchibald.com/2016/link-in-body/
 - Goodbye combineCss advice and hello optimalCssSize!
+- More tests for fastRender and inlineCss advice
 
 ## 0.14.0 2016-03-24
 ### Added
