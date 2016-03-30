@@ -1,5 +1,7 @@
 # CHANGELOG - webcoach
 
+## unreleased
+
 ## 0.16.0 2016-03-30
 ### Changed
 - Flattened JSON result format by removing top level "coachAdvice".
