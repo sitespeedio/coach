@@ -48,7 +48,7 @@ function run(options) {
   }
 
   function formatOutput(result, options) {
-    if (options.output === 'json') {
+    if (options.format === 'json') {
       return stringify(result, {
         space: 2
       });
@@ -58,10 +58,18 @@ function run(options) {
     }
   }
 
+  function printOutput(output, options) {
+    if (options.output) {
+      return fs.writeFileAsync(path.resolve(options.output), output, 'utf8');
+    } else {
+      console.log(output);
+    }
+  }
+
   return Promise.resolve(setupOptions(options))
     .then((options) => runAdvice(options)
       .then((result) => formatOutput(result, options)))
-    .then((output) => console.log(output))
+    .then((output) => printOutput(output, options))
     .catch((e) => {
       console.error('Error running advice: ', e.stack);
       process.exitCode = 1;

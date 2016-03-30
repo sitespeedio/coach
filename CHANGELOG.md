@@ -4,9 +4,11 @@
 ### Changed
 - Flattened json result format by removing top level "coachAdvice".
 - Renamed "results" to "advice" in json result format.
+- Changed format cli option from -o to -f.
 
 ### Added
 - New best practice advice: Use HTTPS together with HTTP/2.
+- Supports writing output to file via -o <PATH>
 
 ## 0.15.1 2016-03-30
 ### Fixed
