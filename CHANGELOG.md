@@ -1,6 +1,8 @@
 # CHANGELOG - webcoach
 
-## unreleased
+## 0.16.1 2016-03-30
+### Fixed
+- Updated readme to follow the new way of getting JSON output.
 
 ## 0.16.0 2016-03-30
 ### Changed
