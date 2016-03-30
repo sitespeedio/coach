@@ -3,6 +3,7 @@
 ## UNRELEASED
 ### Changed
 - Flattened json result format by removing top level "coachAdvice".
+- Renamed "results" to "advice" in json result format.
 
 ### Added
 - New best practice advice: Use HTTPS together with HTTP/2.
