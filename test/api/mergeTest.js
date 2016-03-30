@@ -11,7 +11,7 @@ describe('Merge API:', function() {
 
   it('should work', function() {
     let har = [{
-      'results': {
+      'advice': {
         'performance': {
           'adviceList': {
             'fromHAR': {
@@ -30,7 +30,7 @@ describe('Merge API:', function() {
       'score': 100
     }];
     let dom = {
-      'results': {
+      'advice': {
         'performance': {
           'adviceList': {
             'fromDOM': {
@@ -49,7 +49,7 @@ describe('Merge API:', function() {
       'score': 0
     };
     let result = api.merge(dom, har);
-    assert.strictEqual(Object.keys(result.results.performance.adviceList).length, 2);
-    assert.strictEqual(result.results.performance.score, 50);
+    assert.strictEqual(Object.keys(result.advice.performance.adviceList).length, 2);
+    assert.strictEqual(result.advice.performance.score, 50);
   });
 });

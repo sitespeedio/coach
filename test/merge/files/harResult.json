@@ -1,6 +1,6 @@
 [
   {
-    "results": {
+    "advice": {
       "performance": {
         "adviceList": {
           "assetsRedirects": {
@@ -231,7 +231,7 @@
     }
   },
   {
-    "results": {
+    "advice": {
       "performance": {
         "adviceList": {
           "assetsRedirects": {

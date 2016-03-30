@@ -9,12 +9,12 @@ describe('Run API:', function() {
   it('should output correct structure', () =>
     api.run(LOCAL_SERVER)
       .then((advice) => {
-        ['results', 'errors', 'url', 'version'].forEach((property) =>
+        ['advice', 'errors', 'url', 'version'].forEach((property) =>
           advice.should.have.ownProperty(property)
         );
 
         ['accessibility', 'bestpractice', 'info', 'performance', 'timings', 'score'].forEach((property) =>
-          advice.results.should.have.ownProperty(property)
+          advice.advice.should.have.ownProperty(property)
         );
       }))
 });

@@ -26,21 +26,21 @@ describe('Combined minified script [' + SCRIPT_NAME + ']', function() {
       it('We should have a combined score for all categories', function() {
         return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.results.score > 0, true);
+              assert.strictEqual(result.advice.score > 0, true);
           });
       });
 
       it('We should have a average score for performance', function() {
         return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.results.performance.score > 0, true);
+              assert.strictEqual(result.advice.performance.score > 0, true);
           });
       });
 
       it('We should have a average score for accessibility', function() {
         return bt.run(url + 'index.html', scriptPath)
           .then((result) => {
-              assert.strictEqual(result.results.accessibility.score > 0, true);
+              assert.strictEqual(result.advice.accessibility.score > 0, true);
           });
       });
 

@@ -40,7 +40,7 @@ describe('HAR apis:', function() {
           const firstPageAdvice = advicePerPage[0];
 
           firstPageAdvice.should.have.property('version');
-          firstPageAdvice.should.have.deep.property('results.performance');
+          firstPageAdvice.should.have.deep.property('advice.performance');
         }));
   });
 });
