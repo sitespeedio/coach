@@ -1,9 +1,13 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+- New best practice advice: Use HTTPS together with HTTP/2.
+
 ## 0.15.1 2016-03-30
 ### Fixed
 - optimalCssSize advice showed the wrong limit of a CSS files
-- fastRender missed the number of CSS/JS requests for HTTP/1 
+- fastRender missed the number of CSS/JS requests for HTTP/1
 
 ## 0.15.0 2016-03-30
 ### Added
