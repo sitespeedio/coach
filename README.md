@@ -82,7 +82,7 @@ webcoach -u http://www.sitespeed.io --mobile -b chrome
 
 Yes you can do that!
 ```bash
-webcoach -u http://www.sitespeed.io -o json
+webcoach -u http://www.sitespeed.io -f json
 ```
 Will get you the full JSON, the same as if you integrate the coach into your tool.
 
