@@ -1,9 +1,9 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.16.0 2016-03-30
 ### Changed
-- Flattened json result format by removing top level "coachAdvice".
-- Renamed "results" to "advice" in json result format.
+- Flattened JSON result format by removing top level "coachAdvice".
+- Renamed "results" to "advice" in JSON result format.
 - Changed format cli option from -o to -f.
 
 ### Added
