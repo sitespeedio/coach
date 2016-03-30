@@ -4,8 +4,8 @@ const api = require('../../lib/'),
   fs = require('fs'),
   path = require('path'),
   Promise = require('bluebird'),
-  chai = require("chai"),
-  chaiAsPromised = require("chai-as-promised");
+  chai = require('chai'),
+  chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
 chai.should();
@@ -19,16 +19,13 @@ describe('HAR apis:', function() {
       api.getHarAdvice().should.eventually.not.be.empty
     );
 
-    it('should only return valid advice', function() {
-      return api.getHarAdvice()
-        .then((adviceList) => {
-          return Promise.each(adviceList, (advice) => {
-            return ['id', 'title', 'description', 'weight', 'tags'].forEach((property) =>
+    it('should only return valid advice', () =>
+      api.getHarAdvice()
+        .then((adviceList) =>
+          Promise.each(adviceList, (advice) =>
+            ['id', 'title', 'description', 'weight', 'tags'].forEach((property) =>
               advice.should.have.ownProperty(property)
-            );
-          });
-        });
-    });
+            ))));
   });
 
   describe('runHarAdvice', function() {
@@ -44,8 +41,6 @@ describe('HAR apis:', function() {
 
           firstPageAdvice.should.have.property('version');
           firstPageAdvice.should.have.deep.property('results.performance');
-        })
-    );
+        }));
   });
-
 });

@@ -8,12 +8,13 @@ let fs = require('fs'),
 Promise.promisifyAll(fs);
 
 module.exports = {
-  getHARresult: function(harFile, domAdvice, options) {
-    return fs.readFileAsync(path.resolve(harFile))
-      .then(JSON.parse)
-      .then((har) => api.runHarAdvice(har, api.getHarAdvice(), domAdvice, options));
+  harFromTestFile(fileName) {
+    return fs.readFileAsync(path.resolve(__dirname, '..', 'har', 'files', fileName))
+      .then(JSON.parse);
   },
-  getHAR: function(harFile) {
-    return fs.readFileAsync(path.resolve(harFile))
-      .then(JSON.parse)}
+  firstAdviceForTestFile(fileName, options) {
+    return this.harFromTestFile(fileName)
+      .then((har) => api.runHarAdvice(har, api.getHarAdvice(), undefined, options))
+      .then((result) => result[0].coachAdvice.results);
+  }
 };

@@ -1,8 +1,7 @@
 'use strict';
-let bt = require('../../help/browsertimeSingleScript');
-let assert = require('assert');
 
-let path = 'https://0.0.0.0:8383/performance/fastrender/';
+const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -11,12 +10,14 @@ describe('Fast render advice HTTP/2:', function() {
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
-      before(() => bt.start(browser));
+      const runner = createTestRunner(browser, 'performance', true);
 
-      after(() => bt.stop());
+      before(() => runner.start(browser));
+
+      after(() => runner.stop());
 
       it('We should know that synchronously Javscript makes the page render slower', function() {
-        return bt.run(path + '/avoidJSSyncInHead.html', 'lib/dom/performance/fastRender.js')
+        return runner.run('fastRender.js', 'fastrender/avoidJSSyncInHead.html')
           .then((result) => {
             // In H2 world we don't hurt CSS, we hope it is pushed.
             assert.strictEqual(result.offending.length, 1);
@@ -24,23 +25,20 @@ describe('Fast render advice HTTP/2:', function() {
       });
 
       it('We should know that loading javascript async is ok', function() {
-        return bt.run(path + 'jsAsyncIsOk.html', 'lib/dom/performance/fastRender.js')
+        return runner.run('fastRender.js', 'fastrender/jsAsyncIsOk.html')
           .then((result) => {
             assert.strictEqual(result.offending.length, 0);
           });
       });
 
       if (browser === 'firefox') {
-      it('We should know that loading too large CSS files is not ok', function() {
-        return bt.run(path + 'tooLargeCSS.html', 'lib/dom/performance/fastRender.js')
-          .then((result) => {
-            assert.strictEqual(result.offending.length, 1);
-          });
-      });
-    }
-    else {
-        it('We should know that loading too large CSS files is not ok');
-    }
+        it('We should know that loading too large CSS files is not ok', function() {
+          return runner.run('fastRender.js', 'fastrender/tooLargeCSS.html')
+            .then((result) => {
+              assert.strictEqual(result.offending.length, 1);
+            });
+        });
+      }
     });
   });
 

@@ -25,14 +25,14 @@ describe('DOM apis:', function() {
     describe('runDomAdvice: ' + browser, function() {
       this.timeout(60000);
 
-      it('should run simple script', function() {
-        return api.runDomAdvice(LOCAL_SERVER, api.getDomAdvice(), {
+      it('should run simple script', () =>
+        api.runDomAdvice(LOCAL_SERVER, api.getDomAdvice(), {
           browser,
           iterations: 1,
           pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'
           // TODO test that we actually have DOM data and valid HAR
-        }).should.eventually.have.property("browsertimeData");
-      });
+        }).should.eventually.have.property('browsertimeData')
+      );
     });
   });
 });

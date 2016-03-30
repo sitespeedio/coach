@@ -1,7 +1,7 @@
 'use strict';
-let bt = require('../../help/browsertimeSingleScript');
-let assert = require('assert');
-let path = 'https://0.0.0.0:8383/info/';
+
+const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -10,12 +10,14 @@ describe('info - h2', function() {
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
-      before(() => bt.start(browser));
+      const runner = createTestRunner(browser, 'info', true);
 
-      after(() => bt.stop());
+      before(() => runner.start(browser));
+
+      after(() => runner.stop());
 
       it('Should be able to know if the connection is H2', function() {
-        return bt.run(path + 'connectionType.html', 'lib/dom/info/connectionType.js')
+        return runner.run('connectionType.js')
           .then((result) => {
             assert.strictEqual(result === 'h2', true);
           });

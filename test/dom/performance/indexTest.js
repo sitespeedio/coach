@@ -1,57 +1,60 @@
 'use strict';
-let bt = require('../../help/browsertimeSingleScript');
-let assert = require('assert');
 
-let path = 'http://0.0.0.0:8282/performance/';
+const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
 describe('Performance advice HTTP/1:', function() {
+  this.timeout(60000);
 
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
-      before(() => bt.start(browser));
 
-      after(() => bt.stop());
+      const runner = createTestRunner(browser, 'performance');
+
+      before(() => runner.start(browser));
+
+      after(() => runner.stop());
 
       it('We should find out if an image is scaled', function() {
-        return bt.run(path + 'avoidScalingImages.html', 'lib/dom/performance/avoidScalingImages.js')
+        return runner.run('avoidScalingImages.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
           });
       });
 
       it('We should find out if we load an print CSS', function() {
-        return bt.run(path + 'cssPrint.html', 'lib/dom/performance/cssPrint.js')
+        return runner.run('cssPrint.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
           });
       });
 
       it('We should find out if can have SPOF', function() {
-        return bt.run(path + 'spof.html', 'lib/dom/performance/spof.js')
+        return runner.run('spof.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 2);
           });
       });
 
       it('We should find out if we load third party JS sync', function() {
-        return bt.run(path + 'thirdPartyAsyncJs.html', 'lib/dom/performance/thirdPartyAsyncJs.js')
+        return runner.run('thirdPartyAsyncJs.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
           });
       });
 
       it('Multiple JQuerys that exists on the same page should be reported', function() {
-        return bt.run(path + 'jquery.html', 'lib/dom/performance/jquery.js')
+        return runner.run('jquery.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 2);
           });
       });
 
       it('We should be able to know if the page use user timings', function() {
-        return bt.run(path + 'userTiming.html', 'lib/dom/performance/userTiming.js')
+        return runner.run('userTiming.js')
           .then((result) => {
             assert.strictEqual(result.score, 100);
           });

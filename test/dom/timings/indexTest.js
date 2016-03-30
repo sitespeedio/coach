@@ -1,57 +1,60 @@
 'use strict';
-let bt = require('../../help/browsertimeSingleScript');
-let assert = require('assert');
 
-let path = 'http://0.0.0.0:8282/timings/';
+const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
-describe('Timings:', function() {
+describe('Timings', function() {
+  this.timeout(60000);
 
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
-      before(() => bt.start(browser));
 
-      after(() => bt.stop());
+      const runner = createTestRunner(browser, 'timings');
+
+      before(() => runner.start(browser));
+
+      after(() => runner.stop());
 
       it('We should get a RUMSpeedIndex', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/rumSpeedIndex.js')
+        return runner.run('rumSpeedIndex.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result > 0, true);
           });
       });
 
       it('We should get a Navigation Timings', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/navigationTimings.js')
+        return runner.run('navigationTimings.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result.loadEventEnd > 0, true);
           });
       });
 
       it('We should get our calculated timings', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/timings.js')
+        return runner.run('timings.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result.frontEndTime > 0, true);
           });
       });
 
       it('We should get User Timing Marks', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/userTimings.js')
+        return runner.run('userTimings.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result.marks.santaLoaded > 0, true);
           });
       });
 
       it('We should get User Timing measurements', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/userTimings.js')
+        return runner.run('userTimings.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result.measures.time.startTime > 0, true);
           });
       });
 
       it('We should get a fully loaded timing', function() {
-        return bt.run(path + 'index.html', 'lib/dom/timings/fullyLoaded.js')
+        return runner.run('fullyLoaded.js', 'index.html')
           .then((result) => {
             assert.strictEqual(result > 0, true);
           });
