@@ -8,9 +8,7 @@ describe('Run API:', function() {
 
   it('should output correct structure', () =>
     api.run(LOCAL_SERVER)
-      .then((result) => {
-        const advice = result.coachAdvice;
-
+      .then((advice) => {
         ['results', 'errors', 'url', 'version'].forEach((property) =>
           advice.should.have.ownProperty(property)
         );

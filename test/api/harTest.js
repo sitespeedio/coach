@@ -37,7 +37,7 @@ describe('HAR apis:', function() {
         .then((advicePerPage) => {
           advicePerPage.should.have.length(2);
 
-          const firstPageAdvice = advicePerPage[0].coachAdvice;
+          const firstPageAdvice = advicePerPage[0];
 
           firstPageAdvice.should.have.property('version');
           firstPageAdvice.should.have.deep.property('results.performance');

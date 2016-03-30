@@ -31,7 +31,7 @@ describe('DOM apis:', function() {
           iterations: 1,
           pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'
           // TODO test that we actually have DOM data and valid HAR
-        }).should.eventually.have.property('browsertimeData')
+        }).should.eventually.have.deep.property('results.info.amp')
       );
     });
   });

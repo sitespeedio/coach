@@ -1,6 +1,9 @@
 # CHANGELOG - webcoach
 
 ## UNRELEASED
+### Changed
+- Flattened json result format by removing top level "coachAdvice".
+
 ### Added
 - New best practice advice: Use HTTPS together with HTTP/2.
 

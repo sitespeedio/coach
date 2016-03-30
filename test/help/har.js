@@ -15,6 +15,6 @@ module.exports = {
   firstAdviceForTestFile(fileName, options) {
     return this.harFromTestFile(fileName)
       .then((har) => api.runHarAdvice(har, api.getHarAdvice(), undefined, options))
-      .then((result) => result[0].coachAdvice.results);
+      .then((result) => result[0].results);
   }
 };
