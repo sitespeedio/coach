@@ -69,7 +69,7 @@
     "json-stable-stringify": "1.0.1",
     "lodash.clonedeep": "4.3.1",
     "lodash.groupby": "4.2.0",
-    "lodash.merge": "4.3.2",
+    "lodash.merge": "4.3.3",
     "snufkin": "0.3.8",
     "word-wrap": "1.1.0",
     "yargs": "4.3.1"
