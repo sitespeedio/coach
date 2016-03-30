@@ -62,7 +62,7 @@
   ],
   "dependencies": {
     "bluebird": "3.3.4",
-    "browsertime": "1.0.0-alpha.5",
+    "browsertime": "1.0.0-alpha.6",
     "chalk": "1.1.1",
     "cli-table2": "0.2.0",
     "filter-files": "0.4.0",
