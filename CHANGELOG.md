@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.17.0 2016-03-31
 ### Added
 - Include coach version number in the table output.
 
