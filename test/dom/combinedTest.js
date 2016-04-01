@@ -1,46 +1,45 @@
 'use strict';
-let bt = require('../help/browsertime'),
-  assert = require('assert'),
-  path = require('path');
 
-let url = 'http://0.0.0.0:8282/combined/';
+const createTestRunner = require('../help/browsertimeRunner').createTestRunner,
+  path = require('path'),
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
-let SCRIPT_NAME = 'coach.min.js';
+const SCRIPT_NAME = 'coach.min.js',
+  scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
 
 describe('Combined minified script [' + SCRIPT_NAME + ']', function() {
-
-  const scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
-
+  this.timeout(60000);
+  
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
 
-      this.timeout(60000);
+      const runner = createTestRunner(browser, 'combined');
 
-      before(() => bt.start(browser));
+      before(() => runner.start(browser));
 
-      after(() => bt.stop());
+      after(() => runner.stop());
 
       it('We should have a combined score for all categories', function() {
-        return bt.run(url + 'index.html', scriptPath)
+        return runner.run(scriptPath, 'index.html')
           .then((result) => {
-              assert.strictEqual(result.advice.score > 0, true);
+            assert.strictEqual(result.advice.score > 0, true);
           });
       });
 
       it('We should have a average score for performance', function() {
-        return bt.run(url + 'index.html', scriptPath)
+        return runner.run(scriptPath, 'index.html')
           .then((result) => {
-              assert.strictEqual(result.advice.performance.score > 0, true);
+            assert.strictEqual(result.advice.performance.score > 0, true);
           });
       });
 
       it('We should have a average score for accessibility', function() {
-        return bt.run(url + 'index.html', scriptPath)
+        return runner.run(scriptPath, 'index.html')
           .then((result) => {
-              assert.strictEqual(result.advice.accessibility.score > 0, true);
+            assert.strictEqual(result.advice.accessibility.score > 0, true);
           });
       });
 

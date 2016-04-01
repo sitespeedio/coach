@@ -1,28 +1,27 @@
 'use strict';
-let bt = require('../help/browsertime');
 
-let path = 'http://0.0.0.0:8282/combined/';
+const createTestRunner = require('../help/browsertimeRunner').createTestRunner,
+  path = require('path');
 
 let BROWSERS = ['chrome', 'firefox'];
 
-let SCRIPT_NAME = 'dist/bookmarklet.js';
+let SCRIPT_NAME = 'bookmarklet.js',
+  scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
 
 describe('Bookmarklet script [' + SCRIPT_NAME + ']', function() {
+  this.timeout(60000);
 
   BROWSERS.forEach(function(browser) {
 
     describe('browser:' + browser, function() {
+      const runner = createTestRunner(browser, 'combined');
 
-      this.timeout(60000);
+      before(() => runner.start(browser));
 
-      before(() => bt.start(browser));
-
-      after(() => bt.stop());
+      after(() => runner.stop());
 
       it('We should be able to run the bookmarklet', function() {
-        return bt.run(path + 'index.html', SCRIPT_NAME)
-          .then(() => {
-          });
+        return runner.run(scriptPath, 'index.html');
       });
     });
   });
