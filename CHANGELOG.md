@@ -3,6 +3,7 @@
 ## Unreleased
 ### Fixed
 - Updated id of httpsH2 advice to match filename.
+- Added extra advice text if the main document of a page is served private.
 
 ## 0.17.0 2016-03-31
 ### Added
