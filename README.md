@@ -3,7 +3,7 @@
 The coach helps you find performance problems on your web page. Think of the coach as a modern version of [YSlow](http://yslow.org/). The coach will give advice of how your page can be faster.
 
 # The coach
- - [Do my page need coaching?](#do-my-page-need-coaching)
+ - [Does my page need coaching?](#do-my-page-need-coaching)
  - [Why we love the coach](#why-we-love-the-coach)
  - [Work in progress](#work-in-progress)
  - [How to use the coach](#how-to-use-the-coach)
@@ -11,7 +11,7 @@ The coach helps you find performance problems on your web page. Think of the coa
     - [sitespeed.io 4.0](#sitespeedio-40)
     - [Bookmarklet](#bookmarklet)
     - [Include in your own tool](#include-in-your-own-tool)
- - [What do the coach do?](#what-do-the-coach-do)  
+ - [What does the coach do?](#what-do-the-coach-do)  
  - [How does it all work](#how-does-it-all-work?)
     - [Bonus](#bonus)
     - [Accessibility](#accessibility)
@@ -21,22 +21,22 @@ The coach helps you find performance problems on your web page. Think of the coa
  - [Developers guide](#developers-guide)  
  - [Browser support](#browser-support)    
 
-## Do my page need coaching?
+## Does my page need coaching?
 
-You know, it's hard to get everything right! The world is complex: HTTP/1 vs HTTP/2. Some of the previous performance best practices are now worst practices. The coach will detect that the page is accessed using HTTP/2, and adjust its' advice accordingly.
+You know, it's hard to get everything right! The world is complex: HTTP/1 vs HTTP/2. Some of the previous performance best practices are now worst practices. The coach will detect that the page is accessed using HTTP/2, and adjust its advice accordingly.
 
 
 ## Why we love the coach
 Ten reasons why we love the coach:
- - The coach gives you advice how to make your page faster. The coach aims to NEVER give you a false advice. Follow the advice and you will WIN!
+ - The coach gives you advice on how to make your page faster. The coach aims to NEVER give you bad advice. Follow the advice and you will WIN!
  - HTTP/1 or HTTP/2? That's no problem, the coach adjust the advice accordingly.
- - The coach use real browsers to investigate your page exact as your users.
- - Every advice has one or more unit test to make sure it's easy to change advice in the future.
- - The coach knows other things than performance: Accessibility and web best practice are other things that the coach can help you with.
- - You can integrate the coach in your own web performance tool, it's easy: Your tool only need to be able to run Javascript in the browser and produce a HAR file. Or you can use the built in functionality of the coach to run the browser.
- - The coach is Open Source. The advice is public, you can check them and change them yourself. Help us make the coach even better!
- - The coach can combine knowledge from the DOM with HAR to make super powerful advice.
- - The CLI output is pretty nice, you can configure how much you want to see. Use it as fast way to check the performance of your page.
+ - The coach uses real browsers to see your page exactly like your users do.
+ - Every advice has one or more unit-tests to make sure it's easy to change advice in the future.
+ - The coach knows about more than just performance: Accessibility and web best practice are other things that the coach can help you with.
+ - You can integrate the coach with your own web performance tool. It's easy: your tool only need to be able to run JavaScript in the browser and produce a HAR file. Or you can use the built-in functionality of the coach to run the browser.
+ - The coach is open-source. The advice is public, you can check it and change it yourself. Help us make the coach even better!
+ - The coach can combine knowledge from the DOM with HAR to give you super powerful advice.
+ - The CLI output is pretty nice. You can configure how much you want to see. Use it as fast way to check the performance of your page.
  - The coach will be part of sitespeed.io 4.0 and it will be awesome!
 
 ## Work in progress!
@@ -60,18 +60,18 @@ npm install webcoach -g
 webcoach -u http://www.sitespeed.io --browser chrome
 ```
 
-Do also want to show the offending assets and the description of the advice:
+If you also want to show the offending assets and the description of the advice:
 ```bash
 webcoach -u http://www.sitespeed.io --offending --description
 ```
 
-By default the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
+By default, the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
 
 ```bash
 webcoach -u http://www.sitespeed.io --limit 101
 ```
 
-If you want to test as a mobile device that's possible too by faking user agent.
+If you want to test as a mobile device, that's possible too, by faking the user-agent.
 
 ```bash
 webcoach -u http://www.sitespeed.io --mobile -b chrome
@@ -80,22 +80,22 @@ webcoach -u http://www.sitespeed.io --mobile -b chrome
 
 > ... but hey, I want to see the full JSON?
 
-Yes you can do that!
+Yes, you can do that!
 ```bash
 webcoach -u http://www.sitespeed.io -f json
 ```
-Will get you the full JSON, the same as if you integrate the coach into your tool.
+This will get you the full JSON, the same as if you integrate the coach into your tool.
 
 
 ### sitespeed.io 4.0
 
-The coach is a part of the coming [sitespeed.io 4.0](https://www.sitespeed.io). It will be released this summer, hallelujah!
+The coach is a part of the forthcoming [sitespeed.io 4.0](https://www.sitespeed.io). It will be released this summer, hallelujah!
 
 ### Bookmarklet
 
 We also produce a bookmarklet. The bookmarklet only uses advice that you can run inside the browser (it doesn't have HAR file to analyze even though maybe possible in the future with the Resource Timing API).
 
-The bookmarklet is really rough right now and logs the info to the browser console. Help us make a cool front end :)
+The bookmarklet is really rough right now and logs the info to the browser console. Help us make a cool front-end :)
 
 You can generate the bookmarklet by running
 
@@ -185,16 +185,16 @@ You can run the different steps standalone but for the best result run them toge
 ![What the coach do](img/coach-explained.png)
 
 ## Bonus
-The coach doesn't only knows about performance. She also knows about accessibility and web best practice.
+The coach knows more than just performance. She also knows about accessibility and web best practice.
 
 ### Accessibility
 Make sure your site is accessible and useable for every one. You can read more about making the web accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
 
 ### Best practice
-You want your page to follow best practice right? Making sure your page is setup for search engines, have good URL structure and so on.
+You want your page to follow best practices, right? Making sure your page is set up for search engines, have good URL structure and so on.
 
 ### General information
-The world is complex, somethings are great to know but hard for the coach to give advice about.
+The world is complex. Some things are great to know but hard for the coach to give advice about.
 
 The coach then just tell you have the page is built and you can yourself draw your own conclusions if something should be changed.
 
