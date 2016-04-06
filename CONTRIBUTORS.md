@@ -2,3 +2,5 @@ Many many many thanks to:
  * [Keith Cirkel](https://github.com/keithamus)
  * [Jonathan Lee](https://github.com/beenanner)
  * [Ashley Rich](https://github.com/A5hleyRich)
+ * [Pascal Borreli] (https://github.com/pborreli)
+ * [Ori Livneh] (https://github.com/atdt)
