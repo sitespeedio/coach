@@ -17,9 +17,7 @@ function run(options) {
     options.experimental = {
       nativeHar: true
     };
-
     options.iterations = 1;
-
     if (options.mobile) {
       options.viewPort = '360x640';
       if (options.browser === 'chrome') {
@@ -66,9 +64,16 @@ function run(options) {
     }
   }
 
+  function storeScreenshot(result, options) {
+    if (options.screenshot && options.format === 'table') {
+      return fs.writeFileAsync('screenshot.png',result.screenshot);
+    }
+  }
+
   return Promise.resolve(setupOptions(options))
     .then((options) => runAdvice(options)
-      .then((result) => formatOutput(result, options)))
+    .tap((result) => storeScreenshot(result, options))
+    .then((result) => formatOutput(result, options)))
     .then((output) => printOutput(output, options))
     .catch((e) => {
       console.error('Error running advice: ', e.stack);
