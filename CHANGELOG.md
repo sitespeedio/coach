@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.18.0 2016-04-07
 ### Fixed
 - Updated id of httpsH2 advice to match filename.
 - Added extra advice text if the main document of a page is served private.
