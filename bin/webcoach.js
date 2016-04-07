@@ -47,6 +47,7 @@ function run(options) {
 
   function formatOutput(result, options) {
     if (options.format === 'json') {
+      result.screenshot = undefined;
       return stringify(result, {
         space: 2
       });
@@ -65,8 +66,8 @@ function run(options) {
   }
 
   function storeScreenshot(result, options) {
-    if (options.screenshot && options.format === 'table') {
-      return fs.writeFileAsync('screenshot.png',result.screenshot);
+    if (options.screenshot) {
+      return fs.writeFileAsync(path.join(process.cwd(),'screenshot.png'),result.screenshot);
     }
   }
 
