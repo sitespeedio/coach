@@ -106,6 +106,13 @@ describe('Info', function() {
           });
       });
 
+      it('We should be able to know which browser that runs', function() {
+        return runner.run('browser.js')
+          .then((result) => {
+            assert.strictEqual(result !== 'unknown', true);
+          });
+      });
+
       it('We should be able to get resource hints', function() {
         return runner.run('resourceHints.js')
           .then((result) => {

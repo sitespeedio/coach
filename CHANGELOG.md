@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+
+### Added
+- Get browser and version.
+
 ## 0.18.0 2016-04-07
 ### Fixed
 - Updated id of httpsH2 advice to match filename.
@@ -8,7 +13,6 @@
 ### Added
 - Added possibility to take screenshot (it's now supported in Browsertime). Note: Using Chrome the screenshot will be the current view port, using Firefox it will be the full page. This is a webdriver issue, lets see check how we can
 fix this.
-
 
 ## 0.17.0 2016-03-31
 ### Added
