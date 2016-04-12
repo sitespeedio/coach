@@ -4,6 +4,7 @@
 
 ### Added
 - Get browser and version.
+- Show all redirect URLs in the offending section when a main document is redirected.
 
 ## 0.18.0 2016-04-07
 ### Fixed
