@@ -1,0 +1,706 @@
+{
+  "advice": {
+    "accessibility": {
+      "adviceList": {
+        "altImages": {
+          "advice": "The page has 2 images that lack alt attribute(s) and 2 of them are unique.",
+          "description": "All img tags require an alt attribute. This goes without exception. Everything else is an error. If you have an img tag in your HTML without an alt attribute, add it now. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+          "id": "altImages",
+          "offending": [
+            "https://www.sitespeed.io/img/black-logo-120.png",
+            "https://www.sitespeed.io/img/fastly2.png"
+          ],
+          "score": 80,
+          "tags": [
+            "accessibility",
+            "images"
+          ],
+          "title": "Always use alt attribute on image tags",
+          "weight": 5
+        },
+        "headings": {
+          "advice": "The page is missing a h1 and has heading(s) with lower priority.",
+          "description": "Headings gives your document a logical, easy to follow structure. Have you ever wondered how Wikipedia puts together its table of contents for each article? They use the logical heading structure for that, too! The H1 through H6 elements are unambiguous in telling screen readers, search engines and other technologies what the structure of your document is. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+          "id": "headings",
+          "offending": [
+          ],
+          "score": 90,
+          "tags": [
+            "accessibility",
+            "html"
+          ],
+          "title": "Use headings tags to structure your page",
+          "weight": 4
+        },
+        "labelOnInput": {
+          "advice": "",
+          "description": "Most input elements, as well as the select and textarea elements, need an associated label element that states their purpose. The only exception is those that produce a button, like the reset and submit buttons do. Others, be it text, checkbox, password, radio (button), search etc. require a label element to be present. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+          "id": "labelOnInput",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "accessibility",
+            "form"
+          ],
+          "title": "Always set labels on input in forms",
+          "weight": 3
+        },
+        "landmarks": {
+          "advice": "",
+          "description": "Landmarks can be article, aside, footer, header, nav or main tag. Adding such landmarks appropriately can help further provide sense to your document and help users more easily navigate it. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+          "id": "landmarks",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "accessibility",
+            "html"
+          ],
+          "title": "Structure your content by using landmarks",
+          "weight": 5
+        },
+        "neverSuppressZoom": {
+          "advice": "",
+          "description": "A key feature of mobile browsing is being able to zoom in to read content and out to locate content within a page. http://www.iheni.com/mobile-accessibility-tip-dont-suppress-pinch-zoom/",
+          "id": "neverSuppressZoom",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "accessibility"
+          ],
+          "title": "Don't suppress pinch zoom",
+          "weight": 8
+        },
+        "sections": {
+          "advice": "The page doesn't use sections. You could possible use them to get a better structure of your content.",
+          "description": "Section tags should have at least one heading element as a direct descendant.",
+          "id": "sections",
+          "offending": [
+          ],
+          "score": 0,
+          "tags": [
+            "accessibility",
+            "html"
+          ],
+          "title": "Use headings tags within section tags to better structure your page",
+          "weight": 0
+        },
+        "table": {
+          "advice": "",
+          "description": "Add a caption element to give the table a proper heading or summary. Use th elements to denote column and row headings. Make use of their scope and other attributes to clearly associate what belongs to which. https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/",
+          "id": "table",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "accessibility",
+            "html"
+          ],
+          "title": "Use caption and th in tables",
+          "weight": 5
+        }
+      },
+      "score": 95
+    },
+    "bestpractice": {
+      "adviceList": {
+        "charset": {
+          "advice": "",
+          "description": "The Unicode Standard (UTF-8) covers (almost) all the characters, punctuations, and symbols in the world. Please use that.",
+          "id": "charset",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Use charset for your document",
+          "weight": 2
+        },
+        "doctype": {
+          "advice": "",
+          "description": "The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.",
+          "id": "doctype",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Use a doctype for your document",
+          "weight": 2
+        },
+        "https": {
+          "advice": "",
+          "description": "A page should always use HTTPS ( https://https.cio.gov/everything/). Plus you will need it for HTTP/2!",
+          "id": "https",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Serve your content secure",
+          "weight": 10
+        },
+        "httpsH2": {
+          "advice": "The page is using HTTPS but not HTTP/2. Change to HTTP/2 to follow new best practice and make the site faster.",
+          "description": "Using HTTP/2 together with HTTPS is the new best practice.",
+          "id": "httpsh2",
+          "offending": [
+          ],
+          "score": 0,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Serve your content secure and use HTTP/2",
+          "weight": 2
+        },
+        "language": {
+          "advice": "",
+          "description": "According to the W3C recommendation you should declare the primary language for each Web page with the lang attribute inside the <html> tag. https://www.w3.org/International/questions/qa-html-language-declarations#basics",
+          "id": "language",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Set the language code for your document",
+          "weight": 3
+        },
+        "metaDescription": {
+          "advice": "The meta description is too long. It has 232 characters, the recommended max is 155",
+          "description": "Use a page description to make the page more relevant for a search engine",
+          "id": "metaDescription",
+          "offending": [
+          ],
+          "score": 50,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Meta description",
+          "weight": 5
+        },
+        "optimizely": {
+          "advice": "",
+          "description": "Use Optimizely with care because it hurts your performance. Only turn it on (= load the javascript) when you run your A/B tests",
+          "id": "optimizely",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Only use optimizely when you need it",
+          "weight": 2
+        },
+        "pageTitle": {
+          "advice": "",
+          "description": "Use a title to make the page more relevant for a search engine.",
+          "id": "pageTitle",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Page title",
+          "weight": 5
+        },
+        "spdy": {
+          "advice": "",
+          "description": "Chrome will drop supports for SPDY May 15th, so you should upgrade to H2 asap.",
+          "id": "spdy",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "EOL for SPDY coming soon",
+          "weight": 1
+        },
+        "url": {
+          "advice": "",
+          "description": "A clean URL is good for the user and for SEO. Make them human readable, avoid too long URLs, spaces in the URL, too many request parameters, and never ever have the session id in your URL.",
+          "id": "url",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "bestpractice"
+          ],
+          "title": "Have a good URL format",
+          "weight": 2
+        }
+      },
+      "score": 87
+    },
+    "info": {
+      "amp": false,
+      "connectionType": "http/1.1",
+      "documentHeight": 2230,
+      "documentTitle": "Sitespeed.io - Analyze your website speed and performance",
+      "documentWidth": 1080,
+      "domDepth": {
+        "avg": 7,
+        "max": 11
+      },
+      "domElements": 214,
+      "head": {
+        "css": [
+        ],
+        "jsasync": [
+          "https://ssl.google-analytics.com/ga.js"
+        ],
+        "jssync": [
+        ]
+      },
+      "iframes": 0,
+      "localStorageSize": 0,
+      "pageContentSize": 177127,
+      "pageContentTypes": {
+        "html": {
+          "contentSize": 7450,
+          "headerSize": 775,
+          "requests": 1,
+          "transferSize": 7450
+        },
+        "image": {
+          "contentSize": 153655,
+          "headerSize": 7714,
+          "requests": 10,
+          "transferSize": 153655
+        },
+        "javascript": {
+          "contentSize": 16022,
+          "headerSize": 453,
+          "requests": 1,
+          "transferSize": 16022
+        }
+      },
+      "pageRequests": 12,
+      "pageTransferSize": 177127,
+      "resourceHints": {
+        "dns-prefetch": [
+        ],
+        "preconnect": [
+        ],
+        "prefetch": [
+        ],
+        "prerender": [
+        ]
+      },
+      "responsive": true,
+      "sessionStorageSize": 0,
+      "windowSize": "1080x575"
+    },
+    "performance": {
+      "adviceList": {
+        "assetsRedirects": {
+          "advice": "",
+          "description": "Avoid doing redirects, it will kill your web page on mobile.",
+          "id": "assetsRedirects",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance"
+          ],
+          "title": "Avoid doing redirects",
+          "weight": 2
+        },
+        "avoidScalingImages": {
+          "advice": "The page has 4 image(s) that are scaled more than 100 pixels. It would be better if those images are sent so the browser don't need to scale them. Here's the image(s):  https://www.sitespeed.io/img/sitespeed-logo-2c.png [browserWidth:162 naturalWidth: 324] https://www.sitespeed.io/img/sitespeed.io-logo-large2.png [browserWidth:188 naturalWidth: 375] https://www.sitespeed.io/img/dashboard.png [browserWidth:498 naturalWidth: 1040] https://www.sitespeed.io/img/perfbudget.png [browserWidth:498 naturalWidth: 1060]",
+          "description": "Scaling images inside the browser takes extra CPU time and will hurt performance on mobile as well as make your users download extra kilobytes",
+          "id": "avoidScalingImages",
+          "offending": [
+            "https://www.sitespeed.io/img/sitespeed-logo-2c.png",
+            "https://www.sitespeed.io/img/sitespeed.io-logo-large2.png",
+            "https://www.sitespeed.io/img/dashboard.png",
+            "https://www.sitespeed.io/img/perfbudget.png"
+          ],
+          "score": 60,
+          "tags": [
+            "performance",
+            "image"
+          ],
+          "title": "Don't scale images in the browser",
+          "weight": 5
+        },
+        "cacheHeaders": {
+          "advice": "",
+          "description": "At least have some kind of cache headers!",
+          "id": "cacheHeaders",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Avoid extra requests by setting a cache headers",
+          "weight": 10
+        },
+        "cacheHeadersLong": {
+          "advice": "",
+          "description": "Cache responses longer than one 1 month is good.",
+          "id": "cacheHeadersLong",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Long cache headers is good",
+          "weight": 3
+        },
+        "compressAssets": {
+          "advice": "",
+          "description": "Send content compressed over the wire to save bytes",
+          "id": "compressAssets",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Always compress text content",
+          "weight": 8
+        },
+        "connectionKeepAlive": {
+          "advice": "",
+          "description": "Use keep alive headers & don't close the connection when we have multiple requests to the same domain",
+          "id": "connectionKeepAlive",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Don't close a connection that is used multiple times",
+          "weight": 5
+        },
+        "cssPrint": {
+          "advice": "",
+          "description": "Loading a specific stylesheet for printing slows down the page, even though it is not used",
+          "id": "cssPrint",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "css"
+          ],
+          "title": "Do not load print stylesheets, use @media type print instead",
+          "weight": 1
+        },
+        "cssSize": {
+          "advice": "",
+          "description": "A lot CSS will make the rendering slower, because there's more things to do for the browser before it can start paint the screen.",
+          "id": "cssSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "css"
+          ],
+          "title": "Total CSS size shouldn't be too big",
+          "weight": 5
+        },
+        "documentRedirect": {
+          "advice": "",
+          "description": "You should never ever redirect the main document. Well only if the user uses HTTP and there's a HTTPS version of the page.",
+          "id": "documentRedirect",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance"
+          ],
+          "title": "Avoid redirecting the main document",
+          "weight": 9
+        },
+        "fastRender": {
+          "advice": "",
+          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading Javascript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
+          "id": "fastRender",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance"
+          ],
+          "title": "Avoid slowing down the rendering critical path",
+          "weight": 10
+        },
+        "favicon": {
+          "advice": "",
+          "description": "",
+          "id": "favicon",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "favicon"
+          ],
+          "title": "The favicon should be small and cacheable",
+          "weight": 1
+        },
+        "fewFonts": {
+          "advice": "",
+          "description": "Fonts can slow down the rendering of content try to avoid loading too many of them",
+          "id": "fewFonts",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "font"
+          ],
+          "title": "Avoid too many fonts",
+          "weight": 2
+        },
+        "fewRequestsPerDomain": {
+          "advice": "",
+          "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+          "id": "fewRequestsPerDomain",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "HTTP/1"
+          ],
+          "title": "Avoid too many requests per domain",
+          "weight": 5
+        },
+        "headerSize": {
+          "advice": "",
+          "description": "Avoid a lot of cookies and other stuff that makes your headers big.",
+          "id": "headerSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "mobile"
+          ],
+          "title": "Response headers should't be too big",
+          "weight": 4
+        },
+        "imageSize": {
+          "advice": "",
+          "description": "",
+          "id": "imageSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "image"
+          ],
+          "title": "Total image size shouldn't be too big",
+          "weight": 5
+        },
+        "inlineCss": {
+          "advice": "",
+          "description": "Always inline the CSS when you use HTTP/1. Using HTTP/2 it is complicated. Do your users have a slow connection? Then its better to inline.",
+          "id": "inlineCss",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "css"
+          ],
+          "title": "Inline CSS for faster first render on HTTP/1",
+          "weight": 7
+        },
+        "javascriptSize": {
+          "advice": "",
+          "description": "A lot of Javascript often means you are downloading more than you need. Or what can the user do on your page?",
+          "id": "javascriptSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "javascript"
+          ],
+          "title": "Total Javascript size shouldn't be too big",
+          "weight": 5
+        },
+        "jquery": {
+          "advice": "",
+          "description": "You may not think this is true, but there are pages that uses more than one JQuery versions.",
+          "id": "jquery",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "JQuery",
+            "performance"
+          ],
+          "title": "Avoid use more than one JQuery version per page",
+          "weight": 4
+        },
+        "optimalCssSize": {
+          "advice": "",
+          "description": "Making CSS requests small are to fit into the magic number TCP window size 14.5 kB.",
+          "id": "optimalCssSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "css"
+          ],
+          "title": "Make each CSS response small",
+          "weight": 3
+        },
+        "pageSize": {
+          "advice": "",
+          "description": "Avoid having pages that have transfer size over the wire of more than 2 MB (desktop) and 1 MB (mobile) because that is really big and will hurt performance. ",
+          "id": "pageSize",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "mobile"
+          ],
+          "title": "Total page size shouldn't be too big",
+          "weight": 3
+        },
+        "privateAssets": {
+          "advice": "",
+          "description": "Static content should be able to be cached & used by everyone.",
+          "id": "privateAssets",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Don't use private headers on static content",
+          "weight": 5
+        },
+        "responseOk": {
+          "advice": "",
+          "description": "Check for 40X and 50X responses, and report them.",
+          "id": "responseOk",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "server"
+          ],
+          "title": "Avoid missing and error requests",
+          "weight": 7
+        },
+        "spof": {
+          "advice": "",
+          "description": "A page should not have a single point of failure a.k.a load content from a provider that can cause the page to stop working.",
+          "id": "spof",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "css",
+            "js"
+          ],
+          "title": "Avoid Frontend single point of failure",
+          "weight": 7
+        },
+        "thirdPartyAsyncJs": {
+          "advice": "",
+          "description": "Use JavaScript snippets that load the JS files asynchronously in order to speed up the user experience and avoid blocking the initial load.",
+          "id": "thirdPartyAsyncJs",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance",
+            "js"
+          ],
+          "title": "Always load third party Javascript asynchronously",
+          "weight": 5
+        },
+        "userTiming": {
+          "advice": "",
+          "description": "The User Timing API is a perfect way to start measuring specific and custom metrics for your site.",
+          "id": "userTiming",
+          "offending": [
+          ],
+          "score": 100,
+          "tags": [
+            "performance"
+          ],
+          "title": "Use the User Timing API to check your performance",
+          "weight": 1
+        }
+      },
+      "score": 98
+    },
+    "score": 96,
+    "timings": {
+      "firstPaint": -1,
+      "fullyLoaded": 410.310389,
+      "navigationTimings": {
+        "connectEnd": 78,
+        "connectStart": 78,
+        "domComplete": 413,
+        "domContentLoadedEventEnd": 271,
+        "domContentLoadedEventStart": 270,
+        "domInteractive": 227,
+        "domLoading": 185,
+        "domainLookupEnd": 78,
+        "domainLookupStart": 1,
+        "fetchStart": 1,
+        "loadEventEnd": 414,
+        "loadEventStart": 414,
+        "navigationStart": 0,
+        "requestStart": 148,
+        "responseEnd": 184,
+        "responseStart": 180
+      },
+      "rumSpeedIndex": 257.6573152751796,
+      "timings": {
+        "backEndTime": 180,
+        "domContentLoadedTime": 270,
+        "domInteractiveTime": 227,
+        "domainLookupTime": 77,
+        "frontEndTime": 230,
+        "pageDownloadTime": 4,
+        "pageLoadTime": 414,
+        "redirectionTime": 1,
+        "serverConnectionTime": 0,
+        "serverResponseTime": 36
+      },
+      "userTimings": {
+        "marks": {
+          "headerTime": 227.1,
+          "logoTime": 401.89
+        },
+        "measures": {
+        }
+      }
+    }
+  },
+  "errors": {
+  },
+  "url": "https://www.sitespeed.io/",
+  "version": "0.17.0"
+}

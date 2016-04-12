@@ -1,0 +1,63 @@
+extends ./layout.jade
+
+- const coach = advice.accessibility.adviceList 
+
+block content
+  h1#box-title Wow HERO performance!
+  #stars &starf;&starf;&starf;&starf;&starf;&starf;
+  input#analyze-url(type='text', disabled='disabled', value='#{url}')
+  #{version}
+  
+  img(src='screenshot.png')
+  
+  h3 Accessebility score: #{advice.accessibility.score}
+  table(class='rtable')
+    tr
+      th Title
+      th Advice
+      th Score
+    each adv, name in advice.accessibility.adviceList
+      if adv.score < 100
+        tr
+          td #{adv.title} (#{name})
+          td #{adv.advice}
+          td #{adv.score}
+    
+  h3 Performance score: #{advice.performance.score}
+  table
+    tr
+      th Title
+      th Advice
+      th Score
+    each adv, name in advice.performance.adviceList
+      if adv.score < 100
+        tr
+          td #{adv.title} (#{name})
+          td #{adv.advice}
+          td #{adv.score}
+        tr
+           td(colspan='3') #{adv.offending} 
+                
+  
+  h3 Best practice score: #{advice.bestpractice.score}
+  table
+    tr
+      th Title
+      th Advice
+      th Score
+    each adv, name in advice.bestpractice.adviceList
+      if adv.score < 100
+        tr
+          td #{adv.title} (#{name})
+          td #{adv.advice}
+          td #{adv.score}          
+        tr
+          td(colspan='3') #{adv.offending} 
+          
+  h3 Info
+  a#info
+  table
+    each value, name in advice.info
+      tr
+        td #{name}
+        td #{value}        
