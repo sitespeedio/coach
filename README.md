@@ -60,9 +60,9 @@ npm install webcoach -g
 webcoach -u http://www.sitespeed.io --browser chrome
 ```
 
-If you also want to show the offending assets and the description of the advice:
+If you also want to show the offending assets/details and the description of the advice:
 ```bash
-webcoach -u http://www.sitespeed.io --offending --description
+webcoach -u http://www.sitespeed.io --details --description
 ```
 
 By default, the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
