@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+## Changed
+- Cli name for getting more details is now ... details instead of offending.
+
 ## 0.19.0 2016-04-12
 
 ### Added
