@@ -70,7 +70,7 @@
     "lodash.clonedeep": "4.3.2",
     "lodash.groupby": "4.3.0",
     "lodash.merge": "4.3.4",
-    "snufkin": "0.3.8",
+    "snufkin": "0.4.0",
     "word-wrap": "1.1.0",
     "yargs": "4.3.2"
   }
