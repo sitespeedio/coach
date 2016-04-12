@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.19.0 2016-04-12
 
 ### Added
 - Get browser and version.
