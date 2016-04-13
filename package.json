@@ -44,7 +44,7 @@
     "grunt-contrib-uglify": "^1.0.0",
     "grunt-eslint": "^18.0.0",
     "grunt-jsdoc": "1.1.0",
-    "grunt-mocha-cli": "2.0.0",
+    "grunt-mocha-cli": "2.1.0",
     "longjohn": "0.2.11",
     "mocha": "^2.4.5",
     "uglify-js": "2.6.2"
