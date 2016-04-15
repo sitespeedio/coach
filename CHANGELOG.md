@@ -1,8 +1,9 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.20.0 2016-04-15
 ## Changed
 - Cli name for getting more details is now ... details instead of offending.
+- Better structure for user timings and measurements, so we easily can move the timings to BT.
 
 ## 0.19.0 2016-04-12
 

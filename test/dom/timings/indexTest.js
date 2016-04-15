@@ -42,14 +42,14 @@ describe('Timings', function() {
       it('We should get User Timing Marks', function() {
         return runner.run('userTimings.js', 'index.html')
           .then((result) => {
-            assert.strictEqual(result.marks.santaLoaded > 0, true);
+            assert.strictEqual(result.marks[0].startTime > 0, true);
           });
       });
 
       it('We should get User Timing measurements', function() {
         return runner.run('userTimings.js', 'index.html')
           .then((result) => {
-            assert.strictEqual(result.measures.time.startTime > 0, true);
+            assert.strictEqual(result.measures[0].duration > 0, true);
           });
       });
 
