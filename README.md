@@ -51,30 +51,30 @@ You need Node.js 4.3.0 or later to run. And you need Firefox and/or Chrome insta
 
 If you want to use Firefox (Firefox is default):
 ```bash
-webcoach -u http://www.sitespeed.io
+webcoach https://www.sitespeed.io
 ```
 
 Try it with Chrome:
 ```bash
 npm install webcoach -g
-webcoach -u http://www.sitespeed.io --browser chrome
+webcoach https://www.sitespeed.io --browser chrome
 ```
 
 If you also want to show the offending assets/details and the description of the advice:
 ```bash
-webcoach -u http://www.sitespeed.io --details --description
+webcoach https://www.sitespeed.io --details --description
 ```
 
 By default, the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
 
 ```bash
-webcoach -u http://www.sitespeed.io --limit 101
+webcoach https://www.sitespeed.io --limit 101
 ```
 
 If you want to test as a mobile device, that's possible too, by faking the user-agent.
 
 ```bash
-webcoach -u http://www.sitespeed.io --mobile -b chrome
+webcoach https://www.sitespeed.io --mobile -b chrome
 ```
 
 
@@ -82,7 +82,7 @@ webcoach -u http://www.sitespeed.io --mobile -b chrome
 
 Yes, you can do that!
 ```bash
-webcoach -u http://www.sitespeed.io -f json
+webcoach https://www.sitespeed.io -f json
 ```
 This will get you the full JSON, the same as if you integrate the coach into your tool.
 
