@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.20.1 2016-04-17
+## Fixed
+- Snufkin has changed name to PageXray.
+
 ## 0.20.0 2016-04-15
 ## Changed
 - Cli name for getting more details is now ... details instead of offending.

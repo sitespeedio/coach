@@ -99,7 +99,7 @@ A simple example is the cssPrint advice that looks for a print stylesheet.
 
 
 #### HAR advice
-We use [snufkin](https://github.com/sitespeedio/snufkin) to convert the HAR file into a Page object that are easier to work with.
+We use [PageXray](https://github.com/sitespeedio/pagexray) to convert the HAR file into a Page object that are easier to work with.
 
 Each HAR advice needs to implement a processPage function. The function will be called once for each page.
 
