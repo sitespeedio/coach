@@ -1,8 +1,9 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
-## Changed
+## 0.20.2 2016-04-22
+## Fixed
 - Do not output the difference in size of images in the avoidScailingImages advice, so it looks better when we display that advice.
+- Upgraded to latest PageXray (0.6.0).
 
 ## 0.20.1 2016-04-17
 ## Fixed
