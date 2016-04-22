@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## Unreleased
+## Fixed
+- More robust (and right) first paint (as in Browsertime).
+
+
 ## 0.20.3 2016-04-22
 ## Fixed
 - Bug fix for showing details when you run the CLI using --details
