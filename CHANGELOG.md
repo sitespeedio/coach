@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+## Changed
+- Do not output the difference in size of images in the avoidScailingImages advice, so it looks better when we display that advice.
+
 ## 0.20.1 2016-04-17
 ## Fixed
 - Snufkin has changed name to PageXray.
