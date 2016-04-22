@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.20.3 2016-04-22
+## Fixed
+- Bug fix for showing details when you run the CLI using --details
+
 ## 0.20.2 2016-04-22
 ## Fixed
 - Do not output the difference in size of images in the avoidScailingImages advice, so it looks better when we display that advice.
