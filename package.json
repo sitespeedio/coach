@@ -43,7 +43,7 @@
     "grunt-contrib-connect": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.0",
     "grunt-eslint": "^18.0.0",
-    "grunt-jsdoc": "1.1.0",
+    "grunt-jsdoc": "2.0.0",
     "grunt-mocha-cli": "2.0.0",
     "longjohn": "0.2.11",
     "mocha": "^2.4.5",
