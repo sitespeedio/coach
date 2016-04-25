@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.21.0
 ## Fixed
 - More robust (and right) first paint (as in Browsertime).
 
