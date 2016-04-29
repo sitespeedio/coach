@@ -1,28 +1,32 @@
 # CHANGELOG - webcoach
 
+## 0.22.0
+### Changed
+- The cacheHeaders advice checking for missing cache headers got even higher prio, so it will be more influential of the score.
+
 ## 0.21.0
-## Fixed
+### Fixed
 - More robust (and right) first paint (as in Browsertime).
 
-## Added
+### Added
 - Show LastModifiedStats and expireStats to better know if your cache headers are right.
 - Display total size in kb/mb (make it easier to read).
 
 ## 0.20.3 2016-04-22
-## Fixed
+### Fixed
 - Bug fix for showing details when you run the CLI using --details
 
 ## 0.20.2 2016-04-22
-## Fixed
+### Fixed
 - Do not output the difference in size of images in the avoidScailingImages advice, so it looks better when we display that advice.
 - Upgraded to latest PageXray (0.6.0).
 
 ## 0.20.1 2016-04-17
-## Fixed
+### Fixed
 - Snufkin has changed name to PageXray.
 
 ## 0.20.0 2016-04-15
-## Changed
+### Changed
 - Cli name for getting more details is now ... details instead of offending.
 - Better structure for user timings and measurements, so we easily can move the timings to BT.
 
