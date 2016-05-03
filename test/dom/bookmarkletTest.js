@@ -5,7 +5,7 @@ const createTestRunner = require('../help/browsertimeRunner').createTestRunner,
 
 let BROWSERS = ['chrome', 'firefox'];
 
-let SCRIPT_NAME = 'bookmarklet.js',
+let SCRIPT_NAME = 'domconsole.js',
   scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
 
 describe('Bookmarklet script [' + SCRIPT_NAME + ']', function() {

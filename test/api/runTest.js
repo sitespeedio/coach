@@ -1,13 +1,29 @@
 'use strict';
 
-const api = require('../../lib/');
+const api = require('../../lib/'),
+  urlParser = require('url'),
+  webserver = require('../help/webserver'),
+  chai = require('chai');
 
-const LOCAL_SERVER = 'http://0.0.0.0:8282/info/head.html';
+chai.should();
 
 describe('Run API:', function() {
+  let url;
+
+  before(() => webserver.startServer()
+    .then((address) => {
+      url = urlParser.format({
+        protocol: 'http',
+        hostname: address.address,
+        port: address.port,
+        pathname: 'info/head.html'
+      });
+    }));
+
+  after(() => webserver.stopServer());
 
   it('should output correct structure', () =>
-    api.run(LOCAL_SERVER)
+    api.run(url)
       .then((advice) => {
         ['advice', 'errors', 'url', 'version'].forEach((property) =>
           advice.should.have.ownProperty(property)

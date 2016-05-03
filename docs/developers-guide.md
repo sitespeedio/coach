@@ -17,7 +17,6 @@
 You need:
 - [Node.js](https://nodejs.org/en/)  
 - [npm](https://nodejs.org/en/)
-- [grunt-cli](http://gruntjs.com/using-the-cli)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Chrome](https://www.google.com/chrome/browser/desktop/)
 
@@ -31,7 +30,7 @@ Inside your coach folder install the dependencies and run the tests to check tha
 ```
 $ cd coach
 $ npm install
-$ grunt test
+$ npm test
 ```
 If the test works you are ready start!
 
@@ -188,7 +187,7 @@ it('We should find out if we load an print CSS', function() {
 
 Right now all these tests run in https://github.com/sitespeedio/coach/blob/master/test/dom/performance/indexTest.js
 
-Each test case runs against a specific HTML page located in [test/http-server](test/http-server)  Create a suitable HTML page with the structure you want to test. Create the test case in  [test/dom](test/dom) or [test/har](test/har) and run it with <code>grunt test</code>
+Each test case runs against a specific HTML page located in [test/http-server](test/http-server)  Create a suitable HTML page with the structure you want to test. Create the test case in  [test/dom](test/dom) or [test/har](test/har) and run it with <code>npm test</code>
 
 ## Test your changes against a web page
 The coach uses Browsertime as runner for browsers. When you done a change, make sure to build a new version of the combined Javascript and then test against a url.

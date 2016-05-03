@@ -118,7 +118,7 @@ describe('Info', function() {
           .then((result) => {
             assert.strictEqual(result.prerender[0], 'http://0.0.0.0:8282/info/amp.html', 'Could not fetch prerender');
             assert.strictEqual(result.preconnect[0], 'http://example.com/', 'Could not fetch preconnect');
-            assert.strictEqual(result.prefetch[0], 'http://0.0.0.0:8282/info/js/body.js', 'Could not fetch prefetch');
+            assert.ok(result.prefetch[0].endsWith('/info/js/body.js'), 'Could not fetch prefetch');
             assert.strictEqual(result['dns-prefetch'][0], 'http://example.com/', 'Could not fetch dns-prefetch');
           });
       });

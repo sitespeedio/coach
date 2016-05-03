@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 'use strict';
+
 let path = require('path'),
   fs = require('fs');
 
-module.exports = function(filename) {
-
-    let coachSrc = fs.readFileSync(path.join(__dirname, '../../dist/','coach.js'));
+module.exports = function(sourcePath, destinationPath) {
+    const coachSrc = fs.readFileSync(path.resolve(sourcePath));
 
     const combinedSrc = `(function() {
       var result = ${coachSrc}
@@ -31,5 +33,14 @@ module.exports = function(filename) {
   })();
 `;
 
-    fs.writeFileSync(filename, combinedSrc);
+    fs.writeFileSync(path.resolve(destinationPath), combinedSrc, 'utf8');
 };
+
+if (!module.parent) {
+    if (process.argv.length !== 4) {
+        console.error('Must specify sourcePath and destinationPath');
+        process.exit(1);
+    }
+      
+    module.exports(process.argv[2], process.argv[3]);
+}

@@ -2,7 +2,7 @@
 Please review the [guidelines for contributing](CONTRIBUTING.md) to this repository.
 
 - [ ] Check that your change/fix has corresponding unit tests
-- [ ] Verify that the test works by running `grunt test` and test linting by `grunt eslint`
+- [ ] Verify that the test works by running `npm test` and test linting by `npm run lint`
 
 
 ### Description

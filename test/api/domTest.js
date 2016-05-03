@@ -1,17 +1,30 @@
 'use strict';
 
 const api = require('../../lib/'),
-  chai = require("chai"),
-  chaiAsPromised = require("chai-as-promised");
+  urlParser = require('url'),
+  webserver = require('../help/webserver'),
+  chai = require('chai'),
+  chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
 chai.should();
 
-const LOCAL_SERVER = 'http://0.0.0.0:8282/info/head.html';
-
 const BROWSERS = ['chrome', 'firefox'];
 
 describe('DOM apis:', function() {
+  let url;
+
+  before(() => webserver.startServer()
+    .then((address) => {
+      url = urlParser.format({
+        protocol: 'http',
+        hostname: address.address,
+        port: address.port,
+        pathname: 'info/head.html'
+      });
+    }));
+
+  after(() => webserver.stopServer());
 
   describe('getDomAdvice', function() {
     it('should return a script', function() {
@@ -26,7 +39,7 @@ describe('DOM apis:', function() {
       this.timeout(60000);
 
       it('should run simple script', () =>
-        api.runDomAdvice(LOCAL_SERVER, api.getDomAdvice(), {
+        api.runDomAdvice(url, api.getDomAdvice(), {
           browser,
           iterations: 1,
           pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'
