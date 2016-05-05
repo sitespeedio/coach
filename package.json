@@ -72,6 +72,6 @@
     "lodash.merge": "4.3.4",
     "pagexray": "0.6.0",
     "word-wrap": "1.1.0",
-    "yargs": "4.6.0"
+    "yargs": "4.7.0"
   }
 }
