@@ -68,17 +68,17 @@
     }
   ],
   "dependencies": {
-    "bluebird": "3.3.4",
-    "browsertime": "1.0.0-alpha.8",
+    "bluebird": "3.3.5",
+    "browsertime": "1.0.0-alpha.12",
     "chalk": "1.1.3",
     "cli-table2": "0.2.0",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.clonedeep": "4.3.2",
     "lodash.groupby": "4.3.0",
-    "lodash.merge": "4.3.4",
+    "lodash.merge": "4.3.5",
     "pagexray": "0.6.0",
     "word-wrap": "1.1.0",
-    "yargs": "4.6.0"
+    "yargs": "4.7.0"
   }
 }
