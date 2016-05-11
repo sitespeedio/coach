@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+- Always check for window.chrome and window.chrome.loadTimes before we know that we are using chrome (yep, there are sites out that that defines window.chrome themselves)
+
 ## 0.22.0
 ### Changed
 - The cacheHeaders advice checking for missing cache headers got even higher prio, so it will be more influential of the score.
