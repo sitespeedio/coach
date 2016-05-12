@@ -1,6 +1,8 @@
 # CHANGELOG - webcoach
 
-## 0.22.1
+## Unreleased
+
+## 0.22.1 2016-05-12
 
 ### Fixed
 - Always check for window.chrome and window.chrome.loadTimes before we know that we are using chrome (yep, there are sites out that that defines window.chrome themselves)
@@ -8,7 +10,6 @@
 
 ### Added
 - Upgraded to latest Browsertime alpha 14 with longer default timeout times.
-
 
 ## 0.22.0
 ### Changed
