@@ -14,9 +14,6 @@ Promise.promisifyAll(fs);
 
 function run(options) {
   function setupOptions(options) {
-    options.experimental = {
-      nativeHar: true
-    };
     options.iterations = 1;
     if (options.mobile) {
       options.viewPort = '360x640';
