@@ -1,8 +1,11 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.22.1
+
 ### Fixed
 - Always check for window.chrome and window.chrome.loadTimes before we know that we are using chrome (yep, there are sites out that that defines window.chrome themselves)
+- Safer check when checking JQuery version.
+
 ### Added
 - Upgraded to latest Browsertime alpha 14 with longer default timeout times.
 
