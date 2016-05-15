@@ -77,7 +77,7 @@
     "lodash.clonedeep": "4.3.2",
     "lodash.groupby": "4.3.0",
     "lodash.merge": "4.3.5",
-    "pagexray": "0.6.0",
+    "pagexray": "0.8.0",
     "word-wrap": "1.1.0",
     "yargs": "4.7.0"
   }
