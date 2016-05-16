@@ -1,6 +1,9 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.22.2 2016-05-16
+### Fixed
+- Correction of date when Chrome drops SPDY support (when 51 is released)
+- Bumped depeendencies for Browsertime and PageXray
 
 ## 0.22.1 2016-05-12
 
