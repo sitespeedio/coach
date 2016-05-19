@@ -172,17 +172,17 @@ You can and should test your advice in your browser. It's easy. Just copy/paste 
 ## Add a test case
 When you create a new advice you also need to create unit tests. We run the tests in both Firefox & Chrome.
 
-We create a new unique HTML page for each rule (or two if you want to test different behavior).
+We create a new unique HTML page for each rule (or two if you want to test different behavior). If you only have one page, name it the same as the advice + '.html' and it will be picked up.
 
 A simple test run for the print CSS advice looks like this:
 
 ```javascript
 it('We should find out if we load an print CSS', function() {
-  return bt.run(path + 'cssPrint.html', 'lib/dom/performance/cssPrint.js')
-    .then((result) => {
-      assert.strictEqual(result.offending.length, 1);
-    });
-});
+        return runner.run('cssPrint.js')
+          .then((result) => {
+            assert.strictEqual(result.offending.length, 1);
+          });
+      });
 ```
 
 Right now all these tests run in https://github.com/sitespeedio/coach/blob/master/test/dom/performance/indexTest.js
