@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+## Added
+- Upgraded PageXray to 0.9.0
+
+
 ## 0.22.2 2016-05-16
 ### Fixed
 - Correction of date when Chrome drops SPDY support (when 51 is released)
