@@ -1,8 +1,8 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.22.3 206-05-20
 ## Added
-- Upgraded PageXray to 0.9.0
+- Upgraded PageXray to 0.9.0 and Browsertime to alpha 18(!)
 
 
 ## 0.22.2 2016-05-16
