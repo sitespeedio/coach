@@ -169,14 +169,14 @@ When you got the result from both the DOM and the HAR you need to merge the resu
 const coachResult = api.merge(domAdviceResult, harAdviceResult);
 ```
 
-Now you have the full result (as JSON) as coachResult.
+Now you have the full result (as JSON) as a coachResult.
 
 ## What do the coach do
-The coach will give you advice on how to do your page better. You will also give you a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
+The coach will give you advice on how to do your page better. You will also get a score between 0-100. If you get 100 the page is great, if you get 0 you can do much better!
 
 ## How does it all work?
 
-The coach test your site in two steps:
+The coach tests your site in two steps:
  * Executes Javascript in your browser and check for performance, accessibility, best practice and collect general info about your page.
  * Analyze the [HAR file](http://www.softwareishard.com/blog/har-12-spec/) for your page together with relevant info from the DOM process.
 
@@ -196,10 +196,10 @@ You want your page to follow best practices, right? Making sure your page is set
 ### General information
 The world is complex. Some things are great to know but hard for the coach to give advice about.
 
-The coach then just tell you have the page is built and you can yourself draw your own conclusions if something should be changed.
+The coach will then just tell you how the page is built and you can draw your own conclusions if something should be changed.
 
 ### Timings
-The coach got a clock and know how to use it! You will get timing metrics and know if you are doing better or worse than the last run.
+The coach has a clock and knows how to use it! You will get timing metrics and know if you are doing better or worse than the last run.
 
 # Developers guide
 Checkout the [developers guide](docs/developers-guide.md) to get a better feeling how the coach works.
