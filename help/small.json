@@ -74,7 +74,7 @@
           "weight": 8
         },
         "sections": {
-          "advice": "The page doesn't use sections. You could possible use them to get a better structure of your content.",
+          "advice": "The page doesn't use sections. You could use them to get a better structure of your content.",
           "description": "Section tags should have at least one heading element as a direct descendant.",
           "id": "sections",
           "offending": [
