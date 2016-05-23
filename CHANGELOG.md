@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## 0.22.4 2016-05-23
+## UNRELEASED
 ### Changed
 - Converted a few function to ES6 short syntax
 
