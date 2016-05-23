@@ -1,7 +1,11 @@
 # CHANGELOG - webcoach
 
-## 0.22.3 206-05-20
-## Added
+## 0.22.4 2016-05-23
+### Changed
+- Converted a few function to ES6 short syntax
+
+## 0.22.3 2016-05-20
+### Added
 - Upgraded PageXray to 0.9.0 and Browsertime to alpha 18(!)
 
 
