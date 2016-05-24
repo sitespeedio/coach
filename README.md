@@ -100,7 +100,7 @@ The bookmarklet is really rough right now and logs the info to the browser conso
 You can generate the bookmarklet by running
 
 ```bash
-grunt bookmarklet
+npm run bookmarklet
 ```
 
 and then you will find it in the dist folder.
@@ -132,7 +132,7 @@ First you need the Javascript advice, you can get the raw script either by gener
 
 Generate the script
 ```bash
-grunt combine
+npm run combine
 ```
 and it will be in the dist folder.
 
