@@ -193,7 +193,7 @@ Each test case runs against a specific HTML page located in [test/http-server](t
 The coach uses Browsertime as runner for browsers. When you done a change, make sure to build a new version of the combined Javascript and then test against a url.
 
 ```bash
-grunt
+npm run combine
 bin/index.js https://www.sitespeed.io firefox
 ```
 
