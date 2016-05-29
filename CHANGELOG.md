@@ -1,8 +1,9 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.22.4 2016-05-29
 ### Changed
-- Converted a few function to ES6 short syntax
+- Chrome 51 is here and SPDY is dropped, the SPDY advice is updated.
+- Internal: Converted a few function to ES6 short syntax
 
 ## 0.22.3 2016-05-20
 ### Added
