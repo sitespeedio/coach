@@ -29,8 +29,8 @@
   },
   "scripts": {
     "bookmarklet": "npm run domconsole && bookmarkletify dist/domconsole.js -o dist/coach.bookmarklet.js",
-    "domconsole": "tools/domconsole.js dist/coach.js dist/domconsole.js",
-    "combine": "mkdirp dist && tools/combine.js dist/coach.js",
+    "domconsole": "node tools/domconsole.js dist/coach.js dist/domconsole.js",
+    "combine": "mkdirp dist && node tools/combine.js dist/coach.js",
     "test:api": "mocha --recursive test/api",
     "test:dom": "mocha --recursive test/dom",
     "test:har": "mocha --recursive test/har",
