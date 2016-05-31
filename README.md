@@ -86,6 +86,12 @@ webcoach https://www.sitespeed.io -f json
 ```
 This will get you the full JSON, the same as if you integrate the coach into your tool.
 
+> ... but hey, I don't want any color in the table output?
+
+That's possible as well!
+```bash
+webcoach https://www.sitespeed.io --noColor
+```
 
 ### sitespeed.io 4.0
 
