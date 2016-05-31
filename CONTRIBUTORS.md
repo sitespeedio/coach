@@ -8,3 +8,4 @@ Many many many thanks to:
  * [Martin Faartoft](https://github.com/MartinFaartoft)
  * [Charlie Park](https://github.com/charliepark)
  * [XhmikosR](https://github.com/XhmikosR)
+ * [Chris DeLuca](https://github.com/bronzehedwick)
