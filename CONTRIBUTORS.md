@@ -7,3 +7,4 @@ Many many many thanks to:
  * [Ricky Miller](https://github.com/rickycodes)
  * [Martin Faartoft](https://github.com/MartinFaartoft)
  * [Charlie Park](https://github.com/charliepark)
+ * [XhmikosR](https://github.com/XhmikosR)
