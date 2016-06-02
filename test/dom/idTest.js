@@ -6,8 +6,8 @@ const Promise = require('bluebird'),
 
 Promise.promisifyAll(fs);
 
-describe('Verify advice ids ', function() {
-  it('should have an id that matches the file name ', function() {
+describe('Verify advice IDs', function() {
+  it('should have an ID that matches the file name', function() {
     const domAdviceDir = path.join(__dirname, '..', '..', 'lib', 'dom');
     const adviceCategoriesWithIds = ['accessibility', 'bestpractice', 'performance'];
     return fs.readdirAsync(domAdviceDir)

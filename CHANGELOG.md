@@ -17,13 +17,13 @@
 ## 0.22.2 2016-05-16
 ### Fixed
 - Correction of date when Chrome drops SPDY support (when 51 is released)
-- Bumped depeendencies for Browsertime and PageXray
+- Bumped dependencies for Browsertime and PageXray
 
 ## 0.22.1 2016-05-12
 
 ### Fixed
 - Always check for window.chrome and window.chrome.loadTimes before we know that we are using chrome (yep, there are sites out that that defines window.chrome themselves)
-- Safer check when checking JQuery version.
+- Safer check when checking jQuery version.
 
 ### Added
 - Upgraded to latest Browsertime alpha 14 with longer default timeout times.
@@ -85,7 +85,7 @@ fix this.
 ### Changed
 - Flattened JSON result format by removing top level "coachAdvice".
 - Renamed "results" to "advice" in JSON result format.
-- Changed format cli option from -o to -f.
+- Changed format CLI option from -o to -f.
 
 ### Added
 - New best practice advice: Use HTTPS together with HTTP/2.
@@ -149,7 +149,7 @@ fix this.
 - Lets combine DOM and HAR advice for even smarter advice #13
 - Make sure options is passed to HAR advice so we can have different advice
   depending on device
-- pageSize now have different size limit for mobile and desktop  
+- pageSize now have different size limit for mobile and desktop
 - Changed combineCSS for only looking at CSS inside of HEAD for HTTP/1
 - Dropped combineJs. We can make this better now when we combine DOM & HAR
 
@@ -160,11 +160,11 @@ fix this.
 ## 0.7.0 2016-03-21
 ### Added
 - Set device type using --device in the CLI. Choose between mobile or desktop.
-- Limited support (first HAR page) for outputting HAR as cli table.
+- Limited support (first HAR page) for outputting HAR as CLI table.
 
 ## 0.6.4 2016-03-21
 ### Fixed
-- Better naming of advice headings in cli table output.
+- Better naming of advice headings in CLI table output.
 - Updated readme.
 
 ## 0.6.3 2016-03-21
@@ -194,8 +194,8 @@ fix this.
 - Show response codes in the responseOk advice.
 
 ### Added
-- Use parameter --offending to show offending assets in table cli output.
-- Wrap the text in the output in the table cli so it looks good.
+- Use parameter --offending to show offending assets in table CLI output.
+- Wrap the text in the output in the table CLI so it looks good.
 
 ## 0.4.0 2016-03-19
 ### Fixed
@@ -228,7 +228,7 @@ fix this.
 
 ### Changed
 - Unified naming of util methods to check if HTTP/2 is used.
-- Updated to latest relesed Browsertime 1.0.0.alpha.4
+- Updated to latest released Browsertime 1.0.0.alpha.4
 - Unified naming in the API. This is a breaking change so if you are using the
   API you need to change the name accordingly. Checkout lib/index.js
 
@@ -238,9 +238,9 @@ follow the same structure starting with the key coachAdvice.
 
 ## 0.2.0 - 2016-03-04
 ### Added
-- Include coach version in the ouput JSON
+- Include coach version in the output JSON
 
 ### Changed
-- Updated to latest relesed Browsertime 1.0.0.alpha.3
+- Updated to latest released Browsertime 1.0.0.alpha.3
 - Latest version of Snufkin 0.3.8
 - New structure of the JSON output. Everything is now under results/

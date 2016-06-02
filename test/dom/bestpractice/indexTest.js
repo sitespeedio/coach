@@ -10,7 +10,7 @@ describe('Best practice', function() {
 
   BROWSERS.forEach(function(browser) {
 
-    describe('browser:' + browser, function() {
+    describe('browser: ' + browser, function() {
 
       const runner = createTestRunner(browser, 'bestpractice');
 

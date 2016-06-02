@@ -9,7 +9,7 @@ describe('info - h2', function() {
 
   BROWSERS.forEach(function(browser) {
 
-    describe('browser:' + browser, function() {
+    describe('browser: ' + browser, function() {
       const runner = createTestRunner(browser, 'info', true);
 
       before(() => runner.start(browser));

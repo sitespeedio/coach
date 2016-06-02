@@ -9,7 +9,7 @@ describe('Inline CSS advice HTTP/1:', function() {
 
   BROWSERS.forEach(function(browser) {
 
-    describe('browser:' + browser, function() {
+    describe('browser: ' + browser, function() {
       const runner = createTestRunner(browser, 'performance');
 
       before(() => runner.start(browser));

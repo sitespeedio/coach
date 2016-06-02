@@ -229,7 +229,7 @@
         },
         "cssInHeadDomain": {
           "advice": "",
-          "description": "Make sure css in head is loaded from same domain as document, in order to have a better user experience and minimize DNS lookups.",
+          "description": "Make sure CSS in head is loaded from same domain as document, in order to have a better user experience and minimize DNS lookups.",
           "id": "cssInHeadDomain",
           "offending": [],
           "score": 100,
@@ -255,7 +255,7 @@
         },
         "fastRender": {
           "advice": "",
-          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading Javascript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
+          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading JavaScript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
           "id": "fastRender",
           "offending": [],
           "score": 100,
@@ -280,15 +280,15 @@
         },
         "jquery": {
           "advice": "",
-          "description": "You may not think this is true but there are pages that uses more than one JQuery versions.",
+          "description": "You may not think this is true but there are pages that uses more than one jQuery versions.",
           "id": "jquery",
           "offending": [],
           "score": 100,
           "tags": [
-            "JQuery",
+            "jQuery",
             "performance"
           ],
-          "title": "Avoid use more than one JQuery version per page",
+          "title": "Avoid use more than one jQuery version per page",
           "weight": 4
         },
         "spof": {
@@ -315,7 +315,7 @@
             "performance",
             "js"
           ],
-          "title": "Always load third party Javascript asynchronously",
+          "title": "Always load third-party JavaScript asynchronously",
           "weight": 5
         },
         "userTiming": {

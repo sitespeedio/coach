@@ -12,7 +12,7 @@ describe('Accessibility', function() {
 
     const runner = createTestRunner(browser, 'accessibility');
 
-    describe('browser:' + browser, function() {
+    describe('browser: ' + browser, function() {
 
       before(() => runner.start(browser));
 
@@ -25,14 +25,14 @@ describe('Accessibility', function() {
           });
       });
 
-      it('We should be able to know if a meta tag supress zooming', function() {
+      it('We should be able to know if a meta tag suppresses zooming', function() {
         return runner.run('neverSuppressZoom.js')
           .then((result) => {
             assert.strictEqual(result.score, 0);
           });
       });
 
-      it('We should be able to know if you miss adding a label on a input field', function() {
+      it('We should be able to know if you miss adding a label on an input field', function() {
         return runner.run('labelOnInput.js')
           .then((result) => {
             assert.strictEqual(result.score, 90);

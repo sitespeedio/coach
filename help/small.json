@@ -186,7 +186,7 @@
         },
         "optimizely": {
           "advice": "",
-          "description": "Use Optimizely with care because it hurts your performance. Only turn it on (= load the javascript) when you run your A/B tests",
+          "description": "Use Optimizely with care because it hurts your performance. Only turn it on (= load the JavaScript) when you run your A/B tests",
           "id": "optimizely",
           "offending": [
           ],
@@ -194,7 +194,7 @@
           "tags": [
             "bestpractice"
           ],
-          "title": "Only use optimizely when you need it",
+          "title": "Only use Optimizely when you need it",
           "weight": 2
         },
         "pageTitle": {
@@ -430,7 +430,7 @@
         },
         "fastRender": {
           "advice": "",
-          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading Javascript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
+          "description": "Every file requested inside of head will postpone the rendering of the page. Try to avoid loading JavaScript synchronously, request files from the same domain as the main document, and inline CSS or server push for really fast rendering.",
           "id": "fastRender",
           "offending": [
           ],
@@ -471,7 +471,7 @@
         },
         "fewRequestsPerDomain": {
           "advice": "",
-          "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+          "description": "Using HTTP/1 browsers has a limit of number of concurrent requests per domain, so limit the amount.",
           "id": "fewRequestsPerDomain",
           "offending": [
           ],
@@ -494,7 +494,7 @@
             "performance",
             "mobile"
           ],
-          "title": "Response headers should't be too big",
+          "title": "Response headers shouldn't be too big",
           "weight": 4
         },
         "imageSize": {
@@ -527,7 +527,7 @@
         },
         "javascriptSize": {
           "advice": "",
-          "description": "A lot of Javascript often means you are downloading more than you need. Or what can the user do on your page?",
+          "description": "A lot of JavaScript often means you are downloading more than you need. Or what can the user do on your page?",
           "id": "javascriptSize",
           "offending": [
           ],
@@ -536,21 +536,21 @@
             "performance",
             "javascript"
           ],
-          "title": "Total Javascript size shouldn't be too big",
+          "title": "Total JavaScript size shouldn't be too big",
           "weight": 5
         },
         "jquery": {
           "advice": "",
-          "description": "You may not think this is true, but there are pages that uses more than one JQuery versions.",
+          "description": "You may not think this is true, but there are pages that uses more than one jQuery versions.",
           "id": "jquery",
           "offending": [
           ],
           "score": 100,
           "tags": [
-            "JQuery",
+            "jQuery",
             "performance"
           ],
-          "title": "Avoid use more than one JQuery version per page",
+          "title": "Avoid use more than one jQuery version per page",
           "weight": 4
         },
         "optimalCssSize": {
@@ -635,7 +635,7 @@
             "performance",
             "js"
           ],
-          "title": "Always load third party Javascript asynchronously",
+          "title": "Always load third-party JavaScript asynchronously",
           "weight": 5
         },
         "userTiming": {

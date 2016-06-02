@@ -16,17 +16,17 @@ describe('Merging DOM and HAR results', function() {
     assert.strictEqual(Object.keys(result.advice.performance.adviceList).length, domPerformanceAdvice + harPerformanceAdvice);
   });
 
-  it('The performance score should be right ', function() {
+  it('The performance score should be right', function() {
     let result = merge(domResult, harResult);
     assert.strictEqual(result.advice.performance.score, 99);
   });
 
-  it('The total score should be right ', function() {
+  it('The total score should be right', function() {
     let result = merge(domResult, harResult);
     assert.strictEqual(result.advice.score, 98);
   });
 
-  it('HAR result advice should override DOM advice ', function() {
+  it('HAR result advice should override DOM advice', function() {
     let result = merge(domResult, harResultOverride);
     assert.strictEqual(result.advice.performance.adviceList.altImages.title, 'altImages from HAR');
   });
