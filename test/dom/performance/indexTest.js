@@ -10,7 +10,7 @@ describe('Performance advice HTTP/1:', function() {
 
   BROWSERS.forEach(function(browser) {
 
-    describe('browser:' + browser, function() {
+    describe('browser: ' + browser, function() {
 
       const runner = createTestRunner(browser, 'performance');
 
@@ -39,7 +39,7 @@ describe('Performance advice HTTP/1:', function() {
           });
       });
 
-      it('We should find out if we load third party JS sync', function() {
+      it('We should find out if we load third-party JS sync', function() {
         return runner.run('thirdPartyAsyncJs.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);

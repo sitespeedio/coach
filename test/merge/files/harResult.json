@@ -29,8 +29,8 @@
             "weight": 10
           },
           "combineCss": {
-            "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ...  ut be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
-            "description": "The more number of CSS requests, the slower the page will be. Combine your css files into one. If you are using HTTP/1",
+            "advice": "Using an HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ... but be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+            "description": "The more number of CSS requests, the slower the page will be. Combine your CSS files into one. If you are using HTTP/1",
             "id": "combineCss",
             "offending": [],
             "score": 100,
@@ -43,8 +43,8 @@
             "weight": 5
           },
           "combineJs": {
-            "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many Javascript from the same domain ...  ut be careful! Many Javascript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
-            "description": "The more number of Javascript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
+            "advice": "Using an HTTP/2 or SPDY connection should not be hurt by serving many JavaScript from the same domain ... but be careful! Many JavaScript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+            "description": "The more number of JavaScript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
             "id": "combineJs",
             "offending": [],
             "score": 100,
@@ -135,7 +135,7 @@
           },
           "fewRequestsPerDomain": {
             "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
-            "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+            "description": "Using HTTP/1 browsers has a limit of number of concurrent requests per domain, so limit the amount.",
             "id": "fewRequestsPerDomain",
             "offending": [],
             "score": 100,
@@ -156,7 +156,7 @@
               "performance",
               "mobile"
             ],
-            "title": "Response headers should't be too big",
+            "title": "Response headers shouldn't be too big",
             "weight": 4
           },
           "imageSize": {
@@ -182,7 +182,7 @@
               "performance",
               "javascript"
             ],
-            "title": "Total Javascript size shouldn't be too big",
+            "title": "Total JavaScript size shouldn't be too big",
             "weight": 5
           },
           "pageSize": {
@@ -260,8 +260,8 @@
             "weight": 10
           },
           "combineCss": {
-            "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ...  ut be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
-            "description": "The more number of CSS requests, the slower the page will be. Combine your css files into one. If you are using HTTP/1",
+            "advice": "Using an HTTP/2 or SPDY connection should not be hurt by serving many CSS from the same domain ... but be careful! Many CSS requests on page can still make the load slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+            "description": "The more number of CSS requests, the slower the page will be. Combine your CSS files into one. If you are using HTTP/1",
             "id": "combineCss",
             "offending": [],
             "score": 100,
@@ -274,8 +274,8 @@
             "weight": 5
           },
           "combineJs": {
-            "advice": "Using a HTTP/2 or SPDY connection should not be hurt by serving many Javascript from the same domain ...  ut be careful! Many Javascript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
-            "description": "The more number of Javascript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
+            "advice": "Using an HTTP/2 or SPDY connection should not be hurt by serving many JavaScript from the same domain ... but be careful! Many JavaScript request on the page can still make the page slow, so check how they are prioritized. It could be that you should combine at least a few of them.",
+            "description": "The more number of JavaScript requests, the slower the page will be. Combine your JS files into one. If you are using HTTP/1",
             "id": "combineJs",
             "offending": [],
             "score": 100,
@@ -366,7 +366,7 @@
           },
           "fewRequestsPerDomain": {
             "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
-            "description": "Using HTTP/1 browsers has a limit of number of conncurrent requests per domain, so limit the amount.",
+            "description": "Using HTTP/1 browsers has a limit of number of concurrent requests per domain, so limit the amount.",
             "id": "fewRequestsPerDomain",
             "offending": [],
             "score": 100,
@@ -387,7 +387,7 @@
               "performance",
               "mobile"
             ],
-            "title": "Response headers should't be too big",
+            "title": "Response headers shouldn't be too big",
             "weight": 4
           },
           "imageSize": {
@@ -413,7 +413,7 @@
               "performance",
               "javascript"
             ],
-            "title": "Total Javascript size shouldn't be too big",
+            "title": "Total JavaScript size shouldn't be too big",
             "weight": 5
           },
           "pageSize": {

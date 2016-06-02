@@ -16,11 +16,11 @@ function assertKeys(result, filename) {
   assert.strictEqual(Object.keys(result).length, KEYS.length, 'The ' + filename + ' advice doesn\'t return  the right number of keys');
 }
 
-describe('Verify advice structure ', function() {
+describe('Verify advice structure', function() {
   this.timeout(60000);
 
   ADVICE_CATEGORIES.forEach(function(category) {
-    describe('category:' + category, function() {
+    describe('category: ' + category, function() {
       // we only need to test this for one browser
       const runner = createTestRunner('chrome', category);
 

@@ -3,7 +3,7 @@ let assert = require('assert');
 let har = require('../../help/har');
 
 
-describe('Don\'t sen too much data in the headers', function() {
+describe('Don\'t send too much data in the headers', function() {
   it('We should be able to know if there are too large headers', function() {
     return har.firstAdviceForTestFile('headerSize.har').then((result) => {
       assert.strictEqual(result.performance.adviceList.headerSize.score, 100);
@@ -16,6 +16,5 @@ describe('Don\'t sen too much data in the headers', function() {
       assert.strictEqual(result.performance.adviceList.headerSize.offending.length ,1);
     });
   });
-
 
 });
