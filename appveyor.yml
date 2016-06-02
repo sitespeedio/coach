@@ -1,0 +1,32 @@
+# http://www.appveyor.com/docs/appveyor-yml
+
+version: "{build}"
+
+clone_depth: 10
+
+build: off
+
+environment:
+  matrix:
+    - nodejs_version: "6"
+      platform: x86
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm config set spin false
+  - npm install
+  - npm install win-detect-browsers
+
+test_script:
+  - node_modules\.bin\win-detect-browsers.cmd
+  - npm run lint
+  - npm test
+  - node ./bin/webcoach.js -b chrome https://www.sitespeed.io > output.json
+  - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
+  - node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json
+
+matrix:
+  fast_finish: true
+
+cache:
+  - 'node_modules -> appveyor.yml,package.json'
