@@ -3,12 +3,12 @@
 'use strict';
 
 let Promise = require('bluebird'),
-  fs = require('fs'),
-  path = require('path'),
-  stringify = require('json-stable-stringify'),
-  ResultTable = require('../lib/table'),
-  cli = require('../lib/cli'),
-  api = require('../lib');
+    fs = require('fs'),
+    path = require('path'),
+    stringify = require('json-stable-stringify'),
+    ResultTable = require('../lib/table'),
+    cli = require('../lib/cli'),
+    api = require('../lib');
 
 Promise.promisifyAll(fs);
 
@@ -64,7 +64,7 @@ function run(options) {
 
   function storeScreenshot(result, options) {
     if (options.screenshot) {
-      return fs.writeFileAsync(path.join(process.cwd(),'screenshot.png'),result.screenshot);
+      return fs.writeFileAsync(path.join(process.cwd(), 'screenshot.png'), result.screenshot);
     }
   }
 

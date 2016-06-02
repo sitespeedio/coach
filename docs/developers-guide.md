@@ -59,7 +59,7 @@ Does it look familiar? Yep it is almost the same structure as an YSlow rule :)
 
 ### DOM vs HAR advice
 
-The coach analyze a page in two steps: First it executes JavaScript in the browser to do checks that are a perfect fit for JavaScript: examine the rendering path, check if images are scaled in the browser and more.
+The coach analyzes a page in two steps: First it executes JavaScript in the browser to do checks that are a perfect fit for JavaScript: examine the rendering path, check if images are scaled in the browser and more.
 
 Then the coach take the HAR file generated from the page and analyze that too. The HAR is good if you want the number of responses, response size and check cache headers.
 
@@ -76,6 +76,7 @@ A simple example is the cssPrint advice that looks for a print stylesheet.
 ```js
 (function(util) {
  'use strict';
+
  var offending = [];
 
  var links = document.getElementsByTagName('link');
@@ -112,6 +113,7 @@ Lets look at a simple advice that checks if the total page size is too large.
 
 ```js
 'use strict';
+
 let util = require('../util');
 
 module.exports = {
@@ -134,7 +136,7 @@ module.exports = {
 
     // and the domAdvice is the data we got from running the DOM advice
     // we can get things like what assets are loaded inside of HEAD
-    // knowing which JavaScripts that are loaded synchronous
+    // knowing which JavaScript files are loaded synchronous
     // if (domAdvice.coachAdvice.results.info.head.jssync.length > 0)
 
     return {
@@ -189,7 +191,7 @@ We create a new unique HTML page for each rule (or two if you want to test diffe
 A simple test run for the print CSS advice looks like this:
 
 ```js
-it('We should find out if we load an print CSS', function() {
+it('We should find out if we load a print CSS', function() {
   return runner.run('cssPrint.js')
     .then((result) => {
       assert.strictEqual(result.offending.length, 1);

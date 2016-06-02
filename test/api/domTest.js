@@ -1,17 +1,17 @@
 'use strict';
 
 const api = require('../../lib/'),
-  urlParser = require('url'),
-  webserver = require('../help/webserver'),
-  chai = require('chai'),
-  chaiAsPromised = require('chai-as-promised');
+    urlParser = require('url'),
+    webserver = require('../help/webserver'),
+    chai = require('chai'),
+    chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
 chai.should();
 
 const BROWSERS = ['chrome', 'firefox'];
 
-describe('DOM apis:', function() {
+describe('DOM APIs:', function() {
   let url;
 
   before(() => webserver.startServer()

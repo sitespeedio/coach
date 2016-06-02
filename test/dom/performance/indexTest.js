@@ -1,7 +1,7 @@
 'use strict';
 
 const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-  assert = require('assert');
+    assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -25,7 +25,7 @@ describe('Performance advice HTTP/1:', function() {
           });
       });
 
-      it('We should find out if we load an print CSS', function() {
+      it('We should find out if we load a print CSS', function() {
         return runner.run('cssPrint.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
@@ -39,21 +39,21 @@ describe('Performance advice HTTP/1:', function() {
           });
       });
 
-      it('We should find out if we load third-party JS sync', function() {
+      it('We should find out if we load third-party JS synchronously', function() {
         return runner.run('thirdPartyAsyncJs.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
           });
       });
 
-      it('Multiple JQuerys that exists on the same page should be reported', function() {
+      it('Multiple jQuery versions that exist on the same page should be reported', function() {
         return runner.run('jquery.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 2);
           });
       });
 
-      it('We should be able to know if the page use user timings', function() {
+      it('We should be able to know if the page uses user timings', function() {
         return runner.run('userTiming.js')
           .then((result) => {
             assert.strictEqual(result.score, 100);

@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let har = require('../../help/har');
-
 
 describe('Avoid setting private headers on items that can be cached', function() {
   it('We should be able to find cache headers that are private', function() {

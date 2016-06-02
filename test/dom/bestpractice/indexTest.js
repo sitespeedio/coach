@@ -1,7 +1,7 @@
 'use strict';
 
 const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-  assert = require('assert');
+    assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 

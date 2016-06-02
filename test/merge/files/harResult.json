@@ -134,7 +134,7 @@
             "weight": 2
           },
           "fewRequestsPerDomain": {
-            "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
+            "advice": "There are almost no limits on HTTP/2 connections with the number of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look OK?",
             "description": "Using HTTP/1 browsers has a limit of number of concurrent requests per domain, so limit the amount.",
             "id": "fewRequestsPerDomain",
             "offending": [],
@@ -365,7 +365,7 @@
             "weight": 2
           },
           "fewRequestsPerDomain": {
-            "advice": "There are almost no limits on HTTP/2 connections with the numebr of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look ok?",
+            "advice": "There are almost no limits on HTTP/2 connections with the number of requests, but it is not completely true. It depends on how parts of them are downloaded. Please check you HAR file, does it look OK?",
             "description": "Using HTTP/1 browsers has a limit of number of concurrent requests per domain, so limit the amount.",
             "id": "fewRequestsPerDomain",
             "offending": [],

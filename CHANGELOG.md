@@ -101,7 +101,7 @@ Windows. Thank you @XhmikosR for the PR.
 
 ### Added
 - Show LastModifiedStats and expireStats to better know if your cache headers are right.
-- Display total size in kb/mb (make it easier to read).
+- Display total size in kB/MB (make it easier to read).
 
 ## 0.20.3 2016-04-22
 ### Fixed

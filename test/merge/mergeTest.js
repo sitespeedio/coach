@@ -1,4 +1,5 @@
 'use strict';
+
 let merge = require('../../lib/merge').merge;
 let assert = require('assert');
 

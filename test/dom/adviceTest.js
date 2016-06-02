@@ -1,8 +1,9 @@
 'use strict';
+
 const createTestRunner = require('../help/browsertimeRunner').createTestRunner,
-  assert = require('assert'),
-  fs = require('fs'),
-  path = require('path');
+    assert = require('assert'),
+    fs = require('fs'),
+    path = require('path');
 
 let ADVICE_CATEGORIES = ['accessibility', 'bestpractice', 'performance'];
 
@@ -31,15 +32,14 @@ describe('Verify advice structure', function() {
       after(() => runner.stop());
 
       files.forEach(function(filename) {
-        {
-          if (path.extname(filename) === '.js') {
-            it('We should return the keys for ' + filename, function() {
-              return runner.run(filename)
-                .then((result) => assertKeys(result, filename));
-            });
-          }
+        if (path.extname(filename) === '.js') {
+          it('We should return the keys for ' + filename, function() {
+            return runner.run(filename)
+              .then((result) => assertKeys(result, filename));
+          });
         }
       });
+
     });
   });
 });

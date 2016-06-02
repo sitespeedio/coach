@@ -1,13 +1,14 @@
 'use strict';
+
 const Promise = require('bluebird'),
-  assert = require('assert'),
-  fs = require('fs'),
-  path = require('path');
+    assert = require('assert'),
+    fs = require('fs'),
+    path = require('path');
 
 Promise.promisifyAll(fs);
 
 describe('Verify advice IDs', function() {
-  it('should have an ID that matches the file name', function() {
+  it('We should have an ID that matches the file name', function() {
     const domAdviceDir = path.join(__dirname, '..', '..', 'lib', 'dom');
     const adviceCategoriesWithIds = ['accessibility', 'bestpractice', 'performance'];
     return fs.readdirAsync(domAdviceDir)
@@ -22,10 +23,10 @@ describe('Verify advice IDs', function() {
 
             return fs.readFileAsync(path.join(domAdviceDir, dirname, filename), 'utf8')
               .then((contents) => {
-                const id = contents.match(/id: '([^\']*)',/)[1];
-                assert(id === name, 'Mismatch of id/filename for ' + filename);
-              })
-          })
-      })
+                const id = contents.match(/id: '([^']*)',/)[1];
+                assert(id === name, 'Mismatch of ID/filename for ' + filename);
+              });
+          });
+      });
   });
 });

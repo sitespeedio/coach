@@ -1,7 +1,7 @@
 'use strict';
 
 const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-  assert = require('assert');
+    assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -19,7 +19,7 @@ describe('Info', function() {
       after(() => runner.stop());
 
 
-      it('Should be able to find the assets inside the head tag', function() {
+      it('We should be able to find the assets inside the head tag', function() {
         return runner.run('head.js')
           .then((result) => {
             assert.strictEqual(result.jssync.length, 1);
@@ -38,7 +38,7 @@ describe('Info', function() {
       it('We should be able to identify the connection type', function() {
         return runner.run('connectionType.js')
           .then((result) => {
-              assert.strictEqual(result !== 'unknown', true);
+            assert.strictEqual(result !== 'unknown', true);
           });
       });
 
@@ -102,11 +102,11 @@ describe('Info', function() {
       it('We should be able to get the window size', function() {
         return runner.run('windowSize.js')
           .then((result) => {
-            assert.strictEqual(result != undefined, true);
+            assert.strictEqual(typeof result !== 'undefined', true);
           });
       });
 
-      it('We should be able to know which browser that runs', function() {
+      it('We should be able to know which browser runs', function() {
         return runner.run('browser.js')
           .then((result) => {
             assert.strictEqual(result !== 'unknown', true);

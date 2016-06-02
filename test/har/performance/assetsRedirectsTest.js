@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let har = require('../../help/har');
-
 
 describe('Avoid redirects for the assets', function() {
 
