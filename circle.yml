@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 5
+    version: 6
 
 dependencies:
   pre:
@@ -15,5 +15,4 @@ dependencies:
 
 test:
   override:
-    - nvm use 4 && npm test
-    - nvm use 5 && npm test
+    - nvm use 6 && npm test
