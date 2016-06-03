@@ -4,6 +4,9 @@
 ### Added
 - You can now get CLI output without colors, thank you https://github.com/bronzehedwick
 
+### Changed
+- Show exact size in bytes for optimalCssAdvice
+
 ## 0.22.4 2016-05-29
 ### Changed
 - Chrome 51 is here and SPDY is dropped, the SPDY advice is updated.
