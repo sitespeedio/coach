@@ -6,6 +6,8 @@
 
 ### Changed
 - Show exact size in bytes for optimalCssAdvice
+- Check for cache time >= 30 days instead of month, to make it cleaner and more
+understandable.
 
 ## 0.22.4 2016-05-29
 ### Changed
