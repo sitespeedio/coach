@@ -9,6 +9,10 @@
 - Check for cache time >= 30 days instead of month, to make it cleaner and more
 understandable.
 
+### Fixed
+- Break new lines in CLI output with \n instead of EOL, EOL didn't work on 
+Windows. Thank you @XhmikosR for the PR. 
+
 ## 0.22.4 2016-05-29
 ### Changed
 - Chrome 51 is here and SPDY is dropped, the SPDY advice is updated.
