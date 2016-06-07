@@ -3,6 +3,8 @@
 ## Unreleased
 ### Added
 - You can now get CLI output without colors, thank you https://github.com/bronzehedwick
+- Run Selenium scripts before you test a page (=login the user). Documentation will come, until then 
+  have a look at this example: https://github.com/tobli/browsertime/blob/1.0/test/prepostscripts/preLoginExample.js
 
 ### Changed
 - Show exact size in bytes for optimalCssAdvice
