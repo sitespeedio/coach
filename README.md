@@ -120,6 +120,14 @@ npm run bookmarklet
 
 and then you will find it in the dist folder.
 
+### Chrome Dev Tools Extension
+
+Installing the [Coach Panel](https://chrome.google.com/webstore/detail/coach-panel/olecfjmnejnkjipoicfpneceppjeaemo) Chrome Extension, will add a 'Coach' tab inside your Chrome Dev Tools from there you can analyse and view your page's results.
+
+Like the bookmarklet it only uses advice that you can run inside the browser - just until that Resource Timing API!
+
+Alternatively view the [Source Code](https://github.com/matthojo/coach-devtools).
+
 ### Include in your own tool
 
 The coach uses Browsertime to start the browser, execute the JavaScript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts if you have your own browser implementation.
