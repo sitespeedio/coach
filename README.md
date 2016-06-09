@@ -124,7 +124,7 @@ and then you will find it in the dist folder.
 
 Installing the [Coach Panel](https://chrome.google.com/webstore/detail/coach-panel/olecfjmnejnkjipoicfpneceppjeaemo) Chrome Extension, will add a 'Coach' tab inside your Chrome Dev Tools from there you can analyse and view your page's results.
 
-Like the bookmarklet it only uses advice that you can run inside the browser - just until that Resource Timing API!
+Like the bookmarklet it only uses advice that you can run inside the browser - just until that Resource Timing API supports sizes in Chrome!
 
 Alternatively view the [Source Code](https://github.com/matthojo/coach-devtools).
 
