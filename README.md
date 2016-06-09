@@ -128,6 +128,10 @@ Like the bookmarklet it only uses advice that you can run inside the browser - j
 
 Alternatively view the [Source Code](https://github.com/matthojo/coach-devtools).
 
+![The coach in dev tools](img/coach-chrome.png)
+
+Thank you [Matt](https://github.com/matthojo) for creating the extension!
+
 ### Include in your own tool
 
 The coach uses Browsertime to start the browser, execute the JavaScript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts if you have your own browser implementation.
