@@ -51,19 +51,19 @@ You can use the coach in a couple of different ways.
 
 ### Standalone
 
-You need Node.js 4.3.0 or later to run. And you need Firefox and/or Chrome installed.
+You need Node.js 4.3.0 or later to run. And you need Chrome and/or Firefox installed.
 
-If you want to use Firefox (Firefox is default):
+If you want to use Chrome (Chrome is default):
 
 ```bash
 webcoach https://www.sitespeed.io
 ```
 
-Try it with Chrome:
+Try it with Firefox (needs Firefox 46 at the moment see https://github.com/sitespeedio/sitespeed.io/issues/993):
 
 ```bash
 npm install webcoach -g
-webcoach https://www.sitespeed.io --browser chrome
+webcoach https://www.sitespeed.io --browser firefox
 ```
 
 If you also want to show the offending assets/details and the description of the advice:
