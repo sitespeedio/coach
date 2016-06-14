@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## Unreleased
+## 0.23.0 2016-06-14
 ### Added
 - You can now get CLI output without colors, thank you https://github.com/bronzehedwick
 - Run Selenium scripts before you test a page (=login the user). Documentation will come, until then 
@@ -10,6 +10,7 @@
 - Show exact size in bytes for optimalCssAdvice
 - Check for cache time >= 30 days instead of month, to make it cleaner and more
 understandable.
+- Use Chrome as default browser since Firefox 47, Selenium, Marionette and the HAR Export trigger isn't compatible by default see https://github.com/sitespeedio/sitespeed.io/issues/993
 
 ### Fixed
 - Break new lines in CLI output with \n instead of EOL, EOL didn't work on 
