@@ -53,6 +53,20 @@ describe('Best practice', function() {
           });
       });
 
+      it('We should be able to know if a page is using a non-HTML5 doctype', function() {
+        return runner.run('doctype.js', 'doctype4.html')
+          .then((result) => {
+            assert.strictEqual(result.score, 25);
+          });
+      });
+
+      it('We should be able to know if a page is using the HTML5 doctype', function() {
+        return runner.run('doctype.js', 'doctype5.html')
+          .then((result) => {
+            assert.strictEqual(result.score, 100);
+          });
+      });
+
       it('We should be able to detect the character set of a page', function() {
         return runner.run('charset.js')
           .then((result) => {
