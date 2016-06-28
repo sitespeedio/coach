@@ -1,7 +1,7 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
-### Changed
+## 0.23.1 2016-06-28
+### Fixed
 - Better description for all performance advice, lets try to explain them so people can undrstand them.
 
 ## 0.23.0 2016-06-14
