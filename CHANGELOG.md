@@ -1,8 +1,11 @@
 # CHANGELOG - webcoach
 
-## 0.23.1 2016-06-28
+## 0.24.1 2016-06-28
 ### Fixed
 - Better description for all performance advice, lets try to explain them so people can undrstand them.
+
+## 0.24.0 2016-06-14
+- Bump for fixing broken release.
 
 ## 0.23.0 2016-06-14
 ### Added
