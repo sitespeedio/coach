@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.24.2 2016-06-28
+### Fixed
+- Updated Browsertime to latest version that uses lates Selenium that works with Firefox 47.0.1
+
 ## 0.24.1 2016-06-28
 ### Fixed
 - Better description for all performance advice, lets try to explain them so people can undrstand them.
