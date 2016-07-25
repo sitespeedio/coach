@@ -75,7 +75,7 @@
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.clonedeep": "4.3.2",
-    "lodash.groupby": "4.3.0",
+    "lodash.groupby": "4.5.0",
     "lodash.merge": "4.3.5",
     "pagexray": "0.9.0",
     "word-wrap": "1.1.0",
