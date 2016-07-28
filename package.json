@@ -76,7 +76,7 @@
     "json-stable-stringify": "1.0.1",
     "lodash.clonedeep": "4.3.2",
     "lodash.groupby": "4.3.0",
-    "lodash.merge": "4.3.5",
+    "lodash.merge": "4.5.0",
     "pagexray": "0.9.0",
     "word-wrap": "1.1.0",
     "yargs": "4.7.0"
