@@ -15,7 +15,7 @@ addons:
   apt:
     packages:
       - google-chrome-stable
-  firefox: "latest"
+  firefox: "46.0"
 
 before_install:
   - firefox --version 2>/dev/null
