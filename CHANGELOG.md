@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.24.3 2016-08-11
+### Fixed
+- Updated Browsertime to latest version that uses lates Selenium and Geckodriver that works with Firefox 48. If you are using Windows, you need to make sure you out Geckodriver in your path.
+
 ## 0.24.2 2016-06-28
 ### Fixed
 - Updated Browsertime to latest version that uses lates Selenium that works with Firefox 47.0.1
