@@ -59,7 +59,7 @@ If you want to use Chrome (Chrome is default):
 webcoach https://www.sitespeed.io
 ```
 
-Try it with Firefox (needs Firefox 46 at the moment see https://github.com/sitespeedio/sitespeed.io/issues/993):
+Try it with Firefox (needs Firefox 48 or later):
 
 ```bash
 npm install webcoach -g
