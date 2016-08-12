@@ -244,6 +244,6 @@ Checkout the [developers guide](docs/developers-guide.md) to get a better feelin
 
 ## Browser support
 
-The coach is automatically tested in latest Chrome and Firefox. To get best results you need Chrome or Firefox 45 (or later) to be able to know if the server is using HTTP/2.
+The coach is automatically tested in latest Chrome and Firefox. To get best results you need Chrome or Firefox 48 (or later) to be able to know if the server is using HTTP/2.
 
 We hope that the coach work in other browsers but we cannot guarantee it right now.
