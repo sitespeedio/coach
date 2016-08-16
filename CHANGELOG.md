@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## 0.24.5 2016-08-16
+### Fixed
+- Updated browsertime with fix for right Geckodriver and Chromerdriver on Mac
+
 ## 0.24.4 2016-08-16
 ### Fixed
 - Updated browsertime with latest version of TSProxy that works with http -> https for Chrome.
