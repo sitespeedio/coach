@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## 0.24.6 2016-08-30
+### Changes
+- Updated Browsertime to be beta 2
+
 ## 0.24.5 2016-08-16
 ### Fixed
 - Updated browsertime with fix for right Geckodriver and Chromerdriver on Mac
