@@ -1,7 +1,8 @@
 # CHANGELOG - webcoach
-## UNRELEASED
+## 0.25.0 2016-09-02
 ### Changes
 - Updated PageXray to 0.10.0 so we now shows total number of domains on a page.
+- Updated to Browsertime beta 3
 
 ## 0.24.6 2016-08-30
 ### Changes
