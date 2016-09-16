@@ -48,7 +48,7 @@
     "chai-as-promised": "^5.2.0",
     "connect": "^3.4.1",
     "eslint": "^2.6.0",
-    "http2": "^3.3.4",
+    "http2": "^3.3.6",
     "jsdoc": "^3.4.0",
     "longjohn": "0.2.11",
     "mkdirp": "^0.5.1",
