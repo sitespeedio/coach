@@ -1,5 +1,5 @@
 # CHANGELOG - webcoach
-## UNRELEASED
+## 0.26.0 2016-09-19
 ### Added
 - Updated PageXray to 0.12.0 so we shows cookies for a page (or rather min/max for all responses).
 - Added serializedDomSize as info.
