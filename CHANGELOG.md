@@ -3,6 +3,7 @@
 ### Added
 - Updated PageXray to 0.12.0 so we shows cookies for a page (or rather min/max for all responses).
 - Added serializedDomSize as info.
+- Updated to Browsertime beta 4
 
 ## 0.25.0 2016-09-02
 ### Changes
