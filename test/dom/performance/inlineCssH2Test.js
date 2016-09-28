@@ -29,7 +29,12 @@ describe('Inline CSS advice HTTP/2:', function() {
           });
       });
 
-      it.skip('We should be able to know if we request CSS file(s)', function() {
+      it('We should be able to know if we request CSS file(s)', function() {
+        if (browser === 'firefox') {
+          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
+          this.skip();
+        }
+
         return runner.run('inlineCss.js', 'inlinecss/noInlineAndRequestCss.html')
           .then((result) => {
             assert.strictEqual(result.score, 100);

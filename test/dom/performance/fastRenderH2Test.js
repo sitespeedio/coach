@@ -41,12 +41,7 @@ describe('Fast render advice HTTP/2:', function() {
           });
       });
 
-      it('We should know that loading too large CSS files is not ok', function() {
-        if (browser === 'firefox') {
-          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-          this.skip();
-        }
-
+      it.skip('We should know that loading too large CSS files is not ok', function() {
         return runner.run('fastRender.js', 'fastrender/tooLargeCSS.html')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
