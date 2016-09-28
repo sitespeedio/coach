@@ -17,6 +17,11 @@ describe('Fast render advice HTTP/2:', function() {
       after(() => runner.stop());
 
       it('We should know that synchronously JavaScript makes the page render slower', function() {
+        if (browser === 'firefox') {
+          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
+          this.skip();
+        }
+
         return runner.run('fastRender.js', 'fastrender/avoidJSSyncInHead.html')
           .then((result) => {
             // In H2 world we don't hurt CSS, we hope it is pushed.
@@ -25,20 +30,28 @@ describe('Fast render advice HTTP/2:', function() {
       });
 
       it('We should know that loading JavaScript async is ok', function() {
+        if (browser === 'firefox') {
+          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
+          this.skip();
+        }
+
         return runner.run('fastRender.js', 'fastrender/jsAsyncIsOk.html')
           .then((result) => {
             assert.strictEqual(result.offending.length, 0);
           });
       });
 
-      if (browser === 'firefox') {
-        it('We should know that loading too large CSS files is not ok', function() {
-          return runner.run('fastRender.js', 'fastrender/tooLargeCSS.html')
-            .then((result) => {
-              assert.strictEqual(result.offending.length, 1);
-            });
-        });
-      }
+      it('We should know that loading too large CSS files is not ok', function() {
+        if (browser === 'firefox') {
+          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
+          this.skip();
+        }
+
+        return runner.run('fastRender.js', 'fastrender/tooLargeCSS.html')
+          .then((result) => {
+            assert.strictEqual(result.offending.length, 1);
+          });
+      });
     });
   });
 
