@@ -1,4 +1,9 @@
 # CHANGELOG - webcoach
+
+## 0.27.1 2016-09-29
+### Fixed
+- Fixed crash for pages where the 'last-modified' header is missing.
+
 ## 0.27.0 2016-09-23
 ### Added
 - Updated to Browsertime beta 5 with fix for Firefox 49
