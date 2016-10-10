@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+- New info: get meta description
+
 ## 0.27.1 2016-09-29
 ### Fixed
 - Fixed crash for pages where the 'last-modified' header is missing.
