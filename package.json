@@ -52,7 +52,7 @@
     "jsdoc": "^3.4.1",
     "longjohn": "0.2.11",
     "mkdirp": "^0.5.1",
-    "mocha": "^3.1.0",
+    "mocha": "^3.1.2",
     "serve-static": "^1.10.2",
     "uglify-js": "^2.7.3"
   },
