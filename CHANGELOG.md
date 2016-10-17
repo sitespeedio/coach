@@ -1,8 +1,9 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.28.0 2016-10-17
 ### Added
 - New info: get meta description
+- Updated PageXray and Browsertime to latest releases.
 
 ## 0.27.1 2016-09-29
 ### Fixed
