@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## 0.28.2 2016-10-17
+### Fixed
+- Now we have the latest beta-7 of Browsertime
 
 ## 0.28.0 2016-10-17
 ### Added
