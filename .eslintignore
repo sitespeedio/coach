@@ -1,3 +1,5 @@
-test/http-server
-scripts
-dist
+lib/dom/timings/rumSpeedIndex.js
+dist/
+node_modules/
+scripts/
+test/http-server/
