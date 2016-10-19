@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let util = require('../../lib/har/util');
-
 
 describe('Test HAR util functions', function() {
 
@@ -24,7 +24,6 @@ describe('Test HAR util functions', function() {
 
     url = 'https://sitespeed.io';
     assert.strictEqual(util.getHostname(url), 'sitespeed.io');
-
   });
 
   it('Format bytes for readability', function() {
@@ -33,6 +32,6 @@ describe('Test HAR util functions', function() {
 
     bytes = 120000;
     assert.strictEqual(util.formatBytes(bytes), '120 kB');
-    });
+  });
 
 });

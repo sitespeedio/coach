@@ -1,18 +1,18 @@
 'use strict';
 
 const api = require('../../lib/'),
-  fs = require('fs'),
-  path = require('path'),
-  Promise = require('bluebird'),
-  chai = require('chai'),
-  chaiAsPromised = require('chai-as-promised');
+    fs = require('fs'),
+    path = require('path'),
+    Promise = require('bluebird'),
+    chai = require('chai'),
+    chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
 chai.should();
 
 Promise.promisifyAll(fs);
 
-describe('HAR apis:', function() {
+describe('HAR APIs:', function() {
 
   describe('getHarAdvice', function() {
     it('should return at least one advice', () =>
@@ -30,7 +30,7 @@ describe('HAR apis:', function() {
 
   describe('runHarAdvice', function() {
     const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har'),
-      har = fs.readFileAsync(harPath, 'utf8').then(JSON.parse);
+        har = fs.readFileAsync(harPath, 'utf8').then(JSON.parse);
 
     it('should output correct structure', () =>
       api.runHarAdvice(har)

@@ -1,9 +1,9 @@
 'use strict';
 
 const api = require('../../lib/'),
-  urlParser = require('url'),
-  webserver = require('../help/webserver'),
-  chai = require('chai');
+    urlParser = require('url'),
+    webserver = require('../help/webserver'),
+    chai = require('chai');
 
 chai.should();
 
@@ -32,5 +32,5 @@ describe('Run API:', function() {
         ['accessibility', 'bestpractice', 'info', 'performance', 'timings', 'score'].forEach((property) =>
           advice.advice.should.have.ownProperty(property)
         );
-      }))
+      }));
 });

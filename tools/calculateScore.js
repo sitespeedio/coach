@@ -1,14 +1,15 @@
 'use strict';
 
-/*global advice*/
+/* global advice */
+
 (function(advice) {
   var totalScore = 0,
-    totalWeight = 0;
+      totalWeight = 0;
 
   Object.keys(advice).forEach(function(category) {
     var categoryScore = 0,
-      categoryWeight = 0,
-      adviceList = advice[category].adviceList;
+        categoryWeight = 0,
+        adviceList = advice[category].adviceList;
 
     if (adviceList) {
       Object.keys(adviceList).forEach(function(adviceName) {
@@ -22,7 +23,7 @@
       });
     }
     if (categoryWeight > 0) {
-      advice[category].score = Math.round(categoryScore / categoryWeight)
+      advice[category].score = Math.round(categoryScore / categoryWeight);
     }
   });
 

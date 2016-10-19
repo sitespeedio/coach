@@ -1,7 +1,7 @@
 'use strict';
 
 const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-  assert = require('assert');
+    assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -18,7 +18,7 @@ describe('Accessibility', function() {
 
       after(() => runner.stop());
 
-      it('Missing alt tags on an image should be reported', function() {
+      it('Missing alt tags of an image should be reported', function() {
         return runner.run('altImages.js')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);
@@ -66,6 +66,7 @@ describe('Accessibility', function() {
             assert.strictEqual(result.score, 90);
           });
       });
+
     });
   });
 });

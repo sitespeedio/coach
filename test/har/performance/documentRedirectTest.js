@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let har = require('../../help/har');
-
 
 describe('Never do redirects on the main document', function() {
 
@@ -16,6 +16,5 @@ describe('Never do redirects on the main document', function() {
       assert.strictEqual(result.performance.adviceList.documentRedirect.score, 0);
     });
   });
-
 
 });

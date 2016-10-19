@@ -319,7 +319,7 @@
           "weight": 5
         },
         "userTiming": {
-          "advice": "Start using the User Timing API to measure specifics metrics for your page.",
+          "advice": "Start using the User Timing API to measure specific metrics for your page.",
           "description": "The User Timing API is perfect way to start measuring specific metrics for your site.",
           "id": "userTiming",
           "offending": [],

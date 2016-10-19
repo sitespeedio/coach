@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let har = require('../../help/har');
-
 
 describe('Avoid 40X and 50X', function() {
   it('We should be able to know if we have an error in one request', function() {

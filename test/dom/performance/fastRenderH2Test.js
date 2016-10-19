@@ -1,7 +1,7 @@
 'use strict';
 
 const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-  assert = require('assert');
+    assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
@@ -16,7 +16,7 @@ describe('Fast render advice HTTP/2:', function() {
 
       after(() => runner.stop());
 
-      it('We should know that synchronously JavaScript makes the page render slower', function() {
+      it('We should know that synchronous JavaScript makes the page render slower', function() {
         if (browser === 'firefox') {
           // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
           this.skip();
@@ -29,7 +29,7 @@ describe('Fast render advice HTTP/2:', function() {
           });
       });
 
-      it('We should know that loading JavaScript async is ok', function() {
+      it('We should know that loading JavaScript asynchronously is OK', function() {
         if (browser === 'firefox') {
           // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
           this.skip();
@@ -41,7 +41,7 @@ describe('Fast render advice HTTP/2:', function() {
           });
       });
 
-      it.skip('We should know that loading too large CSS files is not ok', function() {
+      it.skip('We should know that loading too large CSS files is not OK', function() {
         return runner.run('fastRender.js', 'fastrender/tooLargeCSS.html')
           .then((result) => {
             assert.strictEqual(result.offending.length, 1);

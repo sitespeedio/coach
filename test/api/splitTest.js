@@ -1,14 +1,14 @@
 'use strict';
 
 const api = require('../../lib/'),
-  fs = require('fs'),
-  path = require('path'),
-  Promise = require('bluebird'),
-  assert = require('assert');
+    fs = require('fs'),
+    path = require('path'),
+    Promise = require('bluebird'),
+    assert = require('assert');
 
 Promise.promisifyAll(fs);
 
-describe('pickAPage HAR api:', function() {
+describe('pickAPage HAR API:', function() {
   const harPath = path.join(__dirname, '..', 'har', 'files', 'www.nytimes.com.har');
 
   it('should work', () =>

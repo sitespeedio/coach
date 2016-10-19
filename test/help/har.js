@@ -1,9 +1,9 @@
 'use strict';
 
 let fs = require('fs'),
-  Promise = require('bluebird'),
-  path = require('path'),
-  api = require('../../lib/');
+    Promise = require('bluebird'),
+    path = require('path'),
+    api = require('../../lib/');
 
 Promise.promisifyAll(fs);
 

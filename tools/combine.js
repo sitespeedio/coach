@@ -3,12 +3,13 @@
 'use strict';
 
 const path = require('path'),
-  fs = require('fs'),
-  packageInfo = require('../package'),
-  filter = require('filter-files');
+    fs = require('fs'),
+    packageInfo = require('../package'),
+    filter = require('filter-files');
 
-const filterJsFiles = (file) => (path.extname(file) === '.js');
-const filterDirs = (file, dir) => (fs.statSync(path.resolve(dir, file)).isDirectory());
+const filterJsFiles = (file) => path.extname(file) === '.js';
+const filterDirs = (file, dir) => fs.statSync(path.resolve(dir, file)).isDirectory();
+
 const fileContentsByName = (scripts, file) => {
   const name = path.basename(file, '.js');
   scripts[name] = fs.readFileSync(file, 'utf8');
@@ -18,8 +19,8 @@ const fileContentsByName = (scripts, file) => {
 module.exports = function(filename) {
 
   const utilsSrc = fs.readFileSync(path.join(__dirname, '../lib/dom/util.js')),
-    calculateScoreSrc = fs.readFileSync(path.join(__dirname, 'calculateScore.js')),
-    categoriesPath = path.join(__dirname, '../lib/dom');
+      calculateScoreSrc = fs.readFileSync(path.join(__dirname, 'calculateScore.js')),
+      categoriesPath = path.join(__dirname, '../lib/dom');
 
   const categoryDirs = filter.sync(categoriesPath, filterDirs, false);
 
@@ -75,11 +76,11 @@ module.exports = function(filename) {
     return (function(util) {
         var advice = {},
             errors = {};
-            
+
         ${pushResultsSrc}
-  
+
         ${calculateScoreSrc}
-                  
+
         return {
           'advice': advice,
           'errors': errors,

@@ -134,7 +134,7 @@
         },
         "https": {
           "advice": "",
-          "description": "A page should always use HTTPS ( https://https.cio.gov/everything/). Plus you will need it for HTTP/2!",
+          "description": "A page should always use HTTPS (https://https.cio.gov/everything/). Plus you will need it for HTTP/2!",
           "id": "https",
           "offending": [
           ],
@@ -403,7 +403,7 @@
         },
         "cssSize": {
           "advice": "",
-          "description": "A lot CSS will make the rendering slower, because there's more things to do for the browser before it can start paint the screen.",
+          "description": "A lot of CSS will make the rendering slower, because there's more things to do for the browser before it can start paint the screen.",
           "id": "cssSize",
           "offending": [
           ],

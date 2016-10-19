@@ -439,7 +439,7 @@
         },
         "https": {
           "advice": "What!! The page is not using HTTPS. Every unencrypted HTTP request reveals information about user’s behavior, read more about it at https://https.cio.gov/everything/. You can get a totally free SSL/TLS certificate from https://letsencrypt.org/.",
-          "description": "A page should always use HTTPS ( https://https.cio.gov/everything/). Plus you will need it for HTTP/2!",
+          "description": "A page should always use HTTPS (https://https.cio.gov/everything/). Plus you will need it for HTTP/2!",
           "id": "https",
           "offending": [
           ],
@@ -663,7 +663,7 @@
     "performance": {
       "adviceList": {
         "assetsRedirects": {
-          "advice": "The page has 87 redirect(s). 87 request(s) are from other domains, it could be 3rd party assets that do redirects that they really don't need :(",
+          "advice": "The page has 87 redirect(s). 87 request(s) are from other domains, it could be 3rd-party assets that do redirects that they really don't need :(",
           "description": "Avoid doing redirects, it will kill your web page on mobile.",
           "id": "assetsRedirects",
           "offending": [
@@ -1205,7 +1205,7 @@
         },
         "cssSize": {
           "advice": "",
-          "description": "A lot CSS will make the rendering slower, because there's more things to do for the browser before it can start paint the screen.",
+          "description": "A lot of CSS will make the rendering slower, because there's more things to do for the browser before it can start paint the screen.",
           "id": "cssSize",
           "offending": [
           ],
@@ -1379,7 +1379,7 @@
           "weight": 4
         },
         "optimalCssSize": {
-          "advice": "http://www.expressen.se/stylesheets/style.desktop.min__c4c0b6eae40e2af86997d9b7727ed4a4b.css size is 46.9 kB and that is bigger than the limit of 14.5 kB. Try to make the CSS files fit into 14.5 kb.",
+          "advice": "http://www.expressen.se/stylesheets/style.desktop.min__c4c0b6eae40e2af86997d9b7727ed4a4b.css size is 46.9 kB and that is bigger than the limit of 14.5 kB. Try to make the CSS files fit into 14.5 kB.",
           "description": "Making CSS requests small are to fit into the magic number TCP window size 14.5 kB.",
           "id": "optimalCssSize",
           "offending": [
@@ -1477,7 +1477,7 @@
           "weight": 7
         },
         "spof": {
-          "advice": "The page has 3 requests inside of head that can cause a SPOF. Load them async or move them outside of head.",
+          "advice": "The page has 3 requests inside of head that can cause a SPOF. Load them asynchronously or move them outside of head.",
           "description": "A page should not have a single point of failure a.k.a load content from a provider that can cause the page to stop working.",
           "id": "spof",
           "offending": [
@@ -1509,7 +1509,7 @@
           "weight": 5
         },
         "userTiming": {
-          "advice": "Start using the User Timing API to measure specifics metrics for your page.",
+          "advice": "Start using the User Timing API to measure specific metrics for your page.",
           "description": "The User Timing API is a perfect way to start measuring specific and custom metrics for your site.",
           "id": "userTiming",
           "offending": [

@@ -1,7 +1,7 @@
 'use strict';
+
 let assert = require('assert');
 let har = require('../../help/har');
-
 
 describe('Avoid closing a connection that can be used again', function() {
   it('We should be able to find connection close', function() {
