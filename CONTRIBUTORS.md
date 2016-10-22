@@ -9,3 +9,4 @@ Many many many thanks to:
  * [Charlie Park](https://github.com/charliepark)
  * [XhmikosR](https://github.com/XhmikosR)
  * [Chris DeLuca](https://github.com/bronzehedwick)
+ * [Simon Courtois](https://github.com/simonc)
