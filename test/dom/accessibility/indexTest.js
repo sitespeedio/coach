@@ -35,7 +35,19 @@ describe('Accessibility', function() {
       it('We should be able to know if you miss adding a label on an input field', function() {
         return runner.run('labelOnInput.js')
           .then((result) => {
-            assert.strictEqual(result.score, 90);
+            assert.strictEqual(result.score, 60);
+          });
+      });
+
+      it('We should be able to know which input fields are missing a label', function() {
+        return runner.run('labelOnInput.js')
+          .then((result) => {
+            assert.deepEqual(result.offending, [
+              "test-text-missing",
+              "missingUrl",
+              "test-select-missing",
+              "test-textarea-missing"
+            ]);
           });
       });
 
