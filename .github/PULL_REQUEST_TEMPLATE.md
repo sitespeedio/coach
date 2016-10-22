@@ -3,7 +3,7 @@ Please review the [guidelines for contributing](CONTRIBUTING.md) to this reposit
 
 - [ ] Check that your change/fix has corresponding unit tests
 - [ ] Verify that the test works by running `npm test` and test linting by `npm run lint`
-
+- [ ] Squash commits so it looks sane
 
 ### Description
 Please describe your pull request and tell us the fix #
