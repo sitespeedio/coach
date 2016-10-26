@@ -4,6 +4,9 @@
 ### Fixed 
 - Fix the labelOnInput advice (thanks @simonc!)
 
+### Added
+- Updated to latest Browserime beta-8
+
 ## 0.28.2 2016-10-17
 ### Fixed
 - Now we have the latest beta-7 of Browsertime
