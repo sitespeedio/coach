@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.28.3 2016-10-26
 ### Fixed 
 - Fix the labelOnInput advice (thanks @simonc!)
 
