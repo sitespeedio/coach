@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## 0.28.4 2016-10-26
+### Added
+- Updated to latest Browserime beta-9
 
 ## 0.28.3 2016-10-26
 ### Fixed 
