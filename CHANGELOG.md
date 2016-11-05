@@ -108,23 +108,23 @@ Windows. Thank you @XhmikosR for the PR.
 
 ## 0.22.0
 ### Changed
-- The cacheHeaders advice checking for missing cache headers got even higher prio, so it will be more influential of the score.
+- The cacheHeaders advice checking for missing cache headers got even higher priority, so it will be more influential of the score.
 
 ## 0.21.0
 ### Fixed
 - More robust (and right) first paint (as in Browsertime).
 
 ### Added
-- Show LastModifiedStats and expireStats to better know if your cache headers are right.
-- Display total size in kB/MB (make it easier to read).
+- Shows LastModifiedStats and expireStats to know better if your cache headers are right.
+- Display total size in kb/mb (make it easier to read).
 
 ## 0.20.3 2016-04-22
 ### Fixed
-- Bug fix for showing details when you run the CLI using --details
+- Bug fixed for showing details when you run the CLI using --details
 
 ## 0.20.2 2016-04-22
 ### Fixed
-- Do not output the difference in size of images in the avoidScailingImages advice, so it looks better when we display that advice.
+- Do not output the difference in size of images in the avoidScailingImages advice so that it looks better when we display that advice.
 - Upgraded to latest PageXray (0.6.0).
 
 ## 0.20.1 2016-04-17
@@ -134,13 +134,13 @@ Windows. Thank you @XhmikosR for the PR.
 ## 0.20.0 2016-04-15
 ### Changed
 - Cli name for getting more details is now ... details instead of offending.
-- Better structure for user timings and measurements, so we easily can move the timings to BT.
+- Better structures for user timings and measurements, so we can easily move the timings to BT.
 
 ## 0.19.0 2016-04-12
 
 ### Added
 - Get browser and version.
-- Show all redirect URLs in the offending section when a main document is redirected.
+- Show all redirected URLs in the offending section when a main document is redirected.
 
 ## 0.18.0 2016-04-07
 ### Fixed
@@ -148,12 +148,12 @@ Windows. Thank you @XhmikosR for the PR.
 - Added extra advice text if the main document of a page is served private.
 
 ### Added
-- Added possibility to take screenshot (it's now supported in Browsertime). Note: Using Chrome the screenshot will be the current view port, using Firefox it will be the full page. This is a webdriver issue, lets see check how we can
+- Added the possibility to take screenshot (it's now supported in Browsertime). Note: Using Chrome the screenshot will be the current view port, using Firefox it will be the full page. This is a webdriver issue, lets see how we can
 fix this.
 
 ## 0.17.0 2016-03-31
 ### Added
-- Include coach version number in the table output.
+- Included coach version number in the table output.
 
 ## 0.16.1 2016-03-30
 ### Fixed
@@ -176,8 +176,8 @@ fix this.
 
 ## 0.15.0 2016-03-30
 ### Added
-- Show number of occurrences when a response isn't a 200 response in responseOk advice.
-- Rewrite fastRender advice and made it include cssInHeadDomain (removed) to make it easier to rewrite the advice later and act on both what's in the DOM and the HTML. We need to add more tests before this can be released.
+- Shows the number of occurrences when a response isn't a 200 response in responseOk advice.
+- Rewrites the fastRender advice and included it in cssInHeadDomain (removed) to make it easier to rewrite the advice later and act on both what's in the DOM and the HTML. We need to add more tests before this can be released.
 - Test our test cases against a H2 server (that was easy).
 - Drop the cssInHead advice, it is now a anti pattern. https://jakearchibald.com/2016/link-in-body/
 - Goodbye combineCss advice and hello optimalCssSize!
@@ -185,14 +185,14 @@ fix this.
 
 ## 0.14.0 2016-03-24
 ### Added
-- Optimizely advice to turn it off when you are not using it.
+- Optimizely adviced to turn it off when you are not using it.
 
 ### Fixed
 - We missed getting relative CSS when we checked for CSS loaded inside of head.
 
 ## 0.13.0 2016-03-24
 ### Fixed
-- Output the size you would save if you set correct cache headers of assets with no cache time
+- Outputs the size you would save if you set correct cache headers of assets with no cache time
 - Better more precise advice for avoidScalingImages, labelOnInput and https.
 
 ## 0.12.0 2016-03-23
@@ -202,21 +202,21 @@ fix this.
 ## 0.11.0 2016-03-23
 ### Added
 - Lets include page size and size/request per content type #19
-- Let us know how many of the assets redirects happens on the main domain
+- Lets us know how many of the assets redirected on the main domain
 
 ### Fixed
 - combinedCss advice should alert if we have more than 1 CSS.
 - neverSupressZoom now reports the failing meta content
-- privateAssets now also check for private headers for HTML assets
-- faviconAdvice should tell us the real problem with the favicon
-- section advice should tell us how often we have a missing heading
+- privateAssets now checks for private headers for HTML assets
+- faviconAdvice tells us the real problem with the favicon
+- section advice tells us how often we have a missing heading
 
 
 ## 0.10.0 2016-03-22
 ### Added
 - Disable missing favicon check for Firefox because of #49
-- fastRender advice now check CSS response size in HTTP/2 to make sure it isn't larger than the magic number.
-- Sort advice alphabetically in table output
+- fastRender advice now checks CSS response size in HTTP/2 to make sure it isn't larger than the magic number.
+- Sorts advice alphabetically in table output
 
 ## 0.9.0 2016-03-22
 ### Fixed
@@ -224,10 +224,10 @@ fix this.
 
 ### Added
 - Skip -u/-f just pass an argument as in sitespeed.io 4.0
-- Lets combine DOM and HAR advice for even smarter advice #13
-- Make sure options is passed to HAR advice so we can have different advice
+- Lets us combine DOM and HAR advice for even smarter advice #13
+- Makes sure that the options are passed to HAR advice so that we can have different advice
   depending on device
-- pageSize now have different size limit for mobile and desktop
+- pageSize now has different size limit for mobile and desktop  
 - Changed combineCSS for only looking at CSS inside of HEAD for HTTP/1
 - Dropped combineJs. We can make this better now when we combine DOM & HAR
 
@@ -247,7 +247,7 @@ fix this.
 
 ## 0.6.3 2016-03-21
 ### Fixed
-- Fix again for document redirects, old version wasn't working correctly.
+- Fixed again for document redirects, old version wasn't working correctly.
 
 ## 0.6.2 2016-03-21
 ### Fixed
@@ -265,7 +265,7 @@ fix this.
 - Cleanup of advice messages.
 
 ### Added
-- Make it possible to show the title and description of an advice in the CLI using --description
+- Makes it possible to show the title and description of an advice in the CLI using --description
 
 ## 0.5.0 2016-03-21
 ### Fixed
@@ -286,9 +286,9 @@ fix this.
 - Better inlineCSS advice when you use HTTP/2
 
 ### Added
-- Update docs to include the pickAPage API.
-- Output CLI data as a table (but you can still choose JSON).
-- Warn if a page is using SPDY, Chrome EOL coming soon.
+- Updates docs to include the pickAPage API.
+- Outputs CLI data as a table (but you can still choose JSON).
+- Warns if a page is using SPDY, Chrome EOL coming soon.
 
 ## 0.3.2 2016-03-17
 ### Fixed
@@ -296,7 +296,7 @@ fix this.
 
 ## 0.3.1 2016-03-17
 ### Added
-- Include coach version in the HAR coach result.
+- Included coach version in the HAR coach result.
 - API method pickAPage(har,pageIndex) to get specific
   HAR with the chosen page.
 
@@ -311,7 +311,7 @@ fix this.
   API you need to change the name accordingly. Checkout lib/index.js
 
 ### Fixed
-- The merging of HAR & DOM result was broken. Now the HAR and the DOM result
+- The merging of HAR & DOM result was broken. Now the HAR and the DOM results
 follow the same structure starting with the key coachAdvice.
 
 ## 0.2.0 - 2016-03-04
