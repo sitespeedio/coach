@@ -1,8 +1,11 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
-### CHANGED
+## 0.29.0 2016-11-11
+### Changed
 - Updated NodeJs dependency to be 6.9.1 (needed when we start to use Selenium 3.0.0)
+
+### Added
+-  Updated to latest Browserime beta-10 with Selenium 3.0.1. You now need NodeJS 6.9.0
 
 ## 0.28.4 2016-10-26
 ### Added
