@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+- Add --viewPort option to set browser window size for test
+
 ## 0.29.0 2016-11-11
 ### Changed
 - Updated NodeJs dependency to be 6.9.1 (needed when we start to use Selenium 3.0.0)
