@@ -10,3 +10,4 @@ Many many many thanks to:
  * [XhmikosR](https://github.com/XhmikosR)
  * [Chris DeLuca](https://github.com/bronzehedwick)
  * [Simon Courtois](https://github.com/simonc)
+ * [James Socol](https://github.com/jsocol)

@@ -2,7 +2,7 @@
 
 ## UNRELEASED
 ### Added
-- Add --viewPort option to set browser window size for test
+- Add --viewPort option to set browser window size for test, thank you @jsocol for the PR
 
 ## 0.29.0 2016-11-11
 ### Changed
