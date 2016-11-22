@@ -16,7 +16,9 @@ function run(options) {
   function setupOptions(options) {
     options.iterations = 1;
     if (options.mobile) {
-      options.viewPort = '360x640';
+      if (!options.viewPort) {
+          options.viewPort = '360x640';
+      }
       if (options.browser === 'chrome') {
         options.chrome = {
           mobileEmulation: {
