@@ -1,5 +1,10 @@
 # The coach
 
+[![Build status][travis-image]][travis-url]
+[![Downloads][downloads-image]][downloads-url]
+[![Docker][docker-image]][docker-url]
+[![Stars][stars-image]][stars-url]
+
 ![The coach](img/coach.png)
 
 The coach helps you find performance problems on your web page. You can think of the coach as a modern version of [YSlow](http://yslow.org/).
@@ -247,3 +252,13 @@ Checkout the [developers guide](docs/developers-guide.md) to get a better feelin
 The coach is automatically tested in latest Chrome and Firefox. To get best results you need Chrome or Firefox 48 (or later) to be able to know if the server is using HTTP/2.
 
 We hope that the coach works in other browsers but we cannot guarantee it right now.
+
+
+[travis-image]: https://img.shields.io/travis/sitespeedio/coach.svg?style=flat-square
+[travis-url]: https://travis-ci.org/sitespeedio/coach
+[stars-url]: https://github.com/sitespeedio/coach/stargazers
+[stars-image]: https://img.shields.io/github/stars/sitespeedio/coach.svg?style=flat-square
+[downloads-image]: http://img.shields.io/npm/dm/webcoach.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/webcoach
+[docker-image]: https://img.shields.io/docker/pulls/sitespeedio/coach.svg
+[docker-url]: https://hub.docker.com/r/sitespeedio/coach/
