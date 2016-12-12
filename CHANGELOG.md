@@ -1,10 +1,12 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 0.30.0 2016-12-12
 ### Added
 - Add --viewPort option to set browser window size for test, thank you @jsocol for the PR
 
 - New advice "Avoid using incorrect mime types" thank you @lbod #204 
+
+- New Browsertime and PageXray
 
 ## 0.29.0 2016-11-11
 ### Changed
