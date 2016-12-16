@@ -36,8 +36,9 @@ module.exports = {
     if (!server) {
       server = createServer(useHttp2);
     }
+    const ADDRESS = process.platform === 'win32' ? 'localhost' : '0.0.0.0';
     return new Promise((resolve, reject) => {
-      server.listen(0, '0.0.0.0')
+      server.listen(0, ADDRESS)
         .on('error', (e) => reject(e))
         .on('listening', () => resolve(server.address()));
     });

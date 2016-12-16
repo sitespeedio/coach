@@ -1,6 +1,7 @@
 # The coach
 
-[![Build status][travis-image]][travis-url]
+[![Build status Linux][travis-image]][travis-url]
+[![Build status Windows][appveyor-image]][appveyor-url]
 [![Downloads][downloads-image]][downloads-url]
 [![Docker][docker-image]][docker-url]
 [![Stars][stars-image]][stars-url]
@@ -254,11 +255,13 @@ The coach is automatically tested in latest Chrome and Firefox. To get best resu
 We hope that the coach works in other browsers but we cannot guarantee it right now.
 
 
-[travis-image]: https://img.shields.io/travis/sitespeedio/coach.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/sitespeedio/coach.svg?style=flat-square&label=Linux%20build
 [travis-url]: https://travis-ci.org/sitespeedio/coach
+[appveyor-image]: https://img.shields.io/appveyor/ci/XhmikosR/mpc-hc-org/master.svg?style=flat-square&label=Windows%20build
+[appveyor-url]: https://ci.appveyor.com/project/XhmikosR/coach/history
 [stars-url]: https://github.com/sitespeedio/coach/stargazers
 [stars-image]: https://img.shields.io/github/stars/sitespeedio/coach.svg?style=flat-square
 [downloads-image]: http://img.shields.io/npm/dm/webcoach.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/webcoach
-[docker-image]: https://img.shields.io/docker/pulls/sitespeedio/coach.svg
+[docker-image]: https://img.shields.io/docker/pulls/sitespeedio/coach.svg?style=flat-square
 [docker-url]: https://hub.docker.com/r/sitespeedio/coach/
