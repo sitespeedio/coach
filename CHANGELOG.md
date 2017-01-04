@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.30.1 2017-01-04
+### Added 
+- Updated to latest Browserime beta-19
+
 ## 0.30.0 2016-12-12
 ### Added
 - Add --viewPort option to set browser window size for test, thank you @jsocol for the PR
