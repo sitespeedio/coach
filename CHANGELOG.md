@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## 0.30.4 2017-01-10
+### Added
+- Updated to latest Browserime beta-23
+
 ## 0.30.3 2017-01-10
 ### Added
 - Updated to latest Browserime beta-22
