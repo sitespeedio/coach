@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## UNRELEASED
+### Changed
+- Removed User Timing performance advice: If you don't use user timings, you shouldn't get lower score. See how this was broken https://github.com/sitespeedio/browsertime/issues/257 [#148](https://github.com/sitespeedio/coach/issues/148)
+
 ## 0.30.4 2017-01-10
 ### Added
 - Updated to latest Browserime beta-23
@@ -12,14 +16,14 @@
 - Updated to latest Browserime beta-21
 
 ## 0.30.1 2017-01-04
-### Added 
+### Added
 - Updated to latest Browserime beta-19
 
 ## 0.30.0 2016-12-12
 ### Added
 - Add --viewPort option to set browser window size for test, thank you @jsocol for the PR
 
-- New advice "Avoid using incorrect mime types" thank you @lbod #204 
+- New advice "Avoid using incorrect mime types" thank you @lbod #204
 
 - New Browsertime and PageXray
 
@@ -35,7 +39,7 @@
 - Updated to latest Browserime beta-9
 
 ## 0.28.3 2016-10-26
-### Fixed 
+### Fixed
 - Fix the labelOnInput advice (thanks @simonc!)
 
 ### Added
