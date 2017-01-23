@@ -51,7 +51,7 @@
     "http2": "^3.3.6",
     "jsdoc": "^3.4.1",
     "mocha": "^3.1.0",
-    "serve-static": "^1.10.2",
+    "serve-static": "^1.11.2",
     "uglify-js": "^2.7.3"
   },
   "homepage": "https://www.sitespeed.io/coach",
