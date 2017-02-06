@@ -52,13 +52,6 @@ describe('Performance advice HTTP/1:', function() {
             assert.strictEqual(result.offending.length, 2);
           });
       });
-
-      it('We should be able to know if the page uses user timings', function() {
-        return runner.run('userTiming.js')
-          .then((result) => {
-            assert.strictEqual(result.score, 100);
-          });
-      });
     });
   });
 

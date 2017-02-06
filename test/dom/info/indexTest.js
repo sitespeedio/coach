@@ -122,6 +122,13 @@ describe('Info', function() {
             assert.strictEqual(result['dns-prefetch'][0], 'http://example.com/', 'Could not fetch dns-prefetch');
           });
       });
+
+      it('We should be able to know if the page uses user timings', function() {
+        return runner.run('userTiming.js')
+          .then((result) => {
+            assert.strictEqual(result.marks, 1);
+          });
+      });
     });
   });
 });
