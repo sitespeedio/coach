@@ -66,7 +66,7 @@
     }
   ],
   "dependencies": {
-    "bluebird": "3.4.6",
+    "bluebird": "3.4.7",
     "browsertime": "1.0.0-beta.23",
     "chalk": "1.1.3",
     "cli-table2": "0.2.0",
@@ -76,7 +76,7 @@
     "lodash.groupby": "4.6.0",
     "lodash.merge": "4.6.0",
     "pagexray": "0.14.1",
-    "word-wrap": "1.1.0",
-    "yargs": "6.4.0"
+    "word-wrap": "1.2.1",
+    "yargs": "6.6.0"
   }
 }
