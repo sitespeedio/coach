@@ -1,9 +1,12 @@
 # CHANGELOG - webcoach
-## UNRELEASED
+
+## 0.31.0 2017-02-10
 ### Changed
 - Removed User Timing performance advice: If you don't use user timings, you shouldn't get lower score. See how this was broken https://github.com/sitespeedio/browsertime/issues/257 [#148](https://github.com/sitespeedio/coach/issues/148)
 
-- Collect number fo script tags.
+### Added
+- Collect number of script tags as info.
+- Updated to Browsertime beta-24
 
 ## 0.30.4 2017-01-10
 ### Added
