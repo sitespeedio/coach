@@ -46,7 +46,7 @@
     "bookmarkletify": "^1.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "connect": "^3.5.0",
+    "connect": "^3.6.0",
     "eslint": "^3.6.1",
     "http2": "^3.3.6",
     "jsdoc": "^3.4.1",
