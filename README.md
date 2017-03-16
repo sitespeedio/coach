@@ -254,7 +254,7 @@ The coach is automatically tested in latest Chrome and Firefox. To get best resu
 We hope that the coach works in other browsers but we cannot guarantee it right now.
 
 
-[travis-image]: https://img.shields.io/travis/sitespeedio/coach.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/sitespeedio/coach/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/sitespeedio/coach
 [stars-url]: https://github.com/sitespeedio/coach/stargazers
 [stars-image]: https://img.shields.io/github/stars/sitespeedio/coach.svg?style=flat-square
