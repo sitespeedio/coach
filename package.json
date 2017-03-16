@@ -52,7 +52,7 @@
     "jsdoc": "^3.4.1",
     "mocha": "^3.1.0",
     "serve-static": "^1.10.2",
-    "uglify-js": "^2.7.3"
+    "uglify-js": "^2.8.5"
   },
   "homepage": "https://www.sitespeed.io/coach",
   "license": "MIT",
