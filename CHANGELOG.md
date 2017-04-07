@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## 0.33.0 2017-04-07
+### Added
+- Updated to latest Browsertime 1.0.0, finally no beta. Also use latest FF in Docker.
+
 ## 0.32.0 2017-03-14
 ### Added
 - Newest browsertime with support for Chrome 57. Updated Dockerfile to use Firefox 52 and Chrome 57.
