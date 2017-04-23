@@ -1,4 +1,9 @@
 # CHANGELOG - webcoach
+## 0.34.0 2017-04-23
+### Added
+- Updated to latest Browsertime 1.1.0. Also use latest FF & Chrome in Docker.
+
+
 ## 0.33.0 2017-04-07
 ### Added
 - Updated to latest Browsertime 1.0.0, finally no beta. Also use latest FF in Docker.
