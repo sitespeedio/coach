@@ -3,7 +3,7 @@
 'use strict';
 
 let path = require('path'),
-    fs = require('fs');
+  fs = require('fs');
 
 module.exports = function(sourcePath, destinationPath) {
   const coachSrc = fs.readFileSync(path.resolve(sourcePath));

@@ -5,9 +5,8 @@ let harCutter = require('../../lib/har/harCutter').pickAPage;
 let helper = require('../help/har');
 
 describe('Test HAR cutter', function() {
-
   it('We should get the correct number of pages from the HAR cutter', function() {
-    return helper.harFromTestFile('cacheHeaders.har').then((har) => {
+    return helper.harFromTestFile('cacheHeaders.har').then(har => {
       // the original har har two pages
       assert.strictEqual(har.log.pages.length, 2);
       let myHar = harCutter(har, 0);
@@ -18,7 +17,7 @@ describe('Test HAR cutter', function() {
   });
 
   it('We should get the correct number of entries from the HAR cutter', function() {
-    return helper.harFromTestFile('cacheHeaders.har').then((har) => {
+    return helper.harFromTestFile('cacheHeaders.har').then(har => {
       // the original har har two pages
       assert.strictEqual(har.log.entries.length, 212);
       let myHar = harCutter(har, 0);
@@ -26,5 +25,4 @@ describe('Test HAR cutter', function() {
       assert.strictEqual(myHar.log.entries.length, 175);
     });
   });
-
 });

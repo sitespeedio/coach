@@ -18,8 +18,7 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 script:
-- npm run lint
-- npm test
+- npm run travis
 - node ./bin/webcoach.js -b chrome https://www.sitespeed.io > output.json
 - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
 - node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json

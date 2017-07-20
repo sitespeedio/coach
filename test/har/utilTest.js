@@ -4,7 +4,6 @@ let assert = require('assert');
 let util = require('../../lib/har/util');
 
 describe('Test HAR util functions', function() {
-
   it('Categorize connection types H2/SPDY as HTTP/2 and nothing else', function() {
     let page = {};
     page.httpType = 'h2';
@@ -33,5 +32,4 @@ describe('Test HAR util functions', function() {
     bytes = 120000;
     assert.strictEqual(util.formatBytes(bytes), '120 kB');
   });
-
 });

@@ -9,12 +9,18 @@ let harResultOverride = require('./files/harResultOverride.json');
 
 describe('Merging DOM and HAR results', function() {
   it('We should have the right amount of performance advice', function() {
-
-    let domPerformanceAdvice = Object.keys(domResult.advice.performance.adviceList).length;
-    let harPerformanceAdvice = Object.keys(harResult[0].advice.performance.adviceList).length;
+    let domPerformanceAdvice = Object.keys(
+      domResult.advice.performance.adviceList
+    ).length;
+    let harPerformanceAdvice = Object.keys(
+      harResult[0].advice.performance.adviceList
+    ).length;
     let result = merge(domResult, harResult);
 
-    assert.strictEqual(Object.keys(result.advice.performance.adviceList).length, domPerformanceAdvice + harPerformanceAdvice);
+    assert.strictEqual(
+      Object.keys(result.advice.performance.adviceList).length,
+      domPerformanceAdvice + harPerformanceAdvice
+    );
   });
 
   it('The performance score should be right', function() {
@@ -29,6 +35,9 @@ describe('Merging DOM and HAR results', function() {
 
   it('HAR result advice should override DOM advice', function() {
     let result = merge(domResult, harResultOverride);
-    assert.strictEqual(result.advice.performance.adviceList.altImages.title, 'altImages from HAR');
+    assert.strictEqual(
+      result.advice.performance.adviceList.altImages.title,
+      'altImages from HAR'
+    );
   });
 });

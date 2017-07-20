@@ -1,18 +1,17 @@
 'use strict';
 
 const createTestRunner = require('../help/browsertimeRunner').createTestRunner,
-    path = require('path');
+  path = require('path');
 
 let BROWSERS = ['chrome', 'firefox'];
 
 let SCRIPT_NAME = 'domconsole.js',
-    scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
+  scriptPath = path.resolve(__dirname, '..', '..', 'dist', SCRIPT_NAME);
 
 describe('Bookmarklet script [' + SCRIPT_NAME + ']', function() {
   this.timeout(60000);
 
   BROWSERS.forEach(function(browser) {
-
     describe('browser: ' + browser, function() {
       const runner = createTestRunner(browser, 'combined');
 
@@ -25,5 +24,4 @@ describe('Bookmarklet script [' + SCRIPT_NAME + ']', function() {
       });
     });
   });
-
 });
