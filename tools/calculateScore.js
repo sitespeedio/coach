@@ -4,12 +4,12 @@
 
 (function(advice) {
   var totalScore = 0,
-      totalWeight = 0;
+    totalWeight = 0;
 
   Object.keys(advice).forEach(function(category) {
     var categoryScore = 0,
-        categoryWeight = 0,
-        adviceList = advice[category].adviceList;
+      categoryWeight = 0,
+      adviceList = advice[category].adviceList;
 
     if (adviceList) {
       Object.keys(adviceList).forEach(function(adviceName) {

@@ -1,14 +1,13 @@
 'use strict';
 
-const createTestRunner = require('../../help/browsertimeRunner').createTestRunner,
-    assert = require('assert');
+const createTestRunner = require('../../help/browsertimeRunner')
+    .createTestRunner,
+  assert = require('assert');
 
 let BROWSERS = ['chrome', 'firefox'];
 
 describe('info - h2', function() {
-
   BROWSERS.forEach(function(browser) {
-
     describe('browser: ' + browser, function() {
       const runner = createTestRunner(browser, 'info', true);
 
@@ -21,10 +20,9 @@ describe('info - h2', function() {
           // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
           this.skip();
         }
-        return runner.run('connectionType.js')
-          .then((result) => {
-            assert.strictEqual(result === 'h2', true);
-          });
+        return runner.run('connectionType.js').then(result => {
+          assert.strictEqual(result === 'h2', true);
+        });
       });
     });
   });
