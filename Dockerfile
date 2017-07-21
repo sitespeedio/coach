@@ -1,4 +1,4 @@
-FROM sitespeedio/webbrowsers:firefox-53.0-chrome-58.0
+FROM sitespeedio/webbrowsers:firefox-54.0-chrome-60.0.3112.66-beta2
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
