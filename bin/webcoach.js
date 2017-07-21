@@ -22,7 +22,7 @@ function run(options) {
       if (options.browser === 'chrome') {
         options.chrome = {
           mobileEmulation: {
-            deviceName: 'Apple iPhone 6'
+            deviceName: 'iPhone 6'
           }
         };
       } else {
