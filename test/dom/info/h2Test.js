@@ -16,13 +16,11 @@ describe('info - h2', function() {
       after(() => runner.stop());
 
       it('Should be able to know if the connection is H2', function() {
-        if (browser === 'firefox') {
-          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-          this.skip();
-        }
-        return runner.run('connectionType.js').then(result => {
-          assert.strictEqual(result === 'h2', true);
-        });
+        return runner
+          .runGlobalServer('connectionType.js', 'https://www.sitespeed.io/')
+          .then(result => {
+            assert.strictEqual(result === 'h2', true);
+          });
       });
     });
   });

@@ -32,9 +32,11 @@ describe('Info', function() {
       });
 
       it('We should be able to identify the connection type', function() {
-        return runner.run('connectionType.js').then(result => {
-          assert.strictEqual(result !== 'unknown', true);
-        });
+        return runner
+          .runGlobalServer('connectionType.js', 'https://www.sitespeed.io/')
+          .then(result => {
+            assert.strictEqual(result !== 'unknown', true);
+          });
       });
 
       it('We should be able to find iframes', function() {

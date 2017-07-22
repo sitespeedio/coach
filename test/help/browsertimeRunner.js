@@ -11,6 +11,20 @@ Promise.promisifyAll(fs);
 
 browsertime.logging.configure({});
 
+function getScript(ruleFileName, category) {
+  const domPath = path.resolve(__dirname, '..', '..', 'lib', 'dom'),
+    utilPath = path.resolve(domPath, 'util.js'),
+    utilScript = fs.readFileAsync(utilPath, 'utf8'),
+    rulePath = path.resolve(domPath, category, ruleFileName),
+    ruleScript = fs.readFileAsync(rulePath, 'utf8');
+
+  return Promise.join(
+    utilScript,
+    ruleScript,
+    (utilScript, ruleScript) => utilScript + ' return ' + ruleScript
+  );
+}
+
 module.exports = {
   createTestRunner(browser, category, useHttp2) {
     function run(url, script) {
@@ -46,23 +60,17 @@ module.exports = {
       stop() {
         return runner.stop().finally(() => webserver.stopServer());
       },
+      runGlobalServer(ruleFileName, url) {
+        const script = getScript(ruleFileName, category);
+        return run(url, script);
+      },
       run(ruleFileName, testPage) {
         if (!testPage) {
           testPage = path.basename(ruleFileName, '.js') + '.html';
         }
 
-        const domPath = path.resolve(__dirname, '..', '..', 'lib', 'dom'),
-          utilPath = path.resolve(domPath, 'util.js'),
-          utilScript = fs.readFileAsync(utilPath, 'utf8'),
-          rulePath = path.resolve(domPath, category, ruleFileName),
-          ruleScript = fs.readFileAsync(rulePath, 'utf8');
-
         const url = urlParser.resolve(baseUrl, category + '/' + testPage),
-          script = Promise.join(
-            utilScript,
-            ruleScript,
-            (utilScript, ruleScript) => utilScript + ' return ' + ruleScript
-          );
+          script = getScript(ruleFileName, category);
 
         return run(url, script);
       }
