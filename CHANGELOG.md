@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## 0.35.0 2017-07-22
+### Added
+- Updated to Browsertime 1.5.4 and upgraded the Docker container to use Firefox 54 and Chrome 60 Beta
+- Set NodeJS to 6.11.1 or higher
+
 ## 0.34.1 2017-05-11
 ### Added
 - Updated to latest Browsertime 1.2.2.
@@ -7,7 +12,6 @@
 ## 0.34.0 2017-04-23
 ### Added
 - Updated to latest Browsertime 1.1.0. Also use latest FF & Chrome in Docker.
-
 
 ## 0.33.0 2017-04-07
 ### Added
