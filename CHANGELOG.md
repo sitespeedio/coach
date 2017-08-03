@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 0.36.0 2017-08-03
+### Added
+- Updated to Browsertime 1.6.0 and upgraded the Docker container to use Firefox 54 and Chrome 60 (stable)
+
 ## 0.35.0 2017-07-22
 ### Added
 - Updated to Browsertime 1.5.4 and upgraded the Docker container to use Firefox 54 and Chrome 60 Beta
