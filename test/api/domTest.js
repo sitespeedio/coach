@@ -45,7 +45,7 @@ describe('DOM APIs:', function() {
             pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'
             // TODO test that we actually have DOM data and valid HAR
           })
-          .should.eventually.have.deep.property('advice.info.amp'));
+          .should.eventually.have.nested.property('advice.info.amp'));
     });
   });
 });

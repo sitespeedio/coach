@@ -46,7 +46,7 @@ describe('HAR APIs:', function() {
         const firstPageAdvice = advicePerPage[0];
 
         firstPageAdvice.should.have.property('version');
-        firstPageAdvice.should.have.deep.property('advice.performance');
+        firstPageAdvice.should.have.nested.property('advice.performance');
       }));
   });
 });
