@@ -19,6 +19,7 @@ script:
 - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
 - node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json
 cache:
+  apt: true
   directories:
   - node_modules
 notifications:
