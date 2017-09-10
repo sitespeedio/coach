@@ -109,9 +109,9 @@ That's possible as well!
 webcoach https://www.sitespeed.io --noColor
 ```
 
-### sitespeed.io 4.0
+### Part of sitespeed.io since v4.0
 
-The coach is a part of the forthcoming [sitespeed.io 4.0](https://www.sitespeed.io). It will be released this summer, hallelujah!
+The coach is part of [sitespeed.io](https://www.sitespeed.io) since v4.0.
 
 ### Bookmarklet
 
