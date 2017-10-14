@@ -42,16 +42,13 @@ describe('Fast render advice HTTP/2:', function() {
           });
       });
 
-      it.skip(
-        'We should know that loading too large CSS files is not OK',
-        function() {
-          return runner
-            .run('fastRender.js', 'fastrender/tooLargeCSS.html')
-            .then(result => {
-              assert.strictEqual(result.offending.length, 1);
-            });
-        }
-      );
+      it.skip('We should know that loading too large CSS files is not OK', function() {
+        return runner
+          .run('fastRender.js', 'fastrender/tooLargeCSS.html')
+          .then(result => {
+            assert.strictEqual(result.offending.length, 1);
+          });
+      });
     });
   });
 });
