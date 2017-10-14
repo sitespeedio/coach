@@ -1,10 +1,14 @@
 # CHANGELOG - webcoach
+
+## UNRELEASED 1.0.0 ALPHA
+
+
 ## 0.38.0 2017-10-14
-## Added
+### Added
 - Updated to Browsertime 1.9.5
 
 ## 0.37.0 2017-08-26
-## Added
+### Added
 - Updated to PageXray 1.0.0 and Browsertime 1.6.1
 
 ## 0.36.0 2017-08-03
