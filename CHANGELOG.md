@@ -1,7 +1,8 @@
 # CHANGELOG - webcoach
 
 ## UNRELEASED 1.0.0 ALPHA
-
+### Changed
+- Just output version number on --version, not the package name
 
 ## 0.38.0 2017-10-14
 ### Added
