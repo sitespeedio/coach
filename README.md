@@ -1,4 +1,4 @@
-# The coach
+ The coach
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/sitespeedio/coach.svg)](https://greenkeeper.io/)
 
@@ -58,7 +58,7 @@ You can use the coach in a couple of different ways.
 
 ### Standalone
 
-You need Node.js 4.3.0 or later to run. And you need Chrome and/or Firefox installed.
+You need Node.js LTS. And you need Chrome and/or Firefox installed.
 
 If you want to use Chrome (Chrome is default):
 
