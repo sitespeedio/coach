@@ -1,7 +1,5 @@
  The coach
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/sitespeedio/coach.svg)](https://greenkeeper.io/)
-
 [![Build status][travis-image]][travis-url]
 [![Downloads][downloads-image]][downloads-url]
 [![Docker][docker-image]][docker-url]
