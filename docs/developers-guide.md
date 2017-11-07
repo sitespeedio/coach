@@ -27,7 +27,7 @@ When you got them installed you can clone the project (or rather first fork it a
 git clone git@github.com:sitespeedio/coach.git
 ```
 
-Inside your coach folder install the dependencies and run the tests to check that everything works:
+Inside your coach folder install the dependencies and run the tests to check that everything works (you need latest LTS NodeJS):
 
 ```bash
 cd coach
