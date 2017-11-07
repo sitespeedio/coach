@@ -16,10 +16,7 @@ describe('Fast render advice HTTP/2:', function() {
       after(() => runner.stop());
 
       it('We should know that synchronous JavaScript makes the page render slower', function() {
-        if (browser === 'firefox') {
-          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-          this.skip();
-        }
+        this.skip();
 
         return runner
           .run('fastRender.js', 'fastrender/avoidJSSyncInHead.html')
@@ -30,10 +27,7 @@ describe('Fast render advice HTTP/2:', function() {
       });
 
       it('We should know that loading JavaScript asynchronously is OK', function() {
-        if (browser === 'firefox') {
-          // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-          this.skip();
-        }
+        this.skip();
 
         return runner
           .run('fastRender.js', 'fastrender/jsAsyncIsOk.html')
