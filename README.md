@@ -16,7 +16,6 @@ The coach helps you find performance problems on your web page. You can think of
 - [Work in progress](#work-in-progress)
 - [How to use the coach](#how-to-use-the-coach)
   - [Standalone](#standalone)
-  - [sitespeed.io 4.0](#sitespeedio-40)
   - [Bookmarklet](#bookmarklet)
   - [Include in your own tool](#include-in-your-own-tool)
 - [What does the coach do?](#what-do-the-coach-do)
@@ -46,11 +45,6 @@ Ten reasons why we love the coach:
 - The coach is open-source. The advice is public, you can check it and change it yourself. Help us make the coach even better!
 - The coach can combine knowledge from the DOM with HAR to give you super powerful advice.
 - The CLI output is pretty nice. You can configure how much you want to see. Use it as fast way to check the performance of your page.
-- The coach will be part of sitespeed.io 4.0 and it will be awesome!
-
-## Work in progress!
-
-We know you want the coach to help you but right now YOU need to help the coach! The coach is new and need more advice. Send a PR with a new advice, so the coach gets more knowledge! Check out the [issues](https://github.com/sitespeedio/coach/issues), try the project and give us feedback! In a couple of months we will release 1.0.
 
 ## How to use the coach
 
@@ -58,7 +52,7 @@ You can use the coach in a couple of different ways.
 
 ### Standalone
 
-You need Node.js LTS. And you need Chrome and/or Firefox installed.
+You need Node.js LTS (you need to be on 8 or later). And you need Chrome and/or Firefox installed.
 
 If you want to use Chrome (Chrome is default):
 
@@ -66,7 +60,7 @@ If you want to use Chrome (Chrome is default):
 webcoach https://www.sitespeed.io
 ```
 
-Try it with Firefox (needs Firefox 48 or later):
+Try it with Firefox (needs Firefox 57 or later):
 
 ```bash
 npm install webcoach -g
@@ -109,13 +103,9 @@ That's possible as well!
 webcoach https://www.sitespeed.io --noColor
 ```
 
-### Part of sitespeed.io since v4.0
-
-The coach is part of [sitespeed.io](https://www.sitespeed.io) since v4.0.
-
 ### Bookmarklet
 
-We also produce a bookmarklet. The bookmarklet only uses advice that you can run inside the browser (it doesn't have HAR file to analyze even though maybe possible in the future with the Resource Timing API).
+We also produce a bookmarklet. The bookmarklet only uses advice that you can run inside the browser (it doesn't have HAR file to analyse even though maybe possible in the future with the Resource Timing API).
 
 The bookmarklet is really rough right now and logs the info to the browser console. Help us make a cool front-end :)
 
