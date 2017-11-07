@@ -1,4 +1,6 @@
-FROM sitespeedio/webbrowsers:firefox-54.0-chrome-60.0
+FROM sitespeedio/webbrowsers:firefox-54.0-chrome-62.0-chrome-beta-3
+
+ENV DOCKER true
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

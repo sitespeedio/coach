@@ -4,8 +4,25 @@ set -e
 google-chrome-stable --version
 firefox --version
 
-echo 'Starting Xvfb ...'
-export DISPLAY=:99
-2>/dev/null 1>&2 Xvfb :99  -ac -nolisten tcp -screen 0 1500x1200x16 &
-sleep 1
-exec node /usr/src/app/bin/webcoach.js "$@"
+# Here's a hack for fixing the problem with Chrome not starting in time
+# See https://github.com/SeleniumHQ/docker-selenium/issues/87#issuecomment-250475864
+
+sudo rm -f /var/lib/dbus/machine-id
+sudo mkdir -p /var/run/dbus
+sudo service dbus restart > /dev/null
+service dbus status > /dev/null
+export $(dbus-launch)
+export NSS_USE_SHARED_DB=ENABLED
+
+# Inspired by docker-selenium way of shutting down
+function shutdown {
+  kill -s SIGTERM $PID
+  wait $PID
+}
+
+exec node /usr/src/app/bin/webcoach.js "$@" &
+
+PID=$!
+
+trap shutdown SIGTERM SIGINT
+wait $PID
