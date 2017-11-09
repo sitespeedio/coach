@@ -7,6 +7,10 @@
 - Upgraded to NodeJS 8.9.0 (latest LTS)
 - Always prefer CSS inlining.
 
+### Added
+- The Coach now give you advice on Google Analytics and Google Tag Manager [#275](https://github.com/sitespeedio/coach/pull/275).
+
+
 ## 0.38.0 2017-10-14
 ### Added
 - Updated to Browsertime 1.9.5
