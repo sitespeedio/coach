@@ -5,6 +5,7 @@
 - Just output version number on --version, not the package name
 - Upgraded the Docker file to follow the same pattern as the rest of the sitespeed.io projects
 - Upgraded to NodeJS 8.9.0 (latest LTS)
+- Always prefer CSS inlining.
 
 ## 0.38.0 2017-10-14
 ### Added
