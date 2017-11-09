@@ -9,7 +9,7 @@
 
 ### Added
 - The Coach now give you advice on Google Analytics and Google Tag Manager [#275](https://github.com/sitespeedio/coach/pull/275).
-
+- Added new third party lib check: GA, GTM, New Relic, Boomerang, JQuery, Piwik (so far).
 
 ## 0.38.0 2017-10-14
 ### Added
