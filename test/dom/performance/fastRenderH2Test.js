@@ -16,10 +16,11 @@ describe('Fast render advice HTTP/2:', function() {
       after(() => runner.stop());
 
       it('We should know that synchronous JavaScript makes the page render slower', function() {
-        this.skip();
-
         return runner
-          .run('fastRender.js', 'fastrender/avoidJSSyncInHead.html')
+          .runGlobalServer(
+            'fastRender.js',
+            'https://www.sitespeed.io/testcases/performance/fastrender/avoidJSSyncInHead.html'
+          )
           .then(result => {
             // In H2 world we don't hurt CSS, we hope it is pushed.
             assert.strictEqual(result.offending.length, 1);
@@ -27,18 +28,22 @@ describe('Fast render advice HTTP/2:', function() {
       });
 
       it('We should know that loading JavaScript asynchronously is OK', function() {
-        this.skip();
-
         return runner
-          .run('fastRender.js', 'fastrender/jsAsyncIsOk.html')
+          .runGlobalServer(
+            'fastRender.js',
+            'https://www.sitespeed.io/testcases/performance/fastrender/jsAsyncIsOk.html'
+          )
           .then(result => {
             assert.strictEqual(result.offending.length, 0);
           });
       });
 
-      it.skip('We should know that loading too large CSS files is not OK', function() {
+      it('We should know that loading too large CSS files is not OK', function() {
         return runner
-          .run('fastRender.js', 'fastrender/tooLargeCSS.html')
+          .runGlobalServer(
+            'fastRender.js',
+            'https://www.sitespeed.io/testcases/performance/fastrender/tooLargeCSS.html'
+          )
           .then(result => {
             assert.strictEqual(result.offending.length, 1);
           });

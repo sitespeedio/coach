@@ -16,22 +16,26 @@ describe('Inline CSS advice HTTP/2:', function() {
       after(() => runner.stop());
 
       it('We should be able to know if we inline CSS and request CSS files', function() {
-        // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-        this.skip();
-
         return runner
-          .run('inlineCss.js', 'inlinecss/inlineAndRequestCss.html')
+          .runGlobalServer(
+            'inlineCss.js',
+            'https://www.sitespeed.io/testcases/performance/inlinecss/inlineAndRequestCss.html'
+          )
           .then(result => {
             assert.strictEqual(result.score, 95);
           });
       });
 
       it('We should be able to know if we request CSS file(s)', function() {
-        // Skip for now, since Firefox fails for local H2 sites (likely due to self signed cert)
-        this.skip();
-
+        // TODO make this work in FF
+        if (browser === 'firefox') {
+          this.skip();
+        }
         return runner
-          .run('inlineCss.js', 'inlinecss/noInlineAndRequestCss.html')
+          .runGlobalServer(
+            'inlineCss.js',
+            'https://www.sitespeed.io/testcases/performance/inlinecss/noInlineAndRequestCss.html'
+          )
           .then(result => {
             assert.strictEqual(result.score, 100);
           });
