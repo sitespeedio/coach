@@ -6,11 +6,13 @@
 - Upgraded the Docker file to follow the same pattern as the rest of the sitespeed.io projects
 - Upgraded to NodeJS 8.9.0 (latest LTS)
 - Always prefer CSS inlining.
+- Use Navigation Timings 2 to detect connection type.
 
 ### Added
 - The Coach now give you advice on Google Analytics and Google Tag Manager [#275](https://github.com/sitespeedio/coach/pull/275).
 - Added new third party lib check: GA, GTM, New Relic, Boomerang, JQuery, Piwik (so far).
 - Added new check for JavaScript frameworks.
+- Show effective network type for browsers that support it.
 
 ## 0.38.0 2017-10-14
 ### Added
