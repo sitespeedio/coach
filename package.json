@@ -15,7 +15,11 @@
   "engines": {
     "node": ">=8.9.0"
   },
-  "files": ["bin", "lib", "dist"],
+  "files": [
+    "bin",
+    "lib",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/sitespeedio/coach.git"
@@ -24,8 +28,7 @@
     "url": "https://github.com/sitespeedio/coach/issues"
   },
   "scripts": {
-    "bookmarklet":
-      "npm run domconsole && bookmarkletify dist/domconsole.js -o dist/coach.bookmarklet.js",
+    "bookmarklet": "npm run domconsole && bookmarkletify dist/domconsole.js -o dist/coach.bookmarklet.js",
     "domconsole": "node tools/domconsole.js dist/coach.js dist/domconsole.js",
     "combine": "mkdirp dist && node tools/combine.js dist/coach.js",
     "test:api": "mocha --recursive test/api",
@@ -37,13 +40,10 @@
     "jsdoc": "jsdoc -R README.md -r -d dist/doc lib",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "travis": "npm run eslint-check && npm run lint && npm run test",
-    "prepublish":
-      "npm run combine && npm run bookmarklet && npm run uglify && npm run jsdoc",
-    "uglify":
-      "uglifyjs dist/coach.js --compress side_effects=false,negate_iife=false --mangle > dist/coach.min.js"
+    "prepublish": "npm run combine && npm run bookmarklet && npm run uglify && npm run jsdoc",
+    "uglify": "uglifyjs dist/coach.js --compress side_effects=false,negate_iife=false --mangle > dist/coach.min.js"
   },
   "devDependencies": {
     "bookmarkletify": "^1.0.0",
