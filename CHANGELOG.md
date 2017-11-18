@@ -1,6 +1,7 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED 1.0.0 ALPHA
+## 1.0.0 - 2017-11-28
+
 ### Changed
 - Just output version number on --version, not the package name
 - Upgraded the Docker file to follow the same pattern as the rest of the sitespeed.io projects
