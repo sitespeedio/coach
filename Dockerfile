@@ -5,7 +5,7 @@ ENV DOCKER true
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package.json /usr/src/app/
+COPY package.* /usr/src/app/
 RUN npm install --production
 COPY . /usr/src/app
 
