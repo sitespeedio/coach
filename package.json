@@ -61,7 +61,7 @@
     "serve-static": "^1.12.4",
     "uglify-js": "^3.0.28"
   },
-  "homepage": "https://www.sitespeed.io/coach",
+  "homepage": "https://www.sitespeed.io/documentation/coach/",
   "license": "MIT",
   "author": {
     "name": "Peter Hedenskog",
@@ -70,11 +70,14 @@
   "contributors": [
     {
       "name": "Tobias Lidskog"
+    },
+    {
+      "name": "Jonathan Lee"
     }
   ],
   "dependencies": {
     "bluebird": "3.5.0",
-    "browsertime": "2.0.0-alpha.5",
+    "browsertime": "2.0.0",
     "chalk": "2.1.0",
     "cli-table2": "0.2.0",
     "filter-files": "0.4.0",

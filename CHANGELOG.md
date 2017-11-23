@@ -1,6 +1,11 @@
 # CHANGELOG - webcoach
 
-## 1.0.0 - 2017-11-28
+## 1.1.0 - 2017-11-23
+
+### Added
+- Upgraded to Browsertime 2.0.0
+
+## 1.0.0 - 2017-10-28
 
 ### Changed
 - Just output version number on --version, not the package name
