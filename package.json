@@ -43,7 +43,7 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "travis": "npm run eslint-check && npm run lint && npm run test",
     "prepublish": "npm run combine && npm run bookmarklet && npm run uglify && npm run jsdoc",
-    "gen-dist" : "npm run combine && npm run uglify",
+    "postinstall": "npm run combine && npm run uglify",
     "uglify": "uglifyjs dist/coach.js --compress side_effects=false,negate_iife=false --mangle > dist/coach.min.js"
   },
   "devDependencies": {
