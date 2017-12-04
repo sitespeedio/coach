@@ -50,16 +50,7 @@ Ten reasons why we love the coach:
 
 ## How to use the coach
 
-You can use the coach in a few different ways.
-
-### Docker
-
-To build a docker image from source you will need to run a few commands
-
-```bash
-npm run gen-dist
-docker build -t my-custom-coach .
-```
+You can use the coach in a couple of different ways.
 
 ### Standalone
 
