@@ -57,6 +57,7 @@ You can use the coach in a few different ways.
 To build a docker image from source you will need to run a few commands
 
 ```bash
+npm install
 npm run gen-dist
 docker build -t my-custom-coach .
 ```
