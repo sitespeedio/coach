@@ -54,6 +54,10 @@ You can use the coach in a few different ways.
 
 ### Docker
 
+```bash
+docker run sitespeedio/coach https://www.sitespeed.io
+```
+
 To build a docker image from source you will need to run a few commands
 
 ```bash
