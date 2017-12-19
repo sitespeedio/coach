@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+
+### Fixed
+- Upgraded PageXray to 2.0.1 that fixes Chrome problem with URLs containing hashes
+
 ## 1.1.0 - 2017-11-23
 
 ### Added
