@@ -1,9 +1,10 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 1.1.1 - 2017-12-19
 
 ### Fixed
 - Upgraded PageXray to 2.0.1 that fixes Chrome problem with URLs containing hashes
+- Upgraded to Browsertime 2.1.2 with Chromedriver 2.34
 
 ## 1.1.0 - 2017-11-23
 
