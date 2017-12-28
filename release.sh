@@ -12,4 +12,4 @@ docker login
 docker push sitespeedio/coach:$PACKAGE_VERSION
 docker push sitespeedio/coach:latest
 
-bin/webcoach.js --version > ../sitespeed.io/docs/version/coach.txt
+bin/webcoach.js --version | tr -d '\n' > ../sitespeed.io/docs/_includes/version/coach.txt
