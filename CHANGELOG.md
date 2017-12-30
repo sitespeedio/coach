@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+* Do you use 3rd party content from Facebook?
+
 ## 1.1.2 - 2017-12-28
 ### Fixed
 * Upgraded to PageXray 2.0.2.
