@@ -19,7 +19,7 @@ describe('info - h2', function() {
         return runner
           .runGlobalServer('connectionType.js', 'https://www.sitespeed.io/')
           .then(result => {
-            assert.strictEqual(result === 'h2', true);
+            assert.strictEqual(result, 'h2');
           });
       });
     });

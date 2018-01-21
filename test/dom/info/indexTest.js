@@ -35,7 +35,7 @@ describe('Info', function() {
         return runner
           .runGlobalServer('connectionType.js', 'https://www.sitespeed.io/')
           .then(result => {
-            assert.strictEqual(result !== 'unknown', true);
+            assert.notStrictEqual(result, 'unknown');
           });
       });
 
@@ -90,13 +90,13 @@ describe('Info', function() {
 
       it('We should be able to get the window size', function() {
         return runner.run('windowSize.js').then(result => {
-          assert.strictEqual(typeof result !== 'undefined', true);
+          assert.strictEqual(/^\d+x\d+$/.test(result), true);
         });
       });
 
       it('We should be able to know which browser runs', function() {
         return runner.run('browser.js').then(result => {
-          assert.strictEqual(result !== 'unknown', true);
+          assert.notStrictEqual(result, 'unknown');
         });
       });
 
