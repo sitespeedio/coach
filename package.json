@@ -57,10 +57,10 @@
     "http2": "^3.3.6",
     "jsdoc": "^3.5.4",
     "mkdirp": "^0.5.1",
-    "mocha": "^3.5.0",
+    "mocha": "^5.0.0",
     "prettier": "^1.10.2",
     "serve-static": "^1.12.4",
-    "uglify-js": "^3.0.28"
+    "uglify-js": "^3.3.7"
   },
   "homepage": "https://www.sitespeed.io/documentation/coach/",
   "license": "MIT",
@@ -77,9 +77,9 @@
     }
   ],
   "dependencies": {
-    "bluebird": "3.5.0",
-    "browsertime": "2.1.2",
-    "chalk": "2.1.0",
+    "bluebird": "3.5.1",
+    "browsertime": "2.1.3",
+    "chalk": "2.3.0",
     "cli-table2": "0.2.0",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
@@ -89,6 +89,6 @@
     "lodash.sortby": "^4.7.0",
     "pagexray": "2.0.4",
     "word-wrap": "1.2.3",
-    "yargs": "10.0.3"
+    "yargs": "10.1.1"
   }
 }
