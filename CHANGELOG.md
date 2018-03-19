@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+* Bumped PageXray to 2.2.0
+
 ## 1.2.0 - 2018-01-24
 
 ### Added
