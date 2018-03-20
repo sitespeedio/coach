@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+* Upgraded to Browsertime 2.4.0
+
 ## 1.3.0 - 2018-03-20
 ### Added
 * Bumped PageXray to 2.2.0
