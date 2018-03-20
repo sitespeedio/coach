@@ -1,10 +1,10 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 1.3.0 - 2018-03-20
 ### Added
 * Bumped PageXray to 2.2.0
 * The Coach now run headless by default!
-* When you use Firefox you need 60 or later to get all the advice. Add --firefox.beta or --firefox.nightly as extra CLI params (on Mac). 
+* When you use Firefox you need version 60 or later to get all the advice. Add --firefox.beta or --firefox.nightly as extra CLI params (on Mac). Docker uses FF 61.
 * Updated Docker to use Firefox 61 (nightly) and Chrome 66 (beta).
 
 ## 1.2.0 - 2018-01-24
