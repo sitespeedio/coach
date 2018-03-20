@@ -71,8 +71,12 @@ describe('Info', function() {
       });
 
       it('We should be able to get the DOM elements', function() {
+        // The joy of browsers: Firefox has started counting elements
+        // differently from Chrome sinceQuantum (I guess)
+        // Let us find out more about it in an upstream issue.
+        const elements = browser === 'chrome' ? 26 : 27;
         return runner.run('domElements.js').then(result => {
-          assert.strictEqual(result, 26);
+          assert.strictEqual(result, elements);
         });
       });
 
