@@ -57,8 +57,12 @@ module.exports = {
           })
           .then(() => runner.start());
       },
-      stop() {
-        return runner.stop().finally(() => webserver.stopServer());
+      async stop() {
+        try {
+          await runner.stop();
+        } finally {
+          webserver.stopServer();
+        }
       },
       runGlobalServer(ruleFileName, url) {
         const script = getScript(ruleFileName, category);
