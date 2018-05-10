@@ -66,20 +66,9 @@ function run(options) {
     }
   }
 
-  function storeScreenshot(result, options) {
-    if (options.screenshot) {
-      return fs.writeFileAsync(
-        path.join(process.cwd(), 'screenshot.png'),
-        result.screenshot
-      );
-    }
-  }
-
   return Promise.resolve(setupOptions(options))
     .then(options =>
-      runAdvice(options)
-        .tap(result => storeScreenshot(result, options))
-        .then(result => formatOutput(result, options))
+      runAdvice(options).then(result => formatOutput(result, options))
     )
     .then(output => printOutput(output, options))
     .catch(e => {
