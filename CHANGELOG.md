@@ -1,11 +1,14 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 2.0.0 - 2018-05-12
 ### Added
 *  Upgraded to Browsertime 3.0.0 and Chrome 66 and Firefox 61 Beta
 
 ### Changed
 * Browsertime 3.0 doesn't pass on the screenshot so if you use --screenshot it will now be stored as screenshot/1.png in your current dir.
+
+### Fixed
+* Changed the use of the old deprecated loadTimes for Chrome.
 
 ## 1.3.1 - 2018-04-25
 ### Fixed
