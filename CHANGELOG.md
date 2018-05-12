@@ -1,4 +1,8 @@
 # CHANGELOG - webcoach
+## 2.0.3 - 2018-05-12
+### Fixed
+* Oooops old reference to Chrome beta, thanks @sodabrew for the PR [#290](https://github.com/sitespeedio/coach/pull/290).
+
 ## 2.0.2 - 2018-05-12
 ### Fixed
 * Even more chrome.loadTimes removed from RUMSpeedIndex and updated Browsertime that also has the same change.
