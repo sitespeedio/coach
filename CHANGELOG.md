@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## 2.0.1 - 2018-05-12
+### Fixed
+* Updated RUMSpeedIndex to not use chrome.loadTimes.
 
 ## 2.0.0 - 2018-05-12
 ### Added
