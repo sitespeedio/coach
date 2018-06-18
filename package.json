@@ -83,7 +83,6 @@
     "cli-table3": "0.5.0",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
-    "lodash.clonedeep": "4.5.0",
     "lodash.groupby": "4.6.0",
     "lodash.merge": "4.6.0",
     "lodash.sortby": "^4.7.0",
