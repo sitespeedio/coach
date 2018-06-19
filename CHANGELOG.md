@@ -3,6 +3,8 @@
 ### Fixed
 * Updated Docker dependencies so downloaded files are remove -> smaller Docker file. Thanks [@sodabrew](https://github.com/sodabrew) for the PRs.
 
+* Made the pick a HAR api faster [#293](https://github.com/sitespeedio/coach/issues/293).
+
 ## 2.0.3 - 2018-05-12
 ### Fixed
 * Oooops old reference to Chrome beta, thanks @sodabrew for the PR [#290](https://github.com/sitespeedio/coach/pull/290).
