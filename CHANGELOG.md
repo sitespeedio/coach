@@ -2,10 +2,9 @@
 ## UNRELEASED
 ### Fixed
 * Updated Docker dependencies so downloaded files are remove -> smaller Docker file. Thanks [@sodabrew](https://github.com/sodabrew) for the PRs.
-
 * Made the pick a HAR api faster [#293](https://github.com/sitespeedio/coach/issues/293).
-
 * Use Firefox 67 stable.
+* Use Browsertime 3.1.4
 
 ## 2.0.3 - 2018-05-12
 ### Fixed
