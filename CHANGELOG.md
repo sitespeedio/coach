@@ -1,5 +1,5 @@
 # CHANGELOG - webcoach
-## UNRELEASED
+## 2.0.4 - 2018-06-25
 ### Fixed
 * Updated Docker dependencies so downloaded files are remove -> smaller Docker file. Thanks [@sodabrew](https://github.com/sodabrew) for the PRs.
 * Made the pick a HAR api faster [#293](https://github.com/sitespeedio/coach/issues/293).
