@@ -1,4 +1,9 @@
 # CHANGELOG - webcoach
+
+## 2.0.5 - 2018-06-30
+### Fixed
+* Added Browsertime 3.2.0
+
 ## 2.0.4 - 2018-06-25
 ### Fixed
 * Updated Docker dependencies so downloaded files are remove -> smaller Docker file. Thanks [@sodabrew](https://github.com/sodabrew) for the PRs.
