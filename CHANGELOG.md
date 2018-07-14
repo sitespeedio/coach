@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+* Upgraded to Browsertime 3.2.1
+
 ## 2.0.5 - 2018-06-30
 ### Fixed
 * Added Browsertime 3.2.0
