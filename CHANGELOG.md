@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## UNRELEASED
+### Added
+* Upgraded to Chrome 68 in the Docker container
 
 ## 2.0.6 - 2018-07-15
 ### Fixed
