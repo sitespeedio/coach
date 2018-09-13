@@ -1,7 +1,8 @@
 # CHANGELOG - webcoach
 ## UNRELEASED
 ### Added
-* Upgraded to Chrome 68 in the Docker container
+* Upgraded to Chrome 69 and Firefox 62  in the Docker container
+* Use Browsertime 3.4.0
 
 ## 2.0.6 - 2018-07-15
 ### Fixed
