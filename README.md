@@ -9,8 +9,6 @@
 
 ![The coach](img/coach.png)
 
-## IMPORTANT
-
 The coach helps you find performance problems on your web page. You can think of the coach as a modern version of [YSlow](http://yslow.org/).
 
 - [Does my page need coaching?](#do-my-page-need-coaching)
