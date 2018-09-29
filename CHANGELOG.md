@@ -1,4 +1,9 @@
 # CHANGELOG - webcoach
+## UNRELEASED
+
+## Fixed
+* Fixed optimal CSS advice that could be lower than zero [#298](https://github.com/sitespeedio/coach/pull/298).
+
 ## 2.2.0 - 2018-09-15
 ### Added
 * Upgraded to Browsertime 3.5.0
