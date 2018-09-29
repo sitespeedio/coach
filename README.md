@@ -1,9 +1,11 @@
- The coach
+# The coach
 
 [![Build status][travis-image]][travis-url]
 [![Downloads][downloads-image]][downloads-url]
 [![Docker][docker-image]][docker-url]
 [![Stars][stars-image]][stars-url]
+
+[Documentation](https://www.sitespeed.io/documentation/coach/) | [Changelog](https://github.com/sitespeedio/coach/blob/master/CHANGELOG.md)
 
 ![The coach](img/coach.png)
 
