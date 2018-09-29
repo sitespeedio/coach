@@ -3,6 +3,7 @@
 
 ## Fixed
 * Fixed optimal CSS advice that could be lower than zero [#298](https://github.com/sitespeedio/coach/pull/298).
+* Running with --mobile displayed undefined as undefined browser [#299](https://github.com/sitespeedio/coach/pull/299).
 
 ## 2.2.0 - 2018-09-15
 ### Added
