@@ -6,7 +6,7 @@
 * Running with --mobile displayed undefined as undefined browser [#299](https://github.com/sitespeedio/coach/pull/299).
 
 ## Added 
-* Upgraded to Browsertime 3.7.0
+* Upgraded to Browsertime 3.7.1
 
 ## 2.2.0 - 2018-09-15
 ### Added
