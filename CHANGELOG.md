@@ -7,6 +7,7 @@
 
 ## Added 
 * Upgraded to Browsertime 3.7.1
+* Updated to PageXray 2.4.0
 
 ## 2.2.0 - 2018-09-15
 ### Added

@@ -86,7 +86,7 @@
     "lodash.groupby": "4.6.0",
     "lodash.merge": "4.6.0",
     "lodash.sortby": "^4.7.0",
-    "pagexray": "2.2.2",
+    "pagexray": "2.4.0",
     "word-wrap": "1.2.3",
     "yargs": "10.1.1"
   }
