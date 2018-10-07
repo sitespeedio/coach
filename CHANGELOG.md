@@ -1,9 +1,10 @@
 # CHANGELOG - webcoach
-## UNRELEASED
+## 2.3.0 - 2018-10-07
 
 ## Fixed
 * Fixed optimal CSS advice that could be lower than zero [#298](https://github.com/sitespeedio/coach/pull/298).
 * Running with --mobile displayed undefined as undefined browser [#299](https://github.com/sitespeedio/coach/pull/299).
+* Catching Browsertime errors and throwing them. Thanks you [Jadon N](https://github.com/jadonn) for the PR [300](https://github.com/sitespeedio/coach/pull/300).
 
 ## Added 
 * Upgraded to Browsertime 3.7.1
