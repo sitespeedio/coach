@@ -2,17 +2,16 @@
 
 'use strict';
 
-let Promise = require('bluebird'),
-  fs = require('fs'),
-  path = require('path'),
-  stringify = require('json-stable-stringify'),
-  ResultTable = require('../lib/table'),
-  cli = require('../lib/cli'),
-  api = require('../lib');
+const fs = require('fs');
+const path = require('path');
+const stringify = require('json-stable-stringify');
+const ResultTable = require('../lib/table');
+const cli = require('../lib/cli');
+const api = require('../lib');
+const { promisify } = require('util');
+const readFile = promisify(fs.readFile);
 
-Promise.promisifyAll(fs);
-
-function run(options) {
+async function run(options) {
   function setupOptions(options) {
     options.iterations = 1;
     if (options.mobile) {
@@ -33,13 +32,12 @@ function run(options) {
     return options;
   }
 
-  function runAdvice(options) {
+  async function runAdvice(options) {
     var urlOrHar = options._[0];
     if (urlOrHar.match(/^http(s)?:\/\//)) {
       return api.run(urlOrHar, null, null, options);
     } else {
-      return fs
-        .readFileAsync(path.resolve(urlOrHar), 'utf8')
+      return readFile(path.resolve(urlOrHar), 'utf8')
         .then(JSON.parse)
         .then(json => api.runHarAdvice(json, null, null, options))
         .then(results => results[0]);
@@ -66,16 +64,17 @@ function run(options) {
     }
   }
 
-  return Promise.resolve(setupOptions(options))
-    .then(options =>
-      runAdvice(options).then(result => formatOutput(result, options))
-    )
-    .then(output => printOutput(output, options))
-    .catch(e => {
-      console.error('Error running advice: ', e.stack);
-      process.exitCode = 1;
-    })
-    .finally(() => process.exit);
+  options = setupOptions(options);
+  try {
+    const result = await runAdvice(options);
+    const output = formatOutput(result, options);
+    printOutput(output, options);
+  } catch (e) {
+    console.error('Error running advice: ', e.stack);
+    process.exitCode = 1;
+  } finally {
+    process.exit;
+  }
 }
 
 run(cli.getOptions());
