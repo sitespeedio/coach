@@ -34,12 +34,13 @@ describe('DOM APIs:', function() {
   });
 
   BROWSERS.forEach(function(browser) {
-    describe('runDomAdvice: ' + browser, function() {
+    describe('runDomAdvice: ' + browser, async function() {
       this.timeout(60000);
 
+      const advice = await api.getDomAdvice();
       it('should run simple script', () =>
         api
-          .runDomAdvice(url, api.getDomAdvice(), {
+          .runDomAdvice(url, advice, {
             browser,
             iterations: 1,
             pageCompleteCheck: 'return window.performance.timing.loadEventEnd>0'

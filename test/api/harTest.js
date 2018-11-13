@@ -29,7 +29,7 @@ describe('HAR APIs:', function() {
         ));
   });
 
-  describe('runHarAdvice', function() {
+  describe('runHarAdvice', async function() {
     const harPath = path.join(
         __dirname,
         '..',
@@ -37,7 +37,7 @@ describe('HAR APIs:', function() {
         'files',
         'www.nytimes.com.har'
       ),
-      har = fs.readFileAsync(harPath, 'utf8').then(JSON.parse);
+      har = await fs.readFileAsync(harPath, 'utf8').then(JSON.parse);
 
     it('should output correct structure', () =>
       api.runHarAdvice(har).then(advicePerPage => {
