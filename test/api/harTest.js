@@ -21,7 +21,7 @@ describe('HAR APIs:', function() {
       api
         .getHarAdvice()
         .then(adviceList =>
-          Promise.each(adviceList, advice =>
+          Promise.each(adviceList.performance, advice =>
             ['id', 'title', 'description', 'weight', 'tags'].forEach(property =>
               advice.should.have.ownProperty(property)
             )
