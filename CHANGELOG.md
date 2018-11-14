@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+* Docker and npm version now using latest LTS of NodeJS 10.13.0 [#307](https://github.com/sitespeedio/coach/pull/307).
+* There's now a check for reporting if the page use service workers. If the page use a service worker, the worker JavaScript file is returned [#308](https://github.com/sitespeedio/coach/pull/308).
+
 ## 2.4.0 - 2018-10-24
 
 ### Added
