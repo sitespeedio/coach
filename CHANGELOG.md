@@ -9,6 +9,8 @@
 ### Changed
 * We have removed Bluebird and uses native Promises and async/await where possible. It could be the case of that we leaked Bluebird promises before, but that is fixed now [#304](https://github.com/sitespeedio/coach/pull/304).
 
+* HAR advice can now use whatever category we want (before HAR advice was only performance advice). [#309](https://github.com/sitespeedio/coach/pull/309). There's one change to the API that isn't backward compatible. In the new version the getHarAdvice return a structure {category: [advice}] instead of (the old) [advice]. It now has the same structure as DOM advice.
+
 ## 2.4.0 - 2018-10-24
 
 ### Added
