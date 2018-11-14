@@ -28,9 +28,11 @@ describe('Inline CSS advice HTTP/2:', function() {
 
       it('We should be able to know if we request CSS file(s)', function() {
         // TODO make this work in FF
+        /*
         if (browser === 'firefox') {
           this.skip();
         }
+        */
         return runner
           .runGlobalServer(
             'inlineCss.js',
