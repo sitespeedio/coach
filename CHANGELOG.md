@@ -6,6 +6,9 @@
 * There's now a check for reporting if the page use service workers. If the page use a service worker, the worker JavaScript file is returned [#308](https://github.com/sitespeedio/coach/pull/308).
 * Upgraded to Browsertime 3.12.0
 
+### Changed
+* We have removed Bluebird and uses native Promises and async/await where possible. It could be the case of that we leaked Bluebird promises before, but that is fixed now [#304](https://github.com/sitespeedio/coach/pull/304).
+
 ## 2.4.0 - 2018-10-24
 
 ### Added
