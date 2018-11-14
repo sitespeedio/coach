@@ -13,11 +13,10 @@ module.exports = {
       .readFileAsync(path.resolve(__dirname, '..', 'har', 'files', fileName))
       .then(JSON.parse);
   },
-  firstAdviceForTestFile(fileName, options) {
+  async firstAdviceForTestFile(fileName, options) {
+    const advice = await api.getHarAdvice();
     return this.harFromTestFile(fileName)
-      .then(har =>
-        api.runHarAdvice(har, api.getHarAdvice(), undefined, options)
-      )
+      .then(har => api.runHarAdvice(har, advice, undefined, options))
       .then(result => result[0].advice);
   }
 };
