@@ -7,7 +7,7 @@
 * Upgraded to Browsertime 3.12.0.
 * New headers check: Avoid long response headers, avoid too many headers and avoid headers that unnecessary [#310](https://github.com/sitespeedio/coach/pull/310),
 * Check for referrer-policy and strict-transport-security HTTP headers [#311](https://github.com/sitespeedio/coach/pull/311).
-* If you run Chrome we will now test against too much time spent in scripting or rendering for the CPU.
+* If you run Chrome we will now test against too much time spent in scripting or rendering for the CPU [#313](https://github.com/sitespeedio/coach/pull/313).
 
 ### Changed
 * We have removed Bluebird and uses native Promises and async/await where possible. It could be the case of that we leaked Bluebird promises before, but that is fixed now [#304](https://github.com/sitespeedio/coach/pull/304).
