@@ -29,6 +29,11 @@ async function run(options) {
           'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B329 Safari/8536.25';
       }
     }
+
+    if (options.browser === 'chrome') {
+      options.chrome = options.chrome || {};
+      options.chrome.timeline = true;
+    }
     return options;
   }
 
