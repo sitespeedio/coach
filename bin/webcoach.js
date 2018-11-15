@@ -10,6 +10,7 @@ const cli = require('../lib/cli');
 const api = require('../lib');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
+const unlink = promisify(fs.unlink);
 
 async function run(options) {
   function setupOptions(options) {
@@ -78,6 +79,9 @@ async function run(options) {
     console.error('Error running advice: ', e.stack);
     process.exitCode = 1;
   } finally {
+    if (options.browser === 'chrome') {
+      await unlink(path.resolve(process.cwd(), 'trace-1.json.gz'));
+    }
     process.exit;
   }
 }

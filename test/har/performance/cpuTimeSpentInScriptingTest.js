@@ -12,5 +12,4 @@ describe('Find too long time spent in scripting', function() {
       );
     });
   });
-
 });
