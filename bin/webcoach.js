@@ -10,6 +10,7 @@ const cli = require('../lib/cli');
 const api = require('../lib');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
+const unlink = promisify(fs.unlink);
 
 async function run(options) {
   function setupOptions(options) {
@@ -28,6 +29,11 @@ async function run(options) {
         options.userAgent =
           'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B329 Safari/8536.25';
       }
+    }
+
+    if (options.browser === 'chrome') {
+      options.chrome = options.chrome || {};
+      options.chrome.timeline = true;
     }
     return options;
   }
@@ -73,6 +79,9 @@ async function run(options) {
     console.error('Error running advice: ', e.stack);
     process.exitCode = 1;
   } finally {
+    if (options.browser === 'chrome') {
+      await unlink(path.resolve(process.cwd(), 'trace-1.json.gz'));
+    }
     process.exit;
   }
 }
