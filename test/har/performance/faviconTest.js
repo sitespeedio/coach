@@ -9,5 +9,4 @@ describe('Use favicon', function() {
       assert.strictEqual(result.performance.adviceList.favicon.score, 50);
     });
   });
-
 });
