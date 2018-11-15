@@ -8,11 +8,13 @@ describe('Investigate response headers for headers we do not need', function() {
     return har.firstAdviceForTestFile('unnecessaryHeaders.har').then(result => {
       assert.strictEqual(
         result.bestpractice.adviceList.unnecessaryHeaders.offending.length,
-        4
+        7,
+        result.bestpractice.adviceList.unnecessaryHeaders.advice
       );
       assert.strictEqual(
         result.bestpractice.adviceList.unnecessaryHeaders.score,
-        96
+        93,
+        result.bestpractice.adviceList.unnecessaryHeaders.advice
       );
     });
   });
