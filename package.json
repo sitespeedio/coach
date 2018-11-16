@@ -79,15 +79,15 @@
   ],
   "dependencies": {
     "browsertime": "3.12.0",
-    "chalk": "2.3.0",
-    "cli-table3": "0.5.0",
+    "chalk": "2.4.1",
+    "cli-table3": "0.5.1",
     "filter-files": "0.4.0",
     "json-stable-stringify": "1.0.1",
     "lodash.groupby": "4.6.0",
-    "lodash.merge": "4.6.0",
-    "lodash.sortby": "^4.7.0",
+    "lodash.merge": "4.6.1",
+    "lodash.sortby": "4.7.0",
     "pagexray": "2.5.0",
     "word-wrap": "1.2.3",
-    "yargs": "10.1.1"
+    "yargs": "12.0.2"
   }
 }
