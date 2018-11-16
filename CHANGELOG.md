@@ -17,6 +17,12 @@
 
 * HAR advice can now use whatever category we want (before HAR advice was only performance advice). [#309](https://github.com/sitespeedio/coach/pull/309). There's one change to the API that isn't backward compatible. In the new version the getHarAdvice return a structure ```{category: [advice]}``` instead of (the old) ```[advice]```. It now has the same structure as DOM advice.
 
+### Fixed
+* Recommendation for H2 said that H2 always was faster [#269](https://github.com/sitespeedio/coach/issues/269). That's not always true [#319](https://github.com/sitespeedio/coach/pull/319).
+
+### Tech
+* Bumped versions of dependencies [#318](https://github.com/sitespeedio/coach/pull/318).
+
 ## 2.4.0 - 2018-10-24
 
 ### Added
