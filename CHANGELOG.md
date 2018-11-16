@@ -10,6 +10,7 @@
 * If you run Chrome we will now test against too much time spent in scripting or rendering for the CPU [#313](https://github.com/sitespeedio/coach/pull/313).
 * Look for CSP header [#315](https://github.com/sitespeedio/coach/pull/315).
 * Added first/third party support [#316](https://github.com/sitespeedio/coach/pull/316).
+* There's a first/third party advice that will warn about too hight usage of third parties [#317](https://github.com/sitespeedio/coach/pull/317).
 
 ### Changed
 * We have removed Bluebird and uses native Promises and async/await where possible. It could be the case of that we leaked Bluebird promises before, but that is fixed now [#304](https://github.com/sitespeedio/coach/pull/304).
