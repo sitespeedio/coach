@@ -34,6 +34,7 @@ describe('Run API:', function() {
         'bestpractice',
         'info',
         'performance',
+        'privacy',
         'timings',
         'score'
       ].forEach(property => advice.advice.should.have.ownProperty(property));

@@ -9,12 +9,12 @@ describe('Search for strict transport security header', function() {
       .firstAdviceForTestFile('strictTransportSecurityHeader.har')
       .then(result => {
         assert.strictEqual(
-          result.bestpractice.adviceList.strictTransportSecurityHeader.offending
+          result.privacy.adviceList.strictTransportSecurityHeader.offending
             .length,
           0
         );
         assert.strictEqual(
-          result.bestpractice.adviceList.strictTransportSecurityHeader.score,
+          result.privacy.adviceList.strictTransportSecurityHeader.score,
           100
         );
       });

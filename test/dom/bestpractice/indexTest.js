@@ -69,12 +69,6 @@ describe('Best practice', function() {
         });
       });
 
-      it('We should be able to detect if a web page is served using HTTPS', function() {
-        return runner.run('https.js').then(result => {
-          assert.strictEqual(result.score, 0);
-        });
-      });
-
       it('We should be able to detect if a web page has set a language', function() {
         return runner.run('language.js').then(result => {
           assert.strictEqual(result.score, 0);
