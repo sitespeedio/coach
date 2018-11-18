@@ -10,6 +10,7 @@ const cli = require('../lib/cli');
 const api = require('../lib');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
 const unlink = promisify(fs.unlink);
 
 async function run(options) {
@@ -64,7 +65,7 @@ async function run(options) {
 
   function printOutput(output, options) {
     if (options.output) {
-      return fs.writeFileAsync(path.resolve(options.output), output, 'utf8');
+      return writeFile(path.resolve(options.output), output, 'utf8');
     } else {
       console.log(output);
     }
