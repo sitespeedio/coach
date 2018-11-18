@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## UNRELEASED - coming 3.0
 ### Added
 * Docker and npm version now using latest LTS of NodeJS 10.13.0 [#307](https://github.com/sitespeedio/coach/pull/307).
 * There's now a check for reporting if the page use service workers. If the page use a service worker, the worker JavaScript file is returned [#308](https://github.com/sitespeedio/coach/pull/308).
@@ -20,6 +20,8 @@
 
 ### Fixed
 * Recommendation for H2 said that H2 always was faster [#269](https://github.com/sitespeedio/coach/issues/269). That's not always true [#319](https://github.com/sitespeedio/coach/pull/319).
+
+* Renamed Piwik to Matomo (and checking for both versions as info).
 
 ### Tech
 * Bumped versions of dependencies [#318](https://github.com/sitespeedio/coach/pull/318).
