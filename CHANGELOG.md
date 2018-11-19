@@ -1,6 +1,8 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED - coming 3.0
+## 3.0 - 2018-10-20
+Read all about the release at [https://www.sitespeed.io/coach-3.0/](https://www.sitespeed.io/coach-3.0/).
+
 ### Added
 * Docker and npm version now using latest LTS of NodeJS 10.13.0 [#307](https://github.com/sitespeedio/coach/pull/307).
 * There's now a check for reporting if the page use service workers. If the page use a service worker, the worker JavaScript file is returned [#308](https://github.com/sitespeedio/coach/pull/308).
