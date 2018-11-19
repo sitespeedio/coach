@@ -15,7 +15,7 @@ Please include:
 
 **Exact how you run (the exact parameters)**
 
-**Which version you are using**
+**Version of the Coach**
 
 **OS (if you use Docker, report the base OS)**
 
