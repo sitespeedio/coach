@@ -10,7 +10,7 @@
 * If you run Chrome we will now test against too much time spent in scripting or rendering for the CPU [#313](https://github.com/sitespeedio/coach/pull/313).
 * Look for CSP header [#315](https://github.com/sitespeedio/coach/pull/315).
 * Added first/third party support [#316](https://github.com/sitespeedio/coach/pull/316).
-* There's a first/third party advice that will warn about too hight usage of third parties [#317](https://github.com/sitespeedio/coach/pull/317).
+* There's a first/third party advice that will warn about too high usage of third parties [#317](https://github.com/sitespeedio/coach/pull/317).
 * We have a new advice category: privacy [#321](https://github.com/sitespeedio/coach/pull/321).
 
 ### Changed
