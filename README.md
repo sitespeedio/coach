@@ -23,6 +23,7 @@ The coach helps you find performance problems on your web page. You can think of
   - [Bonus](#bonus)
   - [Accessibility](#accessibility)
   - [Best practice](#best-practice)
+  - [Privacy](#privacy)
   - [General information](#general-information)
   - [Timings](#timings)
 - [Developers guide](#developers-guide)
@@ -238,6 +239,10 @@ Make sure your site is accessible and usable for everyone. You can read more abo
 ### Best practice
 
 You want your page to follow best practices, right? Making sure your page is set up for search engines, have good URL structure and so on.
+
+### Privay
+
+Make sure that your page respect user privacy.
 
 ### General information
 
