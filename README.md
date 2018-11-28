@@ -4,6 +4,8 @@
 [![Downloads][downloads-image]][downloads-url]
 [![Docker][docker-image]][docker-url]
 [![Stars][stars-image]][stars-url]
+[![Code Quality: Javascript][lgtm-badge]][lgtm-badge-url]
+[![Total alerts][lgtm-alerts]][lgtm-alerts-url]
 
 [Documentation](https://www.sitespeed.io/documentation/coach/) | [Changelog](https://github.com/sitespeedio/coach/blob/master/CHANGELOG.md)
 
@@ -273,3 +275,7 @@ We hope that the coach works in other browsers but we cannot guarantee it right 
 [downloads-url]: https://npmjs.org/package/webcoach
 [docker-image]: https://img.shields.io/docker/pulls/sitespeedio/coach.svg
 [docker-url]: https://hub.docker.com/r/sitespeedio/coach/
+[lgtm-badge]: https://img.shields.io/lgtm/grade/javascript/g/sitespeedio/coach.svg?logo=lgtm&logoWidth=18
+[lgtm-badge-url]: https://lgtm.com/projects/g/sitespeedio/coach/context:javascript
+[lgtm-alerts]: https://img.shields.io/lgtm/alerts/g/sitespeedio/coach.svg?logo=lgtm&logoWidth=18
+[lgtm-alerts-url]: https://lgtm.com/projects/g/sitespeedio/coach/alerts
