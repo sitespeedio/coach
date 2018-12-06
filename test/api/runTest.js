@@ -39,4 +39,10 @@ describe('Run API:', function() {
         'score'
       ].forEach(property => advice.advice.should.have.ownProperty(property));
     }));
+  it('should output correct structure with returnHar', () =>
+    api.run(url, null, null, null, true).then(advice => {
+      ['advice', 'errors', 'url', 'version', 'har'].forEach(property =>
+        advice.should.have.ownProperty(property)
+      );
+    }));
 });
