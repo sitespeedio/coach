@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## 3.1 - 2019-01-21
+* Updated to beta 3 of Browsertime 4.0. This will make the trace log from Chrome appear in a new file structure ... but let us fix that in later releases.
+
 ## 3.0 - 2018-10-20
 Read all about the release at [https://www.sitespeed.io/coach-3.0/](https://www.sitespeed.io/coach-3.0/).
 
