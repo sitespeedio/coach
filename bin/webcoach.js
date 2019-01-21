@@ -11,10 +11,12 @@ const api = require('../lib');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
+const unlink = promisify(fs.unlink);
 
 async function run(options) {
   function setupOptions(options) {
     options.iterations = 1;
+    options.useSameDir = true;
     if (options.mobile) {
       if (!options.viewPort) {
         options.viewPort = '360x640';
@@ -80,8 +82,7 @@ async function run(options) {
     process.exitCode = 1;
   } finally {
     if (options.browser === 'chrome') {
-      // TODO should we delete ebverything?
-      //  await unlink(path.resolve(process.cwd(), 'trace-1.json.gz'));
+      await unlink(path.resolve(process.cwd(), 'trace-1.json.gz'));
     }
     process.exit;
   }

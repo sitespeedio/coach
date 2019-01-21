@@ -1,6 +1,9 @@
 # CHANGELOG - webcoach
 
-## 3.1 - 2019-01-21
+## 3.1.1 - 2019-01-21
+* Upgraded to stable Browsertime 4.0.0 with a fix for removing the trace log.
+
+## 3.1.0 - 2019-01-21
 * Updated to beta 3 of Browsertime 4.0. This will make the trace log from Chrome appear in a new file structure ... but let us fix that in later releases.
 
 ## 3.0 - 2018-10-20
