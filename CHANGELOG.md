@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 3.1.1 2019-01-23
+* Upgraded to latest Browsertime
+* Fix if the firstParty regex don't match any requests [#326](https://github.com/sitespeedio/coach/pull/326)
+
 ## 3.1.1 - 2019-01-21
 * Upgraded to stable Browsertime 4.0.0 with a fix for removing the trace log.
 
