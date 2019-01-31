@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Added
+* Upgraded to Chrome 72 and Firefox 65 in the Docker container. 
+
 ## 3.1.1 2019-01-23
 * Upgraded to latest Browsertime
 * Fix if the firstParty regex don't match any requests [#326](https://github.com/sitespeedio/coach/pull/326)
