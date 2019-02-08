@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 3.2.1 2019-02-08
+### Fixed
+* Upgrade to latest Browsertime 4.2.6
+
 ## 3.2.0 2019-02-01
 ### Added
 * Upgraded to Chrome 72 and Firefox 65 in the Docker container. 
