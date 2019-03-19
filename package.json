@@ -78,7 +78,7 @@
     }
   ],
   "dependencies": {
-    "browsertime": "4.2.6",
+    "browsertime": "4.5.0",
     "chalk": "2.4.1",
     "cli-table3": "0.5.1",
     "filter-files": "0.4.0",
