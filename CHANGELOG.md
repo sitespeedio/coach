@@ -1,4 +1,7 @@
 # CHANGELOG - webcoach
+## 3.4.0 2019-04-24
+### Added
+* Upgraded to Chrome 74 and Browsertime 8.14.0
 
 ## 3.3.0 2019-02-19
 ### Added
