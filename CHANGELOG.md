@@ -1,4 +1,9 @@
 # CHANGELOG - webcoach
+
+## 3.4.2 2019-05-19
+### Fixed
+* Upgraded to Browsertime 5.0.0
+
 ## 3.4.1 2019-05-05
 ### Fixed
 * Upgraded to Firefox 66.0.4 in the Docker container that fixes the problems with extensions.
