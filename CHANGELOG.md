@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 3.4.3 2019-05-23
+### Fixed
+* Don't categorise defer JavaScript as render blocking in the fast render advice.
+
 ## 3.4.2 2019-05-19
 ### Fixed
 * Upgraded to Browsertime 5.0.0
