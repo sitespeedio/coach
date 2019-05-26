@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## 3.5.0 2019-05-26
+## 3.5.0/3.5.1 2019-05-26
 ### Fixed
 * Upgraded to PageXray 2.5.7.
 
