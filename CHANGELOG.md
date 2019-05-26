@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+* Upgraded to PageXray 2.5.7.
+
 ## 3.4.3 2019-05-23
 ### Fixed
 * Don't categorise defer JavaScript as render blocking in the fast render advice.
