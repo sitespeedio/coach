@@ -1,8 +1,12 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 3.5.0 2019-05-26
 ### Fixed
 * Upgraded to PageXray 2.5.7.
+
+### Added
+* Make sure that surveillance companies doesn't get a high privacy score [#332](https://github.com/sitespeedio/coach/pull/332).
+* Upgraded to Firefox 67 in the Docker container.
 
 ## 3.4.3 2019-05-23
 ### Fixed
