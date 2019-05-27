@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 3.5.6  2019-05-27
+### Fixed
+* Weight of the advice privacy surveillance was broken. Fixed now + typeo fix.
+
 ## 3.5.0 - 3.5.5 2019-05-26
 ### Fixed
 * Upgraded to PageXray 2.5.7.
