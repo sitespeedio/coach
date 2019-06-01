@@ -1,6 +1,10 @@
 # CHANGELOG - webcoach
 
-## 3.5.6  2019-05-27
+## 3.5.7 -  2019-06-01
+### Fixed
+* Bumped all dependencies to latest, including Browsertime 5.1.3.
+
+## 3.5.6 - 2019-05-27
 ### Fixed
 * Weight of the advice privacy surveillance was broken. Fixed now + typeo fix.
 
