@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 3.6.0 - 2019-06-10
+### Added
+* Bumped to Browsertime 5.2.1, Chrome 75 and Chromedriver 75.
+
 ## 3.5.7 -  2019-06-01
 ### Fixed
 * Bumped all dependencies to latest, including Browsertime 5.1.3.
