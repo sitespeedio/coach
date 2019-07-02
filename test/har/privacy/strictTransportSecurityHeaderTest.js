@@ -15,7 +15,7 @@ describe('Search for strict transport security header', function() {
         );
         assert.strictEqual(
           result.privacy.adviceList.strictTransportSecurityHeader.score,
-          100
+          70
         );
       });
   });
