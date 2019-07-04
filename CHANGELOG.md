@@ -6,6 +6,9 @@
 * Third party privacy now uses the third-party-web project to categorise third party requests. There is also a new third party info section that where you can see which tools and category of tools that are used [#335](https://github.com/sitespeedio/coach/pull/335).
 * Moved CSP advice to be under privacy instead of best practice [#337](https://github.com/sitespeedio/coach/pull/337).
 
+### Added
+* Upgraded to Browsertime 5.4.1.
+
 ## 3.6.0 - 2019-06-10
 ### Added
 * Bumped to Browsertime 5.2.1, Chrome 75 and Chromedriver 75.
