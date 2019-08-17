@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## 4.0.0 - UNRELEASED
+## 4.0.0-alpha.1 - 2019-08-17 
 ### Changed
 * Smarter strictTransportSecurityHeader advice that looks for setting subDomains and long max age (>6 month) [#336](https://github.com/sitespeedio/coach/pull/336).
 * Third party privacy now uses the third-party-web project to categorise third party requests. There is also a new third party info section that where you can see which tools and category of tools that are used [#335](https://github.com/sitespeedio/coach/pull/335).
