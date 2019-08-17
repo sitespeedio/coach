@@ -2,12 +2,12 @@
 
 ## 4.0.0 - UNRELEASED
 ### Changed
-* Smarter strictTransportSecurityHeader advice that looks for setting suubDomains and long max age (>6 month) [#336](https://github.com/sitespeedio/coach/pull/336).
+* Smarter strictTransportSecurityHeader advice that looks for setting subDomains and long max age (>6 month) [#336](https://github.com/sitespeedio/coach/pull/336).
 * Third party privacy now uses the third-party-web project to categorise third party requests. There is also a new third party info section that where you can see which tools and category of tools that are used [#335](https://github.com/sitespeedio/coach/pull/335).
 * Moved CSP advice to be under privacy instead of best practice [#337](https://github.com/sitespeedio/coach/pull/337).
 
 ### Added
-* Upgraded to Browsertime 5.4.1.
+* Upgraded to Browsertime 6.0.0-alpha.4.
 
 ## 3.6.0 - 2019-06-10
 ### Added
