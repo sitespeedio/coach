@@ -16,6 +16,7 @@
       }
     ],
     "no-extra-semi": 0,
-    "no-mixed-spaces-and-tabs": 0
+    "no-mixed-spaces-and-tabs": 0,
+    "no-prototype-builtins": 0
   }
 }
