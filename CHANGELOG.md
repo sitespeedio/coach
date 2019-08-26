@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 4.0.0-alpha.2 - 2019-08-26
+### Fixed
+* Updated dependencies to latest.
+
 ## 4.0.0-alpha.1 - 2019-08-17 
 ### Changed
 * Smarter strictTransportSecurityHeader advice that looks for setting subDomains and long max age (>6 month) [#336](https://github.com/sitespeedio/coach/pull/336).
