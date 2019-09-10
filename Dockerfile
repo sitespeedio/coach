@@ -1,4 +1,4 @@
-FROM sitespeedio/webbrowsers:chrome-77-beta-firefox-68.0
+FROM sitespeedio/webbrowsers:chrome-77.0-firefox-69.0
 
 ENV DOCKER true
 

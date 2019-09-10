@@ -15,9 +15,6 @@
   "engines": {
     "node": ">=10.13.0"
   },
-  "publishConfig": {
-    "tag": "canary"
-  },
   "files": [
     "bin",
     "lib",
@@ -81,7 +78,7 @@
     }
   ],
   "dependencies": {
-    "browsertime": "6.0.0-alpha.7",
+    "browsertime": "6.0.0",
     "chalk": "2.4.1",
     "cli-table3": "0.5.1",
     "filter-files": "0.4.0",

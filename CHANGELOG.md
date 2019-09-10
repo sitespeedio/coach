@@ -1,17 +1,16 @@
 # CHANGELOG - webcoach
 
-## 4.0.0-alpha.2 - 2019-08-26
+## 4.0.0 - 2019-09-10
 ### Fixed
 * Updated dependencies to latest.
 
-## 4.0.0-alpha.1 - 2019-08-17 
 ### Changed
 * Smarter strictTransportSecurityHeader advice that looks for setting subDomains and long max age (>6 month) [#336](https://github.com/sitespeedio/coach/pull/336).
 * Third party privacy now uses the third-party-web project to categorise third party requests. There is also a new third party info section that where you can see which tools and category of tools that are used [#335](https://github.com/sitespeedio/coach/pull/335).
 * Moved CSP advice to be under privacy instead of best practice [#337](https://github.com/sitespeedio/coach/pull/337).
 
 ### Added
-* Upgraded to Browsertime 6.0.0-alpha.4.
+* Upgraded to Browsertime 6.0.0 and latest Chrome and Firefox.
 
 ## 3.6.0 - 2019-06-10
 ### Added
