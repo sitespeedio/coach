@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 4.0.1 - 2019-09-12
+### Fixed
+* Updated Browsertime with new Chromedriver going from beta to stable.
+
 ## 4.0.0 - 2019-09-10
 ### Fixed
 * Updated dependencies to latest.
