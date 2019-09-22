@@ -1,5 +1,11 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+### Fixed
+* Fixed the advice checking for empty alt on images [#345](https://github.com/sitespeedio/coach/pull/345) - Thank you [Sumeet Rohra](https://github.com/sumeetrohra) for the fix!
+* Fixed broken color output in [#126](https://github.com/sitespeedio/coach/issues/126), fixed in [#344](https://github.com/sitespeedio/coach/pull/344) - Thank you [Sumeet Rohra](https://github.com/sumeetrohra) for the fix!
+* Fixed faulty HTTP2 advice [#342](https://github.com/sitespeedio/coach/pull/342).
+
 ## 4.0.1 - 2019-09-12
 ### Fixed
 * Updated Browsertime with new Chromedriver going from beta to stable.
