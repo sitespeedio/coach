@@ -66,7 +66,18 @@ async function run(options) {
 
   function printOutput(output, options) {
     if (options.output) {
-      return writeFile(path.resolve(options.output), output, 'utf8');
+      // remove all ansi colors/styles from strings using regex ref: https://stackoverflow.com/a/29497680
+      const formatedOutput = output
+        .split('\n')
+        .map(str => {
+          return str.replace(
+            // eslint-disable-next-line no-control-regex
+            /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
+            ''
+          );
+        })
+        .join('\n');
+      return writeFile(path.resolve(options.output), formatedOutput, 'utf8');
     } else {
       console.log(output);
     }
