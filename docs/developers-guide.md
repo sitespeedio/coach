@@ -209,7 +209,7 @@ The coach uses Browsertime as runner for browsers. When you done a change, make 
 
 ```bash
 npm run combine
-bin/index.js https://www.sitespeed.io firefox
+bin/webcoach.js https://www.sitespeed.io firefox
 ```
 
 ## Add a new category
