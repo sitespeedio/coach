@@ -1,6 +1,6 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 4.1.0 - 2019-10-16
 ### Added
 * Get generator meta tag and put it in the info [#346](https://github.com/sitespeedio/coach/pull/346).
 
