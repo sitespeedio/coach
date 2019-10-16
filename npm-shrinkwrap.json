@@ -1245,9 +1245,9 @@
       }
     },
     "@sitespeed.io/geckodriver": {
-      "version": "0.24.0",
-      "resolved": "https://registry.npmjs.org/@sitespeed.io/geckodriver/-/geckodriver-0.24.0.tgz",
-      "integrity": "sha512-YhMXWDUuQNQao18qLTIa+/AGmxvGV7548XVE5DvUcM/NKQfDO0UnrVUcZfCtKyZz3ZeFPynnNSGvXR1EkM1/DQ==",
+      "version": "0.26.0",
+      "resolved": "https://registry.npmjs.org/@sitespeed.io/geckodriver/-/geckodriver-0.26.0.tgz",
+      "integrity": "sha512-LkfgpY/xQctd4dv/MOaivB+GKoyxivPPo32aSl5uAngw414eM8PGGFJPCLY1tB14ZYhSSxDNPvVquiBFRPo4Bg==",
       "requires": {
         "node-downloader-helper": "1.0.9",
         "node-stream-zip": "1.7.0",
@@ -1591,9 +1591,12 @@
           }
         },
         "eslint-utils": {
-          "version": "1.3.1",
-          "resolved": "https://registry.npmjs.org/eslint-utils/-/eslint-utils-1.3.1.tgz",
-          "integrity": "sha512-Z7YjnIldX+2XMcjr7ZkgEsOj/bREONV60qYeB/bjMAqqqZ4zxKyWX+BOUkdmRmA9riiIPVvo5x86m5elviOk0Q=="
+          "version": "1.4.2",
+          "resolved": "https://registry.npmjs.org/eslint-utils/-/eslint-utils-1.4.2.tgz",
+          "integrity": "sha512-eAZS2sEUMlIeCjBeubdj45dmBHQwPHWyBcT1VSYB7o9x9WRRqKxyUoiXlRjyAwzN7YEzHJlYg0NmzDRWx6GP4Q==",
+          "requires": {
+            "eslint-visitor-keys": "^1.0.0"
+          }
         },
         "eslint-visitor-keys": {
           "version": "1.0.0",
@@ -1905,9 +1908,9 @@
           "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
         },
         "js-yaml": {
-          "version": "3.12.1",
-          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.12.1.tgz",
-          "integrity": "sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==",
+          "version": "3.13.1",
+          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.13.1.tgz",
+          "integrity": "sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==",
           "requires": {
             "argparse": "^1.0.7",
             "esprima": "^4.0.0"
@@ -1959,9 +1962,9 @@
           }
         },
         "lodash": {
-          "version": "4.17.11",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz",
-          "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
+          "version": "4.17.15",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
+          "integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
         },
         "mime-db": {
           "version": "1.37.0",
@@ -2599,9 +2602,9 @@
       "integrity": "sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA=="
     },
     "@types/node": {
-      "version": "12.7.11",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-12.7.11.tgz",
-      "integrity": "sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw=="
+      "version": "12.11.1",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-12.11.1.tgz",
+      "integrity": "sha512-TJtwsqZ39pqcljJpajeoofYRfeZ7/I/OMUQ5pR4q5wOKf2ocrUvBAZUMhWsOvKx3dVc/aaV5GluBivt0sWqA5A=="
     },
     "@types/normalize-package-data": {
       "version": "2.4.0",
@@ -2882,18 +2885,18 @@
       "dev": true
     },
     "browsertime": {
-      "version": "6.1.3",
-      "resolved": "https://registry.npmjs.org/browsertime/-/browsertime-6.1.3.tgz",
-      "integrity": "sha512-XKN90CbceKOeTdx9bFRn8hSGPGKZD2w426cXNP+2v6Fihzk9eJ/uB3wmRj197fb/iXTGfqUlUSurkBspjTQxrw==",
+      "version": "6.1.4",
+      "resolved": "https://registry.npmjs.org/browsertime/-/browsertime-6.1.4.tgz",
+      "integrity": "sha512-SoI7OhEljSwgzrBdxvJeJV7GsA1+sWKUhK4QiGwSQ4DNh0hJtQXwepoW1v7OeToTz6GpsGL6eYBB6dJTVzInJw==",
       "requires": {
         "@cypress/xvfb": "1.2.4",
         "@sitespeed.io/chromedriver": "77.0.3865-40",
-        "@sitespeed.io/geckodriver": "0.24.0",
+        "@sitespeed.io/geckodriver": "0.26.0",
         "@sitespeed.io/throttle": "0.5.4",
         "@sitespeed.io/tracium": "0.3.3",
         "adbkit": "2.11.1",
         "btoa": "1.2.1",
-        "chrome-har": "0.11.2",
+        "chrome-har": "0.11.4",
         "chrome-remote-interface": "0.28.0",
         "dayjs": "1.8.15",
         "execa": "2.0.4",
@@ -3282,9 +3285,9 @@
       "integrity": "sha512-i70fVHhmV3DtTl6nqvZOnIjbY0Pe4kAUjwHj8z0zAdgBtYrJyYwLKCCuRBQ5ppkyL0AkN7HKRnETdmdp1zqNXw=="
     },
     "chrome-har": {
-      "version": "0.11.2",
-      "resolved": "https://registry.npmjs.org/chrome-har/-/chrome-har-0.11.2.tgz",
-      "integrity": "sha512-ZlJSnaQy91LRAPgE1ZwbjgR4D5NzADP1INLo8WtI7eMw7JKnZ6iSr6qT5FSHxXvmefm/qTq0isVTzyqieXs71w==",
+      "version": "0.11.4",
+      "resolved": "https://registry.npmjs.org/chrome-har/-/chrome-har-0.11.4.tgz",
+      "integrity": "sha512-RfL1csMqwXbWqIgR7B6FgR5T+DgzHGoW/LUT7dlKB4EooIGojvDrttOeL9kBlwe/IUEV9qh1CNgC4cnTwBJlEA==",
       "requires": {
         "dayjs": "1.7.7",
         "debug": "3.1.0",
@@ -3458,9 +3461,9 @@
       "optional": true
     },
     "commander": {
-      "version": "2.20.1",
-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.1.tgz",
-      "integrity": "sha512-cCuLsMhJeWQ/ZpsFTbE765kvVfoeSddc4nU3up4fV+fDBcfUXnbITJ+JzhkdjzOqhURjZgujxaioam4RM9yGUg=="
+      "version": "2.20.3",
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+      "integrity": "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="
     },
     "concat-map": {
       "version": "0.0.1",
@@ -4460,9 +4463,9 @@
       "dev": true
     },
     "hosted-git-info": {
-      "version": "2.8.4",
-      "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.4.tgz",
-      "integrity": "sha512-pzXIvANXEFrc5oFFXRMkbLPQ2rXRoDERwDLyrcUxGhaZhgP54BBSl9Oheh7Vv0T090cszWBxPjkQQ5Sq1PbBRQ=="
+      "version": "2.8.5",
+      "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz",
+      "integrity": "sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg=="
     },
     "http-cache-semantics": {
       "version": "4.0.3",

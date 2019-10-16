@@ -4,6 +4,9 @@
 ### Added
 * Get generator meta tag and put it in the info [#346](https://github.com/sitespeedio/coach/pull/346).
 
+### Fixed
+* Upgraded to Browsertime 6.1.4
+
 ## 4.0.2 - 2019-10-07
 ### Fixed
 * Fixed the advice checking for empty alt on images [#345](https://github.com/sitespeedio/coach/pull/345) - Thank you [Sumeet Rohra](https://github.com/sumeetrohra) for the fix!
