@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## 4.2.0 - 2019-11-02
+* Chrome 78, Firefox 70 and Browsertime 7.0.0.
+
 ## 4.1.0 - 2019-10-16
 ### Added
 * Get generator meta tag and put it in the info [#346](https://github.com/sitespeedio/coach/pull/346).
