@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## 4.3.0 - 2019-12-12
+* Chrome 79, Firefox 71 and Browsertime 7.7.1.
+
 ## 4.2.0 - 2019-11-02
 * Chrome 78, Firefox 70 and Browsertime 7.0.0.
 
