@@ -1,5 +1,8 @@
 # CHANGELOG - webcoach
 
+## 4.3.1 - 2020-01-10
+* Extra check so that the 3rd party tool doesn't test against faulty domains [#350](https://github.com/sitespeedio/coach/pull/350).
+
 ## 4.3.0 - 2019-12-12
 * Chrome 79, Firefox 71 and Browsertime 7.7.1.
 
