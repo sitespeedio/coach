@@ -1,7 +1,11 @@
 # CHANGELOG - webcoach
 
+## 4.4.1 - 2020-02-07
+### Fixed
+* Upgraded to Browsertime 8.0.1
+
 ## 4.4.0 - 2020-02-05
-* Upgraded top Browsertime 8.0.0m, Firefox 72 and Chrome 80.
+* Upgraded to Browsertime 8.0.0, Firefox 72 and Chrome 80.
 
 ## 4.3.1 - 2020-01-10
 * Extra check so that the 3rd party tool doesn't test against faulty domains [#350](https://github.com/sitespeedio/coach/pull/350).
