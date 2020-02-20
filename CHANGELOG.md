@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## UNRELEASED
+## Added
+* Upgraded to Browsertime 8.1.0
+* Upgraded to Firefox 73
+
 ## 4.4.1 - 2020-02-07
 ### Fixed
 * Upgraded to Browsertime 8.0.1
