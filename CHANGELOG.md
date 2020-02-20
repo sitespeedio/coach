@@ -1,9 +1,10 @@
 # CHANGELOG - webcoach
 
-## UNRELEASED
+## 4.5.0 - 2020-02-20
 ## Added
 * Upgraded to Browsertime 8.1.0
 * Upgraded to Firefox 73
+* Updated dependencies [#351](https://github.com/sitespeedio/coach/pull/351)
 
 ## 4.4.1 - 2020-02-07
 ### Fixed
