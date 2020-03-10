@@ -1,9 +1,6 @@
 language: node_js
 node_js:
-  - "10"
-env:
-  global:
-    - secure: oZo1mWz69bvOnArdxLXPa35IPBVIQiYCBA67qOtvhWtS4chFrxPAp/j3XI2q/tot2ck7sQCjJwiTFK5ZwZnE5/dpwbj9jAw+QPhWfVBYmbIrlO0LRC3tlnTGbcatEvBNyLf982lRUiahMHYbL7yLIh8iicLYaH6VXl4Y87XIXEVMkpCm1F/+qvHx8iM0WPB4phWgHFtNUPCIgWwtHLjqtfd7qZPop2SvqxX+MmBwV266/6zFXru68pd2NrJoTPAFCtpzy+zfmA+xRssUlEVzZ6ZEXHGbGL6NPZ8nsY+BJ1BD2Tx3zLH48Bo5Lwk8kN/GWU+d/nJhbktuPFaT9o4yhBzf7J40kTJSoe2jDwqfLyGIxTDKNvVHWzraf6ioGa4N2yM7UbflvaQuuMhQ5lrmG2csfxZPVguk5vSeR8HaltlobN4lbSut8ebOdt+RvmZdt5EvPtdm0fxMUEe1J3u2MKwjv5ajPBlWUgXZO0vbIjqTA67qqVhV0s7l0fMHg2ms94GZ9iwTlKTV99aZDPi0SCptHY3Fk3Qjz3xTu+2yHYu82ULUckV5jtnDjFdGdAXaD5Qs/ZyatCvvm8/vyyhd9NLjb9DDtNrNi4akH39bwuw11GYw3jyzfjFUtCrKrNVGiuRb1c4GOAG/rRyekYlw8O5I6s8JDQOEu+kqVnggAnM=
+  - "12"
 sudo: required
 dist: bionic
 addons:
@@ -20,19 +17,6 @@ script:
   - node ./bin/webcoach.js -b chrome https://www.sitespeed.io > output.json
   - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
   - node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json
-cache:
-  directories:
-    - node_modules
 notifications:
   slack:
     secure: O0JhuiCt4htoIok2wybQTVooxU64cBG3kh8rctve5pvQb2XPkOCVRmbEYAbtEm5lOM2Ri0f8n2f+n3qegMj/GE1lDv0uvgdL/8PYzq4RMl5HHlfVFkB49LHNDMHLwdHts6yI55W+FNTo6+ud+oJgXDEBdrjjsS2A+keiLy5Ai6cYMN9jNyWOQladIjcTAJFCbESuTznyjn3ljg+eG2ZdAHyVBXiX4uvWvd3lVgfjCf/Izhoyi0y8ZWfGZ7TdKhRyOAD+VqRQZlyc0CxI3mhJVZWkRAzHD/yWcSUvl60udi9xt1t1Ce79S0kBKcpZ5LoZ+UcfIzD9e4Fh1gran8a7qRgpuHtfG2wuAirIztxSWYq1Z1TJdFMsGqUhA1Z+D7ZXr4uwnEV+WX6H3nW/0dMP0gZI1vknzdW+CBUWXsicJLsV+MqWbnHlxNlTvoqJow0mUmIqh91lAIR21Wbx+xpccEFPo5iwFhh5yoI9S9j7mqVEIXv04nDw2tPEKFYPFnMdvOjqPXf1nEnHQdh4Pwi9RnNZuW2XWtZR0OW6zwxiAgbrQIa5K1tzVERClXLdUmz8zgktG+IkZseexEXUJjrKfNaOLrg4wwWwj5oCuZHXLlFOg0b8he73OCCXjJfzi8kBXqQDGuN3t4lT1RMLV4nCmQ1s6UjapiJ5lj/FlAoVZWM=
-deploy:
-  provider: releases
-  api_key:
-    secure: zX4wKc/Hu22FQnl/ECgzIub2d1NGZuW419Js9tVaQ7d7oLyyjatA4IM5oX0dDx5IDAugZs//MhlHWqnU2Yfg61HQT8h/c/bvCjsHL03SMWwcEflqUteH7kEBrknalWyln85bZWb/sQNGuaKbOtMR5gSAqWBwHML+inwhgITFtI2RORNPFCHoDlmohdpg9cdEoz2lfK85t4QuUYJF+m9laju91y/iLRN2/OwmQBYeLWF6u3oiMVne6/rgt9E3Ed7B5qsdSED49ufvRVj+q4oizoUvdGvyX/mgSRxjoditrI9Zg+v+3zAKnedNZWDbFSsLnEJQAcW/zlkBnStJFzihYyLTDVX5p6FboC9ByDJIUKTRUlz17MWD9qgCcWpDuWMXZNQRFfY2i6g2ibTGiaalTMey0ARM16Lo2G1DTGx3qmr+I4JHjLm6bbkGe7OKHFds5wmztjdItqShOPYTWIDmeroK1E6SYgK979r/6sWk2SQsh45reZi8fa6JN3bHHRzEj1gp7Hkzs2PSRZ6oMz6Hd4YhXhwJGymsgoSB0N38ZS1kIlfH6Wgvi950s3MWBROrnWhColDXWxLSS+/mlYOJd9hsNCN3AeCI0plbI76pMLBrW6mW4glm3v4t04m7/F/jvVZH19wfmyqaehetNKL8ai7Kp04KVpMeWh1L4PY4QXU=
-  skip_cleanup: true
-  file: dist/coach.bookmarklet.js
-  on:
-    repo: sitespeedio/coach
-    tags: true
-    node: "10"

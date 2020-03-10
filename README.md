@@ -132,18 +132,6 @@ npm run bookmarklet
 
 and then you will find it in the dist folder.
 
-### Chrome Dev Tools Extension
-
-Installing the [Coach Panel](https://chrome.google.com/webstore/detail/coach-panel/olecfjmnejnkjipoicfpneceppjeaemo) Chrome Extension, will add a 'Coach' tab inside your Chrome Dev Tools from there you can analyse and view your page's results.
-
-Like the bookmarklet it only uses advice that you can run inside the browser - just until that Resource Timing API supports sizes in Chrome!
-
-Alternatively view the [Source Code](https://github.com/matthojo/coach-devtools).
-
-![The coach in dev tools](img/coach-chrome.png)
-
-Thank you [Matt](https://github.com/matthojo) for creating the extension!
-
 ### Include in your own tool
 
 The coach uses Browsertime to start the browser, execute the JavaScript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts if you have your own browser implementation.
@@ -166,52 +154,7 @@ const result = api.run(url, domScript, harScript, options);
 ```
 
 #### Use the scripts
-
-Say that your tool run on Windows, you start the browsers yourself and you generate your own HAR file. Create your own wrapper to get the coach to help you.
-
-First you need the JavaScript advice, you can get the raw script either by generating it yourself or through the API.
-
-Generate the script
-
-```bash
-npm run combine
-```
-
-and it will be in the dist folder.
-
-Or you just get it from the API:
-
-```js
-// get the API
-const api = require('webcoach');
-// get the DOM scripts, it's a promise
-const domScriptPromise = api.getDomAdvice();
-```
-
-Take the *domScript* and run it in your browser and take care of the result.
-
-To test the HAR you need to generate the HAR yourself and then run it against the advice.
-
-```js
-const api = require('webcoach');
-// You read your HAR file from disk or however you get hold of it
-const harJson = //
-// if your har contains multiple pages (multiple runs etc) you can use the API
-// to get the page that you want
-const firstPageHar = api.pickAPage(harJson, 0);
-// the result is a promise
-const myHarAdviceResultPromise = api.runHarAdvice(firstPageHar, api.getHarAdvice());
-```
-
-When you got the result from both the DOM and the HAR you need to merge the result to get the full coach result:
-
-```js
-// Say that you got the result from the browser in domAdviceResult
-// and the HAR result in harAdviceResult
-const coachResult = api.merge(domAdviceResult, harAdviceResult);
-```
-
-Now you have the full result (as JSON) as a coachResult.
+Checkout the [coach-core]() module.
 
 ## What does the coach do
 
