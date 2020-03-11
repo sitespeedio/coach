@@ -13,7 +13,7 @@ before_install:
   - /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile
     --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1600x1024x16
 script:
-  - npm run travis
+  - npm run test
   - node ./bin/webcoach.js -b chrome https://www.sitespeed.io > output.json
   - node ./bin/webcoach.js -b firefox https://www.sitespeed.io > output.json
   - node ./bin/webcoach.js -b chrome --mobile https://www.sitespeed.io > output.json
