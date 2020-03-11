@@ -1,5 +1,9 @@
 # CHANGELOG - webcoach
 
+## 5.0.0
+### Changed
+* We moved out the core functionality to [coach-core](https://github.com/sitespeedio/coach-core). This makes it easy to use the Coach in your own code.
+
 ## 4.5.0 - 2020-02-20
 ## Added
 * Upgraded to Browsertime 8.1.0
