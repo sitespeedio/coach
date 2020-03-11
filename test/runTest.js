@@ -1,8 +1,8 @@
 'use strict';
 
-const api = require('../../lib/'),
+const api = require('../../coach/lib'),
   urlParser = require('url'),
-  webserver = require('../help/webserver'),
+  webserver = require('../../coach/test/help/webserver'),
   chai = require('chai');
 
 chai.should();

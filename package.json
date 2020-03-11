@@ -17,8 +17,7 @@
   },
   "files": [
     "bin",
-    "lib",
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -28,27 +27,12 @@
     "url": "https://github.com/sitespeedio/coach/issues"
   },
   "scripts": {
-    "bookmarklet": "npm run domconsole && bookmarkletify dist/domconsole.js -o dist/coach.bookmarklet.js",
-    "domconsole": "node tools/domconsole.js dist/coach.js dist/domconsole.js",
-    "combine": "mkdirp dist && node tools/combine.js dist/coach.js",
-    "test:api": "mocha --recursive test/api",
-    "test:dom": "mocha --recursive test/dom",
-    "test:har": "mocha --recursive test/har",
-    "test:merge": "mocha --recursive test/merge",
-    "pretest": "npm run combine && npm run bookmarklet && npm run uglify",
-    "test": "mocha --recursive test/api test/dom test/har test/merge",
-    "jsdoc": "jsdoc -R README.md -r -d dist/doc lib",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "travis": "npm run eslint-check && npm run lint && npm run test",
-    "prepare": "npm run combine && npm run bookmarklet && npm run uglify && npm run jsdoc",
-    "gen-dist": "npm run combine && npm run uglify",
-    "uglify": "uglifyjs dist/coach.js --compress side_effects=false,negate_iife=false --mangle > dist/coach.min.js"
+    "test": "mocha --recursive test"
   },
   "devDependencies": {
-    "bluebird": "3.5.5",
-    "bookmarkletify": "^1.0.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "connect": "^3.7.0",
@@ -78,17 +62,11 @@
     }
   ],
   "dependencies": {
-    "browsertime": "8.1.0",
+    "coach-core": "0.0.2",
+    "browsertime": "8.1.2",
     "chalk": "3.0.0",
     "cli-table3": "0.5.1",
-    "filter-files": "0.4.0",
-    "json-stable-stringify": "1.0.1",
-    "lodash.groupby": "4.6.0",
-    "lodash.merge": "^4.6.2",
-    "lodash.sortby": "4.7.0",
-    "pagexray": "2.5.9",
-    "third-party-web": "0.11.1",
     "word-wrap": "1.2.3",
-    "yargs": "15.1.0"
+    "yargs": "15.3.0"
   }
 }
