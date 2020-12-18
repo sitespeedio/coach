@@ -1,5 +1,10 @@
 # CHANGELOG - webcoach
 
+## 6.0.0 - 2020-12-18
+### Added
+* Use Browsertime 11.0.0
+* Use Coach-code 6.0
+* Use latest Firefox and Chrome
 ## 5.0.0 - 2020-03-11
 ### Changed
 * We moved out the core functionality to [coach-core](https://github.com/sitespeedio/coach-core). This makes it easy to use the Coach in your own code.
