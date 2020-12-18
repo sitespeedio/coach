@@ -95,7 +95,7 @@ async function run(options) {
     if (options.browser === 'chrome') {
       await unlink(path.resolve(process.cwd(), 'trace-1.json.gz'));
     }
-    process.exit;
+    process.exit();
   }
 }
 

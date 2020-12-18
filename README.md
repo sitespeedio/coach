@@ -19,7 +19,6 @@ The coach helps you find performance problems on your web page. You can think of
 - [What does the coach do?](#what-do-the-coach-do)
 - [How does it all work](#how-does-it-all-work?)
   - [Bonus](#bonus)
-  - [Accessibility](#accessibility)
   - [Best practice](#best-practice)
   - [Privacy](#privacy)
   - [General information](#general-information)

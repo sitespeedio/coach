@@ -62,8 +62,8 @@
     }
   ],
   "dependencies": {
-    "coach-core": "5.0.0",
-    "browsertime": "8.1.2",
+    "coach-core": "6.0.0",
+    "browsertime": "11.0.0",
     "chalk": "3.0.0",
     "cli-table3": "0.5.1",
     "word-wrap": "1.2.3",

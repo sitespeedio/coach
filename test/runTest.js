@@ -30,7 +30,6 @@ describe('Run API:', function() {
       );
 
       [
-        'accessibility',
         'bestpractice',
         'info',
         'performance',
