@@ -157,7 +157,7 @@ The coach knows more than just performance. She also knows about accessibility a
 
 ### Accessibility
 
-Make sure your site is accessible and usable for everyone. You can read more about making the web accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
+Make sure your site is accessible and usable for everyone. You can read more about making the web accessible [here](https://www.marcozehe.de/articles/2015-12-14-the-web-accessibility-basics/).
 
 ### Best practice
 
