@@ -1,6 +1,12 @@
 # CHANGELOG - webcoach
 
-## 6.0.0 - 2020-12-18
+
+## 6.4.3 - 2021-10-15
+Version bump to match Coach core.
+### Added
+* Updated to use latest Browsertime with latest Chromedriver
+* Updated Docker container to use latest Chrome/Firefox
+
 ### Added
 * Use Browsertime 11.0.0
 * Use Coach-code 6.0
