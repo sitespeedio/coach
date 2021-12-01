@@ -1,4 +1,4 @@
-FROM sitespeedio/webbrowsers:chrome-94.0-firefox-93.0-edge-93.0-dev
+FROM sitespeedio/webbrowsers:chrome-96.0-firefox-94.0-edge-95.0-dev
 
 ENV DOCKER true
 
