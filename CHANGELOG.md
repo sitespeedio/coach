@@ -1,6 +1,9 @@
 # CHANGELOG - webcoach
+## 7.0.0 - 2021-12-01
+Version bump to match Coach core.
 
-
+### Added
+* Updated to use latest Coach core and Browertime.
 ## 6.4.3 - 2021-10-15
 Version bump to match Coach core.
 ### Added
