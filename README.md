@@ -9,15 +9,15 @@
 
 The coach helps you find performance problems on your web page. You can think of the coach as a modern version of [YSlow](http://yslow.org/).
 
-- [Does my page need coaching?](#do-my-page-need-coaching)
+- [Does my page need coaching?](#does-my-page-need-coaching)
 - [Why we love the coach](#why-we-love-the-coach)
 - [Work in progress](#work-in-progress)
 - [How to use the coach](#how-to-use-the-coach)
   - [Standalone](#standalone)
   - [Bookmarklet](#bookmarklet)
   - [Include in your own tool](#include-in-your-own-tool)
-- [What does the coach do?](#what-do-the-coach-do)
-- [How does it all work](#how-does-it-all-work?)
+- [What does the coach do?](#what-does-the-coach-do)
+- [How does it all work](#how-does-it-all-work)
   - [Bonus](#bonus)
   - [Best practice](#best-practice)
   - [Privacy](#privacy)
