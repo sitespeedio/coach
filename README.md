@@ -33,15 +33,15 @@ You know, it's hard to get everything right! Some of the previous performance be
 
 ## Why we love the coach
 
-Ten reasons why we love the coach:
+Eight reasons why we love the coach:
 - The coach gives you advice on how to make your page faster. The coach aims to NEVER give you bad advice. Follow the advice and you will WIN!
 - The coach uses real browsers to see your page exactly like your users do.
-- Every advice has one or more unit-tests to make sure it's easy to change advice in the future.
+- Each piece of advice has one or more unit-tests to make sure it's easy to implement advice in the future.
 - The coach knows about more than just performance: Accessibility and web best practice are other things that the coach can help you with.
-- You can [integrate the coach](https://github.com/sitespeedio/coach-core) with your own web performance tool. It's easy: your tool only need to be able to run JavaScript in the browser and produce a HAR file. Or you can use the built-in functionality of the coach to run the browser.
+- You can [integrate the coach](https://github.com/sitespeedio/coach-core) with your own web performance tool. It's easy: your tool only needs to be able to run JavaScript in the browser and produce a HAR file. Or you can use the built-in functionality of the coach to run the browser.
 - The coach is open-source. The advice is public, you can check it and change it yourself. Help us make the coach even better!
 - The coach can combine knowledge from the DOM with HAR to give you super powerful advice.
-- The CLI output is pretty nice. You can configure how much you want to see. Use it as fast way to check the performance of your page.
+- The CLI output is pretty nice. You can configure how much you want to see. Use it as a fast way to check the performance of your page.
 
 ## How to use the coach
 
@@ -82,7 +82,7 @@ If you also want to show the offending assets/details and the description of the
 webcoach https://www.sitespeed.io --details --description
 ```
 
-By default, the coach only tells you about advice where you don't get the score 100. You can change that. If you want to see all advice, you can do that too:
+By default, the coach only gives you advice when you don't score 100. You can change that. If you want to see all advice, you can do that too:
 
 ```bash
 webcoach https://www.sitespeed.io --limit 101
@@ -94,7 +94,7 @@ If you want to test as a mobile device, that's possible too, by faking the user-
 webcoach https://www.sitespeed.io --mobile -b chrome
 ```
 
-> ... but hey, I want to see the full JSON?
+> ... but hey, what if I want to see the full JSON?
 
 Yes, you can do that!
 
@@ -104,7 +104,7 @@ webcoach https://www.sitespeed.io -f json
 
 This will get you the full JSON, the same as if you integrate the coach into your tool.
 
-> ... but hey, I don't want any color in the table output?
+> ... but hey, what if I don't want any color in the table output?
 
 That's possible as well!
 
@@ -114,7 +114,7 @@ webcoach https://www.sitespeed.io --noColor
 
 ### Include in your own tool
 
-The coach uses Browsertime to start the browser, execute the JavaScript and fetch the HAR file. You can use that functionality too inside your tool or you can use the raw scripts if you have your own browser implementation. 
+The coach uses Browsertime to start the browser, execute the JavaScript and fetch the HAR file. You can also use that functionality inside your tool or use the raw scripts if you have your own browser implementation. 
 
 #### Use built in browser support
 
@@ -157,21 +157,21 @@ The coach knows more than just performance. She also knows about accessibility a
 
 ### Accessibility
 
-Make sure your site is accessible and usable for everyone. You can read more about making the web accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
+Make sure your site is accessible and usable for everyone. You can read more about making your site accessible [here](https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/).
 
 ### Best practice
 
-You want your page to follow best practices, right? Making sure your page is set up for search engines, have good URL structure and so on.
+You want your page to follow best practices, right? Making sure your page is set up for search engines, has a good URL structure and so on.
 
-### Privay
+### Privacy
 
-Make sure that your page respect user privacy.
+Make sure that your page respects user privacy.
 
 ### General information
 
-The world is complex. Some things are great to know but hard for the coach to give advice about.
+The world is complex. Some things are great to know but hard for the coach to give advice on.
 
-The coach will then just tell you how the page is built and you can draw your own conclusions if something should be changed.
+The coach will then tell you how the page is built and you can decide for yourself whether something should be changed.
 
 ### Timings
 
@@ -179,7 +179,7 @@ The coach has a clock and knows how to use it! You will get timing metrics and k
 
 ## Developers guide
 
-Checkout the [developers guide](docs/developers-guide.md) to get a better feeling how the coach works.
+Checkout the [developers guide](docs/developers-guide.md) to get a better feel for how the coach works.
 
 ## Browser support
 
