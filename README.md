@@ -163,9 +163,9 @@ Make sure your site is accessible and usable for everyone. You can read more abo
 
 You want your page to follow best practices, right? Making sure your page is set up for search engines, have good URL structure and so on.
 
-### Privay
+### Privacy
 
-Make sure that your page respect user privacy.
+Make sure that your page "respect" user privacy.
 
 ### General information
 
