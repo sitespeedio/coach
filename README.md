@@ -1,10 +1,5 @@
 # The coach
 
-[![Build status][travis-image]][travis-url]
-[![Stars][stars-image]][stars-url]
-
-[Documentation](https://www.sitespeed.io/documentation/coach/) | [Changelog](https://github.com/sitespeedio/coach/blob/master/CHANGELOG.md)
-
 ![The coach](img/coach.png)
 
 The coach helps you find performance problems on your web page. You can think of the coach as a modern version of [YSlow](http://yslow.org/).
